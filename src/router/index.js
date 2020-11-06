@@ -15,40 +15,36 @@ Vue.use(VueRouter)
 const routes = [
     {
         component: Home,
-        name: 'Home',
         path: '/'
     },
     {
         component: ParcelTake,
-        name: 'ParcelTake',
         path: '/take'
     },
     {
-        path: '/take/search',
-        component: TakeSearch
+        component: TakeSearch,
+        path: '/take/search'
     },
     {
         component: ParcelSend,
-        name: 'ParcelSend',
         path: '/send'
     },
     {
-        path: '/send/search',
-        component: SendSearch
+        component: SendSearch,
+        path: '/send/search'
     },
     {
         component: Registration,
-        name: 'Registration',
         path: '/registration'
     },
 
     {
-        path: '/search',
-        component: Search
+        component: Search,
+        path: '/search'
     },
     {
-        path: '*',
-        component: Error404
+        component: Error404,
+        path: '*'
     }
 
 ]

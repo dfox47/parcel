@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div class="container mb-5">
-            <send-menu></send-menu>
-            <div class="send_search">
-                <send-search></send-search>
+        <div>
+            <send-menu />
+            <div>
+                <send-search />
             </div>
         </div>
     </div>

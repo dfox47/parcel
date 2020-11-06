@@ -12,7 +12,14 @@
                 <country-input></country-input>
             </div>
             <div class="col-12 pt-3 text-center">
-                <button class="btn btn-primary px-5" @click="loadOrders">Найти</button>
+                <v-btn
+                    color="primary"
+                    @click="loadOrders"
+                    :disabled="loading"
+                    :loading="loading"
+                >
+                    Найти
+                </v-btn>
             </div>
         </div>
 
@@ -71,14 +78,26 @@ export default {
     components: {
         'country-input': CountryInput
     },
+    computed: {
+        loading () {
+            return this.$store.getters.loading
+        }
+    },
     methods: {
         loadOrders () {
+            this.$store.dispatch('clearError')
+            this.$store.dispatch('setLoading', true)
+
             this.$http.get('https://api.wwprcl.ru/api/delivery/order/list')
                 .then(response => {
-                    return response.json()
-                })
-                .then(orders => {
-                    this.orders = orders
+                    this.orders = response.json()
+                    this.$store.dispatch('setLoading', false)
+                }, error => {
+                    console.log(error)
+                    this.$store.dispatch('setLoading', false)
+                    if (error.bodyText == '') {this.$store.dispatch('setError', 'Неизвестная ошибка запроса к серверу')}
+                    else {this.$store.dispatch('setError', error.bodyText)}
+                    throw error
                 })
         },
         checkTypeOrder(type) {
