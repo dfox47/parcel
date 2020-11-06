@@ -1,12 +1,19 @@
 <template>
-    <h1>Parcel Send</h1>
+    <div>
+        <h1>Parcel Send</h1>
+        <send-menu />
+    </div>
 </template>
 
 
 
 <script>
+import SendMenu from "../components/SendMenu";
 export default {
-    name: 'ParcelSend'
+    name: 'ParcelSend',
+    components: {
+        sendMenu: SendMenu
+    }
 }
 </script>
 

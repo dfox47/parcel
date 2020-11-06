@@ -1,0 +1,114 @@
+<template>
+    <div class="container">
+        <h1 class="text-center py-4">ПОИСК ПОСЫЛКИ</h1>
+
+        <div class="row px-5 pb-3">
+            <div class="col-6 pt-3">
+                <h3>Откуда</h3>
+                <country-input></country-input>
+            </div>
+            <div class="col-6 pt-3">
+                <h3>Куда</h3>
+                <country-input></country-input>
+            </div>
+            <div class="col-12 pt-3 text-center">
+                <button class="btn btn-primary px-5" @click="loadOrders">Найти</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 py-2 my-2 border border-primary rounded-0"
+                 v-for="order of orders"
+                 :key="order.id">
+                <div class="row no-gutters">
+                    <div class="col-3 text-left">
+                        <fa-icon class="plane_icon mr-2" icon="plane-departure" />
+                        <span class="order_target order_target_from">{{ order.from }}</span>
+                    </div>
+                    <div class="col-1 text-center">
+                        <fa-icon class="order_right_arrow" icon="long-arrow-alt-right" />
+                    </div>
+                    <div class="col-3 text-right">
+                        <span class="order_target order_target_to">{{ order.to }}</span>
+                        <fa-icon class="plane_icon ml-2" icon="plane-arrival" />
+                    </div>
+                    <div class="col-2 text-center">
+                        <fa-icon class="order_type_icons" icon="weight-hanging" />
+                        <span class="order_type_text">{{ order.weight}} kg.</span>
+                    </div>
+                    <div class="col-3 text-center">
+                        <fa-icon v-if="checkTypeOrder(order.package_type)" class="order_type_icons" icon="box" />
+                        <fa-icon v-else class="order_type_icons" icon="envelope" />
+                        <span class="order_type_text">{{ order.size_length }} <b>X</b> {{ order.size_height }} <b>X</b> {{ order.size_width }}</span>
+                    </div>
+                    <div class="col-8">
+                        {{ order.pickup_address }}
+                    </div>
+                    <div class="col-2">
+                        {{ order.price }}
+                        &#8381;
+                    </div>
+                    <div class="col-2">
+                        {{ order.package_cost }}
+                        &#8381;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import CountryInput from "../components/CountryInput.vue";
+
+export default {
+    name: "SendSearch",
+    data() {
+        return{
+            orders: []
+        }
+    },
+    components: {
+        'country-input': CountryInput
+    },
+    methods: {
+        loadOrders () {
+            this.$http.get('https://api.wwprcl.ru/api/delivery/order/list')
+                .then(response => {
+                    return response.json()
+                })
+                .then(orders => {
+                    this.orders = orders
+                })
+        },
+        checkTypeOrder(type) {
+            if (type === 0 || type === 1 || type === 2 ) {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+}
+</script>
+
+<style scoped>
+    h1 {
+        font-size: 24px;
+        color: #8E21ED;
+    }
+    .plane_icon {
+        color: blueviolet;
+        font-size: 20px;
+    }
+
+    .order_right_arrow {
+        color: green;
+        font-size: 30px;
+    }
+
+    .order_type_icons {
+        color: black;
+        font-size: 20px;
+    }
+</style>

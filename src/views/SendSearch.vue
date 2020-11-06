@@ -10,16 +10,15 @@
 </template>
 
 <script>
+import SendMenu from "../components/SendMenu";
+import SendSearch from "../components/SendSearch";
 export default {
+    components: {
+        sendMenu: SendMenu,
+        sendSearch: SendSearch
+    }
 }
 </script>
 
 <style scoped>
-    .send_search {
-        width: 100%;
-        min-height: 500px;
-        border-left: 1px solid #dee2e6;
-        border-right: 1px solid #dee2e6;
-        border-bottom: 1px solid #dee2e6;
-    }
 </style>
