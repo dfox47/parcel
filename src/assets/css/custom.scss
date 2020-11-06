@@ -1,0 +1,101 @@
+
+
+
+// defaults class's [START]
+body {
+	// TODO : delete
+	min-height: 1000px;
+}
+
+footer {}
+
+
+
+h1 {
+	color: $c_link;
+	font-size: 40px;
+	padding: 1em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+header {}
+
+
+
+li {
+	display: inline-block;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+// defaults class's [END]
+
+
+
+// help class's [START]
+.btn,
+.btn:visited {
+	cursor: pointer;
+	display: inline-block;
+	transition: $transition;
+}
+
+.btn_main,
+.btn_main:visited {
+	border: 1px solid $c_link;
+	border-radius: 6px;
+	color: $c_link;
+	padding: 9px 36px 8px;
+	text-decoration: none;
+
+	&:hover,
+	&.router-link-active {
+		background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
+		border-color: rgba($c_link, .9);
+		color: #fff;
+	}
+}
+
+
+
+// logo [START]
+.logo,
+.logo:visited {
+	align-items: flex-end;
+	display: flex;
+	text-decoration: none;
+}
+
+.logo__img {
+	margin: 0 13px 0 0;
+}
+
+.logo__text {
+	padding: 0 0 7px;
+}
+// logo [END]
+
+
+
+.login_nav {
+	font-size: 18px;
+}
+
+.login_nav__item {
+	margin: 0 0 0 28px;
+}
+
+
+
+.wrap {
+	margin: 0 auto;
+	max-width: 1240px;
+	padding: 0 30px;
+	width: 100%;
+}
+// help class's [END]
+
+

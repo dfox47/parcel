@@ -1,0 +1,42 @@
+
+
+
+.header {
+	align-items: center;
+	border-bottom: 1px solid #000;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 30px;
+	padding: 22px 0 29px;
+	width: 100%;
+}
+
+.header_nav {
+	font-size: 18px;
+	font-weight: 300;
+	padding: 0 0 1px;
+
+	a,
+	a:visited {
+		color: #000;
+		text-decoration: none;
+		transition: $transition;
+
+		&:hover,
+		&.router-link-active {
+			color: $c_link;
+		}
+	}
+}
+
+.header_nav__item {
+	margin: 0 0 0 36px;
+}
+
+.header_right {
+	align-items: center;
+	display: flex;
+	padding: 8px 0 0;
+}
+
+
