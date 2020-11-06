@@ -1,12 +1,12 @@
 <template>
-	<h1>Parcel Take</h1>
+    <h1>Parcel Take</h1>
 </template>
 
 
 
 <script>
 export default {
-	name: 'ParcelTake'
+    name: 'ParcelTake'
 }
 </script>
 

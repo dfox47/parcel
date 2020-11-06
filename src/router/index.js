@@ -1,24 +1,56 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home'
 import AuthGuard from './auth-guard'
+import ParcelSend from "../views/ParcelSend";
+import SendSearch from "../views/SendSearch";
+import ParcelTake from "../views/ParcelTake";
+import TakeSearch from "../views/TakeSearch";
+import Registration from "../views/Registration";
+import Search from "../views/Search";
+import Error404 from "../views/Error404";
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        component: Home,
         name: 'Home',
-        component: Home
+        path: '/'
     },
     {
-        path: '/about',
-        name: 'About',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        component: ParcelTake,
+        name: 'ParcelTake',
+        path: '/take'
+    },
+    {
+        path: '/take/search',
+        component: TakeSearch
+    },
+    {
+        component: ParcelSend,
+        name: 'ParcelSend',
+        path: '/send'
+    },
+    {
+        path: '/send/search',
+        component: SendSearch
+    },
+    {
+        component: Registration,
+        name: 'Registration',
+        path: '/registration'
+    },
+
+    {
+        path: '/search',
+        component: Search
+    },
+    {
+        path: '*',
+        component: Error404
     }
+
 ]
 
 const router = new VueRouter({
@@ -27,3 +59,4 @@ const router = new VueRouter({
 })
 
 export default router
+
