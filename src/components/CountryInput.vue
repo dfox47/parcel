@@ -7,7 +7,7 @@
         item-text="name"
         label="Выберите страну"
         v-model="selectedValue"
-    ></v-autocomplete>
+    />
 </template>
 
 <script>
