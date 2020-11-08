@@ -2,41 +2,59 @@
 
 
 .header {
-	align-items: center;
-	border-bottom: 1px solid #000;
-	display: flex;
-	justify-content: space-between;
-	margin: 0 0 30px;
-	padding: 22px 0 29px;
-	width: 100%;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        background: url(#{$i}/bg1.svg) right top no-repeat scroll transparent;
+        background-size: contain;
+        content: "";
+        height: 564px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1210px;
+        z-index: 0;
+    }
 }
 
 .header_nav {
-	font-size: 18px;
-	font-weight: 300;
-	padding: 0 0 1px;
+    font-size: 18px;
+    font-weight: 300;
 
-	a,
-	a:visited {
-		color: #000;
-		text-decoration: none;
-		transition: $transition;
+    a,
+    a:visited {
+        color: #000;
+        text-decoration: none;
+        transition: $transition;
 
-		&:hover,
-		&.router-link-active {
-			color: $c_link;
-		}
-	}
+        &:hover,
+        &.router-link-active {
+            color: $c_link;
+        }
+    }
 }
 
 .header_nav__item {
-	margin: 0 0 0 36px;
+    margin: 0 0 0 36px;
 }
 
 .header_right {
-	align-items: center;
-	display: flex;
-	padding: 8px 0 0;
+    align-items: center;
+    display: flex;
+    padding: 8px 0 0;
+}
+
+.header_wrap {
+    align-items: flex-start;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 30px;
+    padding: 22px 0 29px;
+    position: relative;
+    width: 100%;
+    z-index: 3;
 }
 
 

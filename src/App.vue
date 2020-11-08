@@ -1,7 +1,11 @@
 <template>
     <v-app>
         <app-header />
-        <router-view />
+
+        <div class="content">
+            <router-view />
+        </div>
+
         <app-footer />
 
         <template v-if="error">
@@ -45,5 +49,5 @@ export default {
 </script>
 
 <style lang="scss">
-    @import 'styles/_styles.scss';
+@import 'styles/_styles.scss';
 </style>

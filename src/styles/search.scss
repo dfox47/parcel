@@ -10,11 +10,11 @@
 }
 
 .search_content {
-    width: 100%;
+    border-bottom: 1px solid $c_search_bg;
+    border-left: 1px solid $c_search_bg;
+    border-right: 1px solid $c_search_bg;
     min-height: 500px;
-    border-left: 1px solid #dee2e6;
-    border-right: 1px solid #dee2e6;
-    border-bottom: 1px solid #dee2e6;
+    width: 100%;
 }
 
 
