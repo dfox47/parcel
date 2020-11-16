@@ -23,19 +23,19 @@
                     <ul class="header_nav">
                         <li class="header_nav__item">
                             <router-link to="/send">
-                                Хочу отправить
+                                {{ $vuetify.lang.t('$vuetify.menu_button_send') }}
                             </router-link>
                         </li>
 
                         <li class="header_nav__item">
                             <router-link to="/take">
-                                Могу захватить
+                                {{ $vuetify.lang.t('$vuetify.menu_button_take') }}
                             </router-link>
                         </li>
 
                         <li class="header_nav__item">
                             <router-link to="/registration">
-                                Русский, ₽
+                                {{ $vuetify.lang.t('$vuetify.language_name') }}, ₽
                             </router-link>
                         </li>
                     </ul>
@@ -46,7 +46,7 @@
                                 class="btn btn_main"
                                 to="/registration"
                             >
-                                Вход
+                                {{ $vuetify.lang.t('$vuetify.login_button') }}
                             </router-link>
                         </li>
                     </ul>

@@ -6,9 +6,12 @@ import vuetify from './plugins/vuetify';
 import VueResource from 'vue-resource';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CountryFlag from 'vue-country-flag'
+
 
 Vue.component('app-header', Header);
 Vue.component('app-footer', Footer);
+Vue.component('country-flag', CountryFlag)
 
 Vue.use(VueResource);
 

@@ -1,5 +1,18 @@
 <template>
     <footer class="footer">
+        <v-container>
+            <v-row justify="center">
+                <v-col md="2" class="text-center d-flex justify-center align-start">
+                    <country-flag country='us' class="border_flag"/>
+                    <v-switch
+                        class="mx-2 mt-0"
+                        v-model="switch1"
+                        @change="changeLocale"
+                    ></v-switch>
+                    <country-flag country='ru' class="border_flag"/>
+                </v-col>
+            </v-row>
+        </v-container>
         <div class="wrap">
             <div class="footer_wrap">
                 <ul class="footer_menu">
@@ -160,8 +173,23 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    data () {
+        return {
+            switch1: true,
+        }
+    },
+    methods: {
+        changeLocale () {
+            if (this.switch1 === true) this.$vuetify.lang.current = 'ru'
+            else this.$vuetify.lang.current = 'en'
+        }
+    },
 }
 </script>
 
-
+<style scoped>
+    .border_flag {
+        box-shadow: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12) !important;
+    }
+</style>

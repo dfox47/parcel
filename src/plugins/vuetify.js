@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 
 Vue.use(Vuetify)
+import ru from '../locale/ru.json'
+import en from '../locale/en.json'
 
 export default new Vuetify({
     theme: {
@@ -13,5 +15,9 @@ export default new Vuetify({
                 error: '#b71c1c'
             }
         }
-    }
+    },
+    lang: {
+        locales: { ru, en },
+        current: 'ru'
+    },
 })
