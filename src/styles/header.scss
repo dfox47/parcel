@@ -50,11 +50,22 @@
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
-    margin: 0 0 30px;
+    margin: 0 auto 15px;
+    max-width: 1180px;
     padding: 22px 0 29px;
     position: relative;
     width: 100%;
     z-index: 3;
 }
 
+@media only screen and (max-width: 1400px) {
+    .header {
+        &:after {
+            background: none;
+        }
+    }
 
+    .header_wrap {
+        padding: 26px 40px 29px;
+    }
+}

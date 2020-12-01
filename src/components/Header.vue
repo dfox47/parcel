@@ -1,58 +1,56 @@
 <template>
     <div class="header">
-        <div class="wrap">
-            <header class="header_wrap">
-                <router-link
-                    class="logo"
-                    to="/"
+        <header class="header_wrap">
+            <router-link
+                class="logo"
+                to="/"
+            >
+                <img
+                    class="logo__img"
+                    src="../assets/i/icons/logo.svg"
+                    alt=""
                 >
-                    <img
-                        class="logo__img"
-                        src="../assets/i/icons/logo.svg"
-                        alt=""
-                    >
 
-                    <img
-                        class="logo__text"
-                        src="../assets/i/icons/logo_text.svg"
-                        alt=""
-                    >
-                </router-link>
+                <img
+                    class="logo__text"
+                    src="../assets/i/icons/logo_text.svg"
+                    alt=""
+                >
+            </router-link>
 
-                <div class="header_right">
-                    <ul class="header_nav">
-                        <li class="header_nav__item">
-                            <router-link to="/send">
-                                {{ $vuetify.lang.t('$vuetify.menu_button_send') }}
-                            </router-link>
-                        </li>
+            <div class="header_right">
+                <ul class="header_nav">
+                    <li class="header_nav__item">
+                        <router-link to="/send">
+                            {{ $vuetify.lang.t('$vuetify.menu_button_send') }}
+                        </router-link>
+                    </li>
 
-                        <li class="header_nav__item">
-                            <router-link to="/take">
-                                {{ $vuetify.lang.t('$vuetify.menu_button_take') }}
-                            </router-link>
-                        </li>
+                    <li class="header_nav__item">
+                        <router-link to="/take">
+                            {{ $vuetify.lang.t('$vuetify.menu_button_take') }}
+                        </router-link>
+                    </li>
 
-                        <li class="header_nav__item">
-                            <router-link to="/registration">
-                                {{ $vuetify.lang.t('$vuetify.language_name') }}, ₽
-                            </router-link>
-                        </li>
-                    </ul>
+                    <li class="header_nav__item">
+                        <router-link to="/registration">
+                            {{ $vuetify.lang.t('$vuetify.language_name') }}, ₽
+                        </router-link>
+                    </li>
+                </ul>
 
-                    <ul class="login_nav">
-                        <li class="login_nav__item">
-                            <router-link
-                                class="btn btn_main"
-                                to="/registration"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.login_button') }}
-                            </router-link>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-        </div>
+                <ul class="login_nav">
+                    <li class="login_nav__item">
+                        <router-link
+                            class="btn btn_main"
+                            to="/registration"
+                        >
+                            {{ $vuetify.lang.t('$vuetify.login_button') }}
+                        </router-link>
+                    </li>
+                </ul>
+            </div>
+        </header>
     </div>
 </template>
 
