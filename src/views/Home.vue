@@ -1,4 +1,8 @@
 <template>
+    <!--    <button id="show-modal" @click="showLoginPopup = true">Show Modal</button>-->
+    <!--    &lt;!&ndash; use the modal component, pass in the prop &ndash;&gt;-->
+    <!--    <modal v-if="showLoginPopup" @close="showLoginPopup = false">-->
+
     <div class="wrap home">
         <div class="home_intro">
             <div class="home_intro_text">
@@ -185,10 +189,6 @@
 
 
 
-<script>
-export default {
-    name: 'Home'
-}
-</script>
+
 
 

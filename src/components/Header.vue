@@ -25,11 +25,13 @@
             </router-link>
 
             <div class="header_right">
-                <img
-                    class="header_login_icon header_mobile"
-                    src="../assets/i/photo.png"
-                    alt="login_icon"
-                >
+                <div class="header_login_icon">
+                    <img
+                        class="header_login_icon header_mobile"
+                        src="../assets/i/photo.png"
+                        alt="login_icon"
+                    >
+                </div>
 
                 <ul class="header_nav">
                     <li class="header_nav__item">
