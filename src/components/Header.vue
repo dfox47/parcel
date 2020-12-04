@@ -1,6 +1,12 @@
 <template>
     <div class="header">
         <header class="header_wrap">
+            <div class="header_bars header_mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <router-link
                 class="logo"
                 to="/"
@@ -19,6 +25,12 @@
             </router-link>
 
             <div class="header_right">
+                <img
+                    class="header_login_icon header_mobile"
+                    src="../assets/i/photo.png"
+                    alt="login_icon"
+                >
+
                 <ul class="header_nav">
                     <li class="header_nav__item">
                         <router-link to="/send">

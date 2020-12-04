@@ -1,5 +1,5 @@
 <template>
-    <div class="wrap">
+    <div class="wrap home">
         <div class="home_intro">
             <div class="home_intro_text">
                 <h2>Заголовок о сервисе в две строки</h2>

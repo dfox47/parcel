@@ -24,6 +24,8 @@ h2 {
     text-align: center;
 }
 
+
+
 header {
     line-height: 1;
 }
@@ -96,9 +98,7 @@ ul {
             cursor: pointer;
         }
     }
-
 }
-
 
 .send_or_grab__inner {
     align-items: center;
@@ -118,6 +118,43 @@ ul {
     }
 }
 
+@media only screen and (max-width: 980px) {
+    .send_or_grab {
+        align-items: center;
+        flex-direction: column;
+
+        div {
+            &:nth-child(1) {
+                margin: 0 0 38px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .send_or_grab {
+        div {
+            height: 246px;
+            width: 246px;
+
+            &:nth-child(1) {
+                margin: 0 0 26px;
+            }
+        }
+    }
+
+    .send_or_grab__inner {
+        padding: 0 0 40px;
+
+        img {
+            max-width: 88px;
+        }
+
+        span {
+            font-size: 23px;
+        }
+    }
+}
 
 
 // logo [START]
@@ -136,6 +173,35 @@ ul {
 .logo__text {
     padding: 0 0 7px;
 }
+
+@media only screen and (max-width: 980px) {
+    .logo__img {
+        width: 30px;
+    }
+
+    .logo__text {
+        padding: 0 0 2px;
+        width: 160px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logo__img {
+        display: none;
+        max-width: 42px;
+    }
+
+    .logo__text {
+        padding: 0;
+        width: 172px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .logo__text {
+        width: 114px;
+    }
+}
 // logo [END]
 
 
@@ -146,6 +212,12 @@ ul {
 
 .login_nav__item {
     margin: 0 0 0 28px;
+}
+
+@media only screen and (max-width: 980px) {
+    .login_nav__item {
+        display: none;
+    }
 }
 
 

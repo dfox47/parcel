@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@charset "utf-8";
-
 //h2 {
 //  font-size: 36px;
 //  font-weight: bold;
@@ -25,15 +23,13 @@
   border: 1px solid transparent;
   background: linear-gradient(138deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);
   color: #fff !important;
-  font-size: 20px;
   text-align: center;
   text-decoration: none;
-  padding: 11px 0;
 
   &:hover {
     background: #fff;
     border: 1px solid $c_special_blue;
-    color: $c_special_blue;
+    color: $c_special_blue !important;
     text-decoration: none;
   }
 }
@@ -52,11 +48,21 @@
 .btn_medium,
 .btn_medium:visited {
   border: 1px solid transparent;
+  font-size: 20px;
+  padding: 11px 0;
 }
 
 .btn_medium,
 .btn_medium:visited {
   max-width: 260px;
+}
+
+@media only screen and (max-width: 460px) {
+  .btn_medium {
+    font-size: 18px;
+    max-width: 180px;
+    padding: 9px 0;
+  }
 }
 
 
