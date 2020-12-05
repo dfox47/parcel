@@ -12,6 +12,12 @@
                     href="javascript:void(0);"
                     class="btn btn_blue btn_medium"
                 >Регистрация</a>
+                <button
+                    class="button"
+                    @click="this.show"
+                >
+                    Show Modal
+                </button>
             </div>
             <div class="home_intro_img">
                 <img

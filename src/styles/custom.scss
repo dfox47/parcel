@@ -267,39 +267,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'montserrat', sans-serif;
-}
-
-#app {
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100vw;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
 .button {
     appearance: none;
     outline: none;
@@ -324,7 +291,7 @@ body {
     }
 }
 
-.modal-overlay {
+.popup_overlay {
     position: absolute;
     top: 0;
     left: 0;

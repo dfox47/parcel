@@ -2,25 +2,10 @@
     <v-app>
         <app-header />
 
-        <!--<app-login_popup />-->
-
-        <div>
-            <button class="button" @click="showLoginPopup = true">
-                popup регистрации
-            </button>
-            <transition name="fade" appear>
-                <div class="modal-overlay" v-if="showLoginPopup" @click="showLoginPopup = false"></div>
-            </transition>
-            <transition name="fade" appear>
-                <div class="modal" v-if="showLoginPopup">
-                    <h1>Lorem Ipsum</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident explicabo accusamus laudantium voluptatum nobis sed nesciunt neque possimus molestiae?</p>
-                    <button class="button" @click="showLoginPopup = false">
-                        Закрыть
-                    </button>
-                </div>
-            </transition>
-        </div>
+        <app-login_popup
+            v-bind:showLoginPopup="showLoginPopup"
+            ref="login_popup"
+        />
 
         <div class="content">
             <router-view />
@@ -64,10 +49,10 @@ export default {
         }
     },
     methods: {
-        closeError () {
-            this.$store.dispatch('clearError')
+        show () { //accessing the child component instance through $refs
+            this.$refs.login_popup.show()
         }
-    }
+    },
 }
 </script>
 
