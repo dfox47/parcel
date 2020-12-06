@@ -2,10 +2,7 @@
     <v-app>
         <app-header />
 
-        <app-login_popup
-            v-bind:showLoginPopup="showLoginPopup"
-            ref="login_popup"
-        />
+        <app-login_popup />
 
         <div class="content">
             <router-view />
@@ -40,19 +37,11 @@
 
 <script>
 export default {
-    data() {
-        return { showLoginPopup: true }
-    },
     computed: {
         error () {
             return this.$store.getters.error
         }
-    },
-    methods: {
-        show () { //accessing the child component instance through $refs
-            this.$refs.login_popup.show()
-        }
-    },
+    }
 }
 </script>
 

@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+
+.popup {
+  background-color: #FFF;
+  border-radius: 14px;
+  left: 50%;
+  max-width: 560px;
+  padding: 70px 70px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 99;
+
+  p {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.popup_bottom {
+  display: flex;
+  flex-direction: column;
+  margin: 52px 0 0;
+  text-align: center;
+}
+
+.popup_close_btn {
+  background-color: #000;
+  border: 1px solid #000;
+  border-radius: 12px;
+  cursor: pointer;
+  height: 40px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  transition: $transition;
+  width: 40px;
+
+  &:after,
+  &:before {
+    background-color: #fff;
+    content: ' ';
+    height: 17px;
+    left: 18px;
+    position: absolute;
+    top: 11px;
+    width: 2px;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background-color: $c_special_blue;
+    border: 1px solid $c_special_blue;
+  }
+
+  &:active {
+    background-color: #fff;
+
+    &:after,
+    &:before {
+      background-color: $c_special_blue;
+    }
+  }
+}
+
+.popup_login {}
+
+.popup_login_options {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 35px;
+  width: 100%;
+
+  >div {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.popup_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 98;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.popup_one_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

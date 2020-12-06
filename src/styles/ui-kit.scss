@@ -1,10 +1,7 @@
 @charset "utf-8";
 
-//h2 {
-//  font-size: 36px;
-//  font-weight: bold;
-//  text-align: center;
-//}
+
+
 
 .btn,
 .btn:visited {
@@ -50,11 +47,15 @@
   border: 1px solid transparent;
   font-size: 20px;
   padding: 11px 0;
+  max-width: 260px;
 }
 
-.btn_medium,
-.btn_medium:visited {
-  max-width: 260px;
+.btn_large,
+.btn_large:visited {
+  border: 1px solid transparent;
+  font-size: 20px;
+  padding: 11px 0;
+  max-width: 420px;
 }
 
 @media only screen and (max-width: 460px) {
@@ -65,10 +66,88 @@
   }
 }
 
-
 .btn_small,
 .btn_small:visited {
   height: 37px;
   padding: 0 38px 0;
   max-width: initial;
+}
+
+
+.link_blue,
+.link_blue:visited {
+  color: $c_special_blue;
+  font-size: 24px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+.input_text {
+  border: 1px solid $c_input_border;
+  border-radius: 4px;
+  font-size: 17px;
+  height: 60px;
+  margin: 0 0 15px;
+  max-width: 420px;
+  padding: 0 18px;
+  width: 100%;
+}
+
+.input_password {
+  position: relative;
+  margin: 0 0 15px;
+  max-width: 420px;
+  width: 100%;
+
+  img {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-60%);
+  }
+
+  input {
+    border: 1px solid $c_input_border;
+    border-radius: 4px;
+    font-size: 17px;
+    height: 60px;
+    max-width: 420px;
+    padding: 0 18px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+.checkbox {
+  cursor: pointer;
+  .control-me {
+    height: 22px;
+    margin: 0 4px 0 0;
+    width: 22px;
+
+    &::after {
+      background: url("#{$i}/icons/checkbox.svg") center center no-repeat;
+      content: " ";
+      display: block;
+      font-size: 100px;
+      height: 22px;
+      width: 22px;
+    }
+  }
+
+  input {
+    position: absolute;
+    left: -100vw;
+  }
+
+  input:checked ~ .control-me::after {
+    background: url("#{$i}/icons/checkbox_active.svg") center center no-repeat;
+  }
 }

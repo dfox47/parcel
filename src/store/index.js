@@ -6,11 +6,21 @@ import requests from "./requests";
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-    state: {},
-    mutations: {},
-    actions: {},
-    modules: {
-        shared,
-        requests
+    state: {
+        LoginPopup: false
+    },
+    mutations: {
+        showLoginPopup(state) {
+            console.log('showLoginPopup');
+            state.LoginPopup = true;
+        },
+        hideLoginPopup(state) {
+            state.LoginPopup = false;
+        }
+    },
+    getters: {
+        getLoginPopup: state => {
+            return state.LoginPopup;
+        }
     }
 })

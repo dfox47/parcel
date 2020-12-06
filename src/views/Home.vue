@@ -1,8 +1,4 @@
 <template>
-    <!--    <button id="show-modal" @click="showLoginPopup = true">Show Modal</button>-->
-    <!--    &lt;!&ndash; use the modal component, pass in the prop &ndash;&gt;-->
-    <!--    <modal v-if="showLoginPopup" @close="showLoginPopup = false">-->
-
     <div class="wrap home">
         <div class="home_intro">
             <div class="home_intro_text">
@@ -11,13 +7,8 @@
                 <a
                     href="javascript:void(0);"
                     class="btn btn_blue btn_medium"
+                    @click="this.showLoginPopup"
                 >Регистрация</a>
-                <button
-                    class="button"
-                    @click="this.show"
-                >
-                    Show Modal
-                </button>
             </div>
             <div class="home_intro_img">
                 <img
@@ -194,7 +185,18 @@
 </template>
 
 
-
-
+<script>
+import store from "../store";
+export default {
+    methods: {
+        showLoginPopup () {
+            store.commit('showLoginPopup');
+        },
+        hideLoginPopup () {
+            store.commit('hideLoginPopup');
+        }
+    }
+}
+</script>
 
 
