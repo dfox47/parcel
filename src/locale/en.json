@@ -3,7 +3,7 @@
   "language_name": "English",
   "login": "Login",
   "login_button": "Login",
-  "register": "Register",
   "menu_button_send": "Want to send",
-  "menu_button_take": "Can take"
+  "menu_button_take": "Can take",
+  "register": "Register"
 }

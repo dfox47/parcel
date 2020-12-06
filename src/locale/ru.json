@@ -3,7 +3,7 @@
   "language_name": "Русский",
   "login": "Войти",
   "login_button": "Вход",
-  "register": "Зарегистрироваться",
   "menu_button_send": "Хочу отправить",
-  "menu_button_take": "Могу захватить"
+  "menu_button_take": "Могу захватить",
+  "register": "Зарегистрироваться"
 }

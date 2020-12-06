@@ -18,6 +18,7 @@ h1 {
 }
 
 h2 {
+  font-family: $font_roboto;
   color: #000;
   font-size: 32px;
   letter-spacing: -.03em;
@@ -76,85 +77,6 @@ ul {
   }
 }
 
-
-
-.send_or_grab {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 742px;
-  width: 100%;
-
-  div {
-    border-radius: 18px;
-    box-shadow: 1px 7px 33px 1px rgba(#000, .15);
-    height: 320px;
-    padding: 4px;
-    transition: $transition;
-    width: 320px;
-
-    &:hover {
-      background: linear-gradient(90deg, $c_special_blue, $c_special_green);
-      cursor: pointer;
-    }
-  }
-}
-
-.send_or_grab__inner {
-  align-items: center;
-  background-color: #fff;
-  border-radius: 16px;
-  color: $c_special_blue;
-  display: flex;
-  flex-direction: column;
-  font-size: 30px;
-  height: 100%;
-  justify-content: flex-end;
-  padding: 0 0 52px;
-  width: 100%;
-
-  span {
-    padding: 37px 0 0;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  .send_or_grab {
-    align-items: center;
-    flex-direction: column;
-
-    div {
-      &:first-child {
-        margin: 0 0 38px;
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .send_or_grab {
-    div {
-      height: 246px;
-      width: 246px;
-
-      &:first-child {
-        margin: 0 0 26px;
-      }
-    }
-  }
-
-  .send_or_grab__inner {
-    padding: 0 0 40px;
-
-    img {
-      max-width: 88px;
-    }
-
-    span {
-      font-size: 23px;
-    }
-  }
-}
 
 
 // logo [START]
@@ -236,6 +158,86 @@ ul {
 .plane_icon {
   color: blueviolet;
   font-size: 20px;
+}
+
+
+
+.send_or_grab {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 742px;
+  width: 100%;
+
+  div {
+    border-radius: 18px;
+    box-shadow: 1px 7px 33px 1px rgba(#000, .15);
+    height: 320px;
+    padding: 4px;
+    transition: $transition;
+    width: 320px;
+
+    &:hover {
+      background: linear-gradient(90deg, $c_special_blue, $c_special_green);
+      cursor: pointer;
+    }
+  }
+}
+
+.send_or_grab__inner {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px;
+  color: $c_special_blue;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 0 0 52px;
+  width: 100%;
+
+  span {
+    padding: 37px 0 0;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .send_or_grab {
+    align-items: center;
+    flex-direction: column;
+
+    div {
+      &:first-child {
+        margin: 0 0 38px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .send_or_grab {
+    div {
+      height: 246px;
+      width: 246px;
+
+      &:first-child {
+        margin: 0 0 26px;
+      }
+    }
+  }
+
+  .send_or_grab__inner {
+    padding: 0 0 40px;
+
+    img {
+      max-width: 88px;
+    }
+
+    span {
+      font-size: 23px;
+    }
+  }
 }
 
 
