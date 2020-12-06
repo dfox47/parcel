@@ -1,12 +1,12 @@
-@charset "utf-8";
+
 
 
 .popup {
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 14px;
   left: 50%;
   max-width: 560px;
-  padding: 70px 70px;
+  padding: 70px;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -31,7 +31,7 @@
 
 .popup_close_btn {
   background-color: #000;
-  border: 1px solid #000;
+  border: 1px solid rgba(#000, .99);
   border-radius: 12px;
   cursor: pointer;
   height: 40px;
@@ -41,8 +41,8 @@
   transition: $transition;
   width: 40px;
 
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     background-color: #fff;
     content: ' ';
     height: 17px;
@@ -52,11 +52,11 @@
     width: 2px;
   }
 
-  &:after {
+  &::after {
     transform: rotate(-45deg);
   }
 
-  &:before {
+  &::before {
     transform: rotate(45deg);
   }
 
@@ -68,12 +68,14 @@
   &:active {
     background-color: #fff;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       background-color: $c_special_blue;
     }
   }
 }
+
+
 
 .popup_login {}
 
@@ -83,25 +85,24 @@
   justify-content: space-between;
   margin: 0 0 35px;
   width: 100%;
-
-  >div {
-    align-items: center;
-    display: flex;
-  }
 }
 
+
+
 .popup_overlay {
+  background-color: rgba(#000, .3);
+  bottom: 0;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
   z-index: 98;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .popup_one_column {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
+

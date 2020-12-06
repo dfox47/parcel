@@ -5,12 +5,12 @@ body {
     .v-application {
         font-family: $font_main;
 
+      p {
+        margin: 0;
+      }
+
         ul {
             padding: 0;
-        }
-
-        p {
-            margin: 0;
         }
     }
 }

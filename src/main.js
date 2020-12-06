@@ -6,7 +6,7 @@ import vuetify from './plugins/vuetify';
 import VueResource from 'vue-resource';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Login_popup from './components/Login_popup';
+import Login_popup from './components/LoginPopup';
 import CountryFlag from 'vue-country-flag';
 
 Vue.component('app-header', Header);

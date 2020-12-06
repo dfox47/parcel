@@ -1,14 +1,15 @@
 <template>
     <v-app>
+        <!-- header -->
         <app-header />
 
-        <app-login_popup />
+        <!-- content -->
+        <router-view />
 
-        <div class="content">
-            <router-view />
-        </div>
-
+        <!-- footer -->
         <app-footer />
+
+
 
         <template v-if="error">
             <v-snackbar
@@ -32,6 +33,8 @@
                 </template>
             </v-snackbar>
         </template>
+
+        <app-login_popup />
     </v-app>
 </template>
 

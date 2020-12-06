@@ -8,8 +8,9 @@
                 class="popup_overlay"
                 v-if="showLoginPopup"
                 @click="this.hideLoginPopup"
-            ></div>
+            />
         </transition>
+
         <transition
             name="fade"
             appear
@@ -21,7 +22,8 @@
                 <div
                     class="popup_close_btn"
                     @click="this.hideLoginPopup"
-                ></div>
+                />
+
                 <form
                     action=""
                     class="popup_one_column"
@@ -29,41 +31,42 @@
                     <h2>
                         {{ $vuetify.lang.t('$vuetify.login') }}
                     </h2>
-                    <!--                    -->
-                    <input
-                        class="input_text"
-                        type="text"
-                        placeholder="Номер телефона"
-                    >
-                    <span class="input_password">
+
+                    <label class="input_wrap">
+                        <input
+                            type="text"
+                            placeholder="Номер телефона"
+                        >
+                    </label>
+
+                    <label class="input_wrap">
                         <input
                             :type="type"
                             placeholder="Пароль"
                         >
 
                         <img
+                            class="input_wrap__img"
                             :src="pass_img"
                             @click="showPassword"
-                        />
-                    </span>
+                            alt=""
+                        >
+                    </label>
 
                     <div class="popup_login_options">
                         <div>
-                            <div>
-                                <label
-                                    class="checkbox"
-                                    for="checkbox_remember_me"
+                            <label class="checkbox">
+                                <input
+                                    type="checkbox"
+                                    class="visually-hidden"
                                 >
-                                    <input
-                                        id="checkbox_remember_me"
-                                        type="checkbox"
-                                        class="visually-hidden"
-                                    >
-                                    <div class="control-me"></div>
-                                </label>
-                            </div>
-                            <p>Запомнить меня</p>
+
+                                <span class="checkbox__box" />
+
+                                <span class="checkbox__desc">Запомнить меня</span>
+                            </label>
                         </div>
+
                         <span>Забыли пароль?</span>
                     </div>
 
@@ -78,6 +81,7 @@
                         <p>
                             Еще нет аккаунта?
                         </p>
+
                         <a
                             href=""
                             class="link_blue"
@@ -106,11 +110,12 @@ export default {
         hideLoginPopup () {
             store.commit('hideLoginPopup');
         },
-        showPassword() {
-            if(this.type === 'password') {
+        showPassword () {
+            if (this.type === 'password') {
                 this.type = 'text'
                 this.pass_img = require('@/assets/i/icons/hide_pass.svg')
-            } else {
+            }
+            else {
                 this.type = 'password'
                 this.pass_img = require('@/assets/i/icons/show_pass.svg')
             }

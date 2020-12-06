@@ -1,148 +1,148 @@
-@charset "utf-8";
-
-
-
 .header {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    &:after {
-        background: url(#{$i}/bg1.svg) right top no-repeat scroll transparent;
-        background-size: contain;
-        content: "";
-        height: 564px;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 1210px;
-        z-index: 0;
-    }
+  &:after {
+    background: url(#{$i}/bg1.svg) right top no-repeat scroll transparent;
+    background-size: contain;
+    content: "";
+    height: 564px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1210px;
+    z-index: 0;
+  }
 }
 
 .header_bars {
-    width: 54px;
+  width: 54px;
 
-    span {
-        background-color: $c_special_blue;
-        display: block;
-        height: 4px;
-        margin: 0 0 8px;
-        width: 36px;
+  span {
+    background-color: $c_special_blue;
+    display: block;
+    height: 4px;
+    margin: 0 0 8px;
+    width: 36px;
 
-        &:nth-child(3) {
-        margin: 0;
-        }
+    &:nth-child(3) {
+      margin: 0;
     }
+  }
 }
 
 .header_login_icon {
-    position: relative;
-    border-radius: 50%;
+  position: relative;
+  border-radius: 50%;
 }
 
 .header_mobile {
-    display: none;
+  display: none;
 }
 
+
+
 .header_nav {
-    font-size: 18px;
-    font-weight: 300;
+  font-size: 18px;
+  font-weight: 300;
 
-    a,
-    a:visited {
-        color: #000;
-        text-decoration: none;
-        transition: $transition;
+  a,
+  a:visited {
+    color: #000;
+    text-decoration: none;
+    transition: $transition;
 
-        &:hover,
-        &.router-link-active {
-            color: $c_link;
-        }
+    &:hover,
+    &.router-link-active {
+      color: $c_link;
     }
+  }
 }
 
 .header_nav__item {
-    margin: 0 0 0 36px;
+  margin: 0 0 0 36px;
 }
 
+
+
 .header_right {
-    align-items: center;
-    display: flex;
-    padding: 8px 0 0;
+  align-items: center;
+  display: flex;
+  padding: 8px 0 0;
 }
 
 .header_wrap {
-    align-items: flex-start;
-    border-bottom: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 15px;
-    max-width: 1180px;
-    padding: 22px 0 29px;
-    position: relative;
-    width: 100%;
-    z-index: 3;
+  align-items: flex-start;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 15px;
+  padding: 22px 0 29px;
+  position: relative;
+  width: 100%;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 1400px) {
-    .header {
-        &:after {
-            background: none;
-        }
+  .header {
+    &:after {
+      background: none;
     }
+  }
 
-    .header_wrap {
-        padding: 26px 40px 29px;
-    }
+  .header_wrap {
+    padding: 26px 40px 29px;
+  }
 }
 
 @media only screen and (max-width: 980px) {
-    .header_mobile {
-        display: block;
-    }
+  .header_mobile {
+    display: block;
+  }
 
-    .header_nav {
-        display: none;
-    }
+  .header_nav {
+    display: none;
+  }
 
-    .header_wrap {
-        align-items: center;
-        border-bottom: 1px solid $c_special_blue;
-        padding: 14px 40px 15px;
-    }
+  .header_wrap {
+    align-items: center;
+    border-bottom: 1px solid $c_special_blue;
+    padding: 14px 40px 15px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .header_bars {
-        width: 40px;
-    }
+  .header_bars {
+    width: 40px;
+  }
 
-    .header_login_icon {
-        max-width: 40px;
-    }
+  .header_login_icon {
+    max-width: 40px;
+  }
 
-    .header_wrap {
-        padding: 21px 21px 22px;
-    }
+  .header_wrap {
+    padding: 21px 21px 22px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
-    .header_bars {
-        width: 24px;
+  .header_bars {
+    width: 24px;
 
-        span {
-            height: 3px;
-            width: 25px;
-            margin: 0 0 5px;
-        }
-    }
+    span {
+      height: 3px;
 
-    .header_login_icon {
-        bottom: 3px;
-        max-width: 24px;
+      margin: 0 0 5px;
+      width: 25px;
     }
+  }
 
-    .header_wrap {
-        padding: 13px 19px;
-    }
+  .header_login_icon {
+    bottom: 3px;
+    max-width: 24px;
+  }
+
+  .header_wrap {
+    padding: 13px 19px;
+  }
 }
