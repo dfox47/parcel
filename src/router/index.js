@@ -10,41 +10,74 @@ import Registration from "../views/Registration";
 import Search from "../views/Search";
 import Error404 from "../views/Error404";
 
+import LoginPopup from "@/components/LoginPopup";
+
 Vue.use(VueRouter);
+
+const popupRoutes = [
+    {
+        name: 'popupName',
+        path: "/popupLogin",
+        component: LoginPopup
+    }
+]
 
 const routes = [
     {
         component: Home,
-        path: '/'
+        path: '/',
+        children: [
+            {
+                name: 'popupName',
+                path: "/popupLogin",
+                components: {
+                    page: LoginPopup
+                }
+            }
+        ]
     },
     {
         component: ParcelTake,
-        path: '/take'
+        path: '/take',
+        children: popupRoutes
     },
     {
         component: TakeSearch,
-        path: '/take/search'
+        path: '/take/search',
+        children: popupRoutes
     },
     {
         component: ParcelSend,
-        path: '/send'
+        path: '/send',
+        children: [
+            {
+                path: "/popupLogin",
+                components: {
+                    page: LoginPopup
+                }
+            }
+        ]
     },
     {
         component: SendSearch,
-        path: '/send/search'
+        path: '/send/search',
+        children: popupRoutes
     },
     {
         component: Registration,
-        path: '/registration'
+        path: '/registration',
+        children: popupRoutes
     },
 
     {
         component: Search,
-        path: '/search'
+        path: '/search',
+        children: popupRoutes
     },
     {
         component: Error404,
-        path: '*'
+        path: '*',
+        children: popupRoutes
     }
 
 ]

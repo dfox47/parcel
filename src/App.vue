@@ -9,7 +9,7 @@
         <!-- footer -->
         <app-footer />
 
-
+        <!--   add popup view     -->
 
         <template v-if="error">
             <v-snackbar

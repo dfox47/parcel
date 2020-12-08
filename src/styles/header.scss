@@ -3,7 +3,7 @@
   z-index: 1;
 
   &:after {
-    background: url(#{$i}/bg1.svg) right top no-repeat scroll transparent;
+    background: url(#{$i}/background_1.svg) right top no-repeat scroll transparent;
     background-size: contain;
     content: "";
     height: 564px;

@@ -1,98 +1,100 @@
 <template id="modal-template">
-    <div>
-        <transition
-            name="fade"
-            appear
-        >
-            <div
-                class="popup_overlay"
-                v-if="showLoginPopup"
-                @click="this.hideLoginPopup"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
-            <div
-                class="popup popup_login"
-                v-if="showLoginPopup"
+    <Portal to="popup">
+        <div>
+            <transition
+                name="fade"
+                appear
             >
                 <div
-                    class="popup_close_btn"
+                    class="popup_overlay"
+                    v-if="showLoginPopup"
                     @click="this.hideLoginPopup"
                 />
+            </transition>
 
-                <form
-                    action=""
-                    class="popup_one_column"
+            <transition
+                name="fade"
+                appear
+            >
+                <div
+                    class="popup popup_login"
+                    v-if="showLoginPopup"
                 >
-                    <h2>
-                        {{ $vuetify.lang.t('$vuetify.login') }}
-                    </h2>
+                    <div
+                        class="popup_close_btn"
+                        @click="this.hideLoginPopup"
+                    />
 
-                    <label class="input_wrap">
-                        <input
-                            type="text"
-                            placeholder="Номер телефона"
-                        >
-                    </label>
+                    <form
+                        action=""
+                        class="popup_one_column"
+                    >
+                        <h2>
+                            {{ $vuetify.lang.t('$vuetify.login') }}
+                        </h2>
 
-                    <label class="input_wrap">
-                        <input
-                            :type="type"
-                            placeholder="Пароль"
-                        >
+                        <label class="input_wrap">
+                            <input
+                                type="text"
+                                placeholder="Номер телефона"
+                            >
+                        </label>
 
-                        <img
-                            class="input_wrap__img"
-                            :src="pass_img"
-                            @click="showPassword"
-                            alt=""
-                        >
-                    </label>
+                        <label class="input_wrap">
+                            <input
+                                :type="type"
+                                placeholder="Пароль"
+                            >
 
-                    <div class="popup_login_options">
-                        <div>
-                            <label class="checkbox">
-                                <input
-                                    type="checkbox"
-                                    class="visually-hidden"
-                                >
+                            <img
+                                class="input_wrap__img"
+                                :src="pass_img"
+                                @click="showPassword"
+                                alt=""
+                            >
+                        </label>
 
-                                <span class="checkbox__box" />
+                        <div class="popup_login_options">
+                            <div>
+                                <label class="checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="visually-hidden"
+                                    >
 
-                                <span class="checkbox__desc">Запомнить меня</span>
-                            </label>
+                                    <span class="checkbox__box" />
+
+                                    <span class="checkbox__desc">Запомнить меня</span>
+                                </label>
+                            </div>
+
+                            <span>Забыли пароль?</span>
                         </div>
 
-                        <span>Забыли пароль?</span>
-                    </div>
-
-                    <span
-                        class="btn btn_blue btn_large"
-                        @click="this.hideLoginPopup"
-                    >
-                        {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                    </span>
-
-                    <div class="popup_bottom">
-                        <p>
-                            Еще нет аккаунта?
-                        </p>
-
-                        <a
-                            href=""
-                            class="link_blue"
+                        <span
+                            class="btn btn_blue btn_large"
+                            @click="this.hideLoginPopup"
                         >
-                            {{ $vuetify.lang.t('$vuetify.register') }}
-                        </a>
-                    </div>
-                </form>
-            </div>
-        </transition>
-    </div>
+                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                        </span>
+
+                        <div class="popup_bottom">
+                            <p>
+                                Еще нет аккаунта?
+                            </p>
+
+                            <a
+                                href=""
+                                class="link_blue"
+                            >
+                                {{ $vuetify.lang.t('$vuetify.register') }}
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </transition>
+        </div>
+    </Portal>
 </template>
 
 <script>

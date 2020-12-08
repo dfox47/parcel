@@ -25,7 +25,9 @@
 
 
 
-.home_advantages {
+.home_advantages {}
+
+.home_advantages__content {
   padding: 112px 0 208px;
   position: relative;
   margin: 0 auto;
@@ -69,7 +71,7 @@
 }
 
 @media only screen and (max-width: 1400px) {
-  .home_advantages {
+  .home_advantages__content {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -103,13 +105,13 @@
 }
 
 @media only screen and (max-width: 980px) {
-  .home_advantages {
+  .home_advantages__content {
     padding: 100px 0 37px;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .home_advantages {
+  .home_advantages__content {
     flex-direction: column;
 
     h2 {
@@ -133,7 +135,7 @@
 }
 
 @media only screen and (max-width: 380px) {
-  .home_advantages {
+  .home_advantages__content {
     padding: 68px 0 0;
   }
 
@@ -152,50 +154,30 @@
 }
 
 
-
-.home_backgrounds {
-  img {
-    position: absolute;
-
-    &:nth-child(1) {
-      top: 682px;
-      left: 0;
-    }
-
-    &:nth-child(2) {
-      top: 786px;
-      right: 0;
-    }
-
-    &:nth-child(3) {
-      top: 2248px;
-      left: 0;
-    }
-
-    &:nth-child(4) {
-      top: 3012px;
-      right: 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 1400px) {
-  .home_backgrounds {
-    img {
-      display: none;
-    }
-  }
-}
-
-
-
 .home_how_it_works {
+  position: relative;
+
+  &::before {
+    background: url(#{$i}/background_5.svg) 0 0 no-repeat scroll transparent;
+    background-size: contain;
+    content: "";
+    height: 902px;
+    right: 0;
+    position: absolute;
+    top: -254px;
+    width: 423px;
+    z-index: 1;
+  }
+}
+
+.home_how_it_works__content{
   align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 75.4%;
   padding: 185px 0 116px;
+  z-index: 3;
 
   h2 {
     padding: 0 0 64px;
@@ -220,6 +202,12 @@
 
 @media only screen and (max-width: 1400px) {
   .home_how_it_works {
+    &::before {
+      display: none;
+    }
+  }
+
+  .home_how_it_works__content{
     max-width: 85.5%;
     padding: 109px 0 40px;
 
@@ -244,7 +232,7 @@
 }
 
 @media only screen and (max-width: 980px) {
-  .home_how_it_works {
+  .home_how_it_works__content{
     align-items: center;
     flex-direction: column;
   }
@@ -256,7 +244,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .home_how_it_works {
+  .home_how_it_works__content{
     padding: 88px 0 0;
 
     h2 {
@@ -276,7 +264,7 @@
 }
 
 @media only screen and (max-width: 380px) {
-  .home_how_it_works {
+  .home_how_it_works__content{
     max-width: 89%;
     padding: 69px 0 0;
 
@@ -450,11 +438,28 @@
 
 
 .home_mobile_app {
+  position: relative;
+
+  &::before {
+    background: url(#{$i}/background_4.svg) 0 0 no-repeat scroll transparent;
+    background-size: contain;
+    content: "";
+    height: 1361px;
+    left: 0;
+    position: absolute;
+    top: -254px;
+    width: 664px;
+    z-index: 1;
+  }
+}
+
+.home_mobile_app__content{
   display: flex;
   margin: 0 auto;
   max-width: 71%;
   padding: 116px 0 129px;
   position: relative;
+  z-index: 3;
 }
 
 .home_mobile_app_text {
@@ -487,6 +492,12 @@
 
 @media only screen and (max-width: 1400px) {
   .home_mobile_app {
+    &::before {
+      display: none;
+    }
+  }
+
+  .home_mobile_app__content{
     align-items: flex-start;
     padding: 145px 0 101px;
 
@@ -509,7 +520,7 @@
 }
 
 @media only screen and (max-width: 980px) {
-  .home_mobile_app {
+  .home_mobile_app__content{
     align-items: center;
     flex-direction: column;
     padding: 108px 0 105px;
@@ -536,7 +547,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .home_mobile_app {
+  .home_mobile_app__content{
     padding: 124px 0 129px;
 
     img {
@@ -576,7 +587,7 @@
 }
 
 @media only screen and (max-width: 380px) {
-  .home_mobile_app {
+  .home_mobile_app__content{
     max-width: 75%;
     padding: 112px 0 95px;
   }
