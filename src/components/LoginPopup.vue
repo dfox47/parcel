@@ -1,5 +1,6 @@
 <template id="modal-template">
     <Portal to="popup">
+        <slot name="backdrop"/>
         <div>
             <transition
                 name="fade"

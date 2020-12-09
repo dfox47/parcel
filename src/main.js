@@ -9,12 +9,16 @@ import Footer from './components/Footer';
 import Login_popup from './components/LoginPopup';
 import CountryFlag from 'vue-country-flag';
 
+import PortalVue from 'portal-vue'
+
 Vue.component('app-header', Header);
 Vue.component('app-footer', Footer);
 Vue.component('app-login_popup', Login_popup);
 Vue.component('country-flag', CountryFlag);
 
 Vue.use(VueResource);
+
+Vue.use(PortalVue);
 
 Vue.config.productionTip = false;
 

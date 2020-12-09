@@ -17,7 +17,8 @@
                     >
                         POPUP
                     </router-link>
-
+                    <slot name="backdrop" slot="backdrop"/><slot/>
+                    <RouterView/>
                 </div>
 
                 <div class="home_intro_img">
