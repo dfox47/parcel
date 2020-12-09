@@ -79,6 +79,13 @@ ul {
 
 
 
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+
+
 // logo [START]
 .logo,
 .logo:visited {

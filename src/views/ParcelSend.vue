@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div class="content">
         <h1>Parcel Send</h1>
+
         <send-menu />
     </div>
 </template>

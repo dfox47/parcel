@@ -1,5 +1,5 @@
 <template>
-    <h1>Registration</h1>
+    <h1>{{ $vuetify.lang.t('$vuetify.registration') }}</h1>
 </template>
 
 

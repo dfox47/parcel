@@ -1,9 +1,43 @@
 {
   "continue_button": "Продолжить",
-  "language_name": "Русский",
+  "create_new_request": "Создать заявку",
+
+  "footer.contacts": "Контакты",
+  "footer.copy": "Копирайт",
+  "footer.lang": "Русский, ₽",
+  "footer.rules": "Правила",
+  "footer.send": "Хочу отправить",
+  "footer.support": "Поддержка",
+  "footer.take": "Могу захватить",
+
+  "home.how_it_works": "Как это работает?",
+  "home.title": "Заголовок о сервисе в две строки",
+
+  "language_name": "Русский, ₽",
+
   "login": "Войти",
-  "login_button": "Вход",
+  "login.button": "Вход",
+  "login.dont_have_account": "Еще нет аккаунта?",
+  "login.forgot_pass": "Забыли пароль?",
+  "login.remember": "Запомнить меня",
+
   "menu_button_send": "Хочу отправить",
   "menu_button_take": "Могу захватить",
-  "register": "Зарегистрироваться"
+
+  "our_advantages": "Наши преимущества",
+
+  "register": "Зарегистрироваться",
+  "registration": "Регистрация",
+
+  "search_for_offers": "Поиск предложений",
+
+  "search.find": "Найти",
+  "search.from": "Откуда",
+  "search.select_country": "Выберите страну",
+  "search.title": "Поиск посылки",
+  "search.to": "Куда",
+  "search.weight": "кг",
+
+  "we_have_mobile_app": "У нас есть мобильное приложение!",
+  "what_do_you_need": "Что Вам необходимо?"
 }

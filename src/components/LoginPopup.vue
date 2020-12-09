@@ -66,11 +66,11 @@
 
                                     <span class="checkbox__box" />
 
-                                    <span class="checkbox__desc">Запомнить меня</span>
                                 </label>
+                                <span class="checkbox__desc">{{ $vuetify.lang.t('$vuetify.login.remember') }}</span>
                             </div>
 
-                            <span>Забыли пароль?</span>
+                            <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
                         </div>
 
                         <span
@@ -82,7 +82,7 @@
 
                         <div class="popup_bottom">
                             <p>
-                                Еще нет аккаунта?
+                                {{ $vuetify.lang.t('$vuetify.login.dont_have_account') }}
                             </p>
 
                             <a

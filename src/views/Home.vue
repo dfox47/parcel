@@ -3,14 +3,14 @@
         <div class="wrap">
             <div class="home_intro">
                 <div class="home_intro_text">
-                    <h2>Заголовок о сервисе в две строки</h2>
+                    <h2>{{ $vuetify.lang.t('$vuetify.home.title') }}</h2>
 
                     <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
 
                     <a
                         to="/popupLogin"
                         class="btn btn_blue btn_medium"
-                    >Регистрация</a>
+                    >{{ $vuetify.lang.t('$vuetify.registration') }}</a>
 
                     <router-link
                         to="/popupLogin"
@@ -38,7 +38,7 @@
         <div class="home_send_or_grab">
             <div class="wrap">
                 <div class="home_send_or_grab__content">
-                    <h2>Что Вам необходимо?</h2>
+                    <h2>{{ $vuetify.lang.t('$vuetify.what_do_you_need') }}</h2>
 
                     <div class="send_or_grab">
                         <div>
@@ -47,7 +47,7 @@
                                     src="../assets/i/send.svg"
                                     alt="send"
                                 >
-                                <span>Хочу отправить</span>
+                                <span>{{ $vuetify.lang.t('$vuetify.menu_button_send') }}</span>
                             </span>
                         </div>
 
@@ -57,7 +57,7 @@
                                     src="../assets/i/grab.svg"
                                     alt="grab"
                                 >
-                                <span>Хочу захватить</span>
+                                <span>{{ $vuetify.lang.t('$vuetify.menu_button_take') }}</span>
                             </span>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
         <div class="home_advantages">
             <div class="wrap">
                 <div class="home_advantages__content">
-                    <h2>Наши преимущества</h2>
+                    <h2>{{ $vuetify.lang.t('$vuetify.our_advantages') }}</h2>
 
                     <div class="home_advantages_left">
                         <div class="home_advantages_item">
@@ -81,6 +81,7 @@
                                 Temperc hillandictur modis et ut andit, nullabore volestem nitatus andaecae volore sanderumquis
                             </p>
                         </div>
+
                         <div class="home_advantages_item">
                             <img
                                 src="../assets/i/clearance.svg"
@@ -91,6 +92,7 @@
                                 Temperc hillandictur modis et ut andit, nullabore volestem nitatus andaecae volore sanderumquis
                             </p>
                         </div>
+
                         <div class="home_advantages_item">
                             <img
                                 src="../assets/i/cost.svg"
@@ -102,6 +104,7 @@
                             </p>
                         </div>
                     </div>
+
                     <div class="home_advantages_right">
                         <div class="home_advantages_item">
                             <img
@@ -113,6 +116,7 @@
                                 Temperc hillandictur modis et ut andit, nullabore volestem nitatus andaecae volore sanderumquis
                             </p>
                         </div>
+
                         <div class="home_advantages_item">
                             <img
                                 src="../assets/i/responsibility.svg"
@@ -123,6 +127,7 @@
                                 Temperc hillandictur modis et ut andit, nullabore volestem nitatus andaecae volore sanderumquis
                             </p>
                         </div>
+
                         <div class="home_advantages_item">
                             <img
                                 src="../assets/i/association.svg"
@@ -147,7 +152,7 @@
                     >
 
                     <div class="home_mobile_app_text">
-                        <h2>У нас есть мобильное приложение!</h2>
+                        <h2>{{ $vuetify.lang.t('$vuetify.we_have_mobile_app') }}</h2>
 
                         <span>Ipsum eatam vid etur, adiatem que con provitaqui dente perumet libus aut reperep udaecti isquiatia di omnim estrupienet, ut voluptatus, con commoluptias eum rerci</span>
 
@@ -170,7 +175,7 @@
         <div class="home_how_it_works">
             <div class="wrap">
                 <div class="home_how_it_works__content">
-                    <h2>Как это работает?</h2>
+                    <h2>{{ $vuetify.lang.t('$vuetify.home.how_it_works') }}</h2>
 
                     <img
                         src="../assets/i/how_it_works.svg"

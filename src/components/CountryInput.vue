@@ -5,7 +5,7 @@
         :items="options"
         color="white"
         item-text="name"
-        label="Выберите страну"
+        :label="$vuetify.lang.t('$vuetify.search.select_country')"
         v-model="selectedValue"
     />
 </template>

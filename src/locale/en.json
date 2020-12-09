@@ -1,9 +1,43 @@
 {
   "continue_button": "Continue",
-  "language_name": "English",
+  "create_new_request": "Create request",
+
+  "footer.contacts": "Contacts",
+  "footer.copy": "Copyright",
+  "footer.lang": "English, $",
+  "footer.rules": "Rules",
+  "footer.send": "Want send",
+  "footer.support": "Support",
+  "footer.take": "Can take",
+
+  "home.how_it_works": "How it works?",
+  "home.title": "Title about service at several lines",
+
+  "language_name": "English, $",
+
   "login": "Login",
-  "login_button": "Login",
+  "login.button": "Login",
+  "login.dont_have_account": "Еще нет аккаунта?",
+  "login.forgot_pass": "Forgot password?",
+  "login.remember": "Remember me",
+
   "menu_button_send": "Want to send",
   "menu_button_take": "Can take",
-  "register": "Register"
+
+  "our_advantages": "Our advantages",
+
+  "register": "Register",
+  "registration": "Registration",
+
+  "search_for_offers": "Search for offers",
+
+  "search.find": "Find",
+  "search.from": "From",
+  "search.select_country": "Select country",
+  "search.title": "Search for a parcel",
+  "search.to": "To",
+  "search.weight": "kg",
+
+  "we_have_mobile_app": "We've got mobile app!",
+  "what_do_you_need": "What do you need?"
 }

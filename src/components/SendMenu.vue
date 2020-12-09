@@ -9,14 +9,15 @@
                 to="/send"
                 active-class="active"
             >
-                Создать заявку
+                {{ $vuetify.lang.t('$vuetify.create_new_request') }}
             </v-btn>
+
             <v-btn
                 color="primary"
                 to="/send/search"
                 active-class="active"
             >
-                Поиск предложений
+                {{ $vuetify.lang.t('$vuetify.search_for_offers') }}
             </v-btn>
         </v-row>
     </v-container>

@@ -49,7 +49,7 @@
 
                         <li class="header_nav__item">
                             <router-link to="/registration">
-                                {{ $vuetify.lang.t('$vuetify.language_name') }}, ₽
+                                {{ $vuetify.lang.t('$vuetify.language_name') }}
                             </router-link>
                         </li>
                     </ul>
@@ -60,7 +60,7 @@
                                 class="btn btn_main"
                                 to="/registration"
                             >
-                                {{ $vuetify.lang.t('$vuetify.login_button') }}
+                                {{ $vuetify.lang.t('$vuetify.login.button') }}
                             </router-link>
                         </li>
                     </ul>

@@ -30,37 +30,37 @@
                 <ul class="footer_menu">
                     <li class="footer_menu__item">
                         <router-link to="/send">
-                            Хочу отправить
+                            {{ $vuetify.lang.t('$vuetify.footer.send') }}
                         </router-link>
                     </li>
 
                     <li class="footer_menu__item">
                         <router-link to="/">
-                            Правила
+                            {{ $vuetify.lang.t('$vuetify.footer.rules') }}
                         </router-link>
                     </li>
 
                     <li class="footer_menu__item">
                         <router-link to="/">
-                            Поддержка
+                            {{ $vuetify.lang.t('$vuetify.footer.support') }}
                         </router-link>
                     </li>
 
                     <li class="footer_menu__item">
                         <router-link to="/take">
-                            Могу захватить
+                            {{ $vuetify.lang.t('$vuetify.footer.take') }}
                         </router-link>
                     </li>
 
                     <li class="footer_menu__item">
                         <router-link to="/registration">
-                            Русский, ₽
+                            {{ $vuetify.lang.t('$vuetify.footer.lang') }}
                         </router-link>
                     </li>
 
                     <li class="footer_menu__item">
                         <router-link to="/">
-                            Контакты
+                            {{ $vuetify.lang.t('$vuetify.footer.contacts') }}
                         </router-link>
                     </li>
                 </ul>
@@ -175,7 +175,7 @@
             </ul>
 
             <div class="footer_copyright">
-                © Копирайт 2020
+                © {{ $vuetify.lang.t('$vuetify.footer.copy') }} {{ new Date().getFullYear() }}
             </div>
         </div>
     </footer>

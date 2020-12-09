@@ -1,18 +1,18 @@
 <template>
-    <div class="container">
+    <div class="content">
         <h1 class="text-center py-4">
-            Поиск посылки
+            {{ $vuetify.lang.t('$vuetify.search.title') }}
         </h1>
 
         <div class="row px-5 pb-3">
             <div class="col-6 pt-3">
-                <h3>Откуда</h3>
+                <h3>{{ $vuetify.lang.t('$vuetify.search.from') }}</h3>
 
                 <country-input />
             </div>
 
             <div class="col-6 pt-3">
-                <h3>Куда</h3>
+                <h3>{{ $vuetify.lang.t('$vuetify.search.to') }}</h3>
 
                 <country-input />
             </div>
@@ -24,7 +24,7 @@
                     :disabled="loading"
                     :loading="loading"
                 >
-                    Найти
+                    {{ $vuetify.lang.t('$vuetify.search.find') }}
                 </v-btn>
             </div>
         </div>
@@ -67,7 +67,7 @@
                             icon="weight-hanging"
                         />
 
-                        <span class="order_type_text">{{ order.weight }} kg.</span>
+                        <span class="order_type_text">{{ order.weight }} {{ $vuetify.lang.t('$vuetify.search.weight') }}.</span>
                     </div>
 
                     <div class="col-3 text-center">
