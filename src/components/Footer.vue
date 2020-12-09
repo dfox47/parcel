@@ -2,17 +2,29 @@
     <footer class="footer">
         <v-container>
             <v-row justify="center">
-                <v-col md="2" class="text-center d-flex justify-center align-start">
-                    <country-flag country='us' class="border_flag"/>
+                <v-col
+                    md="2"
+                    class="text-center d-flex justify-center align-start"
+                >
+                    <country-flag
+                        country="us"
+                        class="border_flag"
+                    />
+
                     <v-switch
                         class="mx-2 mt-0"
                         v-model="switch1"
                         @change="changeLocale"
-                    ></v-switch>
-                    <country-flag country='ru' class="border_flag"/>
+                    />
+
+                    <country-flag
+                        country="ru"
+                        class="border_flag"
+                    />
                 </v-col>
             </v-row>
         </v-container>
+
         <div class="wrap">
             <div class="footer_wrap">
                 <ul class="footer_menu">
@@ -85,7 +97,7 @@
             <ul class="footer_social">
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="Facebook"
                     >
@@ -98,7 +110,7 @@
 
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="Google"
                     >
@@ -111,7 +123,7 @@
 
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="LinkedIn"
                     >
@@ -124,7 +136,7 @@
 
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="Twitter"
                     >
@@ -137,7 +149,7 @@
 
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="Pinterest"
                     >
@@ -150,7 +162,7 @@
 
                 <li class="footer_social__item">
                     <a
-                        href="javscript:void(0);"
+                        href="javascript:void(0);"
                         target="_blank"
                         title="Instagram"
                     >

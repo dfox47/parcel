@@ -13,7 +13,7 @@
 <script>
 export default {
     name: "CountryInput",
-    props: ['type'],
+    props: 'type',
     data() {
         return {
             selectedValue: null,
