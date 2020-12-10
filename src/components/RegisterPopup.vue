@@ -6,22 +6,23 @@
         >
             <div
                 class="popup_overlay"
-                v-if="showLoginPopup"
-                @click="this.hideLoginPopup"
+                v-if="showRegistrationPopup"
+                @click="this.hideRegistrationPopup"
             />
         </transition>
 
         <transition
+
             name="fade"
             appear
         >
             <div
-                class="popup popup_login"
-                v-if="showLoginPopup"
+                class="popup popup_register"
+                v-if="showRegistrationPopup"
             >
                 <div
                     class="popup_close_btn"
-                    @click="this.hideLoginPopup"
+                    @click="this.hideRegistrationPopup"
                 />
 
                 <form
@@ -29,7 +30,7 @@
                     class="popup_one_column"
                 >
                     <h2>
-                        {{ $vuetify.lang.t('$vuetify.login') }}
+                        {{ $vuetify.lang.t('$vuetify.register') }}
                     </h2>
 
                     <label class="input_wrap">
@@ -42,7 +43,7 @@
                     <label class="input_wrap">
                         <input
                             :type="type"
-                            placeholder="Пароль"
+                            placeholder="Придумайте Пароль"
                         >
 
                         <img
@@ -54,39 +55,26 @@
                     </label>
 
                     <div class="popup_login_options">
-                        <div>
-                            <label class="checkbox">
-                                <input
-                                    type="checkbox"
-                                    class="visually-hidden"
-                                >
-
-                                <span class="checkbox__box" />
-
-                                <span class="checkbox__desc">{{ $vuetify.lang.t('$vuetify.login.remember') }}</span>
-                            </label>
-                        </div>
-
-                        <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
+                        {{ $vuetify.lang.t('$vuetify.registration_text') }}
                     </div>
 
                     <span
                         class="btn btn_blue btn_large"
-                        @click="this.hideLoginPopup"
+                        @click="this.showConfirmPopup"
                     >
                         {{ $vuetify.lang.t('$vuetify.continue_button') }}
                     </span>
 
                     <div class="popup_bottom">
                         <p>
-                            {{ $vuetify.lang.t('$vuetify.login.dont_have_account') }}
+                            {{ $vuetify.lang.t('$vuetify.registration.login') }}
                         </p>
 
                         <a
                             class="link_blue"
-                            @click="this.showRegistrationPopup"
+                            @click="this.showLoginPopup"
                         >
-                            {{ $vuetify.lang.t('$vuetify.register') }}
+                            {{ $vuetify.lang.t('$vuetify.login') }}
                         </a>
                     </div>
                 </form>
@@ -101,14 +89,14 @@ export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
-            showLoginPopup: store.getters.getLoginPopup,
+            showRegistrationPopup: store.getters.RegistrationPopup,
             type: 'password',
             btnText: 'Show Password'
         }
     },
     methods: {
-        hideLoginPopup () {
-            store.commit('hideLoginPopup');
+        hideRegistrationPopup () {
+            store.commit('hideRegistrationPopup');
         },
         showPassword () {
             if (this.type === 'password') {
@@ -120,13 +108,17 @@ export default {
                 this.pass_img = require('@/assets/i/icons/show_pass.svg')
             }
         },
-        showRegistrationPopup () {
-            store.commit('showRegistrationPopup');
+        showLoginPopup () {
+            store.commit('showLoginPopup');
+        },
+        showConfirmPopup () {
+            console.log(';lkjasdflkajsdf')
+            store.commit('showConfirmPopup');
         }
     },
     watch: {
-        "$store.state.LoginPopup"(nv) {
-            this.showLoginPopup = nv;
+        "$store.state.RegistrationPopup"(nv) {
+            this.showRegistrationPopup = nv;
         }
     }
 }

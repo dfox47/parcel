@@ -35,6 +35,8 @@
         </template>
 
         <app-login_popup />
+        <app-register_popup />
+        <app-confirm_popup />
     </v-app>
 </template>
 

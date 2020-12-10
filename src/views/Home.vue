@@ -8,22 +8,9 @@
                     <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
 
                     <a
-                        to="/popupLogin"
                         class="btn btn_blue btn_medium"
+                        @click="this.showLoginPopup"
                     >{{ $vuetify.lang.t('$vuetify.registration') }}</a>
-
-                    <router-link
-                        to="/popupLogin"
-                    >
-                        POPUP
-                    </router-link>
-
-                    <slot
-                        name="backdrop"
-                        slot="backdrop"
-                    />
-
-                    <RouterView />
                 </div>
 
                 <div class="home_intro_img">
@@ -214,6 +201,18 @@ export default {
         },
         hideLoginPopup () {
             store.commit('hideLoginPopup');
+        },
+        showRegistrationPopup () {
+            store.commit('showRegistrationPopup');
+        },
+        hideRegistrationPopup () {
+            store.commit('hideRegistrationPopup');
+        },
+        showConfirmPopup () {
+            store.commit('showConfirmPopup');
+        },
+        hideConfirmPopup () {
+            store.commit('hideConfirmPopup');
         }
     }
 }

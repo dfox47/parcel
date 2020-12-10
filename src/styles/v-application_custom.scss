@@ -2,17 +2,21 @@
 
 
 body {
-    .v-application {
-        font-family: $font_main;
+  .v-application {
+    font-family: $font_main;
 
-      p {
-        margin: 0;
-      }
-
-        ul {
-            padding: 0;
-        }
+    a {
+      color: $c_link;
     }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+    }
+  }
 }
 
 

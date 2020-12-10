@@ -14,70 +14,49 @@ import LoginPopup from "@/components/LoginPopup";
 
 Vue.use(VueRouter);
 
-const popupRoutes = [
-    {
-        name: 'popupName',
-        path: "/popupLogin",
-        component: LoginPopup
-    }
-]
+// const popupRoutes = [
+//     {
+//         name: 'popupName',
+//         path: "/popupLogin",
+//         component: LoginPopup
+//     }
+// ]
 
 const routes = [
     {
         component: Home,
         path: '/',
-        children: [
-            {
-                name: 'popupName',
-                path: "/popupLogin",
-                components: {
-                    page: LoginPopup
-                }
-            }
-        ]
     },
     {
         component: ParcelTake,
         path: '/take',
-        children: popupRoutes
     },
     {
         component: TakeSearch,
         path: '/take/search',
-        children: popupRoutes
     },
     {
         component: ParcelSend,
         path: '/send',
-        children: [
-            {
-                path: "/popupLogin",
-                components: {
-                    page: LoginPopup
-                }
-            }
-        ]
     },
     {
         component: SendSearch,
         path: '/send/search',
-        children: popupRoutes
     },
     {
         component: Registration,
         path: '/registration',
-        children: popupRoutes
     },
 
     {
         component: Search,
         path: '/search',
-        children: popupRoutes
+        // children: popupRoutes
     },
     {
         component: Error404,
         path: '*',
-        children: popupRoutes
+        // children: popupRoutes
     }
 
 ]

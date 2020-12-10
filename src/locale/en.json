@@ -1,6 +1,7 @@
 {
   "continue_button": "Continue",
   "create_new_request": "Create request",
+  "confirmation": "Conformation",
 
   "footer.contacts": "Contacts",
   "footer.copy": "Copyright",
@@ -28,6 +29,8 @@
 
   "register": "Register",
   "registration": "Registration",
+  "registration_text": "We will send you an SMS to verify your phone number. Your standard fare terms apply.",
+  "registration.login": "Already have an account?",
 
   "search_for_offers": "Search for offers",
 

@@ -1,6 +1,7 @@
 {
   "continue_button": "Продолжить",
   "create_new_request": "Создать заявку",
+  "confirmation": "Подтверждение",
 
   "footer.contacts": "Контакты",
   "footer.copy": "Копирайт",
@@ -28,6 +29,8 @@
 
   "register": "Зарегистрироваться",
   "registration": "Регистрация",
+  "registration_text": "Мы отправим Вам SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа.",
+  "registration.login": "Уже есть аккаунт?",
 
   "search_for_offers": "Поиск предложений",
 

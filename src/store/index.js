@@ -7,20 +7,53 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        LoginPopup: false
+        ConfirmPopup: true,
+        LoginPopup: false,
+        RegistrationPopup: true
     },
     mutations: {
+        //Hide All popup's
+        hideEverything (state) {
+            state.LoginPopup = false;
+            state.RegistrationPopup = false;
+        },
+
+        //LOGIN
         showLoginPopup(state) {
-            console.log('showLoginPopup');
+            this.commit('hideEverything');
             state.LoginPopup = true;
         },
         hideLoginPopup(state) {
             state.LoginPopup = false;
+        },
+
+        //REGISTRATION
+        showRegistrationPopup(state) {
+            this.commit('hideEverything');
+            state.RegistrationPopup = true;
+        },
+        hideRegistrationPopup(state) {
+            state.RegistrationPopup = false;
+        },
+
+        //RCONFIRM
+        showConfirmPopup(state) {
+            this.commit('hideEverything');
+            state.ConfirmPopup = true;
+        },
+        hideConfirmPopup(state) {
+            state.ConfirmPopup = false;
         }
     },
     getters: {
         getLoginPopup: state => {
             return state.LoginPopup;
+        },
+        getRegisterPopup: state => {
+            return state.RegistrationPopup;
+        },
+        getConfirmPopup: state => {
+            return state.ConfirmPopup;
         }
     }
 })
