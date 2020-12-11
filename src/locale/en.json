@@ -1,7 +1,9 @@
 {
   "continue_button": "Continue",
   "create_new_request": "Create request",
+
   "confirmation": "Conformation",
+  "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
 
   "footer.contacts": "Contacts",
   "footer.copy": "Copyright",

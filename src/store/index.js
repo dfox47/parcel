@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        ConfirmPopup: true,
+        ConfirmPopup: false,
         LoginPopup: false,
         RegistrationPopup: true
     },

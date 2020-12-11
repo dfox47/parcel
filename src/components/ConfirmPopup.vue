@@ -29,30 +29,41 @@
                     action=""
                     class="popup_one_column"
                 >
-                    <h2>
+                    <h3>
                         {{ $vuetify.lang.t('$vuetify.confirmation') }}
-                    </h2>
+                    </h3>
+
+                    <div class="popup_top">
+                        <p>
+                            {{ $vuetify.lang.t('$vuetify.confirmation_text') }}
+                        </p>
+                    </div>
 
                     <label class="input_confirm">
                         <input
                             type="text"
                             placeholder=""
+                            ref="inp_1"
                         >
                         <input
                             type="text"
                             placeholder=""
+                            ref="inp_2"
                         >
                         <input
                             type="text"
                             placeholder=""
+                            ref="inp_3"
                         >
                         <input
                             type="text"
                             placeholder=""
+                            ref="inp_4"
                         >
                         <input
                             type="text"
                             placeholder=""
+                            ref="inp_5"
                         >
                     </label>
 
@@ -65,14 +76,22 @@
 
                     <div class="popup_bottom">
                         <p>
-                            Не получили смс??
+                            Не получили SMS?
+
+                            <a
+                                href=""
+                                class="link_dark"
+                                @click="this.hideConfirmPopup"
+                            >
+                                Отправить повторно
+                            </a>
                         </p>
 
                         <a
-                            class="link_blue"
-                            @click="this.hideConfirmPopup"
+                            href=""
+                            class="link_dark"
                         >
-                            Отправить повторно
+                            Получить SMS на дургой номер
                         </a>
                     </div>
                 </form>
@@ -102,9 +121,13 @@ export default {
             store.commit('showLoginPopup');
         }
     },
+    //here we listen for a new value,if it changes,we change our value
     watch: {
         "$store.state.ConfirmPopup"(nv) {
             this.showConfirmPopup = nv;
+            if ( this.showConfirmPopup ) {
+                this.$refs.inp_1.focus();
+            }
         }
     }
 }

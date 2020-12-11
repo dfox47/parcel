@@ -29,9 +29,9 @@
                     action=""
                     class="popup_one_column"
                 >
-                    <h2>
+                    <h3>
                         {{ $vuetify.lang.t('$vuetify.register') }}
-                    </h2>
+                    </h3>
 
                     <label class="input_wrap">
                         <input
@@ -112,7 +112,6 @@ export default {
             store.commit('showLoginPopup');
         },
         showConfirmPopup () {
-            console.log(';lkjasdflkajsdf')
             store.commit('showConfirmPopup');
         }
     },

@@ -15,82 +15,84 @@
             name="fade"
             appear
         >
-            <div
-                class="popup popup_login"
+            <v-card
                 v-if="showLoginPopup"
             >
-                <div
-                    class="popup_close_btn"
-                    @click="this.hideLoginPopup"
-                />
+                <div class="popup popup_login">
+                    <div
+                        class="popup_close_btn"
+                        @click="this.hideLoginPopup"
+                    />
 
-                <form
-                    action=""
-                    class="popup_one_column"
-                >
-                    <h2>
-                        {{ $vuetify.lang.t('$vuetify.login') }}
-                    </h2>
+                    <form
+                        action=""
+                        class="popup_one_column"
+                    >
+                        <v-card-title>
+                            {{ $vuetify.lang.t('$vuetify.login') }}
+                        </v-card-title>
 
-                    <label class="input_wrap">
-                        <input
-                            type="text"
-                            placeholder="Номер телефона"
-                        >
-                    </label>
+                        <label class="input_wrap">
+                            <input
+                                type="text"
+                                placeholder="Номер телефона"
+                                v-focus
+                            >
+                        </label>
 
-                    <label class="input_wrap">
-                        <input
-                            :type="type"
-                            placeholder="Пароль"
-                        >
+                        <label class="input_wrap">
+                            <input
+                                :type="type"
+                                placeholder="Пароль"
+                            >
 
-                        <img
-                            class="input_wrap__img"
-                            :src="pass_img"
-                            @click="showPassword"
-                            alt=""
-                        >
-                    </label>
+                            <img
+                                class="input_wrap__img"
+                                :src="pass_img"
+                                @click="showPassword"
+                                alt=""
+                            >
+                        </label>
 
-                    <div class="popup_login_options">
-                        <div>
-                            <label class="checkbox">
-                                <input
-                                    type="checkbox"
-                                    class="visually-hidden"
-                                >
+                        <div class="popup_login_options">
+                            <div>
+                                <label class="checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="visually-hidden"
+                                    >
 
-                                <span class="checkbox__box" />
+                                    <span class="checkbox__box" />
 
-                                <span class="checkbox__desc">{{ $vuetify.lang.t('$vuetify.login.remember') }}</span>
-                            </label>
+                                    <span class="checkbox__desc">{{ $vuetify.lang.t('$vuetify.login.remember') }}</span>
+                                </label>
+                            </div>
+
+                            <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
                         </div>
 
-                        <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
-                    </div>
-
-                    <span
-                        class="btn btn_blue btn_large"
-                        @click="this.hideLoginPopup"
-                    >
-                        {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                    </span>
-
-                    <div class="popup_bottom">
-                        <p>
-                            {{ $vuetify.lang.t('$vuetify.login.dont_have_account') }}
-                        </p>
-
-                        <a
-                            class="link_blue"
-                            @click="this.showRegistrationPopup"
+                        <span
+                            class="btn btn_blue btn_large"
+                            @click="this.hideLoginPopup"
                         >
-                            {{ $vuetify.lang.t('$vuetify.register') }}
-                        </a>
-                    </div>
-                </form>
-            </div>
+                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                        </span>
+
+                        <div class="popup_bottom">
+                            <p>
+                                {{ $vuetify.lang.t('$vuetify.login.dont_have_account') }}
+                            </p>
+
+                            <a
+                                class="link_blue"
+                                @click="this.showRegistrationPopup"
+                            >
+                                {{ $vuetify.lang.t('$vuetify.register') }}
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </v-card>
         </transition>
     </div>
 </template>

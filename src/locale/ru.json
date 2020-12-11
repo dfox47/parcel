@@ -1,7 +1,9 @@
 {
   "continue_button": "Продолжить",
   "create_new_request": "Создать заявку",
+
   "confirmation": "Подтверждение",
+  "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",
 
   "footer.contacts": "Контакты",
   "footer.copy": "Копирайт",
