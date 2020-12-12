@@ -41,6 +41,15 @@ header {
 
 
 
+input {
+  &[type="submit"] {
+    left: -100vw;
+    position: absolute;
+  }
+}
+
+
+
 li {
   display: inline-block;
 }
@@ -54,31 +63,6 @@ ul {
 
 
 // help class's [START]
-.btn,
-.btn:visited {
-  cursor: pointer;
-  display: inline-block;
-  transition: $transition;
-}
-
-.btn_main,
-.btn_main:visited {
-  border: 1px solid $c_link;
-  border-radius: 6px;
-  color: $c_link;
-  padding: 9px 36px 8px;
-  text-decoration: none;
-
-  &:hover,
-  &.router-link-active {
-    background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
-    border-color: rgba($c_link, .9);
-    color: #fff;
-  }
-}
-
-
-
 .content {
   position: relative;
   z-index: 3;
@@ -162,6 +146,7 @@ ul {
 }
 
 
+
 .plane_icon {
   color: blueviolet;
   font-size: 20px;
@@ -169,6 +154,7 @@ ul {
 
 
 
+// send_or_grab [START]
 .send_or_grab {
   display: flex;
   justify-content: space-between;
@@ -246,6 +232,7 @@ ul {
     }
   }
 }
+// send_or_grab [END]
 
 
 

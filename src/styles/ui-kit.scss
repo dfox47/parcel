@@ -1,16 +1,23 @@
 
 
 
+// btn [START]
 .btn,
 .btn:visited {
   align-items: center;
   border-radius: 6px;
   cursor: pointer;
-  display: flex;
+  display: inline-block;
   justify-content: center;
   max-width: 420px;
-  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition;
   width: 100%;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn_blue,
@@ -18,14 +25,11 @@
   border: 1px solid transparent;
   background: linear-gradient(138deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);
   color: #fff !important;
-  text-align: center;
-  text-decoration: none;
 
   &:hover {
     background: #fff;
     border: 1px solid $c_special_blue;
     color: $c_special_blue !important;
-    text-decoration: none;
   }
 }
 
@@ -48,6 +52,24 @@
   max-width: 420px;
 }
 
+
+
+.btn_main,
+.btn_main:visited {
+  border: 1px solid $c_link;
+  border-radius: 6px;
+  color: $c_link;
+  padding: 9px 36px 8px;
+  text-decoration: none;
+
+  &:hover,
+  &.router-link-active {
+    background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
+    border-color: rgba($c_link, .9);
+    color: #fff;
+  }
+}
+
 .btn_medium,
 .btn_medium:visited {
   border: 1px solid transparent;
@@ -62,12 +84,62 @@
   }
 }
 
+.btn_primary,
+.btn_primary:visited {
+  border: 1px solid $c_link;
+  border-radius: 6px;
+  color: $c_link;
+  text-decoration: none;
+
+  &:hover,
+  &.router-link-active {
+    background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
+    border-color: rgba($c_link, .9);
+    color: #fff;
+  }
+}
+
 .btn_small,
 .btn_small:visited {
   height: 37px;
-  padding: 0 38px 0;
+  padding: 0 38px;
   max-width: initial;
 }
+
+
+
+.btn_size_l,
+.btn_size_l:visited {
+  font-size: 20px;
+  padding: 14px 47px;
+  width: auto;
+}
+
+.btn_size_m,
+.btn_size_m:visited {
+  font-size: 20px;
+  padding: 11px 0;
+}
+
+.btn_size_s,
+.btn_size_s:visited {
+  font-size: 20px;
+  padding: 11px 0;
+}
+
+
+
+.btn_submit,
+.btn_submit:visited {
+  border: 1px solid $c_border;
+  border-radius: 6px;
+  color: $c_border;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 16px 96px;
+  width: auto;
+}
+// btn [END]
 
 
 
@@ -78,9 +150,6 @@
   cursor: pointer;
 
   input {
-    left: -100vw;
-    position: absolute;
-
     &:checked ~ .checkbox__box {
       background-image: url(#{$i}/icons/checkbox_active.svg);
     }
@@ -115,6 +184,7 @@
     width: 70px;
   }
 }
+
 
 
 .input_wrap {
@@ -161,3 +231,5 @@
     text-decoration: none;
   }
 }
+
+

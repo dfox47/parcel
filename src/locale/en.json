@@ -1,4 +1,7 @@
 {
+  "breadcrumbs.home": "Home",
+  "breadcrumbs.search_parcel": "Parcel search",
+
   "continue_button": "Continue",
   "create_new_request": "Create request",
 
@@ -29,6 +32,8 @@
 
   "our_advantages": "Our advantages",
 
+  "readmore": "Readmore",
+
   "register": "Register",
   "registration": "Registration",
   "registration_text": "We will send you an SMS to verify your phone number. Your standard fare terms apply.",
@@ -42,6 +47,15 @@
   "search.title": "Search for a parcel",
   "search.to": "To",
   "search.weight": "kg",
+
+  "take.add_new_order": "+ Add order",
+  "take.additional_search": "Additional search",
+  "take.from": "From",
+  "take.parcel_search": "Search parcel",
+  "take.results_title_1": "Найдено",
+  "take.results_title_2": "желающих отправить посылку",
+  "take.search": "Search",
+  "take.to": "To",
 
   "we_have_mobile_app": "We've got mobile app!",
   "what_do_you_need": "What do you need?"

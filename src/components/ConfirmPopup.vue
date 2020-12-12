@@ -107,7 +107,7 @@ export default {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
             // showConfirmPopup: store.getters.ConfirmPopup,
-            showConfirmPopup: true,
+            showConfirmPopup: false,
             type: 'password',
             btnText: 'Show Password'
         }
