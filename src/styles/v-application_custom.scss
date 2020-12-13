@@ -7,6 +7,15 @@ body {
 
     a {
       color: $c_link;
+
+      &.btn_more,
+      &.btn_more:visited {
+        color: $c_link_dark;
+
+        &:hover {
+          color: #fff;
+        }
+      }
     }
 
     p {
@@ -15,6 +24,34 @@ body {
 
     ul {
       padding: 0;
+
+      &.breadcrumbs {
+        padding: 5px 2px;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 5px 10px;
+        }
+      }
+
+      &.pagination {
+        padding: 77px 0 99px;
+      }
+    }
+
+    .take_results_item__list {
+      p {
+        margin: 0 0 25px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        p {
+          margin: 0;
+        }
+      }
     }
 
 

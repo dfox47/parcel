@@ -1,6 +1,9 @@
 {
   "add_application": "Добавить заявку",
 
+  "breadcrumbs.home": "Главная",
+  "breadcrumbs.search_parcel": "Поиск посылки",
+
   "continue_button": "Продолжить",
   "create_new_request": "Создать заявку",
 
@@ -31,6 +34,8 @@
 
   "our_advantages": "Наши преимущества",
 
+  "readmore": "Подробнее",
+
   "register": "Зарегистрироваться",
   "registration": "Регистрация",
   "registration_text": "Мы отправим Вам SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа.",
@@ -44,6 +49,15 @@
   "search.title": "Поиск посылки",
   "search.to": "Куда",
   "search.weight": "кг",
+
+  "take.add_new_order": "+ Добавить заявку",
+  "take.additional_search": "Расширенный поиск",
+  "take.from": "Откуда",
+  "take.parcel_search": "Поиск посылки",
+  "take.results_title_1": "Найдено",
+  "take.results_title_2": "желающих отправить посылку",
+  "take.search": "Искать",
+  "take.to": "Куда",
 
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "what_do_you_need": "Что Вам необходимо?"

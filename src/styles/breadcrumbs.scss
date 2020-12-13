@@ -1,0 +1,52 @@
+
+
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 17px;
+  letter-spacing: .02em;
+  margin: 0 0 22px;
+
+  a,
+  a:visited {
+    color: $c_link_dark;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+    position: relative;
+
+    &::after {
+      background: url(#{$i}/icons/breadcrumbs_divider.svg) 0 0 no-repeat scroll transparent;
+      background-size: contain;
+      content: "";
+      height: 10px;
+      display: inline-block;
+      margin: 0 9px 2px;
+      width: 5px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+
