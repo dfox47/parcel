@@ -4,6 +4,7 @@
 // take_destinations [START]
 .take_destinations {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0 0 5px;
 }
@@ -46,6 +47,16 @@
 
 .take_destinations_search {
   padding: 45px 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .take_destinations__link_additional {
+    font-size: 15px;
+  }
+
+  .take_destinations__title {
+    font-size: 12px;
+  }
 }
 // take_destinations [END]
 
@@ -119,13 +130,32 @@
   display: flex;
   justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .take_menu__item {
+    font-size: 18px;
+    padding: 14px 32px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .take_menu__item {
+    font-size: 12px;
+    padding: 12px 28px;
+
+    &::after {
+      margin: 0 0 0 -41px;
+      width: 82px;
+    }
+  }
+}
 // take_menu [END]
 
 
 
 // take_results [START]
 .take_results {
-  padding: 55px 70px 0;
+  padding: 55px 70px;
 }
 
 .take_results__destination {
@@ -143,6 +173,7 @@
   font-size: 32px;
   line-height: 1.1;
   margin: 0 0 30px;
+  padding: 0 22px;
   text-align: center;
 
   span {
@@ -173,6 +204,7 @@
 .take_results_item__info {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   max-width: 636px;
   width: 100%;
@@ -216,6 +248,78 @@
   border-bottom: 1px solid #000;
   padding: 34px 0 0;
 }
+
+@media only screen and (max-width: 1200px) {
+  .take_results {
+    padding: 55px 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .take_results_item__category {
+    margin: 0;
+  }
+
+  .take_results_item__info {
+    width: auto;
+  }
+
+  .take_results_item__link {
+    display: none;
+  }
+
+  .take_results_item__list {
+    padding: 0 30px 0 0;
+  }
+
+  .take_results_item__name_wrap {
+    padding: 0 30px 0 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .take_results_item__info {
+    padding: 30px 0 0;
+    width: 100%;
+  }
+
+  .take_results_item__list {
+    width: 100%;
+  }
+
+  .take_results_item__category {
+    padding: 25px 0 0;
+  }
+
+  .take_results__destination {
+    font-size: 20px;
+    padding: 0 22px;
+  }
+
+  .take_results__title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .take_results_item {
+    font-size: 15px;
+  }
+
+  .take_results__destination {
+    font-size: 12px;
+  }
+
+  .take_results__title {
+    font-size: 12px;
+  }
+}
 // take_results [END]
+
+
+
+.take_wrap {
+  padding: 0 0 100px;
+}
 
 

@@ -84,6 +84,15 @@
   }
 }
 
+.btn_more,
+.btn_more:visited {
+  background-color: rgba($c_border, .17);
+
+  &:hover {
+    background-color: $c_border;
+  }
+}
+
 .btn_primary,
 .btn_primary:visited {
   border: 1px solid $c_link;
@@ -118,7 +127,9 @@
 .btn_size_m,
 .btn_size_m:visited {
   font-size: 20px;
-  padding: 11px 0;
+  padding: 17px 82px;
+  max-width: none;
+  width: auto;
 }
 
 .btn_size_s,
@@ -229,6 +240,17 @@
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+
+
+.mdi {
+  &::before {
+    background: url(#{$i}/icons/select.svg) 0 0 no-repeat scroll transparent;
+    font-size: 0;
+    height: 20px;
+    width: 20px;
   }
 }
 

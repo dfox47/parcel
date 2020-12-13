@@ -147,6 +147,47 @@ ul {
 
 
 
+.pagination {
+  align-items: center;
+  display: flex;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  justify-content: center;
+
+  a,
+  a:visited {
+    background-color: rgba($c_link_additional, .17);
+    border-radius: 6px;
+    color: #000;
+    display: inline-block;
+    padding: 18px 18px 10px;
+    text-decoration: none;
+
+    &.active,
+    &:hover {
+      background-color: $c_link_additional;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  span {
+    background-color: rgba($c_link_additional, .17);
+    border-radius: 6px;
+    color: #000;
+    display: inline-block;
+    padding: 14px 15px;
+  }
+
+  li {
+    display: flex;
+    margin: 0 12px;
+  }
+}
+
+
+
 .plane_icon {
   color: blueviolet;
   font-size: 20px;
