@@ -16,6 +16,59 @@ body {
     ul {
       padding: 0;
     }
+
+
+    .v-card {
+      div {
+        border-radius: 14px;
+      }
+    }
+
+    .v-card-title {
+      font-size: 17px;
+    }
+
+    .v-card__subtitle {
+      //color: $c_;
+      text-align: center;
+      line-height: 32px;
+      font-size: 17px;
+      padding: 0 0 20px;
+    }
+
+
+
+    .v-input--checkbox {
+      .v-label {
+        color: $c_text_main;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .mdi-checkbox-blank-outline {
+        &:before {
+          content: ' ';
+          background: url(/img/checkbox.71ab55f3.svg) center center no-repeat scroll transparent;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .mdi-checkbox-marked {
+        &:before {
+          content: ' ';
+          background: url(/img/checkbox_active.8ace836c.svg) center center no-repeat scroll transparent;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .v-input--selection-controls__input {
+        height: 22px;
+        margin-right: 4px;
+        width: 22px;
+      }
+    }
   }
 }
 

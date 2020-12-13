@@ -9,13 +9,16 @@ export default new Vuex.Store({
     state: {
         ConfirmPopup: false,
         LoginPopup: false,
-        RegistrationPopup: true
+        RegistrationPopup: false,
+        SendOrGrubPopup: false
     },
     mutations: {
         //Hide All popup's
         hideEverything (state) {
+            state.ConfirmPopup = false;
             state.LoginPopup = false;
             state.RegistrationPopup = false;
+            state.SendOrGrubPopup = false;
         },
 
         //LOGIN

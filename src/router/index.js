@@ -51,12 +51,10 @@ const routes = [
     {
         component: Search,
         path: '/search',
-        // children: popupRoutes
     },
     {
         component: Error404,
         path: '*',
-        // children: popupRoutes
     }
 
 ]

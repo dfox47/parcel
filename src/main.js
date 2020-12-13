@@ -6,9 +6,12 @@ import vuetify from './plugins/vuetify';
 import VueResource from 'vue-resource';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import Login_popup from './components/LoginPopup';
 import Register_popup from './components/RegisterPopup';
 import Confirm_popup from './components/ConfirmPopup';
+import SendOrGrab_popup from './components/SendOrGrabPopup';
+
 import CountryFlag from 'vue-country-flag';
 
 import PortalVue from 'portal-vue'
@@ -18,6 +21,7 @@ Vue.component('app-footer', Footer);
 Vue.component('app-login_popup', Login_popup);
 Vue.component('app-register_popup', Register_popup);
 Vue.component('app-confirm_popup', Confirm_popup);
+Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
 Vue.component('country-flag', CountryFlag);
 
 Vue.use(VueResource);

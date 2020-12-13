@@ -37,6 +37,7 @@
         <app-login_popup />
         <app-register_popup />
         <app-confirm_popup />
+        <app-send_or_grub_popup />
     </v-app>
 </template>
 

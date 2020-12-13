@@ -12,73 +12,74 @@
         </transition>
 
         <transition
-
             name="fade"
             appear
         >
-            <div
-                class="popup popup_register"
+            <v-card
                 v-if="showRegistrationPopup"
             >
-                <div
-                    class="popup_close_btn"
-                    @click="this.hideRegistrationPopup"
-                />
+                <div class="popup popup_register">
+                    <div
+                        class="popup_close_btn"
+                        @click="this.hideRegistrationPopup"
+                    />
 
-                <form
-                    action=""
-                    class="popup_one_column"
-                >
-                    <h3>
-                        {{ $vuetify.lang.t('$vuetify.register') }}
-                    </h3>
-
-                    <label class="input_wrap">
-                        <input
-                            type="text"
-                            placeholder="Номер телефона"
-                        >
-                    </label>
-
-                    <label class="input_wrap">
-                        <input
-                            :type="type"
-                            placeholder="Придумайте Пароль"
-                        >
-
-                        <img
-                            class="input_wrap__img"
-                            :src="pass_img"
-                            @click="showPassword"
-                            alt=""
-                        >
-                    </label>
-
-                    <div class="popup_login_options">
-                        {{ $vuetify.lang.t('$vuetify.registration_text') }}
-                    </div>
-
-                    <span
-                        class="btn btn_blue btn_large"
-                        @click="this.showConfirmPopup"
+                    <form
+                        action=""
+                        class="popup_one_column"
                     >
-                        {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                    </span>
+                        <v-card-title>
+                            {{ $vuetify.lang.t('$vuetify.register') }}
+                        </v-card-title>
 
-                    <div class="popup_bottom">
-                        <p>
-                            {{ $vuetify.lang.t('$vuetify.registration.login') }}
-                        </p>
+                        <label class="input_wrap">
+                            <input
+                                type="text"
+                                placeholder="Номер телефона"
+                                v-focus
+                            >
+                        </label>
 
-                        <a
-                            class="link_blue"
-                            @click="this.showLoginPopup"
+                        <label class="input_wrap">
+                            <input
+                                :type="type"
+                                placeholder="Придумайте Пароль"
+                            >
+
+                            <img
+                                class="input_wrap__img"
+                                :src="pass_img"
+                                @click="showPassword"
+                                alt=""
+                            >
+                        </label>
+
+                        <div class="popup_login_options">
+                            {{ $vuetify.lang.t('$vuetify.registration_text') }}
+                        </div>
+
+                        <span
+                            class="btn btn_blue btn_large"
+                            @click="this.showConfirmPopup"
                         >
-                            {{ $vuetify.lang.t('$vuetify.login') }}
-                        </a>
-                    </div>
-                </form>
-            </div>
+                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                        </span>
+
+                        <div class="popup_bottom">
+                            <p>
+                                {{ $vuetify.lang.t('$vuetify.registration.login') }}
+                            </p>
+
+                            <a
+                                class="link_blue"
+                                @click="this.showLoginPopup"
+                            >
+                                {{ $vuetify.lang.t('$vuetify.login') }}
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </v-card>
         </transition>
     </div>
 </template>

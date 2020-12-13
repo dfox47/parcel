@@ -56,16 +56,10 @@
 
                         <div class="popup_login_options">
                             <div>
-                                <label class="checkbox">
-                                    <input
-                                        type="checkbox"
-                                        class="visually-hidden"
-                                    >
-
-                                    <span class="checkbox__box" />
-
-                                    <span class="checkbox__desc">{{ $vuetify.lang.t('$vuetify.login.remember') }}</span>
-                                </label>
+                                <v-checkbox
+                                    v-model="checkbox"
+                                    :label="$vuetify.lang.t('$vuetify.login.remember')"
+                                />
                             </div>
 
                             <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
