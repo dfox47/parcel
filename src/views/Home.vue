@@ -28,8 +28,11 @@
                     <h2>{{ $vuetify.lang.t('$vuetify.what_do_you_need') }}</h2>
 
                     <div class="send_or_grab">
-                        <div>
-                            <span class="send_or_grab__inner">
+                        <div @click="this.showSendOrGrubPopup">
+                            <span
+                                class="send_or_grab__inner"
+                                @click="this.showSendOrGrubPopup"
+                            >
                                 <img
                                     src="../assets/i/send.svg"
                                     alt="send"
@@ -213,7 +216,11 @@ export default {
         },
         hideConfirmPopup () {
             store.commit('hideConfirmPopup');
-        }
+        },
+        showSendOrGrubPopup () {
+            console.log('1')
+            store.commit('showSendOrGrubPopup');
+        },
     }
 }
 </script>

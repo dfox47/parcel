@@ -25,45 +25,34 @@
                         @click="this.hideSendOrGrub"
                     />
 
-                    <form
-                        action=""
-                        class="popup_one_column"
-                    >
-                        <h3>
-                            {{ $vuetify.lang.t('$vuetify.add_application') }}
-                        </h3>
+                    <v-card-title>
+                        {{ $vuetify.lang.t('$vuetify.add_application') }}
+                    </v-card-title>
 
-
-
-                        <span
-                            class="btn btn_blue btn_large"
-                            @click="this.hideSendOrGrub"
-                            ref="btn"
-                        >
-                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </span>
-
-                        <div class="popup_bottom">
-                            <p>
-                                Не получили SMS?
-
-                                <a
-                                    href=""
-                                    class="link_dark"
-                                    @click="this.hideSendOrGrub"
-                                >
-                                    Отправить повторно
-                                </a>
-                            </p>
-
-                            <a
-                                href=""
-                                class="link_dark"
+                    <div class="send_or_grab">
+                        <div @click="this.showSendOrGrubPopup">
+                            <span
+                                class="send_or_grab__inner"
+                                @click="this.showSendOrGrubPopup"
                             >
-                                Получить SMS на дургой номер
-                            </a>
+                                <img
+                                    src="../assets/i/send.svg"
+                                    alt="send"
+                                >
+                                <span>{{ $vuetify.lang.t('$vuetify.menu_button_send') }}</span>
+                            </span>
                         </div>
-                    </form>
+
+                        <div>
+                            <span class="send_or_grab__inner">
+                                <img
+                                    src="../assets/i/grab.svg"
+                                    alt="grab"
+                                >
+                                <span>{{ $vuetify.lang.t('$vuetify.menu_button_take') }}</span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </v-card>
         </transition>
@@ -76,24 +65,20 @@ export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
-            // showSendOrGrub: store.getters.SendOrGrub,
-            showSendOrGrub: true,
+            showSendOrGrub: store.getters.SendOrGrubPopup,
+            // showSendOrGrub: true,
             type: 'password',
             btnText: 'Show Password'
         }
     },
     methods: {
         hideSendOrGrub () {
-            store.commit('hideSendOrGrub');
-        },
-        showLoginPopup () {
-            console.log('worked')
-            store.commit('showLoginPopup');
+            store.commit('hideSendOrGrubPopup');
         }
     },
     //here we listen for a new value,if it changes,we change our value
     watch: {
-        "$store.state.SendOrGrub"(nv) {
+        "$store.state.SendOrGrubPopup"(nv) {
             this.showSendOrGrub = nv;
         },
     }

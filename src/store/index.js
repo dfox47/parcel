@@ -39,13 +39,22 @@ export default new Vuex.Store({
             state.RegistrationPopup = false;
         },
 
-        //RCONFIRM
+        //CONFIRM
         showConfirmPopup(state) {
             this.commit('hideEverything');
             state.ConfirmPopup = true;
         },
         hideConfirmPopup(state) {
             state.ConfirmPopup = false;
+        },
+
+        //SendOrGrub
+        showSendOrGrubPopup(state) {
+            this.commit('hideEverything');
+            state.SendOrGrubPopup = true;
+        },
+        hideSendOrGrubPopup(state) {
+            state.SendOrGrubPopup = false;
         }
     },
     getters: {
@@ -57,6 +66,9 @@ export default new Vuex.Store({
         },
         getConfirmPopup: state => {
             return state.ConfirmPopup;
+        },
+        getSendOrGrub: state => {
+            return state.SendOrGrub;
         }
     }
 })

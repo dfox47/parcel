@@ -3,12 +3,10 @@
   background-color: #fff;
   border-radius: 14px;
   left: 50%;
-  max-width: 560px;
   padding: 70px;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 100%;
   z-index: 99;
 
   p {
@@ -113,6 +111,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  //max-width: 560px;
+  width: 418px;
 }
 
 

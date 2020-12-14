@@ -29,9 +29,9 @@
                         action=""
                         class="popup_one_column"
                     >
-                        <h3>
+                        <v-card-title>
                             {{ $vuetify.lang.t('$vuetify.confirmation') }}
-                        </h3>
+                        </v-card-title>
 
                         <v-card-subtitle>
                             {{ $vuetify.lang.t('$vuetify.confirmation_text') }}
