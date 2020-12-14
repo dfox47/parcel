@@ -33,11 +33,10 @@
                         </v-card-title>
 
                         <label class="input_wrap">
-                            <input
-                                type="text"
-                                placeholder="Номер телефона"
+                            <v-text-field
+                                label="Номер телефона"
                                 v-focus
-                            >
+                            />
                         </label>
 
                         <label class="input_wrap">

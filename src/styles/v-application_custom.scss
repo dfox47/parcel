@@ -107,6 +107,34 @@ body {
         width: 22px;
       }
     }
+
+    .v-text-field {
+      .v-input__slot {
+        .v-label {
+          top: 18px;
+          padding: 0 18px;
+        }
+
+        .v-label--active {
+            top: 8px;
+        }
+
+        .v-text-field__slot {
+          input {
+            padding: 16px 18px;
+            max-height: 59px;
+          }
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
   }
 }
 
