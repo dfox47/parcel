@@ -7,13 +7,11 @@
         <div class="row px-5 pb-3">
             <div class="col-6 pt-3">
                 <h3>{{ $vuetify.lang.t('$vuetify.search.from') }}</h3>
-
                 <country-input />
             </div>
 
             <div class="col-6 pt-3">
                 <h3>{{ $vuetify.lang.t('$vuetify.search.to') }}</h3>
-
                 <country-input />
             </div>
 
@@ -107,6 +105,7 @@
 
 <script>
 import CountryInput from "../components/CountryInput.vue";
+import axios from "axios";
 
 export default {
     name: "SendSearch",
@@ -128,23 +127,26 @@ export default {
             this.$store.dispatch('clearError');
             this.$store.dispatch('setLoading', true);
 
-            this.$http.get('https://api.wwprcl.ru/api/delivery/order/list')
-                .then(response => {
-                    this.orders = response.json();
-                    this.$store.dispatch('setLoading', false);
-                }, error => {
-                    console.log(error);
-                    this.$store.dispatch('setLoading', false);
+            setTimeout(() => {
+                axios.get(`https://api.wwprcl.ru/api/delivery/offer/list`,{headers: {'X-Api-AuthKey': 'd310b9b37084d10c1b57dcd2c453aed64c6f833c'}})
+                    .then(response => {
+                        this.orders = response.json();
+                        this.$store.dispatch('setLoading', false);
+                    }, error => {
+                        //console.log(error);
+                        this.$store.dispatch('setLoading', false);
 
-                    if (error.bodyText === '') {
-                        this.$store.dispatch('setError', 'Неизвестная ошибка запроса к серверу');
-                    }
-                    else {
-                        this.$store.dispatch('setError', error.bodyText);
-                    }
+                        if (error.toJSON().message === '') {
+                            this.$store.dispatch('setError', 'Неизвестная ошибка запроса к серверу');
+                        }
+                        else {
+                            this.$store.dispatch('setError', error.toJSON().message);
+                        }
+                        throw error;
+                    });
+            }, 1000);
 
-                    throw error;
-                });
+
         },
         checkTypeOrder(type) {
             return type === 0 || type === 1 || type === 2;

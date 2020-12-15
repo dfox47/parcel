@@ -3,7 +3,6 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
-import VueResource from 'vue-resource';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -24,7 +23,6 @@ Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
 Vue.component('country-flag', CountryFlag);
 
-Vue.use(VueResource);
 
 Vue.use(PortalVue);
 

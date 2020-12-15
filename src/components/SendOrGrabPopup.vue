@@ -60,27 +60,23 @@
 </template>
 
 <script>
-import store from "../store";
 export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
-            showSendOrGrub: store.getters.SendOrGrubPopup,
-            // showSendOrGrub: true,
             type: 'password',
             btnText: 'Show Password'
         }
     },
-    methods: {
-        hideSendOrGrub () {
-            store.commit('hideSendOrGrubPopup');
+    computed: {
+        showSendOrGrub () {
+            return this.$store.getters.getSendOrGrub
         }
     },
-    //here we listen for a new value,if it changes,we change our value
-    watch: {
-        "$store.state.SendOrGrubPopup"(nv) {
-            this.showSendOrGrub = nv;
-        },
+    methods: {
+        hideSendOrGrub () {
+            this.$store.dispatch('hideSendOrGrubPopup')
+        }
     }
 }
 </script>

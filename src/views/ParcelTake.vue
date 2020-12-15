@@ -25,7 +25,10 @@
                         </li>
 
                         <li>
-                            <span class="take_menu__item">
+                            <span
+                                class="take_menu__item"
+                                @click="showSendOrGrubPopup"
+                            >
                                 {{ $vuetify.lang.t('$vuetify.take.add_new_order') }}
                             </span>
                         </li>
@@ -838,6 +841,11 @@ export default {
             'США'
         ]
     }),
+    methods: {
+        showSendOrGrubPopup () {
+            this.$store.dispatch('showSendOrGrubPopup')
+        }
+    }
 }
 </script>
 

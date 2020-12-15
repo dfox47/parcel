@@ -9,7 +9,7 @@
 
                     <a
                         class="btn btn_blue btn_medium"
-                        @click="this.showLoginPopup"
+                        @click="showRegistrationPopup"
                     >{{ $vuetify.lang.t('$vuetify.registration') }}</a>
                 </div>
 
@@ -28,11 +28,8 @@
                     <h2>{{ $vuetify.lang.t('$vuetify.what_do_you_need') }}</h2>
 
                     <div class="send_or_grab">
-                        <div @click="this.showSendOrGrubPopup">
-                            <span
-                                class="send_or_grab__inner"
-                                @click="this.showSendOrGrubPopup"
-                            >
+                        <div>
+                            <span class="send_or_grab__inner">
                                 <img
                                     src="../assets/i/send.svg"
                                     alt="send"
@@ -196,31 +193,11 @@
 
 
 <script>
-import store from "../store";
 export default {
     methods: {
-        showLoginPopup () {
-            store.commit('showLoginPopup');
-        },
-        hideLoginPopup () {
-            store.commit('hideLoginPopup');
-        },
         showRegistrationPopup () {
-            store.commit('showRegistrationPopup');
-        },
-        hideRegistrationPopup () {
-            store.commit('hideRegistrationPopup');
-        },
-        showConfirmPopup () {
-            store.commit('showConfirmPopup');
-        },
-        hideConfirmPopup () {
-            store.commit('hideConfirmPopup');
-        },
-        showSendOrGrubPopup () {
-            console.log('1')
-            store.commit('showSendOrGrubPopup');
-        },
+            this.$store.dispatch('showRegistrationPopup')
+        }
     }
 }
 </script>
