@@ -12,7 +12,6 @@
         </transition>
 
         <transition
-
             name="fade"
             appear
         >
@@ -39,33 +38,43 @@
 
                         <label class="input_confirm">
                             <input
+                                maxlength="1"
                                 type="text"
                                 placeholder=""
                                 v-focus
                                 @input="focus2"
+                                @focus="clearThis($event.target)"
                             ><!--v-focus sets focus automatically-->
                             <input
+                                maxlength="1"
                                 type="text"
                                 placeholder=""
                                 ref="inp_2"
                                 @input="focus3"
+                                @focus="clearThis($event.target)"
                             >
                             <input
+                                maxlength="1"
                                 type="text"
                                 placeholder=""
                                 ref="inp_3"
                                 @input="focus4"
+                                @focus="clearThis($event.target)"
                             >
                             <input
+                                maxlength="1"
                                 type="text"
                                 placeholder=""
                                 ref="inp_4"
                                 @input="focus5"
+                                @focus="clearThis($event.target)"
                             >
                             <input
+                                maxlength="1"
                                 type="text"
                                 placeholder=""
                                 ref="inp_5"
+                                @focus="clearThis($event.target)"
                             >
                         </label>
 
@@ -105,24 +114,25 @@
 </template>
 
 <script>
-import store from "../store";
 export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
-            showConfirmPopup: store.getters.ConfirmPopup,
-            // showConfirmPopup: true,
             type: 'password',
             btnText: 'Show Password'
         }
     },
+    computed: {
+        showConfirmPopup () {
+            return this.$store.getters.getConfirmPopup
+        }
+    },
     methods: {
         hideConfirmPopup () {
-            store.commit('hideConfirmPopup');
+            this.$store.dispatch('hideConfirmPopup')
         },
         showLoginPopup () {
-            console.log('worked')
-            store.commit('showLoginPopup');
+            this.$store.dispatch('showLoginPopup')
         },
         focus2 () {
             this.$refs.inp_2.focus();
@@ -136,16 +146,9 @@ export default {
         focus5 () {
             this.$refs.inp_5.focus();
         },
-        focusBtn () {
-            this.$refs.btn.focus();
+        clearThis (event) {
+            event.value = ''
         }
-    },
-    //here we listen for a new value,if it changes,we change our value
-    watch: {
-        "$store.state.ConfirmPopup"(nv) {
-            this.showConfirmPopup = nv;
-        },
-
     }
 }
 </script>

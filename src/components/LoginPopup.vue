@@ -91,19 +91,22 @@
 </template>
 
 <script>
-import store from "../store";
 export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
-            showLoginPopup: store.getters.getLoginPopup,
             type: 'password',
             btnText: 'Show Password'
         }
     },
+    computed: {
+        showLoginPopup() {
+            return this.$store.getters.getLoginPopup
+        }
+    },
     methods: {
         hideLoginPopup () {
-            store.commit('hideLoginPopup');
+            this.$store.dispatch('hideLoginPopup')
         },
         showPassword () {
             if (this.type === 'password') {
@@ -116,12 +119,7 @@ export default {
             }
         },
         showRegistrationPopup () {
-            store.commit('showRegistrationPopup');
-        }
-    },
-    watch: {
-        "$store.state.LoginPopup"(nv) {
-            this.showLoginPopup = nv;
+            this.$store.dispatch('showRegistrationPopup')
         }
     }
 }

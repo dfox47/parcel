@@ -13,10 +13,9 @@
 <script>
 export default {
     name: "CountryInput",
-    props: 'type',
     data() {
         return {
-            selectedValue: null,
+            selectedValue: '101',
             options: [
                 { id: '101', name: 'Россия' },
                 { id: '102', name: 'Америка' },

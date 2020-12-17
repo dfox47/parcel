@@ -56,12 +56,12 @@
 
                     <ul class="login_nav">
                         <li class="login_nav__item">
-                            <router-link
+                            <v-btn
                                 class="btn btn_main"
-                                to="/registration"
+                                @click="showLogInButton"
                             >
                                 {{ $vuetify.lang.t('$vuetify.login.button') }}
-                            </router-link>
+                            </v-btn>
                         </li>
                     </ul>
                 </div>
@@ -74,7 +74,11 @@
 
 <script>
 export default {
-    name: 'Header'
+    methods: {
+        showLogInButton () {
+            this.$store.dispatch('showLoginPopup')
+        }
+    }
 }
 </script>
 

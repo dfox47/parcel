@@ -2,7 +2,13 @@
     <v-app>
         <!-- header -->
         <app-header />
-
+        <v-progress-linear
+            :active="loading"
+            :indeterminate="loading"
+            fixed
+            bottom
+            color="deep-purple accent-4"
+        />
         <!-- content -->
         <router-view />
 
@@ -46,6 +52,14 @@ export default {
     computed: {
         error () {
             return this.$store.getters.error
+        },
+        loading() {
+            return this.$store.getters.loading
+        }
+    },
+    methods: {
+        closeError () {
+            this.$store.dispatch('clearError')
         }
     }
 }
