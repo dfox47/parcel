@@ -1,0 +1,105 @@
+.btn_connect {
+  background: linear-gradient(100.05deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);
+  border: 1px solid transparent;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.btn_connect:hover {
+  background: #ffffff;
+  border: 1px solid #00A7E5;
+  color: #00A7E5;
+}
+
+.btn_connect:active {
+  opacity: 0.5;
+}
+
+.parcel_view {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    color: #01A9E4;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+}
+
+.parcel_view__description {
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin: 0 0 62px;
+}
+
+.parcel_view__info {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 44px 0 0;
+
+  > div {
+    margin: 0 0 70px;
+    width: 50%;
+  }
+}
+
+.parcel_view__info__item {
+  color: #3C4858;
+  font-size: 20px;
+  line-height: 35px;
+  //padding: 50px 0;
+}
+
+.parcel_view__name {
+  color: #3C4858;
+  font-size: 22px;
+  line-height: 25px;
+  margin-left: 20px;
+  padding-top: 8px;
+
+  >span {
+    font-weight: 600;
+    font-size: 17px;
+  }
+}
+
+.parcel_view__wrap {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 785px;
+  width: 100%;
+}
+
+.parcel_view__person  {
+  display: flex;
+}
+
+.photo {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 94px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.parcel_view__status {
+  color: #3C4858;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 25px;
+  padding-top: 8px;
+}

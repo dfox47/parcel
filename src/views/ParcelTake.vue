@@ -111,22 +111,26 @@
 
 
                     <div class="take_results_items">
-                        <div class="take_results_item">
+                        <div
+                            v-for="item in items"
+                            :key="item.message"
+                            class="take_results_item"
+                        >
                             <div class="take_results_item__img_wrap">
                                 <img
                                     class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
+                                    :src="item.img"
                                     alt=""
                                 >
 
                                 <div class="take_results_item__name_wrap">
                                     <div class="take_results_item__name">
-                                        Валентина<br>
-                                        Афанасьева
+                                        {{ item.name }}<br>
+                                        {{ item.surname }}
                                     </div>
 
-                                    <div class="take_results_item__rating">
-                                        2.5
+                                    <div class="person_rating">
+                                        {{ item.rating }}
                                     </div>
                                 </div>
                             </div>
@@ -134,15 +138,15 @@
                             <div class="take_results_item__info">
                                 <div class="take_results_item__list">
                                     <p>
-                                        <span>Срок:</span> до 31 фефвраля
+                                        <span>Срок:</span> {{ item.till }}
                                     </p>
 
                                     <p>
-                                        <span>Вес:</span> 0,5 кг
+                                        <span>Вес:</span> {{ item.weight }}
                                     </p>
 
                                     <p>
-                                        <span>Депозит:</span> 5000 руб.
+                                        <span>Депозит:</span> {{ item.deposit }}
                                     </p>
                                 </div>
 
@@ -151,622 +155,21 @@
                                         <span>Категория</span>
                                     </p>
 
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
+                                    <p
+                                        v-for="cat in item.categories"
+                                        :key="cat"
+                                    >
+                                        {{ cat }}
                                     </p>
                                 </div>
 
                                 <div class="take_results_item__link">
                                     <a
                                         class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Александр<br>
-                                        Константиновский
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Анастасия<br>
-                                        Серебрянникова
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Сергей<br>
-                                        Иванов
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Валентина<br>
-                                        Афанасьева
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Александр<br>
-                                        Константиновский
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Анастасия<br>
-                                        Серебрянникова
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Сергей<br>
-                                        Иванов
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Анастасия<br>
-                                        Серебрянникова
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="take_results_item">
-                            <div class="take_results_item__img_wrap">
-                                <img
-                                    class="take_results_item__img"
-                                    src="../assets/i/photo2.png"
-                                    alt=""
-                                >
-
-                                <div class="take_results_item__name_wrap">
-                                    <div class="take_results_item__name">
-                                        Сергей<br>
-                                        Иванов
-                                    </div>
-
-                                    <div class="take_results_item__rating">
-                                        2.5
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="take_results_item__info">
-                                <div class="take_results_item__list">
-                                    <p>
-                                        <span>Срок:</span> до 31 фефвраля
-                                    </p>
-
-                                    <p>
-                                        <span>Вес:</span> 0,5 кг
-                                    </p>
-
-                                    <p>
-                                        <span>Депозит:</span> 5000 руб.
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__category">
-                                    <p>
-                                        <span>Категория</span>
-                                    </p>
-
-                                    <p>
-                                        Категория 1,
-                                    </p>
-
-                                    <p>
-                                        Категория 2,
-                                    </p>
-
-                                    <p>
-                                        Категория 3,
-                                    </p>
-
-                                    <p>
-                                        Ещё 3 категории
-                                    </p>
-                                </div>
-
-                                <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="#"
-                                    >Подробнее</a>
+                                        href="/parseloveriew"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.readmore') }}
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -836,6 +239,113 @@ export default {
             'Выберите страну',
             'Россия',
             'США'
+        ],
+
+        items: [
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            },
+            {
+                categories: [
+                    'Категория 1','Категория 2','Категория 3'
+                ],
+                message: 'Foo',
+                name: 'Сергей',
+                surname: 'Иванов',
+                rating: 2.5,
+                img: require('@/assets/i/photo2.png'),
+                till: 'до 31 февраля',
+                weight: '0,5 кг',
+                deposit: '5000 руб'
+            }
         ]
     }),
 }

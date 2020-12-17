@@ -5,6 +5,7 @@ import AuthGuard from './auth-guard';
 import ParcelSend from "../views/ParcelSend";
 import SendSearch from "../views/SendSearch";
 import ParcelTake from "../views/ParcelTake";
+import ParcelOverview from "../views/ParcelOverview";
 import TakeSearch from "../views/TakeSearch";
 import Registration from "../views/Registration";
 import Search from "../views/Search";
@@ -13,14 +14,6 @@ import Error404 from "../views/Error404";
 import LoginPopup from "@/components/LoginPopup";
 
 Vue.use(VueRouter);
-
-// const popupRoutes = [
-//     {
-//         name: 'popupName',
-//         path: "/popupLogin",
-//         component: LoginPopup
-//     }
-// ]
 
 const routes = [
     {
@@ -34,6 +27,10 @@ const routes = [
     {
         component: TakeSearch,
         path: '/take/search',
+    },
+    {
+        component: ParcelOverview,
+        path: '/parseloveriew',
     },
     {
         component: ParcelSend,
