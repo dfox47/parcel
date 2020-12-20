@@ -113,6 +113,8 @@
                             Связаться
                         </div>
 
+
+
                         <div class="btn btn_back">
                             {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
                         </div>

@@ -1,6 +1,6 @@
 
 .popup {
-  background-color: #fff;
+      background-color: #fff;
   border-radius: 14px;
   left: 50%;
   padding: 70px;
@@ -96,16 +96,21 @@
   width: 100%;
 }
 
-
 .popup_overlay {
   background-color: rgba(#000, .3);
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 98;
 }
+
+.popup_overlay__transparent {
+  @extend .popup_overlay;
+  background-color: transparent;
+}
+
 
 .popup_one_column {
   align-items: center;
@@ -124,4 +129,83 @@
     font-size: 17px;
     padding: 0 0 20px;
   }
+}
+
+
+.popup_lang_n_cur {
+  background-color: $c_popup_bg_secondary;
+  border-radius: 10px 0 10px 10px;
+  padding: 30px 0 14px;
+  position: absolute;
+  right: 9%;
+  top: 90%;
+  width: 184px;
+  z-index: 99;
+}
+
+.popup_lang_n_cur__wrap {
+  margin: 0 auto;
+  max-width: 118px;
+  width: 100%;
+
+  > div:first-child {
+    border-bottom: 1px solid #fefefe;
+    padding: 0 0 2px;
+    margin: 0 0 17px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .popup_lang_n_cur {
+    border-radius: 0 0 10px 10px;
+    right: 145px;
+    top: 101%;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .popup_lang_n_cur {
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    max-width: 355px;
+    padding: 70px 0 1000%;
+    right: auto;
+    top: 87px;
+    width: 100%;
+  }
+
+  .popup_lang_n_cur__wrap {
+    margin: 0 auto;
+    max-width: 202px;
+    width: 100%;
+
+    > div:first-child {
+      border-bottom: 1px solid #fefefe;
+      padding: 0 0 46px;
+      margin: 0 0 58px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+	.popup_lang_n_cur {
+		max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.popup_lang_n_cur {
+		padding: 59px 0 1000%;
+		top: 59px;
+	}
+
+	.popup_lang_n_cur__wrap {
+		max-width: 152px;
+
+		> div:first-child {
+			padding: 0 0 32px;
+			margin: 0 0 44px;
+		}
+	}
 }

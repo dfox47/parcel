@@ -2,7 +2,10 @@
     <div class="header">
         <div class="wrap">
             <header class="header_wrap">
-                <div class="header_bars header_mobile">
+                <div
+                    class="header_bars header_mobile"
+                    @click="this.showLangAndCurPopup"
+                >
                     <span />
                     <span />
                     <span />
@@ -48,11 +51,16 @@
                         </li>
 
                         <li class="header_nav__item">
-                            <router-link to="/registration">
+                            <span
+                                href="javascript:void(0);"
+                                @click="this.showLangAndCurPopup"
+                            >
                                 {{ $vuetify.lang.t('$vuetify.language_name') }}
-                            </router-link>
+                            </span>
                         </li>
                     </ul>
+
+                    <app-lang_and_cur />
 
                     <ul class="login_nav">
                         <li class="login_nav__item">
@@ -75,8 +83,8 @@
 <script>
 export default {
     methods: {
-        showLogInButton () {
-            this.$store.dispatch('showLoginPopup')
+        showLangAndCurPopup () {
+            this.$store.dispatch('showLangAndCurPopup')
         }
     }
 }

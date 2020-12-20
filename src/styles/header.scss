@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  z-index: 1;
 
   &:after {
     background: url(#{$i}/background_1.svg) right top no-repeat scroll transparent;
@@ -16,6 +15,7 @@
 }
 
 .header_bars {
+      cursor: pointer;
   width: 54px;
 
   span {
@@ -60,7 +60,8 @@
 }
 
 .header_nav__item {
-  margin: 0 0 0 36px;
+      cursor: pointer;
+      margin: 0 0 0 36px;
 }
 
 
@@ -80,13 +81,13 @@
   padding: 22px 0 29px;
   position: relative;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
 }
 
 @media only screen and (max-width: 1400px) {
   .header {
     &:after {
-      background: none;
+      display: none;
     }
   }
 

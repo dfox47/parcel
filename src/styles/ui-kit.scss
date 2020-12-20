@@ -20,6 +20,7 @@
   }
 }
 
+
 .btn_back,
 .btn_back:visited {
   background-color: #D4F0FA;
@@ -57,7 +58,6 @@
   padding: 11px 0;
   max-width: 420px;
 }
-
 
 
 .btn_main,
@@ -154,33 +154,6 @@
   width: auto;
 }
 // btn [END]
-
-
-
-// checkbox [START]
-.checkbox {
-  align-items: center;
-  display: flex;
-  cursor: pointer;
-
-  input {
-    &:checked ~ .checkbox__box {
-      background-image: url(#{$i}/icons/checkbox_active.svg);
-    }
-  }
-}
-
-.checkbox__box {
-  background: url(#{$i}/icons/checkbox.svg) center center no-repeat scroll transparent;
-  display: block;
-  height: 22px;
-  margin: 0 4px 0 0;
-  width: 22px;
-}
-
-.checkbox__desc {}
-// checkbox [END]
-
 
 
 .input_confirm {
