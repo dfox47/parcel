@@ -85,6 +85,9 @@ export default {
     methods: {
         showLangAndCurPopup () {
             this.$store.dispatch('showLangAndCurPopup')
+        },
+        showLogInButton () {
+            this.$store.dispatch('showLoginPopup')
         }
     }
 }

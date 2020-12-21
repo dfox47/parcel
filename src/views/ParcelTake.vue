@@ -83,10 +83,14 @@
                     </div>
 
                     <div class="text-center">
-                        <label class="btn btn_submit">
-                            <input type="submit">
-                            <span>{{ $vuetify.lang.t('$vuetify.take.search') }}</span>
-                        </label>
+                        <v-btn
+                            class="btn btn_submit"
+                            @click="loadOrders"
+                            :disabled="loading"
+                            :loading="loading"
+                        >
+                            {{ $vuetify.lang.t('$vuetify.take.search') }}
+                        </v-btn>
                     </div>
 
                     <div class="take_destinations__link_additional">
