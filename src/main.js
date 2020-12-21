@@ -14,8 +14,6 @@ import LangAndCur_popup from "./components/LangAndCurPopup";
 
 import CountryFlag from 'vue-country-flag';
 
-import PortalVue from 'portal-vue'
-
 Vue.component('app-header', Header);
 Vue.component('app-footer', Footer);
 Vue.component('app-login_popup', Login_popup);
@@ -27,7 +25,6 @@ Vue.component('app-lang_and_cur', LangAndCur_popup);
 Vue.component('country-flag', CountryFlag);
 
 
-Vue.use(PortalVue);
 
 Vue.config.productionTip = false;
 
