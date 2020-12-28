@@ -83,7 +83,8 @@
 }
 
 .popup_menu__rating {
-	background-color: #01a9e4;
+	align-items: baseline;
+	background-color: $c_elements_bg;
 	border-radius: 10px;
 	color: #fff;
 	display: flex;
@@ -110,6 +111,10 @@
 
 	.popup_menu__photo {
 		display: flex;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	.popup_menu__icon {
@@ -142,9 +147,13 @@
 	}
 
 	.popup_menu__rating {
-		font-size: 20px;
+		font-size: 21px;
 		padding: 16px 20px 12px 17px;
 		width: 96px;
+
+		span {
+			font-size: 20px;
+		}
 	}
 }
 
@@ -157,14 +166,67 @@
 	}
 
 	.popup_menu__icon {
-		right: 85px;
+		right: 65px;
 	}
 
 	.popup_menu__item {
-		padding: 27px 138px 29px 94px;
+		padding: 27px 118px 29px 60px;
 	}
 
 	.popup_menu__number {
-		right: 85px;
+		right: 65px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.popup_menu {
+		padding: 30px 0 4000px;
+		top: 60px;
+	}
+
+	.popup_menu__photo {
+		margin: 0 0 20px;
+		width: 65px;
+	}
+
+	.popup_menu__icon {
+		font-size: 14px;
+		height: 27px;
+		right: 55px;
+		width: 27px;
+	}
+
+	.popup_menu__item {
+		font-size: 16px;
+		margin: 0 0 7px;
+		padding: 16px 90px 14px 60px;
+	}
+
+	.popup_menu__items {
+		margin: 44px 0 10px;
+	}
+
+	.popup_menu__name {
+		font-size: 16px;
+	}
+
+	.popup_menu__number {
+		font-size: 14px;
+		height: 27px;
+		padding: 8px 0 0;
+		right: 55px;
+		width: 27px;
+	}
+
+	.popup_menu__rating {
+		font-size: 14px;
+		justify-content: space-between;
+		line-height: 1.1;
+		padding: 9px 15px 7px 14px;
+		width: 68px;
+
+		span {
+			font-size: 14px;
+		}
 	}
 }
