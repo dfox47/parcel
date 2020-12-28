@@ -29,9 +29,11 @@
                 </router-link>
 
                 <div class="header_right">
-                    <div class="header_login_icon">
+                    <div
+                        class="header_login_icon header_mobile"
+                        @click="showMenuPopup"
+                    >
                         <img
-                            class="header_login_icon header_mobile"
                             src="../assets/i/photo.png"
                             alt="login_icon"
                         >
@@ -60,18 +62,20 @@
                         </li>
                     </ul>
 
-                    <app-lang_and_cur />
+                    <app-lang_and_cur_popup />
 
                     <ul class="login_nav">
                         <li class="login_nav__item">
                             <v-btn
                                 class="btn btn_main"
-                                @click="showLogInButton"
+                                @click="showMenuPopup"
                             >
                                 {{ $vuetify.lang.t('$vuetify.login.button') }}
                             </v-btn>
                         </li>
                     </ul>
+
+                    <app-menu_popup />
                 </div>
             </header>
         </div>
@@ -86,8 +90,8 @@ export default {
         showLangAndCurPopup () {
             this.$store.dispatch('showLangAndCurPopup')
         },
-        showLogInButton () {
-            this.$store.dispatch('showLoginPopup')
+        showMenuPopup () {
+            this.$store.dispatch('showMenuPopup')
         }
     }
 }

@@ -1,6 +1,4 @@
 
-
-
 body {
   .v-application {
     font-family: $font_main;
@@ -57,6 +55,10 @@ body {
 
     .v-card {
       div {
+        border-radius: 14px;
+      }
+
+      > *:last-child:not(.v-chip) {
         border-radius: 14px;
       }
     }
@@ -169,50 +171,50 @@ body {
 
         .v-input--selection-controls__input {
           height: 42px;
-	        margin-right: 19px;
-	        width: 42px;
+          margin-right: 19px;
+          width: 42px;
         }
 
-	      .v-input--selection-controls__ripple {
-		      left: -3px;
-	      }
+        .v-input--selection-controls__ripple {
+          left: -3px;
+        }
 
-	      .v-label {
-		      font-size: 23px;
-	      }
+        .v-label {
+          font-size: 23px;
+        }
       }
 
-	    @media only screen and (max-width: 380px) {
-		    .mdi-checkbox-blank-outline {
-			    &:before {
-				    background-size: cover;
-				    height: 33px;
-				    width: 33px;
-			    }
-		    }
+      @media only screen and (max-width: 380px) {
+        .mdi-checkbox-blank-outline {
+          &:before {
+            background-size: cover;
+            height: 33px;
+            width: 33px;
+          }
+        }
 
-		    .mdi-checkbox-marked {
-			    &:before {
-				    background-size: cover;
-				    height: 33px;
-				    width: 33px;
-			    }
-		    }
+        .mdi-checkbox-marked {
+          &:before {
+            background-size: cover;
+            height: 33px;
+            width: 33px;
+          }
+        }
 
-		    .v-input--selection-controls__input {
-			    height: 33px;
-			    margin-right: 19px;
-			    width: 33px;
-		    }
+        .v-input--selection-controls__input {
+          height: 33px;
+          margin-right: 19px;
+          width: 33px;
+        }
 
-		    .v-input--selection-controls__ripple {
-			    left: -8px;
-		    }
+        .v-input--selection-controls__ripple {
+          left: -8px;
+        }
 
-		    .v-label {
-			    font-size: 18px;
-		    }
-	    }
+        .v-label {
+          font-size: 18px;
+        }
+      }
     }
 
     .v-text-field {

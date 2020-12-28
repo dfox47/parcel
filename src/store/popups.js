@@ -4,7 +4,8 @@ export default {
         LoginPopup: false,
         RegistrationPopup: false,
         SendOrGrubPopup: false,
-        LangAndCurPopup: true,
+        LangAndCurPopup: false,
+        MenuPopup: true,
     },
     mutations: {
         //Hide All popup's
@@ -14,6 +15,7 @@ export default {
             state.RegistrationPopup = false;
             state.SendOrGrubPopup = false;
             state.LangAndCurPopup = false;
+            state.MenuPopup = false;
         },
 
         //LOGIN
@@ -59,6 +61,15 @@ export default {
         },
         hideLangAndCurPopup (state) {
             state.LangAndCurPopup = false;
+        },
+
+        //MenuPopup
+        showMenuPopup(state) {
+            this.commit('hideEverything');
+            state.MenuPopup = true;
+        },
+        hideMenuPopup (state) {
+            state.MenuPopup = false;
         }
     },
     actions: {
@@ -95,6 +106,13 @@ export default {
         },
         hideLangAndCurPopup ({ commit }) {
             commit('hideLangAndCurPopup')
+        },
+
+        showMenuPopup ({ commit }) {
+            commit('showMenuPopup')
+        },
+        hideMenuPopup ({ commit }) {
+            commit('hideMenuPopup')
         }
     },
     getters: {
@@ -112,6 +130,9 @@ export default {
         },
         getLangAndCurPopup (state) {
             return state.LangAndCurPopup;
+        },
+        getMenuPopup (state) {
+            return state.MenuPopup;
         }
     }
 }

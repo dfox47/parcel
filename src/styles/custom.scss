@@ -69,6 +69,17 @@ ul {
 }
 
 
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+
 
 // logo [START]
 .logo,
@@ -187,12 +198,10 @@ ul {
 }
 
 
-
 .plane_icon {
   color: blueviolet;
   font-size: 20px;
 }
-
 
 
 // send_or_grab [START]
@@ -276,6 +285,17 @@ ul {
 // send_or_grab [END]
 
 
+.slide-enter-active,
+.slide-leave-active {
+	transition: transform .5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+	transform: translateY(-50%) translateX(100vw);
+}
+
+
 
 .wrap {
   margin: 0 auto;
@@ -285,29 +305,32 @@ ul {
 
 
 
+// icomoon [START]
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
 
-
-
-
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity .5s;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+.icon-star_w:before {
+	content: "\e902";
+	color: #fff;
 }
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform .5s;
+.icon-star:before {
+	content: "\e901";
+	color: #01a9e4;
 }
-
-.slide-enter,
-.slide-leave-to {
-  transform: translateY(-50%) translateX(100vw);
+.icon-bell:before {
+	content: "\e900";
+	color: #01a9e4;
 }
-
-
+// icomoon [END]

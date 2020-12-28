@@ -32,8 +32,15 @@
 }
 
 .header_login_icon {
-  position: relative;
-  border-radius: 50%;
+	border-radius: 50%;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	max-width: 54px;
+
+	img {
+		width: 100%;
+	}
 }
 
 .header_mobile {

@@ -10,7 +10,8 @@ import Login_popup from './components/LoginPopup';
 import Register_popup from './components/RegisterPopup';
 import Confirm_popup from './components/ConfirmPopup';
 import SendOrGrab_popup from './components/SendOrGrabPopup';
-import LangAndCur_popup from "./components/LangAndCurPopup";
+import LangAndCur_popup from './components/LangAndCurPopup';
+import Menu_popup from './components/MenuPopup';
 
 import CountryFlag from 'vue-country-flag';
 
@@ -20,7 +21,8 @@ Vue.component('app-login_popup', Login_popup);
 Vue.component('app-register_popup', Register_popup);
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
-Vue.component('app-lang_and_cur', LangAndCur_popup);
+Vue.component('app-lang_and_cur_popup', LangAndCur_popup);
+Vue.component('app-menu_popup', Menu_popup);
 
 Vue.component('country-flag', CountryFlag);
 
