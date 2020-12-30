@@ -121,6 +121,11 @@
 }
 
 
+.popup_send_or_grab {
+
+}
+
+
 .popup_top {
   text-align: center;
 
@@ -189,7 +194,30 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 460px) {
+	.popup {
+		padding: 30px;
+	}
+
+	.popup_close_btn {
+		border-radius: 7px;
+		height: 24px;
+		top: 8px;
+		right: 8px;
+		width: 24px;
+
+		&::after,
+		&::before {
+			background-color: #fff;
+			content: ' ';
+			height: 11px;
+			left: 10px;
+			position: absolute;
+			top: 5px;
+			width: 2px;
+		}
+	}
+
 	.popup_lang_n_cur {
 		max-width: 100%;
 	}

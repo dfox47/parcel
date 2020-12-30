@@ -27,8 +27,11 @@
                 <div class="home_send_or_grab__content">
                     <h2>{{ $vuetify.lang.t('$vuetify.what_do_you_need') }}</h2>
 
-                    <div class="send_or_grab">
-                        <div>
+                    <div class="send_or_grab__wrap">
+                        <div
+                            @click="showSendOrGrubPopup"
+                            class="send_or_grab__outer"
+                        >
                             <span class="send_or_grab__inner">
                                 <img
                                     src="../assets/i/send.svg"
@@ -38,7 +41,9 @@
                             </span>
                         </div>
 
-                        <div>
+                        <div
+                            class="send_or_grab__outer"
+                        >
                             <span class="send_or_grab__inner">
                                 <img
                                     src="../assets/i/grab.svg"
@@ -197,6 +202,9 @@ export default {
     methods: {
         showRegistrationPopup () {
             this.$store.dispatch('showRegistrationPopup')
+        },
+        showSendOrGrubPopup () {
+            this.$store.dispatch('showSendOrGrubPopup')
         }
     }
 }

@@ -5,7 +5,7 @@ export default {
         RegistrationPopup: false,
         SendOrGrubPopup: false,
         LangAndCurPopup: false,
-        MenuPopup: true,
+        MenuPopup: false,
     },
     mutations: {
         //Hide All popup's

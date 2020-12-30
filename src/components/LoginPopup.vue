@@ -19,7 +19,7 @@
                 v-if="showLoginPopup"
             >
                 <div class="popup popup_login">
-                    <div
+                    <span
                         class="popup_close_btn"
                         @click="this.hideLoginPopup"
                     />

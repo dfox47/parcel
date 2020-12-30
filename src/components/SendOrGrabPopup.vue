@@ -19,8 +19,8 @@
             <v-card
                 v-if="showSendOrGrub"
             >
-                <div class="popup popup_confirm">
-                    <div
+                <div class="popup popup_send_or_grab">
+                    <span
                         class="popup_close_btn"
                         @click="this.hideSendOrGrub"
                     />
@@ -29,11 +29,10 @@
                         {{ $vuetify.lang.t('$vuetify.add_application') }}
                     </v-card-title>
 
-                    <div class="send_or_grab">
-                        <div @click="this.showSendOrGrubPopup">
+                    <div class="send_or_grab__wrap">
+                        <span class="send_or_grab__outer">
                             <span
                                 class="send_or_grab__inner"
-                                @click="this.showSendOrGrubPopup"
                             >
                                 <img
                                     src="../assets/i/send.svg"
@@ -41,9 +40,9 @@
                                 >
                                 <span>{{ $vuetify.lang.t('$vuetify.menu_button_send') }}</span>
                             </span>
-                        </div>
+                        </span>
 
-                        <div>
+                        <span class="send_or_grab__outer">
                             <span class="send_or_grab__inner">
                                 <img
                                     src="../assets/i/grab.svg"
@@ -51,7 +50,7 @@
                                 >
                                 <span>{{ $vuetify.lang.t('$vuetify.menu_button_take') }}</span>
                             </span>
-                        </div>
+                        </span>
                     </div>
                 </div>
             </v-card>

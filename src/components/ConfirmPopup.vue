@@ -19,7 +19,7 @@
                 v-if="showConfirmPopup"
             >
                 <div class="popup popup_confirm">
-                    <div
+                    <span
                         class="popup_close_btn"
                         @click="this.hideConfirmPopup"
                     />
