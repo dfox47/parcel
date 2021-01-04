@@ -67,7 +67,8 @@
                     <ul class="login_nav">
                         <li class="login_nav__item">
                             <v-btn
-                                class="btn btn_main"
+                                color="secondary"
+                                small
                                 @click="showMenuPopup"
                             >
                                 {{ $vuetify.lang.t('$vuetify.login.button') }}

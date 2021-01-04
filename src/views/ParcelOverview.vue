@@ -120,7 +120,9 @@
                             </p>
                         </div>
 
-                        <div class="btn btn_connect">Связаться</div>
+                        <div class="btn btn_connect">
+                            Связаться
+                        </div>
 
                         <div class="btn btn_back">
                             {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}

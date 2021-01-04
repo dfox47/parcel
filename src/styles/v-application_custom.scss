@@ -52,6 +52,33 @@ body {
       }
     }
 
+    .v-btn,
+    .v-btn:visited {
+      align-items: center;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-block;
+      justify-content: center;
+      letter-spacing: 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: $transition;
+
+      &.v-btn--contained {
+        box-shadow: none;
+      }
+
+      &.v-size--small {
+        font-size: 15px;
+        height: 37px;
+        padding: 0 39px;
+      }
+    }
+
+
+
 
     .v-card {
       div {
@@ -66,8 +93,8 @@ body {
     .v-card__title {
       font-size: 24px;
       font-weight: 600;
-	    justify-content: center;
-	    line-height: 1.4;
+      justify-content: center;
+      line-height: 1.4;
     }
 
     .v-card__subtitle {
@@ -249,12 +276,12 @@ body {
 }
 
 @media only screen and (max-width: 460px) {
-	body {
-		.v-application {
-			.v-card__title {
-				font-size: 16px;
-			}
-		}
-	}
+  body {
+    .v-application {
+      .v-card__title {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
