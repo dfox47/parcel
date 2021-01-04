@@ -16,7 +16,7 @@
                     </li>
                 </ul>
 
-                <div class="parcel_view">
+                <div class="title_with_btn">
                     <a
                         href="/"
                         class="link_back"
@@ -24,10 +24,12 @@
                         Назад
                     </a>
 
-                    <div class="parcel_view__wrap">
-                        <h2>Россия, Москва - Рим, Италия</h2>
+                    <h2>Россия, Москва — Рим, Италия</h2>
+                </div>
 
-                        <div class="parcel_view__info">
+                <div class="parcel_view">
+                    <div class="parcel_view__info">
+                        <div class="parcel_view__item">
                             <div class="parcel_view__person">
                                 <div class="parcel_view__photo">
                                     <img
@@ -37,96 +39,107 @@
                                 </div>
 
                                 <div class="parcel_view__name__wrap">
-                                    <span class="parcel_view__name">Анастасия</span>
+                                    <span class="parcel_view__name">Анастасия</span>&nbsp;
                                     <span class="parcel_view__lastname">Серебрянникова</span>
                                     <span class="person_rating">4.5</span>
                                 </div>
                             </div>
+                        </div>
 
+                        <div class="parcel_view__item">
                             <div class="parcel_view__status">
-                                10 завершенных перевозок <br>
-                                Оценка на основании 5-и отзывов
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3>Отправить до</h3>
-
-                                <span>25 марта 2021</span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3> Способ передачи получателю</h3>
-
-                                <span>
-                                    Личная встреча <br>
-                                    В аэропорту
-                                </span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3> Данные получателя</h3>
-
-                                <span>
-                                    Александра Степанова <br>
-                                    Германия
-                                </span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3> Категория товара</h3>
-
-                                <span>
-                                    Медикаменты <br>
-                                    Категория 1
-                                </span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3>Габариты</h3>
-
-                                <p>Вес: 5 кг</p>
-
-                                <p>
-                                    Глубина: 6 см<br>
-                                    Высота: 15 см<br>
-                                    Ширина: 8,5 см
-                                </p>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3>Залог за сохранность</h3>
-
-                                <span>Нет</span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3> Объявленная ценность</h3>
-
-                                <span>Нет</span>
-                            </div>
-
-                            <div class="parcel_view__info__item">
-                                <h3>Цена доставки</h3>
-
-                                <span>5,000 руб</span>
+                                <ul>
+                                    <li>10 завершенных перевозок</li>
+                                    <li>Оценка на основании 5-и отзывов</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="parcel_view__description">
-                            <h3>Описание посылки</h3>
+                        <div class="parcel_view__item">
+                            <h3>Отправить до</h3>
 
-                            <p>
-                                Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil euris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau.
-                            </p>
+                            <ul>
+                                <li>25 марта 2021</li>
+                            </ul>
                         </div>
 
-                        <div class="btn btn_connect">
-                            Связаться
+                        <div class="parcel_view__item">
+                            <h3>Способ передачи получателю</h3>
+
+                            <ul>
+                                <li>Личная встреча</li>
+                                <li>В аэропорту</li>
+                            </ul>
                         </div>
 
-                        <div class="btn btn_back">
-                            {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
+                        <div class="parcel_view__item">
+                            <h3>Данные получателя</h3>
+
+                            <ul>
+                                <li>Александра Степанова</li>
+                                <li>Германия</li>
+                            </ul>
                         </div>
+
+                        <div class="parcel_view__item">
+                            <h3>Категория товара</h3>
+
+                            <ul>
+                                <li>Медикаменты</li>
+                                <li>Категория 1</li>
+                            </ul>
+                        </div>
+
+                        <div class="parcel_view__item">
+                            <h3>Габариты</h3>
+
+                            <ul>
+                                <li>Вес: 5 кг</li>
+                                <li>Глубина: 6 см</li>
+                                <li>Высота: 15 см</li>
+                                <li>Ширина: 8,5 см</li>
+                            </ul>
+                        </div>
+
+                        <div class="parcel_view__item">
+                            <h3>Залог за сохранность</h3>
+
+                            <ul>
+                                <li>Нет</li>
+                            </ul>
+                        </div>
+
+                        <div class="parcel_view__item">
+                            <h3> Объявленная ценность</h3>
+
+                            <ul>
+                                <li>Нет</li>
+                            </ul>
+                        </div>
+
+                        <div class="parcel_view__item">
+                            <h3>Цена доставки</h3>
+
+                            <ul>
+                                <li>5,000 руб</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="parcel_view__description">
+                        <h3>Описание посылки</h3>
+
+                        <p>
+                            Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil euris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau.
+                        </p>
+                    </div>
+
+                    <div class="btn btn_connect">
+                        Связаться
+                    </div>
+
+                    <div class="btn btn_back">
+                        {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
                     </div>
                 </div>
             </div>
@@ -142,3 +155,5 @@ export default {
     }),
 }
 </script>
+
+

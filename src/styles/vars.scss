@@ -5,11 +5,11 @@
 
 
 // media [START]
-$desktop: '(max-width: 1279)';
-$tablet_l: '(max-width: 999)';
-$tablet_m: '(max-width: 767)';
-$tablet_s: '(max-width: 599)';
-$mobile: '(max-width: 479)';
+$desktop:       'only screen and (max-width: 1279px)';
+$tablet_l:      'only screen and (max-width: 999px)';
+$tablet_m:      'only screen and (max-width: 767px)';
+$tablet_s:      'only screen and (max-width: 599px)';
+$mobile:        'only screen and (max-width: 479px)';
 // media [END]
 
 
