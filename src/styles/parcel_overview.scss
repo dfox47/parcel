@@ -5,88 +5,96 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  position: relative;
-
-  h2 {
-    margin: 0 0 50px;
-    text-align: center;
-  }
-
-  h3 {
-    color: #01A9E4;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29px;
-    margin-bottom: 14px;
-  }
-}
-
-.parcel_view__description {
-  font-size: 20px;
-  letter-spacing: -.01em;
-  line-height: 1.4;
-  margin: 0 0 62px;
-}
-
-.parcel_view__info {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 44px 0 0;
-
-  > div {
-    margin: 0 0 70px;
-    width: 50%;
-  }
-}
-
-.parcel_view__info__item {
-  color: $c_text_dark;
-  font-size: 20px;
-  line-height: 35px;
-}
-
-.parcel_view__name {
-  color: $c_text_dark;
-  font-size: 22px;
   line-height: 1.1;
-  margin: 0 0 0 20px;
-  padding: 8px 0 0;
-
-  > span {
-    font-weight: 600;
-    font-size: 17px;
-  }
-}
-
-.parcel_view__person {
-  display: flex;
-}
-
-.parcel_view__photo {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 100px;
-
-  img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.parcel_view__status {
-  color: $c_text_dark;
-  font-size: 20px;
-  font-style: italic;
-  line-height: 1.2;
-  padding: 8px 0 0;
-}
-
-.parcel_view__wrap {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
   max-width: 785px;
+  position: relative;
   width: 100%;
+
+  li {
+    display: block;
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+
+
+  &__description {
+    font-size: 20px;
+    letter-spacing: -.01em;
+    line-height: 1.4;
+    margin: 0 0 62px;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 42px 0 0;
+  }
+
+  &__item {
+    color: $c_text_dark;
+    font-size: 20px;
+    margin: 0 0 70px;
+    width: 49%;
+  }
+
+  &__lastname {
+    margin: 0 0 5px;
+  }
+
+  &__name {
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      font-size: 22px;
+      line-height: 1.15;
+      margin: 0 0 0 20px;
+      padding: 14px 0 0;
+    }
+  }
+
+  &__person {
+    align-items: flex-start;
+    display: flex;
+    padding: 0 0 7px 8px;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    height: 100px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__status {
+    font-style: italic;
+    padding: 14px 0 0;
+
+    li {
+      margin: 0 0 3px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  @media #{$tablet_m} {
+    &__item {
+      width: 100%;
+    }
+  }
 }
 
 
