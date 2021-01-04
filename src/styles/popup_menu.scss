@@ -25,9 +25,9 @@
 
 .popup_menu__icon {
 	align-items: center;
-	border: 1px solid $c_border;
+	border: 1px solid $c_primary;
 	border-radius: 8px;
-	color: $c_text_special;
+	color: $c_primary;
 	display: flex;
 	font-size: 15px;
 	height: 32px;
@@ -68,9 +68,9 @@
 }
 
 .popup_menu__number {
-	border: 1px solid $c_border;
+	border: 1px solid $c_primary;
 	border-radius: 8px;
-	color: $c_text_special;
+	color: $c_primary;
 	display: flex;
 	height: 32px;
 	justify-content: center;
@@ -84,7 +84,7 @@
 
 .popup_menu__rating {
 	align-items: baseline;
-	background-color: $c_elements_bg;
+	background-color: $c_primary;
 	border-radius: 10px;
 	color: #fff;
 	display: flex;

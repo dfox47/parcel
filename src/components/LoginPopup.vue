@@ -77,7 +77,7 @@
                             </p>
 
                             <a
-                                class="link_blue"
+                                class="link_primary"
                                 @click="this.showRegistrationPopup"
                             >
                                 {{ $vuetify.lang.t('$vuetify.register') }}

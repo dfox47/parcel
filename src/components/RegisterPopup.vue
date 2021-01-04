@@ -71,7 +71,7 @@
                             </p>
 
                             <a
-                                class="link_blue"
+                                class="link_primary"
                                 @click="this.showLoginPopup"
                             >
                                 {{ $vuetify.lang.t('$vuetify.login') }}

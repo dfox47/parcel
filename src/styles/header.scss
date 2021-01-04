@@ -19,7 +19,7 @@
   width: 54px;
 
   span {
-    background-color: $c_special_blue;
+    background-color: $c_primary;
     display: block;
     height: 4px;
     margin: 0 0 8px;
@@ -114,7 +114,7 @@
 
   .header_wrap {
     align-items: center;
-    border-bottom: 1px solid $c_special_blue;
+    border-bottom: 1px solid $c_primary;
     padding: 14px 40px 15px;
   }
 }

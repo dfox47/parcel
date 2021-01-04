@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-  color: $c_text_special;
+  color: $c_primary;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.1;
@@ -218,7 +218,7 @@ ul {
   align-items: center;
   background-color: #fff;
   border-radius: 16px;
-  color: $c_special_blue;
+  color: $c_primary;
   display: flex;
   flex-direction: column;
   font-size: 30px;
@@ -241,7 +241,7 @@ ul {
   width: 320px;
 
   &:hover {
-    background: linear-gradient(90deg, $c_special_blue, $c_special_green);
+    background: linear-gradient(90deg, $c_primary, $c_special);
     cursor: pointer;
   }
 }
