@@ -21,6 +21,7 @@
 }
 
 
+
 .btn_back,
 .btn_back:visited {
   background-color: #D4F0FA;
@@ -219,15 +220,17 @@
   }
 }
 
-.link_back {
+.link_back,
+.link_back:visited {
   background: url(#{$i}/icons/link_back.svg) 0 0 no-repeat scroll transparent;
-  color: $c_link_back;
+  color: $c_link_dark;
   font-size: 15px;
   padding: 6px 0 8px 50px;
   position: absolute;
   top: 10px;
   left: 0;
 }
+
 
 
 .mdi {
@@ -240,8 +243,11 @@
 }
 
 
+
 .person_rating {
   background: url(#{$i}/icons/star.svg) 0 0 no-repeat scroll transparent;
   line-height: 1.1;
   padding: 0 0 0 20px;
 }
+
+

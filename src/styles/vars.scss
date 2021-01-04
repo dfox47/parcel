@@ -1,7 +1,16 @@
 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+
+// media [START]
+$desktop: '(max-width: 1279)';
+$tablet_l: '(max-width: 999)';
+$tablet_m: '(max-width: 767)';
+$tablet_s: '(max-width: 599)';
+$mobile: '(max-width: 479)';
+// media [END]
 
 
 
@@ -22,13 +31,13 @@ $c_input_border:        #a19f99;
 
 $c_link:                #239ee1;
 $c_link_additional:     #0bb65e;
-$c_link_back:           #3C4858;
 $c_link_dark:           #3c4858;
+
 $c_main:                #777;
 
 $c_pagination:          #1f2d3d;
 
-$c_popup_bg_primary:    #ffffff;
+$c_popup_bg_primary:    #fff;
 $c_popup_bg_secondary:  #01a9e4;
 
 $c_popup_menu_hover:    #e6f6fc;
@@ -38,7 +47,7 @@ $c_special_green:       #48ca87;
 $c_search_bg:           #dee2e6;
 
 $c_text_dark:           #3c4858;
-$c_text_main:           #000000;
+$c_text_main:           #000;
 $c_text_special:        #01a9e4;
 
 
