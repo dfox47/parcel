@@ -1,6 +1,291 @@
 
 
 
+body {
+  .v-application {
+    font-family: $font_main;
+
+    a {
+      color: $c_link;
+
+      &.btn_more,
+      &.btn_more:visited {
+        color: $c_text_dark;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      padding: 0;
+
+      &.breadcrumbs {
+        padding: 5px 2px;
+
+        @media only screen and (max-width: 1200px) {
+          padding: 5px 10px;
+        }
+      }
+
+      &.pagination {
+        padding: 77px 0 99px;
+      }
+    }
+
+    .take_results_item__list {
+      p {
+        margin: 0 0 25px;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+
+      @media only screen and (max-width: 800px) {
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .v-btn,
+    .v-btn:visited {
+      align-items: center;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-block;
+      justify-content: center;
+      letter-spacing: 0;
+      text-align: center;
+      text-decoration: none;
+      text-transform: none;
+      transition: $transition;
+
+      &.v-btn--contained {
+        box-shadow: none;
+      }
+
+      &.v-size--small {
+        font-size: 15px;
+        height: 37px;
+        padding: 0 39px;
+      }
+    }
+
+
+
+    .v-card {
+      div {
+        border-radius: 14px;
+      }
+
+      > *:last-child:not(.v-chip) {
+        border-radius: 14px;
+      }
+    }
+
+    .v-card__title {
+      font-size: 24px;
+      font-weight: 600;
+      justify-content: center;
+      line-height: 1.4;
+    }
+
+    .v-card__subtitle {
+      //color: $c_;
+      text-align: center;
+      line-height: 32px;
+      font-size: 17px;
+      padding: 0 0 20px;
+    }
+
+
+    .v-input--checkbox {
+      .v-label {
+        color: #000;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .mdi-checkbox-blank-outline {
+        &:before {
+          content: ' ';
+          background: url(/img/checkbox.71ab55f3.svg) center center no-repeat scroll transparent;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .mdi-checkbox-marked {
+        &:before {
+          content: ' ';
+          background: url(/img/checkbox_active.8ace836c.svg) center center no-repeat scroll transparent;
+          height: 22px;
+          width: 22px;
+        }
+      }
+
+      .v-input--selection-controls__input {
+        height: 22px;
+        margin-right: 4px;
+        width: 22px;
+      }
+    }
+
+    .v-checkbox_v2 {
+      margin: 0;
+      padding: 0;
+
+      .v-input__slot {
+        margin: 0;
+        padding: 0;
+      }
+
+      .v-label {
+        color: #ffffff;
+        font-size: 15px;
+      }
+
+      .mdi-checkbox-blank-outline {
+        &:before {
+          background: url(#{$i}/icons/checkbox_w.svg) center center no-repeat scroll transparent;
+          content: ' ';
+          height: 27px;
+          width: 27px;
+        }
+      }
+
+      .mdi-checkbox-marked {
+        &:before {
+          content: ' ';
+          background: url(#{$i}/icons/checkbox_w_active.svg) center center no-repeat scroll transparent;
+          height: 27px;
+          width: 27px;
+        }
+      }
+
+      .v-input--selection-controls__input {
+        height: 27px;
+        margin-right: 13px;
+        width: 27px;
+      }
+
+      .v-input--selection-controls__ripple {
+        left: -11px;
+      }
+
+      @media only screen and (max-width: 980px) {
+        .mdi-checkbox-blank-outline {
+          &:before {
+            background-size: cover;
+            height: 42px;
+            width: 42px;
+          }
+        }
+
+        .mdi-checkbox-marked {
+          &:before {
+            background-size: cover;
+            height: 42px;
+            width: 42px;
+          }
+        }
+
+        .v-input--selection-controls__input {
+          height: 42px;
+          margin-right: 19px;
+          width: 42px;
+        }
+
+        .v-input--selection-controls__ripple {
+          left: -3px;
+        }
+
+        .v-label {
+          font-size: 23px;
+        }
+      }
+
+      @media only screen and (max-width: 380px) {
+        .mdi-checkbox-blank-outline {
+          &:before {
+            background-size: cover;
+            height: 33px;
+            width: 33px;
+          }
+        }
+
+        .mdi-checkbox-marked {
+          &:before {
+            background-size: cover;
+            height: 33px;
+            width: 33px;
+          }
+        }
+
+        .v-input--selection-controls__input {
+          height: 33px;
+          margin-right: 19px;
+          width: 33px;
+        }
+
+        .v-input--selection-controls__ripple {
+          left: -8px;
+        }
+
+        .v-label {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .v-text-field {
+      .v-input__slot {
+        .v-label {
+          top: 18px;
+          padding: 0 18px;
+        }
+
+        .v-label--active {
+          top: 8px;
+        }
+
+        .v-text-field__slot {
+          input {
+            padding: 16px 18px;
+            max-height: 59px;
+          }
+        }
+
+        &:after {
+          display: none;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+
+
+    @media #{$mobile} {
+      .v-card__title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+
 // btn [START]
 .btn,
 .btn:visited {

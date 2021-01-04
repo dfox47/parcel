@@ -134,13 +134,13 @@
                         </p>
                     </div>
 
-                    <div class="btn btn_connect">
-                        Связаться
-                    </div>
+                    <v-btn color="primary">
+                        {{ $vuetify.lang.t('$vuetify.connect') }}
+                    </v-btn>
 
-                    <div class="btn btn_back">
+                    <v-btn color="normal">
                         {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
-                    </div>
+                    </v-btn>
                 </div>
             </div>
         </div>

@@ -6,11 +6,11 @@
   "breadcrumbs.home": "Главная",
   "breadcrumbs.search_parcel": "Поиск посылки",
 
-  "continue_button": "Продолжить",
-  "create_new_request": "Создать заявку",
-
   "confirmation": "Подтверждение",
   "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",
+  "connect": "Связаться",
+  "continue_button": "Продолжить",
+  "create_new_request": "Создать заявку",
 
   "footer.contacts": "Контакты",
   "footer.copy": "Копирайт",
