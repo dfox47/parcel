@@ -205,6 +205,11 @@
   font-size: 17px;
   justify-content: space-between;
   padding: 54px 30px;
+  transition: $transition;
+
+  &:hover {
+    background-color: rgba($c_primary, .08);
+  }
 
   &__category {
     margin: 0 32px 0 0;
@@ -243,6 +248,8 @@
   }
 
   &__name {
+    display: flex;
+    flex-direction: column;
     font-weight: 700;
     padding: 0 0 8px;
 
