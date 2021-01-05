@@ -2,7 +2,7 @@
     <div class="home">
         <div class="wrap">
             <div class="home_intro">
-                <div class="home_intro_text">
+                <div class="home_intro__text">
                     <h2>{{ $vuetify.lang.t('$vuetify.home.title') }}</h2>
 
                     <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
@@ -17,7 +17,7 @@
 
                 </div>
 
-                <div class="home_intro_img">
+                <div class="home_intro__img">
                     <img
                         src="../assets/i/intro.png"
                         alt="Intro"
@@ -66,8 +66,8 @@
                 <div class="home_advantages__content">
                     <h2>{{ $vuetify.lang.t('$vuetify.our_advantages') }}</h2>
 
-                    <div class="home_advantages_left">
-                        <div class="home_advantages_item">
+                    <div class="home_advantages__left">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/speed.svg"
                                 alt="speed"
@@ -78,7 +78,7 @@
                             </p>
                         </div>
 
-                        <div class="home_advantages_item">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/clearance.svg"
                                 alt="customs clearance"
@@ -89,7 +89,7 @@
                             </p>
                         </div>
 
-                        <div class="home_advantages_item">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/cost.svg"
                                 alt="cost"
@@ -101,8 +101,8 @@
                         </div>
                     </div>
 
-                    <div class="home_advantages_right">
-                        <div class="home_advantages_item">
+                    <div class="home_advantages__right">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/clarity.svg"
                                 alt="clarity"
@@ -113,7 +113,7 @@
                             </p>
                         </div>
 
-                        <div class="home_advantages_item">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/responsibility.svg"
                                 alt="responsibility"
@@ -124,7 +124,7 @@
                             </p>
                         </div>
 
-                        <div class="home_advantages_item">
+                        <div class="home_advantages__item">
                             <img
                                 src="../assets/i/association.svg"
                                 alt="association"
@@ -147,7 +147,7 @@
                         alt=""
                     >
 
-                    <div class="home_mobile_app_text">
+                    <div class="home_mobile_app__text">
                         <h2>{{ $vuetify.lang.t('$vuetify.we_have_mobile_app') }}</h2>
 
                         <span>Ipsum eatam vid etur, adiatem que con provitaqui dente perumet libus aut reperep udaecti isquiatia di omnim estrupienet, ut voluptatus, con commoluptias eum rerci</span>
@@ -178,7 +178,7 @@
                         alt=""
                     >
 
-                    <div class="home_how_it_works_text">
+                    <div class="home_how_it_works__text">
                         <p>
                             <span>1. Temperc hillandictur </span>
                             Modis et ut andit, nullabore volestem nitatus andaecae volore sanderumquis

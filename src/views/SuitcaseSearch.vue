@@ -11,7 +11,7 @@
 
                     <li>
                         <span>
-                            {{ $vuetify.lang.t('$vuetify.breadcrumbs.search_parcel') }}
+                            {{ $vuetify.lang.t('$vuetify.breadcrumbs.search_suitcase') }}
                         </span>
                     </li>
                 </ul>
@@ -20,7 +20,7 @@
                     <ul class="take_menu">
                         <li>
                             <span class="take_menu__item active">
-                                {{ $vuetify.lang.t('$vuetify.take.parcel_search') }}
+                                {{ $vuetify.lang.t('$vuetify.suitcase.search') }}
                             </span>
                         </li>
 
@@ -84,8 +84,7 @@
 
                     <div class="text-center">
                         <v-btn
-                            color="secondary"
-                            medium
+                            class="btn btn_submit"
                             @click="loadOrders"
                             :disabled="loading"
                             :loading="loading"
@@ -96,7 +95,7 @@
 
                     <div class="take_destinations__link_additional">
                         <router-link to="/">
-                            {{ $vuetify.lang.t('$vuetify.take.additional_search') }}
+                            {{ $vuetify.lang.t('$vuetify.more_filters') }}
                         </router-link>
                     </div>
                 </form>
@@ -104,7 +103,7 @@
                 <div class="take_results">
                     <div class="wrap">
                         <div class="take_results__title">
-                            {{ $vuetify.lang.t('$vuetify.take.results_title_1') }}&nbsp;<span>25</span>&nbsp;{{ $vuetify.lang.t('$vuetify.take.results_title_2') }}
+                            {{ $vuetify.lang.t('$vuetify.take.results_title_1') }}&nbsp;<span>15</span>&nbsp;{{ $vuetify.lang.t('$vuetify.suitcase.free_space') }}
                         </div>
 
                         <div class="take_results__destination">
