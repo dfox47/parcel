@@ -10,41 +10,35 @@
     z-index: 1;
 }
 
-
-
-// footer_app [START]
 .footer_app {
     display: flex;
     flex-direction: column;
-}
 
-.footer_app__item {
-    display: block;
-    margin: 0 0 10px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-
-    a,
-    a:visited {
-        color: #000;
+    &__item {
         display: block;
-        text-decoration: none;
-        transition: $transition;
+        margin: 0 0 10px;
 
-        &:hover {
-            opacity: .5;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a,
+        a:visited {
+            color: #000;
+            display: block;
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        img {
+            display: block;
         }
     }
-
-    img {
-        display: block;
-    }
 }
-// footer_app [END]
-
-
 
 .footer_copyright {
     font-size: 17px;
@@ -62,26 +56,26 @@
     justify-content: space-between;
     max-width: 496px;
     width: 100%;
-}
 
-.footer_menu__item {
-    display: block;
-    padding: 0 0 25px;
-    width: 31%;
-
-    a,
-    a:visited {
-        color: #000;
+    &__item {
         display: block;
-        text-decoration: none;
+        padding: 0 0 25px;
+        width: 31%;
 
-        &:hover {
-            text-decoration: underline;
+        a,
+        a:visited {
+            color: #000;
+            display: block;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
-    }
 
-    img {
-        display: block;
+        img {
+            display: block;
+        }
     }
 }
 
@@ -96,36 +90,32 @@
 
 
 
-// footer_social [START]
 .footer_social {
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 0 0 58px;
     width: 100%;
-}
 
-.footer_social__item {
-    display: block;
-    margin: 0 20px;
-
-    a,
-    a:visited {
+    &__item {
         display: block;
-        transition: $transition;
+        margin: 0 20px;
 
-        &:hover {
-            opacity: .5;
+        a,
+        a:visited {
+            display: block;
+            transition: $transition;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        img {
+            display: block;
         }
     }
-
-    img {
-        display: block;
-    }
 }
-// footer_social [END]
-
-
 
 .footer_wrap {
     display: flex;

@@ -24,7 +24,7 @@
     margin-bottom: 15px;
   }
 
-  @media only screen and (max-width: 460px) {
+  @media #{$tablet_s} {
     padding: 30px;
   }
 }
@@ -137,7 +137,7 @@
     }
   }
 
-  @media only screen and (max-width: 1400px) {
+  @media #{$desktop} {
     border-radius: 0 0 10px 10px;
     right: 145px;
     top: 101%;
@@ -170,7 +170,7 @@
     max-width: 100%;
   }
 
-  @media only screen and (max-width: 380px) {
+  @media #{$mobile} {
     padding: 59px 0 1000%;
     top: 59px;
 
@@ -203,7 +203,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  //max-width: 560px;
   width: 418px;
 }
 
@@ -226,9 +225,7 @@
 
 
 
-.popup_send_or_grab {
-
-}
+.popup_send_or_grab {}
 
 
 
@@ -236,8 +233,8 @@
   text-align: center;
 
   p {
-    line-height: 32px;
     font-size: 17px;
+    line-height: 2;
     padding: 0 0 20px;
   }
 }

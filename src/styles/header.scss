@@ -1,7 +1,10 @@
+
+
+
 .header {
   position: relative;
 
-  &:after {
+  &::after {
     background: url(#{$i}/background_1.svg) right top no-repeat scroll transparent;
     background-size: contain;
     content: "";
@@ -12,10 +15,16 @@
     width: 1210px;
     z-index: 0;
   }
+
+  @media #{$desktop} {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .header_bars {
-      cursor: pointer;
+  cursor: pointer;
   width: 54px;
 
   span {
@@ -32,22 +41,20 @@
 }
 
 .header_login_icon {
-	border-radius: 50%;
-	display: flex;
-	position: relative;
-	overflow: hidden;
-	max-width: 54px;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 54px;
 
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 
 .header_mobile {
   display: none;
 }
-
-
 
 .header_nav {
   font-size: 18px;
@@ -64,14 +71,12 @@
       color: $c_link;
     }
   }
+
+  &__item {
+    cursor: pointer;
+    margin: 0 0 0 36px;
+  }
 }
-
-.header_nav__item {
-      cursor: pointer;
-      margin: 0 0 0 36px;
-}
-
-
 
 .header_right {
   align-items: center;
@@ -89,19 +94,13 @@
   position: relative;
   width: 100%;
   z-index: 4;
-}
 
-@media only screen and (max-width: 1400px) {
-  .header {
-    &:after {
-      display: none;
-    }
-  }
-
-  .header_wrap {
+  @media #{$desktop} {
     padding: 26px 40px 29px;
   }
 }
+
+
 
 @media only screen and (max-width: 980px) {
   .header_mobile {
@@ -154,3 +153,5 @@
     padding: 13px 19px;
   }
 }
+
+
