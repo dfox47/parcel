@@ -11,6 +11,7 @@ import ParcelOverview from "../views/ParcelOverview";
 import Registration from "../views/Registration";
 import Search from "../views/Search";
 import SendSearch from "../views/SendSearch";
+import SuitcaseOverview from "../views/SuitcaseOverview";
 import SuitcaseSearch from "../views/SuitcaseSearch";
 import TakeSearch from "../views/TakeSearch";
 
@@ -30,6 +31,10 @@ const routes = [
     {
         component: ParcelOverview,
         path: '/parseloveriew',
+    },
+    {
+        component: SuitcaseOverview,
+        path: '/suitcase-overview',
     },
     {
         component: SuitcaseSearch,
