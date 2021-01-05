@@ -1,10 +1,12 @@
 {
   "add_application": "Добавить заявку",
+  "add_new_order": "+ Добавить заявку",
 
   "back_to_search_results": "Назад к результатам поиска",
 
   "breadcrumbs.home": "Главная",
   "breadcrumbs.search_parcel": "Поиск посылки",
+  "breadcrumbs.search_suitcase": "Поиск чемодана",
 
   "confirmation": "Подтверждение",
   "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",
@@ -33,6 +35,7 @@
 
   "menu_button_send": "Хочу отправить",
   "menu_button_take": "Могу захватить",
+  "more_filters": "Больше фильтров",
 
   "our_advantages": "Наши преимущества",
 
@@ -52,7 +55,9 @@
   "search.to": "Куда",
   "search.weight": "кг",
 
-  "take.add_new_order": "+ Добавить заявку",
+  "suitcase.search": "Поиск чемодана",
+  "suitcase.free_space": "свободных мест в чемодане",
+
   "take.additional_search": "Расширенный поиск",
   "take.from": "Откуда",
   "take.parcel_search": "Поиск посылки",
