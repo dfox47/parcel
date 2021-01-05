@@ -119,7 +119,8 @@
 
 
                     <div class="take_results_items">
-                        <div
+                        <router-link
+                            to="/parseloveriew"
                             v-for="item in items"
                             :key="item.message"
                             class="take_results_item"
@@ -180,7 +181,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </router-link>
                     </div>
                 </div>
 
