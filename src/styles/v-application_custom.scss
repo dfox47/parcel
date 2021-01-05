@@ -70,10 +70,28 @@ body {
         box-shadow: none;
       }
 
+      &.v-size--default {
+        font-size: 20px;
+        height: 55px;
+        padding: 0 70px;
+      }
+
       &.v-size--small {
         font-size: 15px;
         height: 37px;
         padding: 0 39px;
+      }
+
+      &.secondary {
+        background-color: transparent !important;
+        border-color: $c_primary !important;
+        color: $c_primary !important;
+
+        &:hover {
+          background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
+          border-color: transparent !important;
+          color: #fff !important;
+        }
       }
     }
 

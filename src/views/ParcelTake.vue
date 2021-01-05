@@ -84,7 +84,8 @@
 
                     <div class="text-center">
                         <v-btn
-                            class="btn btn_submit"
+                            color="secondary"
+                            medium
                             @click="loadOrders"
                             :disabled="loading"
                             :loading="loading"
