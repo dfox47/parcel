@@ -58,12 +58,13 @@
                             {{ $vuetify.lang.t('$vuetify.registration_text') }}
                         </div>
 
-                        <span
-                            class="btn btn_blue btn_large"
+                        <v-btn
+                            block
+                            color="primary"
                             @click="this.showConfirmPopup"
                         >
                             {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </span>
+                        </v-btn>
 
                         <div class="popup_bottom">
                             <p>

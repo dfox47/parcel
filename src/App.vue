@@ -44,6 +44,7 @@
         <app-register_popup />
         <app-confirm_popup />
         <app-send_or_grub_popup />
+        <app-request_send_popup />
     </v-app>
 </template>
 

@@ -78,13 +78,13 @@
                             >
                         </label>
 
-                        <span
-                            class="btn btn_blue btn_large"
+                        <v-btn
+                            block
+                            color="primary"
                             @click="this.hideConfirmPopup"
-                            ref="btn"
                         >
                             {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </span>
+                        </v-btn>
 
                         <div class="popup_bottom">
                             <p>
@@ -105,6 +105,8 @@
                             >
                                 Получить SMS на дургой номер
                             </a>
+
+                            <v-icon>mdi-home</v-icon>
                         </div>
                     </form>
                 </div>

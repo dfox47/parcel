@@ -7,10 +7,14 @@
 
                     <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
 
-                    <a
-                        class="btn btn_blue btn_medium"
+                    <v-btn
+                        medium
+                        color="primary"
                         @click="showRegistrationPopup"
-                    >{{ $vuetify.lang.t('$vuetify.registration') }}</a>
+                    >
+                        {{ $vuetify.lang.t('$vuetify.registration') }}
+                    </v-btn>
+
                 </div>
 
                 <div class="home_intro_img">
@@ -205,6 +209,9 @@ export default {
         },
         showSendOrGrubPopup () {
             this.$store.dispatch('showSendOrGrubPopup')
+        },
+        showRequestSendPopup () {
+            this.$store.dispatch('showRequestSendPopup')
         }
     }
 }

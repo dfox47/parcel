@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 
 import Login_popup from './components/LoginPopup';
 import Register_popup from './components/RegisterPopup';
+import RequestSend_popup from './components/RequestSendPopup';
 import Confirm_popup from './components/ConfirmPopup';
 import SendOrGrab_popup from './components/SendOrGrabPopup';
 import LangAndCur_popup from './components/LangAndCurPopup';
@@ -19,6 +20,7 @@ Vue.component('app-header', Header);
 Vue.component('app-footer', Footer);
 Vue.component('app-login_popup', Login_popup);
 Vue.component('app-register_popup', Register_popup);
+Vue.component('app-request_send_popup', RequestSend_popup);
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
 Vue.component('app-lang_and_cur_popup', LangAndCur_popup);

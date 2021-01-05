@@ -6,6 +6,7 @@ export default {
         SendOrGrubPopup: false,
         LangAndCurPopup: false,
         MenuPopup: false,
+        RequestSend: true
     },
     mutations: {
         //Hide All popup's
@@ -16,6 +17,7 @@ export default {
             state.SendOrGrubPopup = false;
             state.LangAndCurPopup = false;
             state.MenuPopup = false;
+            state.RequestSend = false;
         },
 
         //LOGIN
@@ -54,7 +56,7 @@ export default {
             state.SendOrGrubPopup = false;
         },
 
-        //LangAndCurPopup
+        //LangAndCur
         showLangAndCurPopup(state) {
             this.commit('hideEverything');
             state.LangAndCurPopup = true;
@@ -63,13 +65,22 @@ export default {
             state.LangAndCurPopup = false;
         },
 
-        //MenuPopup
+        //Menu
         showMenuPopup(state) {
             this.commit('hideEverything');
             state.MenuPopup = true;
         },
         hideMenuPopup (state) {
             state.MenuPopup = false;
+        },
+
+        //RequestSend
+        showRequestSendPopup(state) {
+            this.commit('hideEverything');
+            state.RequestSend = true;
+        },
+        hideRequestSendPopup (state) {
+            state.RequestSend = false;
         }
     },
     actions: {
@@ -113,6 +124,14 @@ export default {
         },
         hideMenuPopup ({ commit }) {
             commit('hideMenuPopup')
+        },
+
+        showRequestSendPopup(state) {
+            this.commit('hideEverything');
+            state.RequestSend = true;
+        },
+        hideRequestSendPopup (state) {
+            state.RequestSend = false;
         }
     },
     getters: {
@@ -133,6 +152,9 @@ export default {
         },
         getMenuPopup (state) {
             return state.MenuPopup;
+        },
+        getRequestSendPopup (state) {
+            return state.RequestSend;
         }
     }
 }

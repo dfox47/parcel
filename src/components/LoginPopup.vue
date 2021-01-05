@@ -64,12 +64,13 @@
                             <span>{{ $vuetify.lang.t('$vuetify.login.forgot_pass') }}</span>
                         </div>
 
-                        <span
-                            class="btn btn_blue btn_large"
+                        <v-btn
+                            block
+                            color="primary"
                             @click="this.hideLoginPopup"
                         >
                             {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </span>
+                        </v-btn>
 
                         <div class="popup_bottom">
                             <p>
