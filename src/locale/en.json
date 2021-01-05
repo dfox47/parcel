@@ -3,7 +3,9 @@
 
   "back_to_search_results": "Back to search results",
 
+  "breadcrumbs.completed": "Completed",
   "breadcrumbs.home": "Home",
+  "breadcrumbs.my_parcels": "My parcels",
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
 
@@ -54,6 +56,8 @@
   "search.to": "To",
   "search.weight": "kg",
 
+  "send_before": "Send before",
+
   "suitcase.search": "Suitcase search",
 
   "take.add_new_order": "+ Add order",
@@ -64,6 +68,12 @@
   "take.results_title_2": "желающих отправить посылку",
   "take.search": "Search",
   "take.to": "To",
+
+  "tasks.active": "Active",
+  "tasks.completed": "Completed",
+
+  "status.delivered": "Доставлено",
+  "status.sent": "Отправлено",
 
   "we_have_mobile_app": "We've got mobile app!",
   "what_do_you_need": "What do you need?"

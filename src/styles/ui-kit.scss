@@ -572,8 +572,26 @@ body {
 
 .person_rating {
   background: url(#{$i}/icons/star.svg) 0 0 no-repeat scroll transparent;
+  background-size: 15px;
   font-size: 17px;
   font-weight: 600;
   line-height: 1.1;
   padding: 0 0 0 20px;
+
+  @media #{$tablet_l} {
+    background-size: 11px;
+    font-size: 13px;
+  }
+
+  @media #{$tablet_m} {
+    background-size: 15px;
+    font-size: 17px;
+  }
+
+  @media #{$mobile} {
+    background-size: 11px;
+    font-size: 13px;
+  }
 }
+
+
