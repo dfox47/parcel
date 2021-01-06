@@ -68,6 +68,10 @@ body {
       text-transform: capitalize;
       transition: $transition;
 
+      &:active {
+        opacity: .8;
+      }
+
       &:before {
         background-color: transparent;
       }
@@ -132,6 +136,7 @@ body {
       font-size: 24px;
       font-weight: 600;
       justify-content: center;
+      margin: 0 auto  ;
       line-height: 1.4;
     }
 
@@ -349,68 +354,6 @@ body {
   color: #000000;
 }
 
-.btn_blue,
-.btn_blue:visited {
-  border: 1px solid transparent;
-  background: linear-gradient(138deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);
-  color: #fff !important;
-
-  &:hover {
-    background: #fff;
-    border: 1px solid $c_primary;
-    color: $c_primary !important;
-  }
-}
-
-.btn_empty,
-.btn_empty:visited {
-  border: 1px solid $c_primary;
-  color: $c_primary;
-
-  &:hover {
-    background:linear-gradient(138deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);
-    color: #fff;
-  }
-}
-
-.btn_large,
-.btn_large:visited {
-  border: 1px solid transparent;
-  font-size: 20px;
-  padding: 11px 0;
-  max-width: 420px;
-}
-
-
-.btn_main,
-.btn_main:visited {
-  border: 1px solid $c_link;
-  color: $c_link;
-  padding: 9px 36px 8px;
-  text-decoration: none;
-
-  &:hover,
-  &.router-link-active {
-    background: linear-gradient(137.73deg, $c_btn_gradient_1 52.21%, $c_btn_gradient_2 52.22%, $c_btn_gradient_3 105.02%);
-    border-color: rgba($c_link, .9);
-    color: #fff;
-  }
-}
-
-.btn_medium,
-.btn_medium:visited {
-  border: 1px solid transparent;
-  font-size: 20px;
-  padding: 11px 0;
-  max-width: 260px;
-
-  @media only screen and (max-width: 460px) {
-    font-size: 18px;
-    max-width: 180px;
-    padding: 9px 0;
-  }
-}
-
 .btn_more,
 .btn_more:visited {
   background-color: rgba($c_primary, .17);
@@ -439,23 +382,6 @@ body {
   height: 37px;
   padding: 0 38px;
   max-width: initial;
-}
-
-
-
-.btn_size_l,
-.btn_size_l:visited {
-  font-size: 20px;
-  padding: 14px 47px;
-  width: auto;
-}
-
-.btn_size_m,
-.btn_size_m:visited {
-  font-size: 20px;
-  padding: 17px 82px;
-  max-width: none;
-  width: auto;
 }
 
 

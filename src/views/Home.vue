@@ -14,7 +14,6 @@
                     >
                         {{ $vuetify.lang.t('$vuetify.registration') }}
                     </v-btn>
-
                 </div>
 
                 <div class="home_intro__img">
@@ -33,7 +32,7 @@
 
                     <div class="send_or_grab__wrap">
                         <div
-                            @click="showSendOrGrubPopup"
+                            @click="showRequestSendPopup_1"
                             class="send_or_grab__outer"
                         >
                             <span class="send_or_grab__inner">
@@ -210,8 +209,8 @@ export default {
         showSendOrGrubPopup () {
             this.$store.dispatch('showSendOrGrubPopup')
         },
-        showRequestSendPopup () {
-            this.$store.dispatch('showRequestSendPopup')
+        showRequestSendPopup_1 () {
+            this.$store.dispatch('showRequestSendPopup_1')
         }
     }
 }

@@ -35,6 +35,11 @@
 
   "menu_button_send": "Хочу отправить",
   "menu_button_take": "Могу захватить",
+
+  "messages": "Сообщения",
+  "messages.from": "Откуда: ",
+  "messages.to": "Куда: ",
+
   "more_filters": "Больше фильтров",
 
   "our_advantages": "Наши преимущества",
@@ -54,6 +59,10 @@
   "search.title": "Поиск посылки",
   "search.to": "Куда",
   "search.weight": "кг",
+
+  "steps.1_of_3": "Шаг 1 / 3",
+  "steps.2_of_3": "Шаг 2 / 3",
+  "steps.3_of_3": "Шаг 3 / 3",
 
   "suitcase.search": "Поиск чемодана",
   "suitcase.free_space": "свободных мест в чемодане",

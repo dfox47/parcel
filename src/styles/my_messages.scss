@@ -1,0 +1,123 @@
+.name {
+  color: #3C4858;
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 3px 0 0;
+  padding-top: 0;
+}
+
+.name_info {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.lk_messages {
+  z-index: 0;
+}
+
+.lk_messages_items {
+  margin: 47px 0 0 ;
+}
+
+.lk_messages_item  {
+  border-bottom: 1px solid #A19F99 ;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 47px 70px 45px 35px;
+  transition: all 0.3s;
+}
+
+.lk_messages_item:hover {
+  background-color: #D4EFFC;
+
+  .lk_massages_btn_wrap {
+    display: block;
+  }
+}
+
+.lk_massages_btn_wrap {
+  display: none;
+}
+
+.counter {
+  align-items: center;
+  background-color: #01A9E4 ;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  position: absolute;
+  top: -4px;
+  right: 0;
+  text-align: center;
+}
+
+.persone {
+  display: flex;
+}
+
+.photo {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.photo > img {
+  width: 100%;
+}
+
+.photo_wrap {
+  position: relative;
+  margin: 0 20px 0 0;
+}
+
+
+@media only screen and (max-width: 960px) {
+  .lk_massages_btn_wrap  {
+    display: none;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .name_info {
+    font-size: 15px;
+  }
+  .photo {
+    max-width: 80px;
+  }
+  .lk_messages_item {
+    padding-left: 43px;
+  }
+  .counter {
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .lk_messages_item {
+    padding-left: 18px;
+  }
+  .name {
+    font-size: 13px;
+    margin-left: 11px;
+  }
+  .name_info {
+    font-size: 10px;
+  }
+  .photo {
+    max-width: 53px;
+  }
+  .counter {
+    font-size: 10px;
+    height: 19px;
+    width: 19px;
+  }
+}

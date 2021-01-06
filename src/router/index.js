@@ -5,6 +5,7 @@ import Home from '../views/Home';
 import AuthGuard from './auth-guard';
 import Error404 from "../views/Error404";
 
+import MyMessages from "../views/MyMessages";
 import ParcelTake from "../views/ParcelTake";
 import ParcelSend from "../views/ParcelSend";
 import ParcelOverview from "../views/ParcelOverview";
@@ -27,6 +28,10 @@ const routes = [
     {
         component: Home,
         path: '/',
+    },
+    {
+        component: MyMessages,
+        path: '/my-messages',
     },
     {
         component: ParcelOverview,

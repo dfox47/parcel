@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div>
         <div class="take_wrap">
             <div class="wrap">
                 <ul class="breadcrumbs">
@@ -180,6 +180,14 @@
                                     >
                                         {{ $vuetify.lang.t('$vuetify.readmore') }}
                                     </a>
+
+                                    <!--<v-btn-->
+                                    <!--     small-->
+                                    <!--     color="secondary"-->
+                                    <!--     to="/parseloveriew"-->
+                                    <!-- >-->
+                                    <!--    {{ $vuetify.lang.t('$vuetify.readmore') }}-->
+                                    <!--</v-btn>-->
                                 </div>
                             </div>
                         </router-link>
