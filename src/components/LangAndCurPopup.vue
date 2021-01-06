@@ -16,24 +16,24 @@
                 <div class="popup_lang_n_cur__wrap">
                     <div>
                         <v-checkbox
-                            v-model="checkbox"
+                            v-model="checkRu"
                             class="v-checkbox_v2"
                             label="Русский"
                         />
                         <v-checkbox
-                            v-model="checkbox"
+                            v-model="checkEn"
                             class="v-checkbox_v2"
                             label="English"
                         />
                     </div>
                     <div>
                         <v-checkbox
-                            v-model="checkbox"
+                            v-model="checkRub"
                             class="v-checkbox_v2"
                             label="Рубль, ₽"
                         />
                         <v-checkbox
-                            v-model="checkbox"
+                            v-model="checkEur"
                             class="v-checkbox_v2"
                             label="Доллар, $"
                         />
@@ -50,18 +50,43 @@ export default {
         return {
             animation: 'fade',
             lang: this.$vuetify.lang.current,
-            currency: 'rub',
-            windowWidth: window.innerWidth
+            windowWidth: window.innerWidth,
+            checkRu: true,
+            checkEn: false,
+            checkRub: true,
+            checkEur: false
         }
     },
     mounted() {
-        window.addEventListener('resize', () => {
+        if (this.curLang === 'ru') {
+            this.checkRu = true
+            this.checkEn = false
+        } else {
+            this.checkRu = false
+            this.checkEn = true
+        }
+
+        if (this.currency === 'rub') {
+            this.checkRub = true
+            this.checkEur = false
+        } else {
+            this.checkEur = true
+            this.checkRub = false
+        }
+
+        window.addEventListener ('resize', () => {
             this.windowWidth = window.innerWidth;
         })
     },
     computed: {
-        showLangAndCurPopup() {
+        showLangAndCurPopup () {
             return this.$store.getters.getLangAndCurPopup
+        },
+        curLang () {
+            return this.$store.getters.getLang
+        },
+        currency () {
+            return this.$store.getters.getCur
         }
     },
     methods: {
@@ -76,6 +101,65 @@ export default {
             }
             else if (980 < newWidth) {
                 this.animation = 'fade';
+            }
+        },
+        curLang () {
+            if (this.curLang === 'ru') {
+                this.checkRu = true
+                this.checkEn = false
+            } else {
+                this.checkRu = false
+                this.checkEn = true
+            }
+        },
+        checkRu () {
+            if (this.checkRu === true) {
+                this.checkEn = false
+                this.$store.dispatch('setLang', 'ru')
+                this.$vuetify.lang.current = 'ru'
+            } else {
+                this.checkEn = true
+                this.$store.dispatch('setLang', 'en')
+                this.$vuetify.lang.current = 'en'
+            }
+        },
+        checkEn () {
+            if (this.checkEn === true) {
+                this.checkRu = false
+                this.$store.dispatch('setLang', 'en')
+                this.$vuetify.lang.current = 'en'
+            } else {
+                this.checkRu = true
+                this.$store.dispatch('setLang', 'ru')
+                this.$vuetify.lang.current = 'ru'
+            }
+        },
+
+        currency () {
+            if (this.currency === 'rub') {
+                this.checkRub = true
+                this.checkEur = false
+            } else {
+                this.checkEur = true
+                this.checkRub = false
+            }
+        },
+        checkRub () {
+            if (this.checkRub === true) {
+                this.checkEur = false
+                this.$store.dispatch('setCur', 'rub')
+            } else {
+                this.checkEur = true
+                this.$store.dispatch('setCur', 'eur')
+            }
+        },
+        checkEur () {
+            if (this.checkEur === true) {
+                this.checkRub = false
+                this.$store.dispatch('setCur', 'eur')
+            } else {
+                this.checkRub = true
+                this.$store.dispatch('setCur', 'rub')
             }
         }
     }

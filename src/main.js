@@ -46,4 +46,27 @@ new Vue({
     store,
     vuetify,
     render: h => h(App),
+    created () {
+        if (localStorage.getItem('lang')) {
+            let lang = localStorage.getItem('lang')
+            if (lang === 'en') {
+                this.$vuetify.lang.current = 'en'
+                this.$store.dispatch('setLang', 'en')
+            } else {
+                this.$vuetify.lang.current = 'ru'
+                this.$store.dispatch('setLang', 'ru')
+            }
+        }
+
+        if (localStorage.getItem('cur')) {
+            let cur = localStorage.getItem('cur')
+            console.log(cur)
+            if (cur === 'rub') {
+                this.$store.dispatch('setCur', 'rub')
+            } else {
+                this.$vuetify.lang.current = 'ru'
+                this.$store.dispatch('setCur', 'eur')
+            }
+        }
+    }
 }).$mount('#app')

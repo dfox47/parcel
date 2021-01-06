@@ -18,8 +18,6 @@ export default new Vuetify({
     },
     lang: {
         locales: { ru, en },
-        current: 'ru',
-        // currencies: {'rub','eur'},
-        // currency: 'rub'
+        current: 'ru'
     }
 })
