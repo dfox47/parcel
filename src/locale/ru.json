@@ -84,9 +84,13 @@
   "tasks.completed": "Завершённые",
 
   "status.delivered": "Доставлено",
+  "status.looking_parcel": "Ищу посылку",
+  "status.looking_suitcase": "Ищу чемодан",
   "status.sent": "Отправлено",
 
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "weight": "Вес",
   "what_do_you_need": "Что Вам необходимо?"
 }
+
+

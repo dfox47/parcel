@@ -22,7 +22,16 @@
                     </li>
                 </ul>
 
-                <h1>Мои посылки</h1>
+                <div class="title_with_btn">
+                    <a
+                        href="/"
+                        class="link_back"
+                    >
+                        Назад
+                    </a>
+
+                    <h1>Мои посылки</h1>
+                </div>
 
                 <ul class="tasks_menu">
                     <li class="tasks_menu__item">
