@@ -4,7 +4,9 @@
 
   "back_to_search_results": "Назад к результатам поиска",
 
+  "breadcrumbs.completed": "Завершённые",
   "breadcrumbs.home": "Главная",
+  "breadcrumbs.my_parcels": "Мои посылки",
   "breadcrumbs.search_parcel": "Поиск посылки",
   "breadcrumbs.search_suitcase": "Поиск чемодана",
 
@@ -25,7 +27,7 @@
   "home.how_it_works": "Как это работает?",
   "home.title": "Заголовок о сервисе в две строки",
 
-  "language_name": "Русский, ₽",
+  "language_name": "Русский",
 
   "login": "Войти",
   "login.button": "Вход",
@@ -64,6 +66,8 @@
   "steps.2_of_3": "Шаг 2 / 3",
   "steps.3_of_3": "Шаг 3 / 3",
 
+  "send_before": "Отправить до",
+
   "suitcase.search": "Поиск чемодана",
   "suitcase.free_space": "свободных мест в чемодане",
 
@@ -75,6 +79,13 @@
   "take.search": "Искать",
   "take.to": "Куда",
 
+  "tasks.active": "Активные",
+  "tasks.completed": "Завершённые",
+
+  "status.delivered": "Доставлено",
+  "status.sent": "Отправлено",
+
   "we_have_mobile_app": "У нас есть мобильное приложение!",
+  "weight": "Вес",
   "what_do_you_need": "Что Вам необходимо?"
 }

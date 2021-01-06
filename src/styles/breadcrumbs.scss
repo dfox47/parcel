@@ -40,12 +40,16 @@
     }
   }
 
-  @media only screen and (max-width: 800px) {
+  @media #{$tablet_l} {
     font-size: 14px;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media #{$tablet_s} {
     font-size: 12px;
+  }
+
+  @media #{$mobile} {
+    display: none;
   }
 }
 

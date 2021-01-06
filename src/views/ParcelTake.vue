@@ -121,7 +121,7 @@
                     <div class="take_results_items">
                         <router-link
                             tag="div"
-                            to="/parseloveriew"
+                            to="/parcel-overview"
                             v-for="item in items"
                             :key="item.message"
                             class="take_results_item"
@@ -176,7 +176,7 @@
                                 <div class="take_results_item__link">
                                     <a
                                         class="btn btn_primary btn_size_l"
-                                        href="/parseloveriew"
+                                        href="/parcel-overview"
                                     >
                                         {{ $vuetify.lang.t('$vuetify.readmore') }}
                                     </a>
@@ -184,7 +184,7 @@
                                     <!--<v-btn-->
                                     <!--     small-->
                                     <!--     color="secondary"-->
-                                    <!--     to="/parseloveriew"-->
+                                    <!--     to="/parcel-overview"-->
                                     <!-- >-->
                                     <!--    {{ $vuetify.lang.t('$vuetify.readmore') }}-->
                                     <!--</v-btn>-->

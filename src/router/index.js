@@ -4,11 +4,12 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home';
 import AuthGuard from './auth-guard';
 import Error404 from "../views/Error404";
+import MyParcelsCompleted from "../views/MyParcelsCompleted";
+import ParcelOverview from "../views/ParcelOverview";
+import ParcelSend from "../views/ParcelSend";
 
 import MyMessages from "../views/MyMessages";
 import ParcelTake from "../views/ParcelTake";
-import ParcelSend from "../views/ParcelSend";
-import ParcelOverview from "../views/ParcelOverview";
 import Registration from "../views/Registration";
 import Search from "../views/Search";
 import SendSearch from "../views/SendSearch";
@@ -16,7 +17,7 @@ import SuitcaseOverview from "../views/SuitcaseOverview";
 import SuitcaseSearch from "../views/SuitcaseSearch";
 import TakeSearch from "../views/TakeSearch";
 
-import LoginPopup from "@/components/LoginPopup";
+
 
 Vue.use(VueRouter);
 
@@ -34,8 +35,8 @@ const routes = [
         path: '/my-messages',
     },
     {
-        component: ParcelOverview,
-        path: '/parseloveriew',
+        component: MyParcelsCompleted,
+        path: '/my-parcels-completed',
     },
     {
         component: SuitcaseOverview,
@@ -44,6 +45,10 @@ const routes = [
     {
         component: SuitcaseSearch,
         path: '/suitcase-search',
+    },
+    {
+        component: ParcelOverview,
+        path: '/parcel-overview',
     },
     {
         component: ParcelSend,

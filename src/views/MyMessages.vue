@@ -15,7 +15,7 @@
                 </li>
             </ul>
 
-            <h2>{{ $vuetify.lang.t('$vuetify.messages') }}</h2>
+            <h1>{{ $vuetify.lang.t('$vuetify.messages') }}</h1>
 
             <div class="lk_messages_items">
                 <router-link

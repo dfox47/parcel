@@ -57,7 +57,7 @@
                                 href="javascript:void(0);"
                                 @click="this.showLangAndCurPopup"
                             >
-                                {{ $vuetify.lang.t('$vuetify.language_name') }}
+                                {{ $vuetify.lang.t('$vuetify.language_name') }}, {{ getCurSymbol() }}
                             </span>
                         </li>
                     </ul>
@@ -93,6 +93,9 @@ export default {
         },
         showMenuPopup () {
             this.$store.dispatch('showMenuPopup')
+        },
+        getCurSymbol () {
+            return this.$store.getters.getCurSymbol
         }
     }
 }

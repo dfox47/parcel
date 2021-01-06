@@ -1,0 +1,421 @@
+
+
+
+.tasks_client {
+  border-left: 1px solid #000;
+  flex-basis: 230px;
+  flex-shrink: 0;
+  padding: 42px 0 0 56px;
+  text-align: center;
+
+  &__img {
+    height: auto;
+    margin: 0 0 10px;
+    max-height: 100px;
+    max-width: 100px;
+    width: 100%;
+  }
+
+  &__name {
+    color: $c_text_dark;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    text-align: center;
+  }
+
+  &__wrap {}
+
+  @media #{$desktop} {
+    flex-basis: 254px;
+    padding: 40px 0 0 36px;
+  }
+
+  @media #{$tablet_l} {
+    flex-basis: 193px;
+  }
+  
+  @media #{$tablet_m} {
+    border-left: 0 none;
+    border-top: 1px solid #000;
+    display: flex;
+    flex-basis: auto;
+    margin: 25px 0 0;
+    padding: 42px 0 0;
+
+    &__img {
+      margin: 0 20px 0 0;
+    }
+
+    &__name {
+      font-size: 22px;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    &__wrap {
+      padding: 14px 0 0;
+      text-align: left;
+    }
+  }
+  
+  @media #{$mobile} {
+    margin: 12px 0 0;
+    padding: 30px 0 0;
+
+    &__img {
+      margin: 0 14px 0 0;
+      max-height: 72px;
+      max-width: 72px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__wrap {
+      padding: 10px 0 0;
+    }
+  }
+}
+
+.tasks_completed {
+  padding: 0 0 114px;
+
+  h1 {
+    font-family: $font_roboto;
+    font-size: 31px;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .breadcrumbs {
+    margin: 0 0 32px;
+  }
+
+  @media #{$tablet_l} {
+    h1 {
+      font-size: 23px;
+    }
+
+    .breadcrumbs {
+      margin: 0 0 12px;
+    }
+  }
+
+  @media #{$tablet_m} {
+    .breadcrumbs {
+      margin: 0 0 18px;
+    }
+  }
+
+  @media #{$mobile} {
+    padding-top: 27px;
+
+    h1 {
+      font-size: 16px;
+    }
+  }
+}
+
+.tasks_desc {
+  flex-grow: 1;
+  padding: 38px 20px 38px 56px;
+
+  &__list {
+    font-size: 17px;
+
+    li {
+      display: block;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__more,
+  &__more:visited {
+    color: $c_link_additional;
+    font-size: 17px;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__name {
+    color: $c_text_dark;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 5px;
+  }
+
+  @media #{$desktop} {
+    padding: 38px 20px 38px 42px;
+  }
+
+  @media #{$tablet_l} {
+    padding: 28px 10px 10px 32px;
+
+    &__list {
+      font-size: 13px;
+    }
+
+    &__more,
+    &__more:visited {
+      font-size: 13px;
+    }
+
+    &__name {
+      font-size: 17px;
+      margin: 0;
+    }
+  }
+  
+  @media #{$tablet_m} {
+    padding: 25px 0;
+
+    &__list {
+      font-size: 17px;
+    }
+
+    &__more,
+    &__more:visited {
+      font-size: 17px;
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+  }
+
+  @media #{$mobile} {
+    padding: 20px 0;
+
+    &__list {
+      font-size: 13px;
+    }
+
+    &__more,
+    &__more:visited {
+      font-size: 13px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+  }
+}
+
+.tasks_list {
+  margin: 65px auto 0;
+  max-width: 1108px;
+  width: 100%;
+
+  &__item {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 1px 5px 25px 1px rgba(#000, .15);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px;
+    padding: 60px 64px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media #{$desktop} {
+    &__item {
+      margin: 0 0 36px;
+      padding: 43px 40px;
+    }
+  }
+
+  @media #{$tablet_l} {
+    margin-top: 36px;
+
+    &__item {
+      padding: 32px 40px 16px;
+    }
+  }
+
+  @media #{$tablet_m} {
+    margin-top: 54px;
+    padding: 0 20px;
+
+    &__item {
+      flex-direction: column;
+      margin: 0 0 44px;
+    }
+  }
+  
+  @media #{$mobile} {
+    margin-top: 26px;
+    padding: 0;
+
+    &__item {
+      margin: 0 0 32px;
+      padding: 22px 28px 38px;
+    }
+  }
+}
+
+.tasks_menu {
+  font-family: $font_roboto;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 15px 0;
+  text-align: center;
+
+  a,
+  a:visited {
+    color: $c_input_border;
+    display: block;
+    padding: 10px 30px;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      background-color: $c_primary;
+      content: "";
+      display: none;
+      height: 2px;
+      left: 50%;
+      margin: -1px 0 0 -25px;
+      position: absolute;
+      top: 100%;
+      width: 50px;
+    }
+
+    &:hover {
+      color: $c_primary;
+    }
+  }
+
+  &__item {
+    &.active {
+      a,
+      a:visited {
+        color: $c_primary;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media #{$tablet_l} {
+    font-size: 18px;
+    margin: 24px 0;
+  }
+
+  @media #{$tablet_m} {
+    a,
+    a:visited {
+      padding: 8px 22px;
+
+      &::after {
+        height: 1px;
+        margin: -1px 0 0 -18px;
+        width: 36px;
+      }
+    }
+  }
+  
+  @media #{$mobile} {
+    margin: 14px 0;
+
+    a,
+    a:visited {
+      font-size: 13px;
+    }
+  }
+}
+
+.tasks_status {
+  align-items: center;
+  background-color: rgba($c_input_border, .1);
+  border-radius: 14px;
+  color: $c_text_dark;
+  display: flex;
+  flex-basis: 278px;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+
+  &__desc {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 22px 0 0;
+  }
+
+  &__img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 95px;
+    width: 95px;
+
+    &__delivered {
+      background-image: url(#{$i}/icons/delivered.svg);
+    }
+
+    &__sent {
+      background-image: url(#{$i}/icons/sent.svg);
+    }
+  }
+
+  @media #{$desktop} {
+    flex-basis: 235px;
+  }
+
+  @media #{$tablet_l} {
+    flex-basis: 180px;
+  }
+
+  @media #{$tablet_m} {
+    border-radius: 7px;
+    flex-basis: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 35px 25px;
+
+    &__desc {
+      margin: 10px 30px 0 0;
+    }
+
+    &__img {
+      height: 52px;
+      width: 52px;
+    }
+  }
+
+  @media #{$mobile} {
+    padding: 17px 27px;
+
+    &__desc {
+      font-size: 19px;
+      margin: 0 25px 0 0;
+    }
+
+    &__img {
+      height: 38px;
+      width: 38px;
+    }
+  }
+}
+
+
