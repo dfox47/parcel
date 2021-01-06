@@ -43,7 +43,7 @@
                         <label class="input_wrap">
                             <input
                                 :type="type"
-                                placeholder="Придумайте Пароль"
+                                placeholder="Придумайте пароль"
                             >
 
                             <img

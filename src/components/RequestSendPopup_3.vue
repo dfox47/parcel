@@ -1,0 +1,86 @@
+<template id="modal-template">
+    <div>
+        <transition
+            name="fade"
+            appear
+        >
+            <div
+                class="popup_overlay"
+                v-if="showRequestSendPopup_3"
+                @click="this.hideRequestSendPopup_3"
+            />
+        </transition>
+
+        <transition
+            name="fade"
+            appear
+        >
+            <v-card
+                v-if="showRequestSendPopup_3"
+            >
+                <div class="popup">
+                    <span
+                        class="popup_close_btn"
+                        @click="this.hideRequestSendPopup_3"
+                    />
+
+                    <v-card-title>
+                        {{ $vuetify.lang.t('$vuetify.steps.3_of_3') }}
+                    </v-card-title>
+
+                    <form
+                        action=""
+                        class="popup_two_columns"
+                    >
+                        <label class="input_wrap">
+                            <v-text-field
+                                label="Номер телефона"
+                                v-focus
+                            />
+                        </label>
+
+                        <label class="input_wrap">
+                            <input
+                                :type="type"
+                                placeholder="Пароль"
+                            >
+
+                            <img
+                                class="input_wrap__img"
+                                :src="pass_img"
+                                @click="showPassword"
+                                alt=""
+                            >
+                        </label>
+
+                        <v-btn
+                            block
+                            color="primary"
+                            @click="this.showRequestAcceptedPopup"
+                        >
+                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                        </v-btn>
+                    </form>
+                </div>
+            </v-card>
+        </transition>
+    </div>
+</template>
+
+<script>
+export default {
+    computed: {
+        showRequestSendPopup_3() {
+            return this.$store.getters.getRequestSendPopup_3
+        }
+    },
+    methods: {
+        hideRequestSendPopup_3 () {
+            this.$store.dispatch('hideRequestSendPopup_3')
+        },
+        showRequestAcceptedPopup () {
+            this.$store.dispatch('showRequestAcceptedPopup')
+        }
+    }
+}
+</script>

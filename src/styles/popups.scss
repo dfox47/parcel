@@ -31,6 +31,16 @@
 
 
 
+.popup_block {
+
+
+  &__half {
+
+  }
+}
+
+
+
 .popup_bottom {
   display: flex;
   flex-direction: column;
@@ -236,6 +246,26 @@
     font-size: 17px;
     line-height: 2;
     padding: 0 0 20px;
+  }
+}
+
+
+
+.popup_two_columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 954px;
+}
+
+.popup_two_columns__wrap {
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    color: $c_primary;
+    font-size: 20px;
   }
 }
 

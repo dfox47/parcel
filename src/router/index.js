@@ -8,10 +8,11 @@ import AutoSearch from "@/views/AutoSearch";
 import Home from '../views/Home';
 import AuthGuard from './auth-guard';
 import Error404 from "../views/Error404";
-import LoginPopup from "@/components/LoginPopup";
 import MyParcelsCompleted from "../views/MyParcelsCompleted";
 import ParcelOverview from "../views/ParcelOverview";
 import ParcelSend from "../views/ParcelSend";
+
+import MyMessages from "../views/MyMessages";
 import ParcelTake from "../views/ParcelTake";
 import Registration from "../views/Registration";
 import Search from "../views/Search";
@@ -38,6 +39,10 @@ const routes = [
         path: '/',
     },
     {
+        component: MyMessages,
+        path: '/my-messages',
+    },
+    {
         component: MyParcelsCompleted,
         path: '/my-parcels-completed',
     },
@@ -51,7 +56,7 @@ const routes = [
     },
     {
         component: ParcelOverview,
-        path: '/parseloveriew',
+        path: '/parcel-overview',
     },
     {
         component: ParcelSend,

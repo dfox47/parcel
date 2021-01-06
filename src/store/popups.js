@@ -6,7 +6,10 @@ export default {
         SendOrGrubPopup: false,
         LangAndCurPopup: false,
         MenuPopup: false,
-        RequestSend: true
+        RequestSendPopup_1: false,
+        RequestSendPopup_2: false,
+        RequestSendPopup_3: false,
+        RequestAcceptedPopup: false
     },
     mutations: {
         //Hide All popup's
@@ -17,7 +20,10 @@ export default {
             state.SendOrGrubPopup = false;
             state.LangAndCurPopup = false;
             state.MenuPopup = false;
-            state.RequestSend = false;
+            state.RequestSendPopup_1= false;
+            state.RequestSendPopup_2= false;
+            state.RequestSendPopup_3= false;
+            state.RequestAcceptedPopup= false;
         },
 
         //LOGIN
@@ -74,13 +80,40 @@ export default {
             state.MenuPopup = false;
         },
 
-        //RequestSend
-        showRequestSendPopup(state) {
+        //RequestSend1
+        showRequestSendPopup_1(state) {
             this.commit('hideEverything');
-            state.RequestSend = true;
+            state.RequestSendPopup_1= true;
         },
-        hideRequestSendPopup (state) {
-            state.RequestSend = false;
+        hideRequestSendPopup_1 (state) {
+            state.RequestSendPopup_1= false;
+        },
+
+        //RequestSend2
+        showRequestSendPopup_2(state) {
+            this.commit('hideEverything');
+            state.RequestSendPopup_2= true;
+        },
+        hideRequestSendPopup_2 (state) {
+            state.RequestSendPopup_2= false;
+        },
+
+        //RequestSend
+        showRequestSendPopup_3(state) {
+            this.commit('hideEverything');
+            state.RequestSendPopup_3= true;
+        },
+        hideRequestSendPopup_3 (state) {
+            state.RequestSendPopup_3= false;
+        },
+
+        //RequestSend
+        showRequestAcceptedPopup(state) {
+            this.commit('hideEverything');
+            state.RequestAcceptedPopup= true;
+        },
+        hideRequestAcceptedPopup (state) {
+            state.RequestAcceptedPopup= false;
         }
     },
     actions: {
@@ -126,13 +159,33 @@ export default {
             commit('hideMenuPopup')
         },
 
-        showRequestSendPopup(state) {
-            this.commit('hideEverything');
-            state.RequestSend = true;
+        showRequestSendPopup_1({ commit }) {
+            commit('showRequestSendPopup_1')
         },
-        hideRequestSendPopup (state) {
-            state.RequestSend = false;
-        }
+        hideRequestSendPopup_1 ({ commit }) {
+            commit('hideRequestSendPopup_1')
+        },
+
+        showRequestSendPopup_2({ commit }) {
+            commit('showRequestSendPopup_2')
+        },
+        hideRequestSendPopup_2 ({ commit }) {
+            commit('hideRequestSendPopup_2')
+        },
+
+        showRequestSendPopup_3({ commit }) {
+            commit('showRequestSendPopup_3')
+        },
+        hideRequestSendPopup_3 ({ commit }) {
+            commit('hideRequestSendPopup_3')
+        },
+
+        showRequestAcceptedPopup({ commit }) {
+            commit('showRequestAcceptedPopup')
+        },
+        hideRequestAcceptedPopup ({ commit }) {
+            commit('hideRequestAcceptedPopup')
+        },
     },
     getters: {
         getLoginPopup (state) {
@@ -153,8 +206,17 @@ export default {
         getMenuPopup (state) {
             return state.MenuPopup;
         },
-        getRequestSendPopup (state) {
-            return state.RequestSend;
+        getRequestSendPopup_1 (state) {
+            return state.RequestSendPopup_1;
+        },
+        getRequestSendPopup_2 (state) {
+            return state.RequestSendPopup_2;
+        },
+        getRequestSendPopup_3 (state) {
+            return state.RequestSendPopup_3;
+        },
+        getRequestAcceptedPopup (state) {
+            return state.RequestAcceptedPopup;
         }
     }
 }

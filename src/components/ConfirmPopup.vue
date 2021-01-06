@@ -105,8 +105,6 @@
                             >
                                 Получить SMS на дургой номер
                             </a>
-
-                            <v-icon>mdi-home</v-icon>
                         </div>
                     </form>
                 </div>

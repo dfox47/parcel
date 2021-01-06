@@ -41,7 +41,7 @@
                 <div class="tasks_list">
                     <router-link
                         tag="div"
-                        to="/parseloveriew"
+                        to="/parcel-overview"
                         v-for="item in items"
                         :key="item.name"
                         class="tasks_list__item"
