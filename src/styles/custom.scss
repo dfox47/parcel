@@ -8,11 +8,19 @@ footer {}
 
 h1 {
   color: #000;
-  font-size: 53px;
+  font-family: $font_roboto;
+  font-size: 31px;
   font-weight: 700;
-  line-height: 1.1;
-  text-align: left;
-  letter-spacing: -0.024em;
+  letter-spacing: 0;
+  text-align: center;
+
+  @media #{$tablet_l} {
+    font-size: 23px;
+  }
+
+  @media #{$mobile} {
+    font-size: 16px;
+  }
 }
 
 h2 {
@@ -352,3 +360,5 @@ ul {
   color: #01a9e4;
 }
 // icomoon [END]
+
+

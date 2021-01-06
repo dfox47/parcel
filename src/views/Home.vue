@@ -3,7 +3,7 @@
         <div class="wrap">
             <div class="home_intro">
                 <div class="home_intro__text">
-                    <h2>{{ $vuetify.lang.t('$vuetify.home.title') }}</h2>
+                    <h1>{{ $vuetify.lang.t('$vuetify.home.title') }}</h1>
 
                     <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
 

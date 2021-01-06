@@ -38,7 +38,7 @@
   @media #{$tablet_l} {
     flex-basis: 193px;
   }
-  
+
   @media #{$tablet_m} {
     border-left: 0 none;
     border-top: 1px solid #000;
@@ -62,7 +62,7 @@
       text-align: left;
     }
   }
-  
+
   @media #{$mobile} {
     margin: 12px 0 0;
     padding: 30px 0 0;
@@ -86,22 +86,11 @@
 .tasks_completed {
   padding: 0 0 114px;
 
-  h1 {
-    font-family: $font_roboto;
-    font-size: 31px;
-    letter-spacing: 0;
-    text-align: center;
-  }
-
   .breadcrumbs {
     margin: 0 0 32px;
   }
 
   @media #{$tablet_l} {
-    h1 {
-      font-size: 23px;
-    }
-
     .breadcrumbs {
       margin: 0 0 12px;
     }
@@ -115,10 +104,6 @@
 
   @media #{$mobile} {
     padding-top: 27px;
-
-    h1 {
-      font-size: 16px;
-    }
   }
 }
 
@@ -180,7 +165,7 @@
       margin: 0;
     }
   }
-  
+
   @media #{$tablet_m} {
     padding: 25px 0;
 
@@ -259,7 +244,7 @@
       margin: 0 0 44px;
     }
   }
-  
+
   @media #{$mobile} {
     margin-top: 26px;
     padding: 0;
@@ -333,7 +318,7 @@
       }
     }
   }
-  
+
   @media #{$mobile} {
     margin: 14px 0;
 

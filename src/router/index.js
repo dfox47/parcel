@@ -1,6 +1,10 @@
+
+
+
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+import AutoSearch from "@/views/AutoSearch";
 import Home from '../views/Home';
 import AuthGuard from './auth-guard';
 import Error404 from "../views/Error404";
@@ -21,6 +25,10 @@ import TakeSearch from "../views/TakeSearch";
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        component: AutoSearch,
+        path: '/auto-search',
+    },
     {
         component: Error404,
         path: '*',

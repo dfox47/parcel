@@ -10,9 +10,9 @@
                     </li>
 
                     <li>
-                        <span>
+                        <router-link to="/">
                             {{ $vuetify.lang.t('$vuetify.breadcrumbs.my_parcels') }}
-                        </span>
+                        </router-link>
                     </li>
 
                     <li>
@@ -157,7 +157,7 @@ export default {
                 lastname: 'Константиновский',
                 to: 'Багамские Острова, Санто-Доминго',
                 weight: '10 кг'
-            },
+            }
         ]
     })
 }

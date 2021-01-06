@@ -2,7 +2,14 @@
 
 
 .home {
-  > div.x {
+  h1 {
+    font-size: 53px;
+    letter-spacing: -.024em;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  > div {
     &::after {
       content: '';
       background-color: #000;
@@ -202,9 +209,9 @@
   }
 
   @media #{$desktop} {
-      &::before {
-        display: none;
-      }
+    &::before {
+      display: none;
+    }
 
     &__content {
       max-width: 85.5%;
