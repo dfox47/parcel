@@ -27,20 +27,20 @@
                         href="/"
                         class="link_back"
                     >
-                        Назад
+                        {{ $vuetify.lang.t('$vuetify.back') }}
                     </a>
 
                     <h1>Мои посылки</h1>
                 </div>
 
-                <ul class="tasks_menu">
-                    <li class="tasks_menu__item">
+                <ul class="submenu">
+                    <li class="submenu__item">
                         <router-link to="/">
                             {{ $vuetify.lang.t('$vuetify.tasks.active') }}
                         </router-link>
                     </li>
 
-                    <li class="tasks_menu__item active">
+                    <li class="submenu__item active">
                         <router-link to="/my-parcels-completed">
                             {{ $vuetify.lang.t('$vuetify.tasks.completed') }}
                         </router-link>

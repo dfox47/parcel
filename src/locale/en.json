@@ -3,19 +3,25 @@
   "add_new_order": "+ Add application",
   "auto_search": "Autosearch",
 
+  "back": "Back",
   "back_to_search_results": "Back to search results",
 
+  "breadcrumbs.account": "Account",
   "breadcrumbs.completed": "Completed",
   "breadcrumbs.home": "Home",
   "breadcrumbs.my_parcels": "My parcels",
+  "breadcrumbs.payments": "Payments",
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
+  "breadcrumbs.personal_info": "Personal info",
 
   "confirmation": "Conformation",
   "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
   "connect": "Connect",
   "continue_button": "Continue",
   "create_new_request": "Create request",
+
+  "edit": "Edit",
 
   "footer.contacts": "Contacts",
   "footer.copy": "Copyright",
@@ -30,6 +36,7 @@
 
   "language_name": "English",
 
+  "load_document": "Load document",
   "login": "Login",
   "login.button": "Login",
   "login.dont_have_account": "Еще нет аккаунта?",

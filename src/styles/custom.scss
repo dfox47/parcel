@@ -311,6 +311,82 @@ ul {
 
 
 
+.submenu {
+  font-family: $font_roboto;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 15px 0;
+  text-align: center;
+
+  a,
+  a:visited {
+    color: $c_input_border;
+    display: block;
+    padding: 10px 30px;
+    position: relative;
+    text-decoration: none;
+    transition: $transition;
+
+    &::after {
+      background-color: $c_primary;
+      content: "";
+      display: none;
+      height: 2px;
+      left: 50%;
+      margin: -1px 0 0 -25px;
+      position: absolute;
+      top: 100%;
+      width: 50px;
+    }
+
+    &:hover {
+      color: $c_primary;
+    }
+  }
+
+  &__item {
+    &.active {
+      a,
+      a:visited {
+        color: $c_primary;
+
+        &::after {
+          display: block;
+        }
+      }
+    }
+  }
+
+  @media #{$tablet_l} {
+    font-size: 18px;
+    margin: 24px 0;
+  }
+
+  @media #{$tablet_m} {
+    a,
+    a:visited {
+      padding: 8px 22px;
+
+      &::after {
+        height: 1px;
+        margin: -1px 0 0 -18px;
+        width: 36px;
+      }
+    }
+  }
+
+  @media #{$mobile} {
+    margin: 14px 0;
+
+    a,
+    a:visited {
+      font-size: 13px;
+    }
+  }
+}
+
+
+
 .title_with_btn {
   padding: 0 120px;
   position: relative;
