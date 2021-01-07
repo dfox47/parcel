@@ -4,15 +4,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
+import AccountPersonalInfo from "../views/AccountPersonalInfo";
 import AutoSearch from "@/views/AutoSearch";
 import Home from '../views/Home';
 import AuthGuard from './auth-guard';
 import Error404 from "../views/Error404";
+import MyMessages from "../views/MyMessages";
 import MyParcelsCompleted from "../views/MyParcelsCompleted";
 import ParcelOverview from "../views/ParcelOverview";
 import ParcelSend from "../views/ParcelSend";
-
-import MyMessages from "../views/MyMessages";
 import ParcelTake from "../views/ParcelTake";
 import Registration from "../views/Registration";
 import Search from "../views/Search";
@@ -26,6 +26,10 @@ import TakeSearch from "../views/TakeSearch";
 Vue.use(VueRouter);
 
 const routes = [
+    {
+        component: AccountPersonalInfo,
+        path: '/account/personal-info',
+    },
     {
         component: AutoSearch,
         path: '/auto-search',

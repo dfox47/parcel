@@ -46,9 +46,13 @@
                                 <div class="auto_search_close btn popup_close_btn" />
                             </div>
 
-                            <div class="auto_search_numbers">{{ item.orders_total }}</div>
+                            <div class="auto_search_numbers">
+                                {{ item.orders_total }}
+                            </div>
 
-                            <div class="auto_search_numbers auto_search_numbers__new">{{ item.orders_new }}</div>
+                            <div class="auto_search_numbers auto_search_numbers__new">
+                                {{ item.orders_new }}
+                            </div>
                         </div>
 
                         <div class="auto_search__desc">
