@@ -3,19 +3,27 @@
   "add_new_order": "+ Add application",
   "auto_search": "Autosearch",
 
+  "back": "Back",
   "back_to_search_results": "Back to search results",
 
+  "breadcrumbs.account": "Account",
   "breadcrumbs.completed": "Completed",
   "breadcrumbs.home": "Home",
   "breadcrumbs.my_parcels": "My parcels",
+  "breadcrumbs.payments": "Payments",
+  "breadcrumbs.personal_info": "Personal info",
+  "breadcrumbs.rules": "Rules",
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
 
   "confirmation": "Conformation",
   "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
   "connect": "Connect",
+  "connect_card": "Connect card",
   "continue_button": "Continue",
   "create_new_request": "Create request",
+
+  "edit": "Edit",
 
   "footer.contacts": "Contacts",
   "footer.copy": "Copyright",
@@ -32,6 +40,7 @@
 
   "language_name": "English",
 
+  "load_document": "Load document",
   "login": "Login",
   "login.button": "Login",
   "login.dont_have_account": "Еще нет аккаунта?",
@@ -65,9 +74,9 @@
   "search.to": "To",
   "search.weight": "kg",
 
-  "steps.1_of_3": "Шаг 1 / 3",
-  "steps.2_of_3": "Шаг 2 / 3",
-  "steps.3_of_3": "Шаг 3 / 3",
+  "steps.1_of_3": "Step 1 / 3",
+  "steps.2_of_3": "Step 2 / 3",
+  "steps.3_of_3": "Step 3 / 3",
 
   "steps.1_of_2": "Шаг 1 / 2",
   "steps.2_of_2": "Шаг 2 / 2",
@@ -80,18 +89,22 @@
   "take.additional_search": "Additional search",
   "take.from": "From",
   "take.parcel_search": "Search parcel",
-  "take.results_title_1": "Найдено",
-  "take.results_title_2": "желающих отправить посылку",
+  "take.results_title_1": "Found",
+  "take.results_title_2": "who want to send a parcel",
   "take.search": "Search",
   "take.to": "To",
 
   "tasks.active": "Active",
   "tasks.completed": "Completed",
 
-  "status.delivered": "Доставлено",
-  "status.sent": "Отправлено",
+  "status.delivered": "Delivered",
+  "status.looking_parcel": "Looking for parcel",
+  "status.looking_suitcase": "Looking for a suitcase",
+  "status.sent": "Sent",
 
   "we_have_mobile_app": "We've got mobile app!",
   "weight": "Weight",
   "what_do_you_need": "What do you need?"
 }
+
+

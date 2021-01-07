@@ -121,7 +121,6 @@ body {
 
 
 
-
     .v-card {
       align-items: center;
       background: transparent;
@@ -141,23 +140,24 @@ body {
       > *:last-child:not(.v-chip) {
         border-radius: 14px;
       }
+
+      &__subtitle {
+        //color: $c_;
+        text-align: center;
+        line-height: 32px;
+        font-size: 17px;
+        padding: 0 0 20px;
+      }
+
+      &__title {
+        font-size: 24px;
+        font-weight: 600;
+        justify-content: center;
+        margin: 0 auto  ;
+        line-height: 1.4;
+      }
     }
 
-    .v-card__title {
-      font-size: 24px;
-      font-weight: 600;
-      justify-content: center;
-      margin: 0 auto  ;
-      line-height: 1.4;
-    }
-
-    .v-card__subtitle {
-      //color: $c_;
-      text-align: center;
-      line-height: 32px;
-      font-size: 17px;
-      padding: 0 0 20px;
-    }
 
 
     .v-input--checkbox {
@@ -328,9 +328,49 @@ body {
     }
 
 
+
+    .account_info {
+      p {
+        margin: 0 0 20px;
+        
+        @media #{$desktop} {
+          margin: 0 0 25px;
+        }
+      }
+    }
+
+    .rules {
+      &__content {
+        p {
+          margin: 1em 0;
+        }
+      }
+    }
+
+    .submenu {
+      a,
+      a:visited {
+        color: $c_input_border;
+
+        &.router-link-exact-active {
+          color: $c_primary;
+
+          &::after {
+            display: block;
+          }
+        }
+
+        &:hover {
+          color: $c_primary;
+        }
+      }
+    }
+
     @media #{$mobile} {
-      .v-card__title {
-        font-size: 16px;
+      .v-card {
+        &__title {
+          font-size: 16px;
+        }
       }
     }
   }

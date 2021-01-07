@@ -3,19 +3,27 @@
   "add_new_order": "+ Добавить заявку",
   "auto_search": "Автопоиск",
 
+  "back": "Назад",
   "back_to_search_results": "Назад к результатам поиска",
 
+  "breadcrumbs.account": "Аккаунт",
   "breadcrumbs.completed": "Завершённые",
   "breadcrumbs.home": "Главная",
   "breadcrumbs.my_parcels": "Мои посылки",
+  "breadcrumbs.payments": "Платежи",
+  "breadcrumbs.personal_info": "Личная информация",
+  "breadcrumbs.rules": "Правила",
   "breadcrumbs.search_parcel": "Поиск посылки",
   "breadcrumbs.search_suitcase": "Поиск чемодана",
 
   "confirmation": "Подтверждение",
   "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",
   "connect": "Связаться",
+  "connect_card": "Привязать карту",
   "continue_button": "Продолжить",
   "create_new_request": "Создать заявку",
+
+  "edit": "Редактировать",
 
   "footer.contacts": "Контакты",
   "footer.copy": "Копирайт",
@@ -32,6 +40,7 @@
 
   "language_name": "Русский",
 
+  "load_document": "Загрузить документ",
   "login": "Войти",
   "login.button": "Вход",
   "login.dont_have_account": "Еще нет аккаунта?",
@@ -86,9 +95,13 @@
   "tasks.completed": "Завершённые",
 
   "status.delivered": "Доставлено",
+  "status.looking_parcel": "Ищу посылку",
+  "status.looking_suitcase": "Ищу чемодан",
   "status.sent": "Отправлено",
 
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "weight": "Вес",
   "what_do_you_need": "Что Вам необходимо?"
 }
+
+
