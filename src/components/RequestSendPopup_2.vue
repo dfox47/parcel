@@ -18,7 +18,7 @@
             <v-card
                 v-if="showRequestSendPopup_2"
             >
-                <div class="popup">
+                <div class="popup popup_two_columns">
                     <span
                         class="popup_close_btn"
                         @click="this.hideRequestSendPopup_2"
@@ -30,36 +30,63 @@
 
                     <form
                         action=""
-                        class="popup_two_columns"
                     >
-                        <label class="input_wrap">
-                            <v-text-field
-                                label="Номер телефона"
-                                v-focus
-                            />
-                        </label>
+                        <div class="popup_two_columns__four">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
-                        <label class="input_wrap">
-                            <input
-                                :type="type"
-                                placeholder="Пароль"
+                            <div>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+                        </div>
+
+                        <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+
+                        <v-textarea
+                            counter="500"
+                            rows="4"
+                        />
+
+                        <div class="popup_two_columns__one">
+                            <v-btn
+                                block
+                                color="primary"
+                                @click="this.showRequestSendPopup_3"
                             >
-
-                            <img
-                                class="input_wrap__img"
-                                :src="pass_img"
-                                @click="showPassword"
-                                alt=""
-                            >
-                        </label>
-
-                        <v-btn
-                            block
-                            color="primary"
-                            @click="this.showRequestSendPopup_3"
-                        >
-                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </v-btn>
+                                {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                            </v-btn>
+                        </div>
                     </form>
                 </div>
             </v-card>

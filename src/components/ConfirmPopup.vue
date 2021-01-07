@@ -18,7 +18,7 @@
             <v-card
                 v-if="showConfirmPopup"
             >
-                <div class="popup popup_confirm">
+                <div class="popup popup_one_column  popup_confirm">
                     <span
                         class="popup_close_btn"
                         @click="this.hideConfirmPopup"

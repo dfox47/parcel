@@ -18,7 +18,7 @@
             <v-card
                 v-if="showRequestSendPopup_3"
             >
-                <div class="popup">
+                <div class="popup popup_two_columns">
                     <span
                         class="popup_close_btn"
                         @click="this.hideRequestSendPopup_3"
@@ -30,36 +30,81 @@
 
                     <form
                         action=""
-                        class="popup_two_columns"
                     >
-                        <label class="input_wrap">
-                            <v-text-field
-                                label="Номер телефона"
-                                v-focus
-                            />
-                        </label>
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
-                        <label class="input_wrap">
-                            <input
-                                :type="type"
-                                placeholder="Пароль"
+                                <v-radio-group
+                                    v-model="row"
+                                    row
+                                >
+                                    <v-radio
+                                        label="Option 1"
+                                        value="radio-1"
+                                    />
+                                    <v-radio
+                                        label="Option 2"
+                                        value="radio-2"
+                                    />
+                                </v-radio-group>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+
+                                <span class="popup_description">
+                                    При использовании депозита курьер должен будет перевести указанную сумму на счёт сервиса для обеспечения безопасности доставки. После доставки он получит сумму депозита обратно в полном объёме. Залог за сохранность увеличивает стоимость доставки и уменьшает количество курьеров.
+                                </span>
+                            </div>
+
+                            <div>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+
+                                <v-radio-group
+                                    v-model="row"
+                                    row
+                                >
+                                    <v-radio
+                                        label="Option 1"
+                                        value="radio-1"
+                                    />
+                                    <v-radio
+                                        label="Option 2"
+                                        value="radio-2"
+                                    />
+                                </v-radio-group>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="popup_two_columns__one">
+                            <v-btn
+                                block
+                                color="primary"
+                                @click="this.showRequestAcceptedPopup"
                             >
-
-                            <img
-                                class="input_wrap__img"
-                                :src="pass_img"
-                                @click="showPassword"
-                                alt=""
-                            >
-                        </label>
-
-                        <v-btn
-                            block
-                            color="primary"
-                            @click="this.showRequestAcceptedPopup"
-                        >
-                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </v-btn>
+                                {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                            </v-btn>
+                        </div>
                     </form>
                 </div>
             </v-card>

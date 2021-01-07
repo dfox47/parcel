@@ -174,20 +174,13 @@
                                 </div>
 
                                 <div class="take_results_item__link">
-                                    <a
-                                        class="btn btn_primary btn_size_l"
-                                        href="/parcel-overview"
+                                    <v-btn
+                                        medium
+                                        color="secondary"
+                                        to="/parcel-overview"
                                     >
                                         {{ $vuetify.lang.t('$vuetify.readmore') }}
-                                    </a>
-
-                                    <!--<v-btn-->
-                                    <!--     small-->
-                                    <!--     color="secondary"-->
-                                    <!--     to="/parcel-overview"-->
-                                    <!-- >-->
-                                    <!--    {{ $vuetify.lang.t('$vuetify.readmore') }}-->
-                                    <!--</v-btn>-->
+                                    </v-btn>
                                 </div>
                             </div>
                         </router-link>

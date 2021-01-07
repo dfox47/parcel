@@ -18,7 +18,7 @@
             <v-card
                 v-if="showRequestSendPopup_1"
             >
-                <div class="popup">
+                <div class="popup_two_columns popup">
                     <span
                         class="popup_close_btn"
                         @click="this.hideRequestSendPopup_1"
@@ -30,11 +30,10 @@
 
                     <form
                         action=""
-                        class="popup_two_columns"
                     >
-                        <div class="popup_two_columns__wrap">
+                        <div class="popup_two_columns__two">
                             <div>
-                                <span>Откуда</span>
+                                <span class="popup_title">Откуда</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -52,7 +51,7 @@
                             </div>
 
                             <div>
-                                <span>Куда</span>
+                                <span class="popup_title">Куда</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -70,27 +69,77 @@
                             </div>
                         </div>
 
-                        <label class="input_wrap">
-                            <input
-                                :type="type"
-                                placeholder="Пароль"
-                            >
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <span class="popup_title">Откуда</span>
 
-                            <img
-                                class="input_wrap__img"
-                                :src="pass_img"
-                                @click="showPassword"
-                                alt=""
-                            >
-                        </label>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
 
-                        <v-btn
-                            block
-                            color="primary"
-                            @click="this.showRequestSendPopup_2"
-                        >
-                            {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                        </v-btn>
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="popup_title">Куда</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <span class="popup_title">Откуда</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="popup_title">Куда</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="popup_two_columns__one">
+                            <v-btn
+                                block
+                                color="secondary"
+                                @click="this.showRequestSendPopup_2"
+                            >
+                                {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                            </v-btn>
+                        </div>
                     </form>
                 </div>
             </v-card>

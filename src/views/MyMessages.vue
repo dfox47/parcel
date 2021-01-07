@@ -1,5 +1,5 @@
 <template>
-    <div class="lk_messages">
+    <div class="messages">
         <div class="wrap">
             <ul class="breadcrumbs">
                 <li>
@@ -17,13 +17,13 @@
 
             <h1>{{ $vuetify.lang.t('$vuetify.messages') }}</h1>
 
-            <div class="lk_messages_items">
+            <div class="messages_items">
                 <router-link
                     tag="div"
                     to="/chat"
                     v-for="item in items"
                     :key="item.message"
-                    class="lk_messages_item"
+                    class="messages_item"
                 >
                     <div class="persone">
                         <div class="photo_wrap">
@@ -40,18 +40,18 @@
 
                         <div>
                             <div class="name">
-                                <span>{{ item.name }}</span>
+                                <span>{{ item.name }}</span>&nbsp;
                                 <span>{{ item.surname }}</span>
                             </div>
                             <span class="person_rating">{{ item.rating }}</span>
                             <div class="name_info">
-                                <span><b>{{ $vuetify.lang.t('$vuetify.messages.from') }}</b> {{ item.from }}</span>
-                                <span><b>{{ $vuetify.lang.t('$vuetify.messages.to') }}  </b> {{ item.to }}</span>
+                                <span><strong>{{ $vuetify.lang.t('$vuetify.messages.from') }}</strong> {{ item.from }}</span>
+                                <span><strong>{{ $vuetify.lang.t('$vuetify.messages.to') }}  </strong> {{ item.to }}  </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="lk_massages_btn_wrap">
+                    <div class="messages_btn_wrap">
                         <v-btn
                             block
                             color="primary"

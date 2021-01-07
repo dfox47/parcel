@@ -60,7 +60,7 @@ body {
       border: 1px solid transparent;
       border-radius: 6px;
       cursor: pointer;
-      display: inline-block;
+      display: inline-flex;
       justify-content: center;
       letter-spacing: 0;
       text-align: center;
@@ -123,6 +123,17 @@ body {
 
 
     .v-card {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+
       div {
         border-radius: 14px;
       }

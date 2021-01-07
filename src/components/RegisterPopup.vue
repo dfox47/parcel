@@ -18,7 +18,7 @@
             <v-card
                 v-if="showRegistrationPopup"
             >
-                <div class="popup popup_register">
+                <div class="popup popup_one_column  popup_register">
                     <span
                         class="popup_close_btn"
                         @click="this.hideRegistrationPopup"
