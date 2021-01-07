@@ -15,8 +15,6 @@
         <!-- footer -->
         <app-footer />
 
-        <!--   add popup view     -->
-
         <template v-if="error">
             <v-snackbar
                 timeout="5000"
@@ -40,15 +38,28 @@
             </v-snackbar>
         </template>
 
-        <app-login_popup />
-        <app-register_popup />
         <app-confirm_popup />
-        <app-send_or_grub_popup />
 
+        <app-international_popup_1 />
+        <app-international_popup_2 />
+
+        <app-login_popup />
+
+        <app-passport_loaded_popup />
+        <app-passport_popup_1 />
+        <app-passport_popup_2 />
+        <app-passport_popup_3 />
+
+        <app-register_popup />
+
+        <app-request_accepted_popup />
+        <app-request_place_popup_1 />
+        <app-request_place_popup_2 />
         <app-request_send_popup_1 />
         <app-request_send_popup_2 />
         <app-request_send_popup_3 />
-        <app-request_accepted_popup />
+
+        <app-send_or_grub_popup />
     </v-app>
 </template>
 
