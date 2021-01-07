@@ -328,6 +328,14 @@ body {
       }
     }
 
+    .rules {
+      &__content {
+        p {
+          margin: 1em 0;
+        }
+      }
+    }
+
     .submenu {
       a,
       a:visited {

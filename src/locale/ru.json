@@ -11,9 +11,10 @@
   "breadcrumbs.home": "Главная",
   "breadcrumbs.my_parcels": "Мои посылки",
   "breadcrumbs.payments": "Платежи",
+  "breadcrumbs.personal_info": "Личная информация",
+  "breadcrumbs.rules": "Правила",
   "breadcrumbs.search_parcel": "Поиск посылки",
   "breadcrumbs.search_suitcase": "Поиск чемодана",
-  "breadcrumbs.personal_info": "Личная информация",
 
   "confirmation": "Подтверждение",
   "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",

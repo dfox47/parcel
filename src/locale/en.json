@@ -11,9 +11,10 @@
   "breadcrumbs.home": "Home",
   "breadcrumbs.my_parcels": "My parcels",
   "breadcrumbs.payments": "Payments",
+  "breadcrumbs.personal_info": "Personal info",
+  "breadcrumbs.rules": "Rules",
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
-  "breadcrumbs.personal_info": "Personal info",
 
   "confirmation": "Conformation",
   "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
