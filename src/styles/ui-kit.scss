@@ -333,17 +333,16 @@ body {
       a:visited {
         color: $c_input_border;
 
+        &.router-link-exact-active {
+          color: $c_primary;
+
+          &::after {
+            display: block;
+          }
+        }
+
         &:hover {
           color: $c_primary;
-        }
-      }
-
-      &__item {
-        &.active {
-          a,
-          a:visited {
-            color: $c_primary;
-          }
         }
       }
     }

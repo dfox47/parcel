@@ -3,26 +3,140 @@
 
 .account {}
 
+.account_btn {
+  background-size: 16px;
+  border-radius: 6px;
+  height: 40px;
+  transition: $transition;
+  width: 40px;
+
+  &__close {
+    background: url(#{$i}/icons/close_secondary.svg) center center no-repeat scroll transparent;
+    border: 1px solid $c_primary;
+    cursor: pointer;
+    margin: 0 0 0 15px;
+
+    &:hover {
+      background: url(#{$i}/icons/close.svg) center center no-repeat scroll $c_primary;
+    }
+  }
+
+  &__done {
+    background: url(#{$i}/icons/done.svg) center center no-repeat scroll $c_special;
+  }
+
+  @media #{$tablet_s} {
+    height: 32px;
+    width: 32px;
+  }
+
+  @media #{$tablet_m} {
+    background-size: 13px;
+  }
+
+  @media #{$mobile} {
+    background-size: 8px;
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.account_card {
+  align-items: center;
+  display: flex;
+
+  &__add {
+    text-align: center;
+    width: 100%;
+  }
+
+  &__desc {
+    font-size: 22px;
+  }
+
+  &__type {
+    background-position: center;
+    background-size: 60px;
+    border: 1px solid $c_text_dark;
+    border-radius: 10px;
+    height: 81px;
+    margin: 0 33px 0 0;
+    width: 124px;
+
+    &__maestro {
+      background-image: url(#{$i}/icons/card_maestro.svg);
+    }
+
+    &__master {
+      background-image: url(#{$i}/icons/card_master.svg);
+    }
+
+    &__visa {
+      background-image: url(#{$i}/icons/card_visa.svg);
+    }
+  }
+
+  @media #{$tablet_l} {
+    &__desc {
+      font-size: 17px;
+    }
+  }
+
+  @media #{$tablet_m} {
+    &__desc {
+      font-size: 13px;
+    }
+
+    &__type {
+      background-size: 45px;
+      height: 65px;
+      margin: 0 14px 0 0;
+      width: 100px;
+    }
+  }
+
+  @media #{$mobile} {
+    &__desc {
+      font-size: 9px;
+    }
+
+    &__type {
+      background-size: 30px;
+      height: 42px;
+      margin: 0 9px 0 0;
+      width: 65px;
+    }
+  }
+}
+
 .account_fields {
-  border-top: 1px solid $c_input_border;
   flex-grow: 1;
   margin: 0 55px 0 0;
 
+  &__info {
+    font-size: 22px;
+    padding: 0 0 60px;
+  }
+
   &__item {
     align-items: center;
-    border-bottom: 1px solid $c_input_border;
+    border-top: 1px solid $c_input_border;
     display: flex;
     justify-content: space-between;
     min-height: 140px;
-    padding: 10px 0;
+    padding: 20px 0;
+
+    &:last-child {
+      border-bottom: 1px solid $c_input_border;
+    }
 
     &__edit,
     &__edit:visited {
+      display: flex;
       font-size: 17px;
       text-decoration: none;
       padding: 0 0 0 20px;
       text-align: right;
-      width: 50%;
 
       &:hover {
         text-decoration: underline;
@@ -32,7 +146,6 @@
     &__info {
       color: $c_text_dark;
       font-size: 22px;
-      width: 50%;
     }
   }
 
@@ -45,6 +158,12 @@
 
   @media #{$desktop} {
     margin: 0 0 63px;
+  }
+
+  @media #{$tablet_l} {
+    &__info {
+      font-size: 17px;
+    }
   }
 
   @media #{$tablet_m} {
@@ -69,6 +188,10 @@
   }
 
   @media #{$mobile} {
+    &__info {
+      font-size: 14px;
+    }
+
     &__item {
       min-height: 75px;
       padding: 10px 0 10px 18px;
@@ -142,6 +265,7 @@
 }
 
 .account_wrap {
+  align-items: flex-start;
   display: flex;
   padding: 48px 0 125px;
   margin: 0 auto;

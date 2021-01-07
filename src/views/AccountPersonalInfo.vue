@@ -34,13 +34,13 @@
                 </div>
 
                 <ul class="submenu">
-                    <li class="submenu__item active">
+                    <li>
                         <router-link to="/account/personal-info">
                             {{ $vuetify.lang.t('$vuetify.breadcrumbs.personal_info') }}
                         </router-link>
                     </li>
 
-                    <li class="submenu__item">
+                    <li>
                         <router-link to="/account/payments">
                             {{ $vuetify.lang.t('$vuetify.breadcrumbs.payments') }}
                         </router-link>

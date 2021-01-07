@@ -5,6 +5,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import AccountPersonalInfo from "../views/AccountPersonalInfo";
+import AccountPayments from "../views/AccountPayments";
 import AutoSearch from "@/views/AutoSearch";
 import Home from '../views/Home';
 import AuthGuard from './auth-guard';
@@ -29,6 +30,10 @@ const routes = [
     {
         component: AccountPersonalInfo,
         path: '/account/personal-info',
+    },
+    {
+        component: AccountPayments,
+        path: '/account/payments',
     },
     {
         component: AutoSearch,
