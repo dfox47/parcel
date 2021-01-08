@@ -3,37 +3,38 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
-import Header from './components/Header';
-import Footer from './components/Footer';
 
-import Login_popup from './components/LoginPopup';
-import Register_popup from './components/RegisterPopup';
 import Confirm_popup from './components/ConfirmPopup';
-import SendOrGrab_popup from './components/SendOrGrabPopup';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import LangAndCur_popup from './components/LangAndCurPopup';
+import Login_popup from './components/LoginPopup';
 import Menu_popup from './components/MenuPopup';
+import Register_popup from './components/RegisterPopup';
+import RequestAccepted_popup from './components/RequestAcceptedPopup';
 import RequestSendPopup_popup_1 from './components/RequestSendPopup_1';
 import RequestSendPopup_popup_2 from './components/RequestSendPopup_2';
 import RequestSendPopup_popup_3 from './components/RequestSendPopup_3';
-import RequestAccepted_popup from './components/RequestAcceptedPopup';
+import RulesMenu from './components/RulesMenu';
+import SendOrGrab_popup from './components/SendOrGrabPopup';
 
 import CountryFlag from 'vue-country-flag';
 
-Vue.component('app-header', Header);
-Vue.component('app-footer', Footer);
-Vue.component('app-login_popup', Login_popup);
-Vue.component('app-register_popup', Register_popup);
-Vue.component('app-confirm_popup', Confirm_popup);
-Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
-Vue.component('app-lang_and_cur_popup', LangAndCur_popup);
-Vue.component('app-menu_popup', Menu_popup);
 
+
+Vue.component('app-confirm_popup', Confirm_popup);
+Vue.component('app-footer', Footer);
+Vue.component('app-header', Header);
+Vue.component('app-lang_and_cur_popup', LangAndCur_popup);
+Vue.component('app-login_popup', Login_popup);
+Vue.component('app-menu_popup', Menu_popup);
+Vue.component('app-register_popup', Register_popup);
+Vue.component('app-request_accepted_popup', RequestAccepted_popup);
 Vue.component('app-request_send_popup_1', RequestSendPopup_popup_1);
 Vue.component('app-request_send_popup_2', RequestSendPopup_popup_2);
 Vue.component('app-request_send_popup_3', RequestSendPopup_popup_3);
-
-Vue.component('app-request_accepted_popup', RequestAccepted_popup);
-
+Vue.component('app-rules_menu', RulesMenu);
+Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
 Vue.component('country-flag', CountryFlag);
 
 
@@ -77,3 +78,5 @@ new Vue({
         }
     }
 }).$mount('#app')
+
+
