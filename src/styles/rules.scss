@@ -23,28 +23,6 @@
     }
   }
 
-  &__menu {
-    flex-basis: 240px;
-    flex-shrink: 0;
-    font-size: 22px;
-
-    a,
-    a:visited {
-      display: inline-block;
-      text-decoration: none;
-      transition: $transition;
-
-      &.router-link-exact-active {
-        font-weight: 700;
-      }
-    }
-
-    li {
-      display: block;
-      margin: 0 0 20px;
-    }
-  }
-
   @media #{$desktop} {
     padding: 56px 40px 100px;
 
@@ -54,10 +32,6 @@
 
     &__content {
       font-size: 20px;
-    }
-
-    &__menu {
-      font-size: 17px;
     }
   }
 
@@ -75,17 +49,55 @@
       padding: 0;
       width: 100%;
     }
-
-    &__menu {
-      flex-basis: auto;
-      width: 100%;
-    }
   }
 
   @media #{$mobile} {
     &__content {
       font-size: 14px;
     }
+  }
+}
+
+.rules_menu {
+  flex-basis: 240px;
+  flex-shrink: 0;
+  font-size: 22px;
+
+  &__list {}
+
+  &__mobile_toggle {
+    > div {
+      display: none;
+
+      &.router-link-exact-active {
+        display: block;
+      }
+    }
+  }
+
+  a,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    transition: $transition;
+
+    &.router-link-exact-active {
+      font-weight: 700;
+    }
+  }
+
+  li {
+    display: block;
+    margin: 0 0 20px;
+  }
+
+  @media #{$desktop} {
+    font-size: 17px;
+  }
+
+  @media #{$tablet_m} {
+    flex-basis: auto;
+    width: 100%;
   }
 }
 

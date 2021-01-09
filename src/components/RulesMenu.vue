@@ -1,14 +1,27 @@
 <template>
-    <ul class="rules__menu">
-        <li
-            v-for="link in links"
-            :key="link.title"
-        >
-            <router-link :to="link.src">
+    <div class="rules_menu">
+        <div class="rules_menu__mobile_toggle">
+            <router-link
+                :key="link.title"
+                :to="link.src"
+                tag="div"
+                v-for="link in links"
+            >
                 {{ link.title }}
             </router-link>
-        </li>
-    </ul>
+        </div>
+
+        <ul class="rules_menu__list">
+            <li
+                v-for="link in links"
+                :key="link.title"
+            >
+                <router-link :to="link.src">
+                    {{ link.title }}
+                </router-link>
+            </li>
+        </ul>
+    </div>
 </template>
 
 

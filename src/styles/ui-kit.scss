@@ -323,7 +323,7 @@ body {
     .account_info {
       p {
         margin: 0 0 20px;
-        
+
         @media #{$desktop} {
           margin: 0 0 25px;
         }
@@ -336,15 +336,15 @@ body {
           margin: 1em 0;
         }
       }
+    }
 
-      &__menu {
-        a,
-        a:visited {
-          color: $c_text_dark;
+    .rules_menu {
+      a,
+      a:visited {
+        color: $c_text_dark;
 
-          &:hover {
-            color: $c_primary;
-          }
+        &:hover {
+          color: $c_primary;
         }
       }
     }

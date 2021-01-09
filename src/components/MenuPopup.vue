@@ -27,14 +27,14 @@
                 </span>
 
                 <div class="popup_menu__rating">
-                    <span class="icon-star_w"></span>
+                    <span class="icon-star_w" />
                     4.5
                 </div>
 
                 <ul class="popup_menu__items">
                     <li class="popup_menu__item">
                         Мои посылки
-                        <span class="icon-bell popup_menu__icon"></span>
+                        <span class="icon-bell popup_menu__icon" />
                     </li>
 
                     <li class="popup_menu__item">
@@ -68,6 +68,8 @@
     </div>
 </template>
 
+
+
 <script>
 export default {
     data() {
@@ -89,3 +91,5 @@ export default {
     }
 }
 </script>
+
+
