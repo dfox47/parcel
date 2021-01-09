@@ -4,21 +4,16 @@
             name="fade"
             appear
         >
-            <div
-                class="popup_overlay"
-                v-if="showLoginPopup"
-                @click="this.hideLoginPopup"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
             <v-card
                 v-if="showLoginPopup"
             >
-                <div class="popup popup_login">
+                <div
+                    class="popup_overlay"
+                    v-if="showLoginPopup"
+                    @click="this.hideLoginPopup"
+                />
+
+                <div class="popup popup_one_column  popup_login">
                     <span
                         class="popup_close_btn"
                         @click="this.hideLoginPopup"

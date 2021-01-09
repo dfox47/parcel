@@ -4,19 +4,24 @@
             name="fade"
             appear
         >
-            <v-card
-                v-if="showRequestSendPopup_1"
-            >
-                <div
-                    class="popup_overlay"
-                    v-if="showRequestSendPopup_1"
-                    @click="this.hideRequestSendPopup_1"
-                />
+            <div
+                class="popup_overlay"
+                v-if="showPassportPopup_1"
+                @click="this.hidePassportPopup_1"
+            />
+        </transition>
 
+        <transition
+            name="fade"
+            appear
+        >
+            <v-card
+                v-if="showPassportPopup_1"
+            >
                 <div class="popup_two_columns popup">
                     <span
                         class="popup_close_btn"
-                        @click="this.hideRequestSendPopup_1"
+                        @click="this.hidePassportPopup_1"
                     />
 
                     <v-card-title>
@@ -28,75 +33,37 @@
                     >
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.from') }}</span>
+                                <span class="popup_title">Откуда</span>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.where_to') }}</span>
-
-                                <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
-                                    />
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.transfer_method_to_recipient') }}</span>
-
-                                <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
                             </div>
 
                             <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.recipient_data') }}</span>
+                                <span class="popup_title">Куда</span>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
                             </div>
@@ -104,23 +71,61 @@
 
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.product_category') }}</span>
+                                <span class="popup_title">Откуда</span>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
                             </div>
 
                             <div>
-                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.send_before') }}</span>
+                                <span class="popup_title">Куда</span>
 
                                 <label class="input_wrap">
-                                    <v-autocomplete
-                                        label="Город"
-                                        :items="items"
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <span class="popup_title">Откуда</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="popup_title">Куда</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
                                     />
                                 </label>
                             </div>
@@ -130,7 +135,7 @@
                             <v-btn
                                 block
                                 color="secondary"
-                                @click="this.showRequestSendPopup_2"
+                                @click="this.showPassportPopup_2"
                             >
                                 {{ $vuetify.lang.t('$vuetify.continue_button') }}
                             </v-btn>
@@ -144,20 +149,18 @@
 
 <script>
 export default {
-    data: () => ({
-        items: ['Нижний новгород', 'Bar', 'Fizz', 'Buzz', 'sadhfkas', 'text', 'ne text'],
-    }),
+    // data() {},
     computed: {
-        showRequestSendPopup_1() {
-            return this.$store.getters.getRequestSendPopup_1
+        showPassportPopup_1() {
+            return this.$store.getters.getPassportPopup_1
         }
     },
     methods: {
-        hideRequestSendPopup_1 () {
-            this.$store.dispatch('hideRequestSendPopup_1')
+        hidePassportPopup_1 () {
+            this.$store.dispatch('hidePassportPopup_1')
         },
-        showRequestSendPopup_2 () {
-            this.$store.dispatch('showRequestSendPopup_2')
+        showPassportPopup_2 () {
+            this.$store.dispatch('showPassportPopup_2')
         }
     }
 }

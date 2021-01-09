@@ -3,41 +3,78 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
-
-import Confirm_popup from './components/ConfirmPopup';
-import Footer from './components/Footer';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import RulesMenu from './components/RulesMenu';
+
+// popup [START]
+import Confirm_popup from './components/ConfirmPopup';
+
+import International_popup_1 from './components/InternationalPopup_1';
+import International_popup_2 from './components/InternationalPopup_2';
+
 import LangAndCur_popup from './components/LangAndCurPopup';
 import Login_popup from './components/LoginPopup';
 import Menu_popup from './components/MenuPopup';
+
+import Passport_popup_1 from './components/PassportPopup_1';
+import Passport_popup_2 from './components/PassportPopup_2';
+import Passport_popup_3 from './components/PassportPopup_3';
+
+import PassportLoaded_popup from './components/PassportLoadedPopup';
+
 import Register_popup from './components/RegisterPopup';
+
 import RequestAccepted_popup from './components/RequestAcceptedPopup';
-import RequestSendPopup_popup_1 from './components/RequestSendPopup_1';
-import RequestSendPopup_popup_2 from './components/RequestSendPopup_2';
-import RequestSendPopup_popup_3 from './components/RequestSendPopup_3';
-import RulesMenu from './components/RulesMenu';
+
+import RequestSend_popup_1 from './components/RequestSendPopup_1';
+import RequestSend_popup_2 from './components/RequestSendPopup_2';
+import RequestSend_popup_3 from './components/RequestSendPopup_3';
+
+import RequestPlace_popup_1 from './components/RequestPlacePopup_1';
+import RequestPlace_popup_2 from './components/RequestPlacePopup_2';
+
 import SendOrGrab_popup from './components/SendOrGrabPopup';
+// popup [END]
 
 import CountryFlag from 'vue-country-flag';
-
-
+import VCalendar from "v-calendar";
 
 Vue.component('app-confirm_popup', Confirm_popup);
-Vue.component('app-footer', Footer);
 Vue.component('app-header', Header);
+Vue.component('app-footer', Footer);
+Vue.component('app-rules_menu', RulesMenu);
+
+Vue.component('app-international_popup_1', International_popup_1);
+Vue.component('app-international_popup_2', International_popup_2);
+
 Vue.component('app-lang_and_cur_popup', LangAndCur_popup);
 Vue.component('app-login_popup', Login_popup);
+
 Vue.component('app-menu_popup', Menu_popup);
+
+Vue.component('app-passport_popup_1', Passport_popup_1);
+Vue.component('app-passport_popup_2', Passport_popup_2);
+Vue.component('app-passport_popup_3', Passport_popup_3);
+
+Vue.component('app-passport_loaded_popup', PassportLoaded_popup);
+
 Vue.component('app-register_popup', Register_popup);
+
+Vue.component('app-request_send_popup_1', RequestSend_popup_1);
+Vue.component('app-request_send_popup_2', RequestSend_popup_2);
+Vue.component('app-request_send_popup_3', RequestSend_popup_3);
+
+Vue.component('app-request_place_popup_1', RequestPlace_popup_1);
+Vue.component('app-request_place_popup_2', RequestPlace_popup_2);
+
 Vue.component('app-request_accepted_popup', RequestAccepted_popup);
-Vue.component('app-request_send_popup_1', RequestSendPopup_popup_1);
-Vue.component('app-request_send_popup_2', RequestSendPopup_popup_2);
-Vue.component('app-request_send_popup_3', RequestSendPopup_popup_3);
-Vue.component('app-rules_menu', RulesMenu);
+
 Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
+
 Vue.component('country-flag', CountryFlag);
 
-
+Vue.component('calendar', VCalendar)
 
 Vue.config.productionTip = false;
 

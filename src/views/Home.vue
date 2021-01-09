@@ -3,9 +3,15 @@
         <div class="wrap">
             <div class="home_intro">
                 <div class="home_intro__text">
-                    <h1>{{ $vuetify.lang.t('$vuetify.home.title') }}</h1>
+                    <h1
+                        @click="showInternationalPopup_1"
+                    >
+                        {{ $vuetify.lang.t('$vuetify.home.title') }}
+                    </h1>
 
-                    <span>Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
+                    <span
+                        @click="showPassportPopup_1"
+                    >Duciam repersp erunt, officiis nam quam, cus aciania et que que eveles volorio cum nobis molestrum denimagnam laceris excepudam id es quid qui nobitatur sapissed molorpo rehent mossusciisti optatquibus earchil</span>
 
                     <v-btn
                         medium
@@ -32,7 +38,7 @@
 
                     <div class="send_or_grab__wrap">
                         <div
-                            @click="showRequestSendPopup_1"
+                            @click="showRequestPlacePopup_1"
                             class="send_or_grab__outer"
                         >
                             <span class="send_or_grab__inner">
@@ -45,6 +51,7 @@
                         </div>
 
                         <div
+                            @click="showRequestSendPopup_1"
                             class="send_or_grab__outer"
                         >
                             <span class="send_or_grab__inner">
@@ -203,14 +210,23 @@
 <script>
 export default {
     methods: {
+        showInternationalPopup_1 () {
+            this.$store.dispatch('showInternationalPopup_1')
+        },
+        showPassportPopup_1 () {
+            this.$store.dispatch('showPassportPopup_1')
+        },
         showRegistrationPopup () {
             this.$store.dispatch('showRegistrationPopup')
         },
-        showSendOrGrubPopup () {
-            this.$store.dispatch('showSendOrGrubPopup')
+        showRequestPlacePopup_1 () {
+            this.$store.dispatch('showRequestPlacePopup_1')
         },
         showRequestSendPopup_1 () {
             this.$store.dispatch('showRequestSendPopup_1')
+        },
+        showSendOrGrubPopup () {
+            this.$store.dispatch('showSendOrGrubPopup')
         }
     }
 }
