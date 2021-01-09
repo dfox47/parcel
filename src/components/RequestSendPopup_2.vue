@@ -4,20 +4,15 @@
             name="fade"
             appear
         >
-            <div
-                class="popup_overlay"
-                v-if="showRequestSendPopup_2"
-                @click="this.hideRequestSendPopup_2"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
             <v-card
                 v-if="showRequestSendPopup_2"
             >
+                <div
+                    class="popup_overlay"
+                    v-if="showRequestSendPopup_2"
+                    @click="this.hideRequestSendPopup_2"
+                />
+
                 <div class="popup popup_two_columns">
                     <span
                         class="popup_close_btn"
@@ -71,11 +66,12 @@
                             </div>
                         </div>
 
-                        <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+                        <span class="popup_title">{{ $vuetify.lang.t('$vuetify.parcel_description') }}</span>
 
                         <v-textarea
                             counter="500"
-                            rows="4"
+                            label="Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil euris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau."
+                            rows="7"
                         />
 
                         <div class="popup_two_columns__one">

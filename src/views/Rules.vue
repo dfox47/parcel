@@ -30,7 +30,12 @@
                 <div class="rules">
                     <ul class="rules__menu">
                         <li>
-                            <a class="active" href="">Условия предоставления услуг</a>
+                            <a
+                                class="active"
+                                href=""
+                            >
+                                Условия предоставления услуг
+                            </a>
                         </li>
 
                         <li>

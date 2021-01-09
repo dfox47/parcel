@@ -58,7 +58,13 @@
 
   "our_advantages": "Our advantages",
 
+  "parcel_description": "Parcel description",
+
+  "product_category": "Product category",
+
   "readmore": "Readmore",
+
+  "recipient_data": "Recipient data",
 
   "register": "Register",
   "registration": "Registration",
@@ -97,6 +103,8 @@
   "tasks.active": "Active",
   "tasks.completed": "Completed",
 
+  "transfer_method_to_recipient": "Transfer method to recipient",
+
   "status.delivered": "Delivered",
   "status.looking_parcel": "Looking for parcel",
   "status.looking_suitcase": "Looking for a suitcase",
@@ -104,6 +112,7 @@
 
   "we_have_mobile_app": "We've got mobile app!",
   "weight": "Weight",
+  "where_to": "Куда",
   "what_do_you_need": "What do you need?"
 }
 

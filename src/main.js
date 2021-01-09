@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
+import VCalendar from 'v-calendar';
+
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -71,7 +73,7 @@ Vue.component('app-send_or_grub_popup', SendOrGrab_popup);
 
 Vue.component('country-flag', CountryFlag);
 
-
+Vue.component('calendar', VCalendar)
 
 Vue.config.productionTip = false;
 
