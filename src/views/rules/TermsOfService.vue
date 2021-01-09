@@ -10,8 +10,14 @@
                     </li>
 
                     <li>
-                        <span>
+                        <router-link to="/rules">
                             {{ $vuetify.lang.t('$vuetify.breadcrumbs.rules') }}
+                        </router-link>
+                    </li>
+
+                    <li>
+                        <span>
+                            Условия предоставления услуг
                         </span>
                     </li>
                 </ul>
@@ -28,44 +34,7 @@
                 </div>
 
                 <div class="rules">
-                    <ul class="rules__menu">
-                        <li>
-                            <a
-                                class="active"
-                                href=""
-                            >
-                                Условия предоставления услуг
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="">Политика сервиса</a>
-                        </li>
-
-                        <li>
-                            <a href="">Условия обработки платежей</a>
-                        </li>
-
-                        <li>
-                            <a href="">Политика конфиденциальности</a>
-                        </li>
-
-                        <li>
-                            <a href="">Гарантия для хозяев</a>
-                        </li>
-
-                        <li>
-                            <a href="">Возврат</a>
-                        </li>
-
-                        <li>
-                            <a href="">Политика в области интеллектуальной собственности</a>
-                        </li>
-
-                        <li>
-                            <a href="">Политика в отношении файлов «cookie»</a>
-                        </li>
-                    </ul>
+                    <app-rules_menu />
 
                     <div class="rules__content">
                         <h2>Условия предоставления услуг</h2>
@@ -116,7 +85,7 @@
 
 <script>
 export default {
-    name: 'Rules'
+    name: 'TermsOfService'
 }
 </script>
 

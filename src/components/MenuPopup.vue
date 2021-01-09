@@ -36,23 +36,29 @@
                         Мои посылки
                         <span class="icon-bell popup_menu__icon" />
                     </li>
+
                     <li class="popup_menu__item">
                         Сообщения
                         <span class="popup_menu__number">55</span>
                     </li>
+
                     <li class="popup_menu__item">
                         Добавить заявку
                     </li>
+
                     <li class="popup_menu__item">
                         Искать заявки
                     </li>
+
                     <li class="popup_menu__item">
                         Автопоиск
                         <span class="popup_menu__number">99</span>
                     </li>
+
                     <li class="popup_menu__item">
                         Аккаунт
                     </li>
+
                     <li class="popup_menu__item">
                         Выход
                     </li>

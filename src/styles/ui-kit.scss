@@ -38,6 +38,8 @@ body {
       }
     }
 
+
+
     .take_results_item__list {
       p {
         margin: 0 0 25px;
@@ -511,6 +513,17 @@ body {
       &__content {
         p {
           margin: 1em 0;
+        }
+      }
+
+      &__menu {
+        a,
+        a:visited {
+          color: $c_text_dark;
+
+          &:hover {
+            color: $c_primary;
+          }
         }
       }
     }

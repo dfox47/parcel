@@ -3,10 +3,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
-import VCalendar from 'v-calendar';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
+import RulesMenu from './components/RulesMenu';
 
 // popup [START]
 import Confirm_popup from './components/ConfirmPopup';
@@ -39,10 +38,12 @@ import SendOrGrab_popup from './components/SendOrGrabPopup';
 // popup [END]
 
 import CountryFlag from 'vue-country-flag';
+import VCalendar from "v-calendar";
 
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-header', Header);
 Vue.component('app-footer', Footer);
+Vue.component('app-rules_menu', RulesMenu);
 
 Vue.component('app-international_popup_1', International_popup_1);
 Vue.component('app-international_popup_2', International_popup_2);
@@ -114,3 +115,5 @@ new Vue({
         }
     }
 }).$mount('#app')
+
+
