@@ -17,7 +17,12 @@ export default new Vuetify({
         }
     },
     lang: {
-        locales: { ru, en },
+        locales: {
+            ru,
+            en
+        },
         current: 'ru'
     }
 })
+
+

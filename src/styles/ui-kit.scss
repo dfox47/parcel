@@ -526,6 +526,15 @@ body {
           color: $c_primary;
         }
       }
+
+      @media #{$tablet_m} {
+        a,
+        a:visited {
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
     }
 
     .submenu {
@@ -583,7 +592,7 @@ body {
 .btn_back,
 .btn_back:visited {
   background-color: #D4F0FA;
-  color: #000000;
+  color: #000;
 }
 
 .btn_more,

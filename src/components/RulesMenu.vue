@@ -1,14 +1,19 @@
+
+
+
 <template>
-    <div class="rules_menu">
-        <div class="rules_menu__mobile_toggle">
-            <router-link
-                :key="link.title"
-                :to="link.src"
-                tag="div"
-                v-for="link in links"
-            >
-                {{ link.title }}
-            </router-link>
+    <div
+        class="rules_menu"
+        :class="{'active': isActive}"
+        v-click-outside="mobileClose"
+    >
+        <div
+            :key="currentLink.src"
+            class="rules_menu__mobile_toggle"
+            v-for="currentLink in currentLinks"
+            @click="mobileToggle"
+        >
+            {{ currentLink.title }}
         </div>
 
         <ul class="rules_menu__list">
@@ -28,7 +33,15 @@
 
 <script>
 export default {
+    computed: {
+        currentLinks: function() {
+            return this.links.filter(function (link) {
+                return link.src === window.location.pathname;
+            });
+        }
+    },
     data: () => ({
+        isActive: false,
         links: [
             {
                 src: '/rules',
@@ -64,6 +77,14 @@ export default {
             }
         ]
     }),
+    methods: {
+        mobileClose () {
+            this.isActive = false;
+        },
+        mobileToggle: function () {
+            this.isActive = !this.isActive;
+        },
+    },
     name: "RulesMenu"
 }
 </script>
