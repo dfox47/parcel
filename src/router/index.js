@@ -15,6 +15,7 @@ import GuaranteeOwners from "@/views/rules/GuaranteeOwners";
 import Home from '@/views/Home';
 import IntellectualPolicy from "@/views/rules/IntellectualPolicy";
 import MyMessages from "@/views/MyMessages";
+import MyParcelsActive from "@/views/MyParcelsActive";
 import MyParcelsCompleted from "@/views/MyParcelsCompleted";
 import ParcelOverview from "@/views/ParcelOverview";
 import ParcelSend from "@/views/ParcelSend";
@@ -74,6 +75,10 @@ const routes = [
     {
         component: MyMessages,
         path: '/my-messages',
+    },
+    {
+        component: MyParcelsActive,
+        path: '/my-parcels-active',
     },
     {
         component: MyParcelsCompleted,

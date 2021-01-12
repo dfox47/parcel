@@ -2,6 +2,7 @@
   "add_application": "Add application",
   "add_new_order": "+ Add application",
   "auto_search": "Autosearch",
+  "apartment": "Apartment",
 
   "back": "Back",
   "back_to_search_results": "Back to search results",
@@ -16,12 +17,26 @@
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
 
+  "building": "Building",
+
+  "check_and_edit_your_data": "Please check your data and edit if necessary.",
+
+  "country_code": "Country code",
+
   "confirmation": "Conformation",
   "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
   "connect": "Connect",
   "connect_card": "Connect card",
   "continue_button": "Continue",
   "create_new_request": "Create request",
+
+  "city": "City",
+
+  "date_of_birth": "Date of birth",
+  "date_of_issue": "Date of issue",
+  "date_of_expiration": "Date of expiration",
+
+  "dimensions": "Dimensions",
 
   "edit": "Edit",
 
@@ -33,10 +48,16 @@
   "footer.support": "Support",
   "footer.take": "Can take",
 
-  "dimensions": "Dimensions",
+  "from": "From",
+
+  "gender": "Gender",
 
   "home.how_it_works": "How it works?",
   "home.title": "Title about service at several lines",
+
+  "house": "House",
+
+  "issuing_authority": "Issuing authority",
 
   "language_name": "English",
 
@@ -56,15 +77,30 @@
 
   "more_filters": "More filters",
 
+  "name": "Name",
+
+  "number": "Number",
+
   "our_advantages": "Our advantages",
 
   "parcel_description": "Parcel description",
+  "parcel_category": "Parcel category",
+
+  "passport_upload_text": "Please upload the first page of your passport.",
+
+  "pay_a_deposit_for_safety" : "I can pay a deposit for safety",
+
+  "place_of_birth": "Place of Birth",
 
   "product_category": "Product category",
+
+  "publish_request": "Publish request",
 
   "readmore": "Readmore",
 
   "recipient_data": "Recipient data",
+
+  "region": "Регион",
 
   "register": "Register",
   "registration": "Registration",
@@ -80,16 +116,22 @@
   "search.to": "To",
   "search.weight": "kg",
 
+  "series": "Series",
+
   "steps.1_of_3": "Step 1 / 3",
   "steps.2_of_3": "Step 2 / 3",
   "steps.3_of_3": "Step 3 / 3",
 
-  "steps.1_of_2": "Шаг 1 / 2",
-  "steps.2_of_2": "Шаг 2 / 2",
+  "steps.1_of_2": "Step 1 / 2",
+  "steps.2_of_2": "Step 2 / 2",
+
+  "street": "Street",
 
   "send_before": "Send before",
 
   "suitcase.search": "Suitcase search",
+
+  "take_consolidated_cargo": "I can take consolidated cargo",
 
   "take.add_new_order": "+ Add order",
   "take.additional_search": "Additional search",
@@ -103,6 +145,7 @@
   "tasks.active": "Active",
   "tasks.completed": "Completed",
 
+  "transfer_method": "Transfer method",
   "transfer_method_to_recipient": "Transfer method to recipient",
 
   "status.delivered": "Delivered",
@@ -110,9 +153,13 @@
   "status.looking_suitcase": "Looking for a suitcase",
   "status.sent": "Sent",
 
+  "surname": "Surname",
+
+  "upload_photo": "Upload photo",
+
   "we_have_mobile_app": "We've got mobile app!",
   "weight": "Weight",
-  "where_to": "Куда",
+  "where_to": "To",
   "what_do_you_need": "What do you need?"
 }
 

@@ -33,14 +33,7 @@
                     >
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.number') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -51,7 +44,7 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.series') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -59,6 +52,34 @@
                                         v-focus
                                     />
                                 </label>
+                            </div>
+                        </div>
+
+                        <div class="popup_two_columns__block">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.issuing_authority') }}</span>
+
+                            <label class="input_wrap">
+                                <v-text-field
+                                    label="Номер телефона"
+                                    v-focus
+                                />
+                            </label>
+                        </div>
+
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_issue') }}</span>
+
+                                <label class="input_wrap">
+                                    <v-text-field
+                                        label="Номер телефона"
+                                        v-focus
+                                    />
+                                </label>
+                            </div>
+
+                            <div>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_expiration') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -71,14 +92,7 @@
 
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.surname') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -89,14 +103,7 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.name') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -109,7 +116,7 @@
 
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.gender') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -120,7 +127,7 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_birth') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -131,14 +138,37 @@
                             </div>
                         </div>
 
-                        <div class="popup_two_columns__one">
-                            <v-btn
-                                block
-                                color="secondary"
-                                @click="this.showPassportPopup_3"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.continue_button') }}
-                            </v-btn>
+                        <div class="popup_two_columns__block">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.place_of_birth') }}</span>
+
+                            <label class="input_wrap">
+                                <v-text-field
+                                    label="Номер телефона"
+                                    v-focus
+                                />
+                            </label>
+                        </div>
+
+                        <div class="popup_two_columns__two">
+                            <div>
+                                <v-btn
+                                    block
+                                    color="secondary"
+                                    @click="this.showPassportPopup_3"
+                                >
+                                    {{ $vuetify.lang.t('$vuetify.edit') }}
+                                </v-btn>
+                            </div>
+
+                            <div>
+                                <v-btn
+                                    block
+                                    color="secondary"
+                                    @click="this.showPassportPopup_3"
+                                >
+                                    {{ $vuetify.lang.t('$vuetify.continue_button') }}
+                                </v-btn>
+                            </div>
                         </div>
                     </form>
                 </div>

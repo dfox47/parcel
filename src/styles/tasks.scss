@@ -267,6 +267,11 @@
   flex-shrink: 0;
   justify-content: center;
 
+  &__active {
+    @extend .tasks_status;
+    background-color: rgba($c_primary, .1);
+  }
+
   &__desc {
     font-size: 22px;
     font-weight: 300;

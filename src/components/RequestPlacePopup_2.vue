@@ -4,20 +4,15 @@
             name="fade"
             appear
         >
-            <div
-                class="popup_overlay"
-                v-if="showRequestPlacePopup_2"
-                @click="this.hideRequestPlacePopup_2"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
             <v-card
                 v-if="showRequestPlacePopup_2"
             >
+                <div
+                    class="popup_overlay"
+                    v-if="showRequestPlacePopup_2"
+                    @click="this.hideRequestPlacePopup_2"
+                />
+
                 <div class="popup_two_columns popup">
                     <span
                         class="popup_close_btn"
@@ -31,17 +26,10 @@
                     <form
                         action=""
                     >
-                        <div class="popup_two_columns__two">
+                        <div class="popup_two_columns__four">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+
                             <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
                                 <label class="input_wrap">
                                     <v-text-field
                                         label="Номер телефона"
@@ -51,35 +39,6 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
                                 <label class="input_wrap">
                                     <v-text-field
                                         label="Номер телефона"
@@ -89,15 +48,15 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
-
                                 <label class="input_wrap">
                                     <v-text-field
                                         label="Номер телефона"
                                         v-focus
                                     />
                                 </label>
+                            </div>
 
+                            <div>
                                 <label class="input_wrap">
                                     <v-text-field
                                         label="Номер телефона"
@@ -109,25 +68,89 @@
 
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.pay_a_deposit_for_safety') }}</span>
 
-                                <label class="input_wrap">
+                                <v-radio-group
+                                    v-model="row"
+                                    row
+                                >
+                                    <v-radio
+                                        label="Нет"
+                                        value="radio-1"
+                                    />
+
+                                    <v-radio
+                                        label="Да"
+                                        value="radio-2"
+                                    />
+                                </v-radio-group>
+
+                                <div class="input_n_select_wrap">
                                     <v-text-field
                                         label="Номер телефона"
                                         v-focus
                                     />
-                                </label>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :items="currency"
+                                        :label="currency[0]"
+                                    />
+                                </div>
+
+                                <span class="popup_description">
+                                    При использовании депозита курьер должен будет перевести указанную сумму на счёт сервиса для обеспечения безопасности доставки. После доставки он получит сумму депозита обратно в полном объёме. Залог за сохранность увеличивает стоимость доставки и уменьшает количество курьеров.
+                                </span>
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.take_consolidated_cargo') }}</span>
 
-                                <label class="input_wrap">
+                                <v-radio-group
+                                    v-model="row"
+                                    row
+                                >
+                                    <v-radio
+                                        label="Нет"
+                                        value="radio-1"
+                                    />
+
+                                    <v-radio
+                                        label="Да"
+                                        value="radio-2"
+                                    />
+                                </v-radio-group>
+
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
+
+                                <v-radio-group
+                                    v-model="row"
+                                    row
+                                >
+                                    <v-radio
+                                        label="Точная"
+                                        value="radio-1"
+                                    />
+
+                                    <v-radio
+                                        label="Договорная"
+                                        value="radio-2"
+                                    />
+                                </v-radio-group>
+
+                                <div class="input_n_select_wrap">
                                     <v-text-field
                                         label="Номер телефона"
                                         v-focus
                                     />
-                                </label>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :items="currency"
+                                        :label="currency[0]"
+                                    />
+                                </div>
+
                             </div>
                         </div>
 
@@ -149,7 +172,9 @@
 
 <script>
 export default {
-    // data() {},
+    data: () => ({
+        currency: ['rub', 'eur'],
+    }),
     computed: {
         showRequestPlacePopup_2() {
             return this.$store.getters.getRequestPlacePopup_2

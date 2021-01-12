@@ -4,21 +4,16 @@
             name="fade"
             appear
         >
-            <div
-                class="popup_overlay"
-                v-if="showPassportPopup_1"
-                @click="this.hidePassportPopup_1"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
             <v-card
                 v-if="showPassportPopup_1"
             >
-                <div class="popup_two_columns popup">
+                <div
+                    class="popup_overlay"
+                    v-if="showPassportPopup_1"
+                    @click="this.hidePassportPopup_1"
+                />
+
+                <div class="popup_one_column popup">
                     <span
                         class="popup_close_btn"
                         @click="this.hidePassportPopup_1"
@@ -31,105 +26,23 @@
                     <form
                         action=""
                     >
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">Откуда</span>
+                        <v-btn
+                            small
+                            color="secondary"
+                            @click="chooseFiles"
+                        >
+                            {{ btn_text }}
+                        </v-btn>
 
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
+                        <div class="hidden">
+                            <v-file-input
+                                id="file_input"
+                            />
                         </div>
 
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-                        </div>
+                        <v-card-subtitle>
+                            {{ $vuetify.lang.t('$vuetify.passport_upload_text') }}
+                        </v-card-subtitle>
 
                         <div class="popup_two_columns__one">
                             <v-btn
@@ -149,7 +62,9 @@
 
 <script>
 export default {
-    // data() {},
+    data: () => ({
+        btn_text: "продолжить",
+    }),
     computed: {
         showPassportPopup_1() {
             return this.$store.getters.getPassportPopup_1
@@ -161,6 +76,13 @@ export default {
         },
         showPassportPopup_2 () {
             this.$store.dispatch('showPassportPopup_2')
+        },
+        chooseFiles(event) {
+            var file_input = document.querySelector("#file_input")
+            file_input.click();
+            // var text = document.querySelector(".v-file-input__text").textContent;
+            // console.log(text);
+            // this.btn_text = text;
         }
     }
 }

@@ -31,16 +31,31 @@
                     <form
                         action=""
                     >
+                        <div class="popup_two_columns__block">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.region') }}</span>
+
+                            <label class="input_wrap">
+                                <v-text-field
+                                    label="Номер телефона"
+                                    v-focus
+                                />
+                            </label>
+                        </div>
+
+                        <div class="popup_two_columns__block">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.street') }}</span>
+
+                            <label class="input_wrap">
+                                <v-text-field
+                                    label="Номер телефона"
+                                    v-focus
+                                />
+                            </label>
+                        </div>
+
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.house') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -51,14 +66,7 @@
                             </div>
 
                             <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.building') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field
@@ -71,56 +79,7 @@
 
                         <div class="popup_two_columns__two">
                             <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">Куда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="popup_two_columns__two">
-                            <div>
-                                <span class="popup_title">Откуда</span>
-
-                                <label class="input_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-                                </label>
-                            </div>
-
-                            <div>
-                                <span class="popup_title">Куда</span>
+                                <span class="popup_title">{{ $vuetify.lang.t('$vuetify.apartment') }}</span>
 
                                 <label class="input_wrap">
                                     <v-text-field

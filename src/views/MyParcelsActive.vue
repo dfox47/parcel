@@ -34,13 +34,13 @@
                 </div>
 
                 <ul class="submenu">
-                    <li class="submenu__item">
+                    <li class="submenu__item active">
                         <router-link to="/my-parcels-active">
                             {{ $vuetify.lang.t('$vuetify.tasks.active') }}
                         </router-link>
                     </li>
 
-                    <li class="submenu__item active">
+                    <li class="submenu__item">
                         <router-link to="/my-parcels-completed">
                             {{ $vuetify.lang.t('$vuetify.tasks.completed') }}
                         </router-link>
@@ -55,7 +55,7 @@
                         :key="item.name"
                         class="tasks_list__item"
                     >
-                        <div class="tasks_status">
+                        <div class="tasks_status__active">
                             <div :class="'tasks_status__img tasks_status__img__' + item.status" />
 
                             <div class="tasks_status__desc">
