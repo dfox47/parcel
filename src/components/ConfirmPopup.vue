@@ -91,7 +91,7 @@
                                 Не получили SMS?
 
                                 <a
-                                    href=""
+                                    href="/"
                                     class="link_dark"
                                     @click="this.hideConfirmPopup"
                                 >
@@ -100,7 +100,7 @@
                             </p>
 
                             <a
-                                href=""
+                                href="/"
                                 class="link_dark"
                             >
                                 Получить SMS на дургой номер

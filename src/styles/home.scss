@@ -9,22 +9,7 @@
     text-align: left;
   }
 
-  > div {
-    &::after {
-      content: '';
-      background-color: #000;
-      bottom: 0;
-      display: block;
-      height: 1px;
-      left: 50%;
-      margin: 0 auto;
-      position: absolute;
-      transform: translate(-50%,0);
-      width: 224px;
-    }
-  }
-
-  @media only screen and (max-width: 380px) {
+  @media #{$mobile} {
     > div {
       &::after {
         width: 172px;
@@ -34,6 +19,20 @@
 }
 
 .home_advantages {
+  > div {
+    &::after {
+      content: '';
+      background-color: #000;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,0);
+      width: 224px;
+    }
+  }
+
   &__content {
     margin: 0 auto;
     padding: 112px 0 208px;
@@ -176,8 +175,6 @@
     z-index: 1;
   }
 
-
-
   &__content {
     align-items: flex-start;
     display: flex;
@@ -301,6 +298,20 @@
   position: relative;
   z-index: 3;
 
+  > div {
+    &::after {
+      content: '';
+      background-color: #000;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,0);
+      width: 224px;
+    }
+  }
+
   &__img {
     img {
       max-width: 100%;
@@ -316,7 +327,7 @@
     padding: 0 0 38px;
     width: 100%;
 
-    h2 {
+    h1 {
       padding: 0 0 36px;
       width: 90%;
       color: #000;
@@ -348,7 +359,7 @@
     &__text {
       max-width: 44.5%;
 
-      h2 {
+      h1 {
         color: #000;
         font-size: 32px;
         letter-spacing: -0.025em;
@@ -378,7 +389,7 @@
       max-width: 454px;
       padding: 37px 0 30px;
 
-      h2 {
+      h1 {
         text-align: center;
         max-width: 79%;
         width: 100%;
@@ -397,7 +408,7 @@
     &__text {
       padding: 30px 0;
 
-      h2 {
+      h1 {
         font-size: 30px;
         padding: 18px 0;
       }
@@ -419,7 +430,7 @@
     &__text {
       padding: 10px 0;
 
-      h2 {
+      h1 {
         font-size: 23px;
         padding: 16px 0 ;
         max-width: 100%;
@@ -435,6 +446,20 @@
 
 .home_mobile_app {
   position: relative;
+
+  > div {
+    &::after {
+      content: '';
+      background-color: #000;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,0);
+      width: 224px;
+    }
+  }
 
   &::before {
     background: url(#{$i}/background_4.svg) 0 0 no-repeat scroll transparent;
@@ -616,6 +641,20 @@
 .home_send_or_grab {
   padding: 100px 0 162px;
   position: relative;
+
+  > div {
+    &::after {
+      content: '';
+      background-color: #000;
+      bottom: 0;
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,0);
+      width: 224px;
+    }
+  }
 
   &::after {
     background: url(#{$i}/background_3.svg) 0 0 no-repeat scroll transparent;

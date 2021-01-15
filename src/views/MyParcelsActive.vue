@@ -91,7 +91,7 @@
 
                             <a
                                 class="tasks_desc__more"
-                                href=""
+                                href="/"
                             >{{ $vuetify.lang.t('$vuetify.readmore') }}</a>
                         </div>
 

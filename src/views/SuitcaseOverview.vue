@@ -134,13 +134,21 @@
                         </p>
                     </div>
 
-                    <v-btn color="primary">
-                        {{ $vuetify.lang.t('$vuetify.connect') }}
-                    </v-btn>
+                    <div class="parcel_view__btns">
+                        <v-btn
+                            color="primary"
+                            medium
+                        >
+                            {{ $vuetify.lang.t('$vuetify.connect') }}
+                        </v-btn>
 
-                    <v-btn color="normal">
-                        {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
-                    </v-btn>
+                        <v-btn
+                            color="primary_light"
+                            medium
+                        >
+                            {{ $vuetify.lang.t('$vuetify.back_to_search_results') }}
+                        </v-btn>
+                    </div>
                 </div>
             </div>
         </div>

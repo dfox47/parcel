@@ -197,7 +197,7 @@
                     <li>
                         <a
                             class="active"
-                            href=""
+                            href="/"
                         >2</a>
                     </li>
 
@@ -215,10 +215,12 @@
                 </ul>
 
                 <div class="text-center">
-                    <a
-                        class="btn btn_more btn_size_m"
-                        href="#"
-                    >Изменить параметры поиска</a>
+                    <v-btn
+                        medium
+                        color="primary_light"
+                    >
+                        {{ $vuetify.lang.t('$vuetify.change_search_request') }}
+                    </v-btn>
                 </div>
             </div>
         </div>

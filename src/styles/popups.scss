@@ -206,10 +206,10 @@
 .popup_login {}
 
 .popup_login_options {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  margin: 0 0 35px;
+  margin: 0 0 20px;
   width: 100%;
 }
 

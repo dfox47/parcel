@@ -32,7 +32,7 @@
                             <div>
                                 <label class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.weight')"
                                         v-focus
                                     />
                                 </label>
@@ -41,8 +41,7 @@
                             <div>
                                 <label class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
+                                        :label="$vuetify.lang.t('$vuetify.height')"
                                     />
                                 </label>
                             </div>
@@ -50,8 +49,7 @@
                             <div>
                                 <label class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
+                                        :label="$vuetify.lang.t('$vuetify.depth')"
                                     />
                                 </label>
                             </div>
@@ -59,8 +57,7 @@
                             <div>
                                 <label class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
+                                        :label="$vuetify.lang.t('$vuetify.width')"
                                     />
                                 </label>
                             </div>

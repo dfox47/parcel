@@ -47,7 +47,7 @@
 
                                 <div class="input_n_select_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.sum')"
                                         v-focus
                                     />
 
@@ -83,7 +83,7 @@
 
                                 <div class="input_n_select_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.sum')"
                                         v-focus
                                     />
 
@@ -98,7 +98,7 @@
 
                                 <div class="input_n_select_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.sum')"
                                         v-focus
                                     />
 

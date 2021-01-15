@@ -57,7 +57,7 @@
 
                             <a
                                 class="account_fields__item__edit"
-                                href=""
+                                href="/"
                             >
                                 {{ $vuetify.lang.t('$vuetify.edit') }}
                             </a>
@@ -71,7 +71,7 @@
 
                             <a
                                 class="account_fields__item__edit"
-                                href=""
+                                href="/"
                             >
                                 {{ $vuetify.lang.t('$vuetify.load_document') }}
                             </a>
@@ -91,7 +91,7 @@
 
                             <a
                                 class="account_fields__item__edit"
-                                href=""
+                                href="/"
                             >
                                 {{ $vuetify.lang.t('$vuetify.edit') }}
                             </a>
@@ -112,7 +112,7 @@
 
                             <a
                                 class="account_fields__item__edit"
-                                href=""
+                                href="/"
                             >
                                 {{ $vuetify.lang.t('$vuetify.edit') }}
                             </a>

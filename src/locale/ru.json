@@ -21,6 +21,7 @@
 
   "check_and_edit_your_data": "Пожалуйста проверьте данные и отредактируйте при необходимости.",
 
+  "country": "Страна",
   "country_code": "Код государства",
 
   "confirmation": "Подтверждение",
@@ -116,6 +117,8 @@
   "search.to": "Куда",
   "search.weight": "кг",
 
+  "send": "Отправить",
+
   "series": "Серия",
 
   "steps.1_of_3": "Шаг 1 / 3",
@@ -160,7 +163,26 @@
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "weight": "Вес",
   "where_to": "Куда",
-  "what_do_you_need": "Что Вам необходимо?"
+  "what_do_you_need": "Что Вам необходимо?",
+
+
+  "how": "Как?",
+  "where": "Где?",
+  "phone_number": "Номер телефона",
+  "names": "Имя Фамилия",
+  "choose_category": "Выберите Категорию",
+  "calendar": "Календарь",
+  "height": "Высота",
+  "depth": "Глубина",
+  "width": "Ширина",
+  "sum": "Сумма",
+  "change_search_request": "Изменить параметры поиска",
+
+  "or_decline": "или отказаться",
+  "reconcile_data": "Согласовать данные",
+  "delivery_method_to_courier": "Способ получения курьером",
+  "courier_pick_up_address": "Адрес получения курьером",
+  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:"
 }
 
 

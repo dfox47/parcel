@@ -1,4 +1,8 @@
-.name {
+.messages {
+  z-index: 0;
+}
+
+.messages__name {
   color: #3C4858;
   font-size: 22px;
   line-height: 1.2;
@@ -6,23 +10,19 @@
   padding-top: 0;
 }
 
-.name_info {
+.messages__info {
   display: flex;
   flex-direction: column;
   font-size: 17px;
   line-height: 1.5;
 }
 
-.messages {
-  z-index: 0;
+.messages__items {
+  margin: 47px 0 20px;
 }
 
-.messages_items {
-  margin: 47px 0 0 ;
-}
-
-.messages_item  {
-  border-bottom: 1px solid #A19F99 ;
+.messages__item  {
+  border-bottom: 1px solid $c_input_border ;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -31,104 +31,83 @@
   transition: all 0.3s;
 
   &:hover {
-    background-color: #D4EFFC;
+    background-color: rgba($c_primary, .15);
 
-    .messages_btn_wrap {
+    .messages__btn_wrap {
       display: block;
     }
   }
+
+  &:last-child {
+    border-bottom: none ;
+  }
 }
 
-.messages_btn_wrap {
+.messages__btn_wrap {
   display: none;
 }
 
-.counter {
-  align-items: center;
-  background-color: #01A9E4 ;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 6px;
-  font-size: 16px;
-  position: absolute;
-  top: -4px;
-  right: 0;
-  text-align: center;
-}
-
-.persone {
+.messages__persone {
   display: flex;
 }
 
-.photo {
+.messages__photo {
   border-radius: 50%;
   max-width: 100px;
+
+  > img {
+    width: 100%;
+  }
 }
 
-.photo > img {
-  width: 100%;
-}
-
-.photo_wrap {
+.messages__photo_wrap {
   position: relative;
   margin: 0 20px 0 0;
 }
 
 
 @media #{$tablet_l} {
-  .messages_btn_wrap  {
+  .messages__btn_wrap  {
     display: none;
   }
 
-  .name {
-    font-size: 20px;
-  }
-
-  .name_info {
+  .messages__info {
     font-size: 15px;
   }
 
-  .photo {
-    max-width: 80px;
-  }
-
-  .messages_item {
+  .messages__item {
     padding-left: 43px;
 
     &:hover {
-      .messages_btn_wrap {
+      .messages__btn_wrap {
         display: none;
       }
     }
   }
 
-  .counter {
-    font-size: 14px;
-    height: 25px;
-    width: 25px;
+  .messages__name {
+    font-size: 20px;
+  }
+
+  .messages__photo {
+    max-width: 80px;
   }
 }
 
 @media #{$mobile} {
-  .messages_item {
+  .messages__info {
+    font-size: 10px;
+  }
+
+  .messages__item {
     padding-left: 18px;
   }
-  .name {
+
+  .messages__name {
     font-size: 13px;
-    margin-left: 11px;
   }
-  .name_info {
-    font-size: 10px;
-  }
-  .photo {
+
+  .messages__photo {
     max-width: 53px;
-  }
-  .counter {
-    font-size: 10px;
-    height: 19px;
-    width: 19px;
   }
 }

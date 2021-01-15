@@ -1,6 +1,4 @@
 
-
-
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
@@ -14,6 +12,7 @@ import Error404 from "@/views/Error404";
 import GuaranteeOwners from "@/views/rules/GuaranteeOwners";
 import Home from '@/views/Home';
 import IntellectualPolicy from "@/views/rules/IntellectualPolicy";
+import MyChat from "@/views/MyChat"
 import MyMessages from "@/views/MyMessages";
 import MyParcelsActive from "@/views/MyParcelsActive";
 import MyParcelsCompleted from "@/views/MyParcelsCompleted";
@@ -71,6 +70,10 @@ const routes = [
     {
         component: IntellectualPolicy,
         path: '/rules/intellectual-policy',
+    },
+    {
+        component: MyChat,
+        path: '/my-chat',
     },
     {
         component: MyMessages,

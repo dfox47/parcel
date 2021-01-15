@@ -17,20 +17,20 @@
 
             <h1>{{ $vuetify.lang.t('$vuetify.messages') }}</h1>
 
-            <div class="messages_items">
+            <div class="messages__items">
                 <router-link
                     tag="div"
-                    to="/chat"
+                    to="/my-chat"
                     v-for="item in items"
                     :key="item.message"
-                    class="messages_item"
+                    class="messages__item"
                 >
-                    <div class="persone">
-                        <div class="photo_wrap">
+                    <div class="messages__persone">
+                        <div class="messages__photo_wrap">
                             <img
                                 :src="item.img"
                                 alt="person's photo"
-                                class="photo"
+                                class="messages__photo"
                             >
 
                             <div class="counter">
@@ -39,19 +39,19 @@
                         </div>
 
                         <div>
-                            <div class="name">
+                            <div class="messages__name">
                                 <span>{{ item.name }}</span>&nbsp;
                                 <span>{{ item.surname }}</span>
                             </div>
                             <span class="person_rating">{{ item.rating }}</span>
-                            <div class="name_info">
+                            <div class="messages__info">
                                 <span><strong>{{ $vuetify.lang.t('$vuetify.messages.from') }}</strong> {{ item.from }}</span>
                                 <span><strong>{{ $vuetify.lang.t('$vuetify.messages.to') }}  </strong> {{ item.to }}  </span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="messages_btn_wrap">
+                    <div class="messages__btn_wrap">
                         <v-btn
                             block
                             color="primary"
@@ -134,16 +134,5 @@ export default {
             },
         ]
     }),
-    methods: {
-        showRegistrationPopup () {
-            this.$store.dispatch('showRegistrationPopup')
-        },
-        showSendOrGrubPopup () {
-            this.$store.dispatch('showSendOrGrubPopup')
-        },
-        showRequestSendPopup_1 () {
-            this.$store.dispatch('showRequestSendPopup_1')
-        }
-    }
 }
 </script>

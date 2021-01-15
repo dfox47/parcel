@@ -83,6 +83,34 @@ ul {
 }
 
 
+.counter {
+  align-items: center;
+  background-color: #01A9E4;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  position: absolute;
+  top: -4px;
+  right: 0;
+  text-align: center;
+
+  @media #{$tablet_l} {
+    font-size: 14px;
+    height: 25px;
+    width: 25px;
+  }
+
+  @media #{$mobile} {
+    font-size: 10px;
+    height: 19px;
+    width: 19px;
+  }
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s;
@@ -392,6 +420,14 @@ ul {
   }
 }
 
+
+.tooltip_sign {
+  background: url(#{$i}/icons/question_sign.svg) center center no-repeat scroll transparent;
+  background-color: $c_text_dark;
+  border-radius: 6px;
+  height: 21px;
+  width: 21px;
+}
 
 
 .wrap {

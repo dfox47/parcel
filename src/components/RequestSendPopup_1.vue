@@ -32,14 +32,14 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.country')"
                                         :items="items"
                                     />
                                 </label>
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.city')"
                                         :items="items"
                                     />
                                 </label>
@@ -50,14 +50,14 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.country')"
                                         :items="items"
                                     />
                                 </label>
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.city')"
                                         :items="items"
                                     />
                                 </label>
@@ -70,14 +70,14 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.how')"
                                         :items="items"
                                     />
                                 </label>
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.where')"
                                         :items="items"
                                     />
                                 </label>
@@ -88,14 +88,14 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.phone_number')"
                                         :items="items"
                                     />
                                 </label>
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.names')"
                                         :items="items"
                                     />
                                 </label>
@@ -108,7 +108,7 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.choose_category')"
                                         :items="items"
                                     />
                                 </label>
@@ -119,7 +119,7 @@
 
                                 <label class="input_wrap">
                                     <v-autocomplete
-                                        label="Город"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
                                         :items="items"
                                     />
                                 </label>

@@ -60,13 +60,6 @@
 
 <script>
 export default {
-    data() {
-        return {
-            pass_img: require('@/assets/i/icons/show_pass.svg'),
-            type: 'password',
-            btnText: 'Show Password'
-        }
-    },
     computed: {
         showSendOrGrub () {
             return this.$store.getters.getSendOrGrub
