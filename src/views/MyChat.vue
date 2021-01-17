@@ -88,21 +88,33 @@
 
                 <div class="popup_two_columns__two">
                     <div>
-                        <div class="popup_title">Способ получения курьером</div>
+                        <div
+                            class="popup_title"
+                        >
+                            Способ получения курьером
+                        </div>
 
                         <v-select
                             class="take_destinations__select"
                             outlined
                         />
 
-                        <div class="popup_title">Дата передачи</div>
+                        <div
+                            class="popup_title"
+                        >
+                            Дата передачи
+                        </div>
 
                         <v-select
                             class="take_destinations__select"
                             outlined
                         />
 
-                        <div class="popup_title">Время передачи</div>
+                        <div
+                            class="popup_title"
+                        >
+                            Время передачи
+                        </div>
 
                         <v-select
                             class="take_destinations__select"
@@ -111,7 +123,11 @@
                     </div>
 
                     <div>
-                        <div class="popup_title">Адрес получения курьером:</div>
+                        <div
+                            class="popup_title"
+                        >
+                            Адрес получения курьером:
+                        </div>
 
                         <v-text-field
                             class="take_destinations__select"
@@ -120,37 +136,45 @@
                         />
                         <v-text-field
                             class="take_destinations__select"
-                            label="Город"
+                            label="Улица"
                             outlined
                         />
 
                         <div class="two_inputs">
                             <v-text-field
                                 class="take_destinations__select"
-                                label="Город"
+                                label="Корпус/строение"
                                 outlined
                             />
 
                             <v-text-field
                                 class="take_destinations__select"
-                                label="Город"
+                                label="Дом"
                                 outlined
                             />
                         </div>
+
+                        <v-text-field
+                            class="take_destinations__select"
+                            label="Коментарий к адресу"
+                            outlined
+                        />
                     </div>
                 </div>
 
-                <v-checkbox
-                    v-model="checkRu"
-                    class="v-checkbox_v2"
-                    label="Вы"
-                />
+                <div class="agreement_checkbox">
+                    <v-checkbox
+                        v-model="checkRu"
+                        class="v-checkbox_v3"
+                        label="Вы"
+                    />
 
-                <v-checkbox
-                    v-model="checkRub"
-                    class="v-checkbox_v2"
-                    label="Рубль, ₽"
-                />
+                    <v-checkbox
+                        v-model="checkRub"
+                        class="v-checkbox_v3"
+                        label="Александр Константиновский"
+                    />
+                </div>
             </div>
 
             <div class="chat__messages">

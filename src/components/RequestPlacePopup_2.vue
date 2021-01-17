@@ -82,19 +82,6 @@
                                     />
                                 </v-radio-group>
 
-                                <div class="input_n_select_wrap">
-                                    <v-text-field
-                                        label="Номер телефона"
-                                        v-focus
-                                    />
-
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :items="currency"
-                                        :label="currency[0]"
-                                    />
-                                </div>
-
                                 <span class="popup_description">
                                     При использовании депозита курьер должен будет перевести указанную сумму на счёт сервиса для обеспечения безопасности доставки. После доставки он получит сумму депозита обратно в полном объёме. Залог за сохранность увеличивает стоимость доставки и уменьшает количество курьеров.
                                 </span>
@@ -137,7 +124,7 @@
 
                                 <div class="input_n_select_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        label="Сумма"
                                         v-focus
                                     />
 

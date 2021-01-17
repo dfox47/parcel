@@ -46,14 +46,14 @@
                                 {{ $vuetify.lang.t('$vuetify.take.from') }}
                             </div>
 
-                            <v-select
+                            <v-autocomplete
                                 class="take_destinations__select"
                                 :items="fromCountry"
                                 :label="fromCountry[0]"
                                 outlined
                             />
 
-                            <v-select
+                            <v-autocomplete
                                 class="take_destinations__select"
                                 :items="fromCity"
                                 :label="fromCity[0]"
@@ -66,14 +66,14 @@
                                 {{ $vuetify.lang.t('$vuetify.take.to') }}
                             </div>
 
-                            <v-select
+                            <v-autocomplete
                                 class="take_destinations__select"
                                 :items="toCountry"
                                 :label="toCountry[0]"
                                 outlined
                             />
 
-                            <v-select
+                            <v-autocomplete
                                 class="take_destinations__select"
                                 :items="toCity"
                                 :label="toCity[0]"

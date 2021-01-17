@@ -160,6 +160,7 @@
   .footer_social {
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0 auto;
     width: 340px;
   }
 
@@ -207,16 +208,13 @@
   }
 
   .footer_menu__item {
-    font-size: 17px;
+    font-size: 18px;
     text-align: center;
-    padding: 0 0 22px ;
+    padding: 0 0 20px ;
     width: 100%;
   }
 
   .footer_social {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 0 auto;
     width: 262px;
   }
 

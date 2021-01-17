@@ -21,7 +21,7 @@
 
                     <form
                         action=""
-                        class="popup_one_column"
+                        class="popup_one_column__wrap"
                     >
                         <v-card-title>
                             {{ $vuetify.lang.t('$vuetify.login') }}
@@ -35,10 +35,10 @@
                         </label>
 
                         <label class="input_wrap">
-                            <input
+                            <v-text-field
                                 :type="type"
-                                placeholder="Пароль"
-                            >
+                                label="Пароль"
+                            />
 
                             <img
                                 class="input_wrap__img"
