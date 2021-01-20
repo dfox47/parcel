@@ -341,6 +341,14 @@
 .popup_two_columns__block {
   margin: 0 0 40px;
   width: 100%;
+
+  @media #{$tablet_l} {
+    margin: 0 0 28px;
+  }
+
+  @media #{$mobile} {
+    margin: 0 0 11px;
+  }
 }
 
 .popup_two_columns__one {
@@ -365,18 +373,19 @@
     > div {
       width: 100%;
 
-      &:first-child {
+      &:last-child {
         margin: 0 0 26px;
       }
     }
   }
 
   @media #{$mobile} {
-    margin: 0 0 13px;
+    margin: 0 0 6px;
 
     > div {
-      &:first-child {
-        margin: 0 0 13px;
+      margin: 0 0 6px;
+      &:last-child {
+        margin: 0;
       }
     }
   }
@@ -393,8 +402,22 @@
   }
 
   @media #{$tablet_l} {
+    margin: 0 0 28px;
+
     >div {
       width: 100%;
+    }
+  }
+
+  @media #{$mobile} {
+    margin: 0 0 6px;
+
+    > div {
+      margin: 0 0 6px;
+
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }

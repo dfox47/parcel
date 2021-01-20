@@ -145,6 +145,12 @@ body  {
         padding: 0 39px;
       }
 
+      &.v-btn--block {
+        max-width: 260px;
+        padding: 0 70px;
+        width: 100%;
+      }
+
       &.primary {
         border: 1px solid transparent !important;
         background: linear-gradient(138deg, #00A8E4 74.4%, #00A7E5 74.41%, #55D074 120.36%);

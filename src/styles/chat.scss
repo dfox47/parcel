@@ -9,7 +9,7 @@
 }
 
 .chat__agreement {
-  padding: 20px 148px;
+  padding: 20px 0;
 }
 
 .chat__agreement_btn {
@@ -25,10 +25,23 @@
   width: 100%;
 }
 
+.agreement_checkbox {
+  padding: 36px 0;
+}
+
 .chat__agreement_title {
   font-size: 24px;
   text-align: center;
 }
+
+.chat__agreement_section {
+  border-bottom: 1px solid $c_input_border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 148px;
+}
+
 
 .chat__two_columns {
   display: flex;
@@ -58,7 +71,7 @@
   text-decoration: underline;
 }
 
-.chat__name {
+.chat__names {
   color: #3C4858;
   font-size: 22px;
   line-height: 1.2;
@@ -143,31 +156,29 @@
 }
 
 
-
-.chat__info {
+.chat__person_info {
   display: flex;
   flex-direction: column;
   font-size: 17px;
   line-height: 1.5;
 }
 
+.chat__info_wrap {}
+
 .chat__items {
   margin: 47px 0 20px;
 }
 
-.chat__item  {
-  border-bottom: 2px solid $c_input_border ;
+.chat__item {
+  align-items: center;
+  background-color: rgba($c_primary, .1);
+  border-bottom: 2px solid $c_input_border;
   cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 47px 70px 45px 35px;
+  padding: 47px 50px 45px 35px;
   transition: all 0.3s;
-
-  &:hover {
-    background-color: rgba($c_primary, .15);
-  }
-  }
+}
 
 .chat__persone {
   display: flex;
@@ -187,31 +198,109 @@
   margin: 0 20px 0 0;
 }
 
-
-@media #{$tablet_l} {
-  .chat__btns_wrap  {
-    display: none;
+@media #{$desktop} {
+  .chat__agreement_section {
+    padding: 32px 58px;
   }
 
-  .chat__info {
+  .chat__item {
+    padding: 54px 42px 43px 40px;
+  }
+
+  .chat__messages {
+    padding: 0 50px;
+  }
+
+  .chat__photo_wrap {
+    margin: 0 8px 0 0;
+  }
+}
+
+@media #{$tablet_l} {
+  .chat__person_info {
     font-size: 15px;
   }
 
   .chat__item {
-    padding-left: 43px;
+    padding: 54px 15px 43px 20px;
   }
 
-  .chat__name {
+  .chat__names {
     font-size: 20px;
   }
 
   .chat__photo {
     max-width: 80px;
   }
+
+  .chat__agreement_title {
+    font-size: 21px;
+  }
+
+  .chat__agreement_section {
+    padding: 32px 160px;
+  }
+
+  .chat__messages {
+    padding: 0 45px;
+  }
+}
+
+@media #{$tablet_m} {
+  .chat__agreement_section {
+    padding: 32px 30px;
+  }
+
+  .chat__decline {
+    font-size: 20px;
+  }
+
+  .chat__info_wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat__item {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .chat__messages {
+    padding: 0 20px;
+  }
+
+  .chat__names {
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+    flex-direction: column;
+    margin: 8px 0 0;
+  }
+
+  .chat__persone {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .chat__person_info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .chat__photo {
+    max-width: 76px;
+  }
+
+  .chat__photo_wrap {
+    margin: 0;
+  }
 }
 
 @media #{$mobile} {
-  .chat__info {
+  .chat__person_info {
     font-size: 10px;
   }
 
@@ -219,12 +308,20 @@
     padding-left: 18px;
   }
 
-  .chat__name {
+  .chat__names {
     font-size: 13px;
   }
 
   .chat__photo {
     max-width: 53px;
+  }
+
+  .chat__agreement_section {
+    padding: 32px 30px;
+  }
+
+  .chat__messages {
+    padding: 0 12px;
   }
 }
 

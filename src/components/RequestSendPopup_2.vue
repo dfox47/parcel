@@ -63,13 +63,15 @@
                             </div>
                         </div>
 
-                        <span class="popup_title">{{ $vuetify.lang.t('$vuetify.parcel_description') }}</span>
+                        <div class="popup_two_columns__block">
+                            <span class="popup_title">{{ $vuetify.lang.t('$vuetify.parcel_description') }}</span>
 
-                        <v-textarea
-                            counter="500"
-                            label="Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil euris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau."
-                            rows="7"
-                        />
+                            <v-textarea
+                                counter="500"
+                                label="Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil euris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau. Enecab ius, ommodis ut odition sequod quat quam que sinusam quistet imus delit ex est landisc iiscilibus reic tore nonestibusam sunt verchicil eum ea simillenis eos dolor ma con reris minciati bere vellau."
+                                rows="7"
+                            />
+                        </div>
 
                         <div class="popup_two_columns__one">
                             <v-btn

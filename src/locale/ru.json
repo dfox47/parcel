@@ -181,8 +181,10 @@
   "or_decline": "или отказаться",
   "reconcile_data": "Согласовать данные",
   "delivery_method_to_courier": "Способ получения курьером",
+  "delivery_method_to_recipient": "Способ передачи получателю",
   "courier_pick_up_address": "Адрес получения курьером",
-  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:"
+  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:",
+  "delivery_date": "Дата передачи",
+  "delivery_time": "Время передачи",
+  "pick_up_address": "Адрес передачи"
 }
-
-

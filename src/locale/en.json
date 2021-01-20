@@ -181,6 +181,10 @@
   "or_decline": "or decline",
   "reconcile_data": "Reconcile data",
   "delivery_method_to_courier": "Delivery method to courier",
+  "delivery_method_to_recipient": "Delivery method to recipient",
   "courier_pick_up_address": "Courier pick up address",
-  "check_the_box_if_you_agree_with_the_conditions": "Check the box if you agree with the conditions:"
+  "check_the_box_if_you_agree_with_the_conditions": "Check the box if you agree with the conditions:",
+  "delivery_date": "Date delivery",
+  "delivery_time": "Time delivery",
+  "pick_up_address": "Pick up address"
 }
