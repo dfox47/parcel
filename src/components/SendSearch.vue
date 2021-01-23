@@ -128,9 +128,9 @@ export default {
             this.$store.dispatch('setLoading', true);
 
             setTimeout(() => {
-                axios.get(`https://api.wwprcl.ru/api/delivery/offer/list`,{headers: {'X-Api-AuthKey': 'd310b9b37084d10c1b57dcd2c453aed64c6f833c'}})
+                axios.get(`https://api.wwprcl.ru/api/delivery/offer/list`)
                     .then(response => {
-                        this.orders = response.json();
+                        this.orders = response.data;
                         this.$store.dispatch('setLoading', false);
                     }, error => {
                         //console.log(error);

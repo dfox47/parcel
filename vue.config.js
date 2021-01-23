@@ -3,6 +3,7 @@ module.exports = {
         'vuetify'
     ],
     devServer: {
-        proxy: 'https://api.wwprcl.ru/',
+        host: "localhost.ru",
+        port: 80
     }
 }

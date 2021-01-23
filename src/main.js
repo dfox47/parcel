@@ -39,6 +39,8 @@ import SendOrGrab_popup from './components/SendOrGrabPopup';
 
 import CountryFlag from 'vue-country-flag';
 import VCalendar from "v-calendar";
+import moment from 'moment';
+import './plugins/vuetify-mask.js';
 
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-header', Header);
@@ -77,6 +79,7 @@ Vue.component('country-flag', CountryFlag);
 Vue.component('calendar', VCalendar)
 
 Vue.config.productionTip = false;
+Vue.prototype.$moment = moment;
 
 Vue.directive('focus', {
     // Когда привязанный элемент вставлен в DOM...
@@ -111,6 +114,21 @@ new Vue({
             } else {
                 this.$vuetify.lang.current = 'ru'
                 this.$store.dispatch('setCur', 'eur')
+            }
+        }
+
+        if (localStorage.getItem('user')) {
+            try {
+                let user = JSON.parse(localStorage.getItem('user'));
+
+                if (user) {
+                    this.$store.dispatch('autoLoginUser', user)
+                } else {
+                    localStorage.removeItem('user');
+                }
+
+            } catch(e) {
+                localStorage.removeItem('user');
             }
         }
     }

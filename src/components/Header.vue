@@ -92,7 +92,7 @@ export default {
             this.$store.dispatch('showLangAndCurPopup')
         },
         showMenuPopup () {
-            this.$store.dispatch('showMenuPopup')
+            this.$store.dispatch('showLoginPopup')
         },
         getCurSymbol () {
             return this.$store.getters.getCurSymbol
