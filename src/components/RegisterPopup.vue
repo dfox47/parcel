@@ -19,7 +19,10 @@
                         @click="this.hideRegistrationPopup"
                     />
 
-                    <form
+                    <v-form
+                        v-model="valid"
+                        ref="form"
+                        lazy
                         action=""
                         class="popup_one_column__wrap"
                     >
@@ -27,19 +30,48 @@
                             {{ $vuetify.lang.t('$vuetify.register') }}
                         </v-card-title>
 
-                        <label class="input_wrap">
-                            <v-text-field
-                                label="Номер телефона"
-                                v-focus
-                            />
-                        </label>
+                        <v-text-field-integer
+                            v-model="phone"
+                            class="input_wrap"
+                            name="phone"
+                            label="Ваш телефон"
+                            :properties="{
+                                prefix: mask,
+                                suffix: '',
+                                'prepend-icon': 'mdi-phone',
+                                rules: [
+                                    v => !!v || 'Укажите пожалуйста Ваш телефон',
+                                    v => (v !== null && v.length >= 15) || 'Слишком короткий номер телефона'
+                                ],
+                                readonly: false,
+                                disabled: false,
+                                outlined: false,
+                                clearable: true,
+                                placeholder: '',
+                            }"
+                            :options="{
+                                inputMask: '(###) ###-##-##',
+                                outputMask: '##########',
+                                empty: null,
+                                applyAfter: false,
+                                alphanumeric: true,
+                                lowerCase: false,
+                            }"
+                            @focus="mask = '+7'"
+                            @blur="checkBlur"
+                        />
 
                         <label class="input_wrap">
                             <v-text-field
+                                id="password"
+                                prepend-icon="mdi-lock"
+                                name="password"
+                                label="Пароль"
                                 :type="type"
-                                label="Придумайте пароль"
+                                counter
+                                :rules="passwordRules"
+                                v-model="password"
                             />
-
                             <img
                                 class="input_wrap__img"
                                 :src="pass_img"
@@ -55,7 +87,9 @@
                         <v-btn
                             block
                             color="primary"
-                            @click="this.showConfirmPopup"
+                            @click="onSubmit"
+                            :loading="loading"
+                            :disabled="!valid || loading"
                         >
                             {{ $vuetify.lang.t('$vuetify.continue_button') }}
                         </v-btn>
@@ -72,7 +106,7 @@
                                 {{ $vuetify.lang.t('$vuetify.login') }}
                             </a>
                         </div>
-                    </form>
+                    </v-form>
                 </div>
             </v-card>
         </transition>
@@ -80,22 +114,46 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
             pass_img: require('@/assets/i/icons/show_pass.svg'),
             type: 'password',
-            btnText: 'Show Password'
+            btnText: 'Show Password',
+            phone: null,
+            focus: false,
+            mask: '',
+            password: '',
+            passwordRules: [
+                v => !!v || 'Введите пароль!',
+                v => (v && v.length >= 8) || 'Пароль не может быть меньше 8 символов!',
+                v => /(?=.*[A-Z])/.test(v) || 'Пароль должен содержать хотя бы 1 заглавную букву',
+                v => /(?=.*[a-z])/.test(v) || 'Пароль должен содержать хотя бы 1 строчную букву',
+                v => /(?=.*\d)/.test(v) || 'Пароль должен содержать хотя бы 1 цифру',
+                v => /^[a-zA-Z0-9@#$%^&+=*.\-_]{0,100}$/.test(v) || 'Недопустимые символы'
+            ],
+            checkbox: true,
+            valid: false
         }
     },
     computed: {
         showRegistrationPopup() {
             return this.$store.getters.getRegisterPopup
+        },
+        loading () {
+            return this.$store.getters.loading
         }
     },
     methods: {
         hideRegistrationPopup () {
             this.$store.dispatch('hideRegistrationPopup')
+        },
+        checkBlur () {
+            if (this.phone === null || this.phone === '') {
+                this.mask = ''
+            }
         },
         showPassword () {
             if (this.type === 'password') {
@@ -112,6 +170,32 @@ export default {
         },
         showConfirmPopup () {
             this.$store.dispatch('showConfirmPopup')
+        },
+        onSubmit () {
+            this.$store.dispatch('clearError');
+            this.$store.dispatch('setLoading', true);
+
+            console.log(this.phone + ' - ' + this.password)
+
+            axios.post(`https://api.wwprcl.ru/auth/register`, {
+                phone: '+7' + this.phone,
+                password: 'this.password'
+            })
+                .then(response => {
+                    console.log(response.data)
+                    this.$store.dispatch('setLoading', false);
+                }, error => {
+                    //console.log(error);
+                    this.$store.dispatch('setLoading', false);
+
+                    if (error.toJSON().message === '') {
+                        this.$store.dispatch('setError', 'Неизвестная ошибка запроса к серверу');
+                    }
+                    else {
+                        this.$store.dispatch('setError', error.toJSON().message);
+                    }
+                    throw error;
+                });
         }
     }
 }
