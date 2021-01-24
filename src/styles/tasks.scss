@@ -1,6 +1,4 @@
 
-
-
 .tasks_client {
   border-left: 1px solid #000;
   flex-basis: 230px;
@@ -108,8 +106,20 @@
 }
 
 .tasks_desc {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  padding: 38px 20px 38px 56px;
+  justify-content: center;
+  padding: 0 20px 0 56px;
+
+  &_active {
+    @extend .tasks_desc;
+  }
+
+  &__btn {
+    margin: 40px 0 0;
+  }
 
   &__list {
     font-size: 17px;
@@ -145,11 +155,15 @@
   }
 
   @media #{$desktop} {
-    padding: 38px 20px 38px 42px;
+    padding: 0 20px 0 42px;
   }
 
   @media #{$tablet_l} {
-    padding: 28px 10px 10px 32px;
+    padding: 0 10px 0 32px;
+
+    &__btn {
+      margin: 8px 0 0;
+    }
 
     &__list {
       font-size: 13px;
@@ -168,6 +182,10 @@
 
   @media #{$tablet_m} {
     padding: 25px 0;
+
+    &__btn {
+      margin: 40px 0 0;
+    }
 
     &__list {
       font-size: 17px;
@@ -256,6 +274,91 @@
   }
 }
 
+.tasks_search {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 44px 0 0;
+
+  &__img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 88px;
+    width: 88px;
+
+    &__send {
+      background-image: url(#{$i}/icons/parsels_deliver.svg);
+    }
+
+    &__deliver {
+      background-image: url(#{$i}/icons/parsels_sent.svg);
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin: 36px 0 0;
+    text-align: center;
+    width: 190px;
+  }
+
+  &__items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media #{$tablet_l} {
+    margin: 0 20px 0 0;
+
+    &__img {
+      height: 64px;
+      width: 64px;
+    }
+
+    &__item {
+      font-size: 13px;
+      margin: 30px 0 0;
+    }
+  }
+
+  @media #{$tablet_m} {
+    flex-direction: row;
+
+    &__img {
+      min-height: 88px;
+      min-width: 88px;
+    }
+
+    &__item {
+      align-items: flex-start;
+      font-size: 18px;
+      margin: 25px 0 0 32px;
+      text-align: left;
+    }
+  }
+
+  @media #{$mobile} {
+    &__img {
+      min-height: 66px;
+      min-width: 66px;
+    }
+
+    &__item {
+      align-items: flex-start;
+      font-size: 13px;
+      margin: 16px 0 0 24px;
+      max-width: 135px;
+      text-align: left;
+    }
+  }
+}
+
 .tasks_status {
   align-items: center;
   background-color: rgba($c_input_border, .1);
@@ -265,6 +368,7 @@
   flex-basis: 278px;
   flex-direction: column;
   flex-shrink: 0;
+  min-height: 278px;
   justify-content: center;
 
   &__active {
@@ -278,6 +382,11 @@
     margin: 22px 0 0;
   }
 
+  &__desc_active {
+    @extend .tasks_status__desc;
+    color: $c_primary;
+  }
+
   &__img {
     background-position: center;
     background-repeat: no-repeat;
@@ -285,6 +394,14 @@
     display: block;
     height: 95px;
     width: 95px;
+
+    &__deliver {
+      background-image: url(#{$i}/icons/auto_search_2.svg);
+    }
+
+    &__send {
+      background-image: url(#{$i}/icons/auto_search_1.svg);
+    }
 
     &__delivered {
       background-image: url(#{$i}/icons/delivered.svg);
@@ -301,6 +418,17 @@
 
   @media #{$tablet_l} {
     flex-basis: 180px;
+    min-height: 214px;
+
+    &__desc {
+      font-size: 17px;
+      margin: 15px 0 0;
+    }
+
+    &__img {
+      height: 78px;
+      width: 75px;
+    }
   }
 
   @media #{$tablet_m} {
@@ -308,9 +436,11 @@
     flex-basis: auto;
     flex-direction: row;
     justify-content: space-between;
+    min-height: auto;
     padding: 20px 35px 25px;
 
     &__desc {
+      font-size: 26px;
       margin: 10px 30px 0 0;
     }
 
@@ -319,6 +449,7 @@
       width: 52px;
     }
   }
+
 
   @media #{$mobile} {
     padding: 17px 27px;

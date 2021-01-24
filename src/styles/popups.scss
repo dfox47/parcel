@@ -173,14 +173,14 @@
     top: 101%;
   }
 
-  @media only screen and (max-width: 980px) {
+  @media #{$tablet_l} {
     border-radius: 0;
     position: absolute;
     left: 0;
     max-width: 355px;
     padding: 70px 0 1000%;
     right: auto;
-    top: 87px;
+    top: 92px;
     width: 100%;
 
     &__wrap {
@@ -196,11 +196,8 @@
     }
   }
 
-  @media only screen and (max-width: 460px) {
-    max-width: 100%;
-  }
-
   @media #{$mobile} {
+    max-width: 100%;
     padding: 59px 0 1000%;
     top: 59px;
 

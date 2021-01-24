@@ -1,6 +1,7 @@
 {
   "add_application": "Add application",
   "add_new_order": "+ Add application",
+  "answered": "answered",
   "auto_search": "Autosearch",
   "apartment": "Apartment",
 
@@ -152,9 +153,11 @@
   "transfer_method_to_recipient": "Transfer method to recipient",
 
   "status.delivered": "Delivered",
+  "status.deliver": "Deliver",
   "status.looking_parcel": "Looking for parcel",
   "status.looking_suitcase": "Looking for a suitcase",
   "status.sent": "Sent",
+  "status.send": "Send",
 
   "surname": "Surname",
 
@@ -180,11 +183,16 @@
 
   "or_decline": "or decline",
   "reconcile_data": "Reconcile data",
+  "open_reconcile_window": "Open reconcile window",
   "delivery_method_to_courier": "Delivery method to courier",
   "delivery_method_to_recipient": "Delivery method to recipient",
   "courier_pick_up_address": "Courier pick up address",
   "check_the_box_if_you_agree_with_the_conditions": "Check the box if you agree with the conditions:",
   "delivery_date": "Date delivery",
   "delivery_time": "Time delivery",
-  "pick_up_address": "Pick up address"
+  "pick_up_address": "Pick up address",
+  "security deposit": "Security deposit",
+  "cost": "Cost",
+
+  "we_found": "according to your parameters we have found"
 }

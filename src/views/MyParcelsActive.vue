@@ -58,12 +58,12 @@
                         <div class="tasks_status__active">
                             <div :class="'tasks_status__img tasks_status__img__' + item.status" />
 
-                            <div class="tasks_status__desc">
+                            <div class="tasks_status__desc_active">
                                 {{ $vuetify.lang.t('$vuetify.status.' + item.status) }}
                             </div>
                         </div>
 
-                        <div class="tasks_desc">
+                        <div class="tasks_desc_active">
                             <div class="tasks_desc__name">
                                 <span>{{ item.name }}</span>
                                 <span>{{ item.lastname }}</span>
@@ -93,22 +93,34 @@
                                 class="tasks_desc__more"
                                 href="/"
                             >{{ $vuetify.lang.t('$vuetify.readmore') }}</a>
+
+                            <v-btn
+                                small
+                                color="primary"
+                                class="tasks_desc__btn"
+                            >
+                                {{ $vuetify.lang.t('$vuetify.edit') }}
+                            </v-btn>
                         </div>
 
-                        <div class="tasks_client">
-                            <img
-                                class="tasks_client__img"
-                                :src="item.client_img"
-                                alt=""
-                            >
+                        <div class="tasks_search">
+                            <div :class="'tasks_search__img tasks_search__img__' + item.status" />
 
-                            <div class="tasks_client__wrap">
-                                <div class="tasks_client__name">
-                                    <span>{{ item.client_name }}</span>
-                                    <span>{{ item.client_lastname }}</span>
+                            <div class="tasks_search__items">
+                                <div class="tasks_search__item">
+                                    <span class="tasks_search__info">{{ $vuetify.lang.t('$vuetify.we_found') }}</span>
+                                    <a
+                                        class="tasks_desc__more"
+                                        href="/"
+                                    >{{ item.found }}</a>
                                 </div>
-
-                                <span class="person_rating">{{ item.client_rating }}</span>
+                                <div class="tasks_search__item">
+                                    <span class="tasks_search__info">{{ $vuetify.lang.t('$vuetify.answered') }}</span>
+                                    <a
+                                        class="tasks_desc__more"
+                                        href="/"
+                                    >{{ item.answered }}</a>
+                                </div>
                             </div>
                         </div>
                     </router-link>
@@ -118,51 +130,43 @@
     </div>
 </template>
 
-
-
 <script>
 export default {
     name: 'MyParcelsCompleted',
     data: () => ({
         items: [
             {
-                client_img: require('@/assets/i/photo2.png'),
-                client_lastname: 'Афанасьева',
-                client_name: 'Валентина',
-                client_rating: '2.5',
+                answered: "1 человек",
                 from: 'Северная Ирландия, Каррикфергус',
+                found: '5 посылок',
                 name: 'Александр',
                 rating: '3.5',
                 send_before: '1 февраля',
-                status: 'delivered',
+                status: 'deliver',
                 lastname: 'Константиновский',
                 to: 'Багамские Острова, Санто-Доминго',
                 weight: '10 кг'
             },
             {
-                client_img: require('@/assets/i/photo2.png'),
-                client_lastname: 'Афанасьева',
-                client_name: 'Валентина',
-                client_rating: '2.5',
+                answered: "1 человек",
                 from: 'Северная Ирландия, Каррикфергус',
+                found: '5 посылок',
                 name: 'Александр',
                 rating: '3.5',
                 send_before: '1 февраля',
-                status: 'delivered',
+                status: 'deliver',
                 lastname: 'Константиновский',
                 to: 'Багамские Острова, Санто-Доминго',
                 weight: '10 кг'
             },
             {
-                client_img: require('@/assets/i/photo2.png'),
-                client_lastname: 'Афанасьева',
-                client_name: 'Валентина',
-                client_rating: '2.5',
+                answered: "1 человек",
                 from: 'Северная Ирландия, Каррикфергус',
+                found: '5 посылок',
                 name: 'Александр',
                 rating: '3.5',
                 send_before: '1 февраля',
-                status: 'sent',
+                status: 'send',
                 lastname: 'Константиновский',
                 to: 'Багамские Острова, Санто-Доминго',
                 weight: '10 кг'

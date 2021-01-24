@@ -8,9 +8,7 @@
   flex-direction: column;
 }
 
-.chat__agreement {
-  padding: 20px 0;
-}
+.chat__agreement {}
 
 .chat__agreement_btn {
   border: 1px solid $c_primary;
@@ -18,28 +16,43 @@
   color: $c_primary;
   cursor: pointer;
   font-size: 24px;
-  margin: 40px auto;
+  margin: 48px auto;
   max-width: 670px;
-  padding: 20px 0 16px;
+  padding: 14px 0 8px;
   text-align: center;
   width: 100%;
 }
 
-.agreement_checkbox {
+.chat__agreement_wrap {}
+
+.chat__agreement_checkbox {
   padding: 36px 0;
 }
 
 .chat__agreement_title {
   font-size: 24px;
   text-align: center;
+  padding: 6px 0 0;
 }
 
 .chat__agreement_section {
-  border-bottom: 1px solid $c_input_border;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 32px 148px;
+  position: relative;
+
+  &:after {
+    content: "";
+    background-color: $c_input_border;
+    bottom: 0;
+    display: block;
+    height: 1px;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    width: 100%;
+  }
 }
 
 
@@ -61,6 +74,7 @@
 }
 
 .chat__btns_wrap {
+  align-items: flex-start;
   display: flex;
 }
 
@@ -68,6 +82,7 @@
 .chat__decline {
   color: $c_text_dark;
   font-size: 15px;
+  margin: 14px 0 0;
   text-decoration: underline;
 }
 
@@ -96,6 +111,19 @@
     margin: 40px auto 0;
     overflow: auto;
   }
+}
+
+.chat__messages_btn {}
+
+.chat__messages_btn_mobile {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+}
+
+.chat__messages_textarea {
+  position: relative;
 }
 
 
@@ -163,20 +191,24 @@
   line-height: 1.5;
 }
 
-.chat__info_wrap {}
+.chat__info_wrap {
+  .person_rating {
+    margin: 0 0 0 10px;
+  }
+}
 
 .chat__items {
   margin: 47px 0 20px;
 }
 
 .chat__item {
-  align-items: center;
+  align-items: flex-end;
   background-color: rgba($c_primary, .1);
   border-bottom: 2px solid $c_input_border;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
-  padding: 47px 50px 45px 35px;
+  padding: 38px 50px 54px 35px;
   transition: all 0.3s;
 }
 
@@ -195,15 +227,20 @@
 
 .chat__photo_wrap {
   position: relative;
-  margin: 0 20px 0 0;
+  margin: 0 8px 0 0;
 }
 
 @media #{$desktop} {
   .chat__agreement_section {
     padding: 32px 58px;
+
+    &:after {
+      width: 1000%;
+    }
   }
 
   .chat__item {
+    border: none;
     padding: 54px 42px 43px 40px;
   }
 
@@ -217,8 +254,18 @@
 }
 
 @media #{$tablet_l} {
-  .chat__person_info {
-    font-size: 15px;
+  .chat__agreement_checkbox {
+    padding: 0 0 50px;
+  }
+
+  .chat__agreement_section {
+    margin: 0 auto;
+    max-width: 420px;
+    padding: 32px 0;
+  }
+
+  .chat__agreement_title {
+    font-size: 21px;
   }
 
   .chat__item {
@@ -229,26 +276,31 @@
     font-size: 20px;
   }
 
-  .chat__photo {
-    max-width: 80px;
-  }
-
-  .chat__agreement_title {
-    font-size: 21px;
-  }
-
-  .chat__agreement_section {
-    padding: 32px 160px;
-  }
-
   .chat__messages {
     padding: 0 45px;
+  }
+
+  .chat__messages_btn {
+    display: none;
+  }
+
+  .chat__messages_btn_mobile {
+    display: block;
+  }
+
+  .chat__person_info {
+    font-size: 15px;
+  }
+
+  .chat__photo {
+    max-width: 80px;
   }
 }
 
 @media #{$tablet_m} {
-  .chat__agreement_section {
-    padding: 32px 30px;
+  .chat__agreement_btn {
+    margin: 40px 20px;
+    width: auto;
   }
 
   .chat__decline {
@@ -259,9 +311,14 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+
+    .person_rating {
+      margin: 4px 0 0;
+    }
   }
 
   .chat__item {
+    align-items: center;
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
@@ -269,6 +326,45 @@
 
   .chat__messages {
     padding: 0 20px;
+  }
+
+  .chat__msg {
+    margin: 0 0 26px;
+  }
+
+  .chat__msg_info {
+    font-size: 20px;
+    padding: 17px 0 22px 38px;
+  }
+
+  .chat__msg_system {
+    padding: 28px 40px 32px;
+  }
+
+  .chat__msg_system_text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .chat__msg_user {
+    padding: 24px 38px;
+  }
+
+  .chat__msg_date {
+    font-size: 20px;
+  }
+
+  .chat__msg_title {
+    font-size: 20px;
+  }
+
+  .chat__msg_text {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .chat__msg_me {
+    padding: 24px 38px;
   }
 
   .chat__names {
@@ -288,6 +384,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin: 0 0 48px;
   }
 
   .chat__photo {
@@ -300,12 +397,88 @@
 }
 
 @media #{$mobile} {
+  .chat__agreement_btn {
+    font-size: 13px;
+    margin: 22px 18px;
+  }
+
+  .chat__agreement_checkbox {
+    padding: 0 0 18px;
+  }
+
+  .chat__agreement_section {
+    padding: 32px 30px;
+  }
+
+  .chat__agreement_title {
+    font-size: 13px;
+    padding: 0 15px;
+  }
+
+  .chat__messages_btn_mobile {
+    bottom: 15px;
+    max-height: 18px;
+    max-width: 18px;
+    right: 10px;
+  }
+
+  .chat__decline {
+    font-size: 13px;
+  }
+
   .chat__person_info {
     font-size: 10px;
+    margin: 0 0 30px;
   }
 
   .chat__item {
     padding-left: 18px;
+  }
+
+  .chat__messages {
+    padding: 0 12px;
+  }
+
+  .chat__msg {
+    margin: 0 0 20px;
+  }
+
+  .chat__msg_info {
+    font-size: 13px;
+    line-height: 1.9;
+    padding: 8px 0 12px 26px;
+  }
+
+  .chat__msg_system {
+    padding: 20px 30px 24px;
+  }
+
+  .chat__msg_system_text {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .chat__msg_user {
+    line-height: 1.6;
+    padding: 16px 25px;
+  }
+
+  .chat__msg_date {
+    font-size: 13px;
+  }
+
+  .chat__msg_title {
+    font-size: 13px;
+  }
+
+  .chat__msg_text {
+    font-size: 13px;
+    padding: 0;
+  }
+
+  .chat__msg_me {
+    line-height: 1.6;
+    padding: 16px 25px;
   }
 
   .chat__names {
@@ -315,25 +488,18 @@
   .chat__photo {
     max-width: 53px;
   }
-
-  .chat__agreement_section {
-    padding: 32px 30px;
-  }
-
-  .chat__messages {
-    padding: 0 12px;
-  }
 }
 
 .chat_btn {
   background-size: 16px;
   border-radius: 6px;
-  height: 56px;
+  min-height: 56px;
+  min-width: 56px;
   transition: $transition;
-  width: 56px;
 
   &__phone {
     background: url(#{$i}/icons/phone_secondary.svg) center center no-repeat scroll transparent;
+    background-size: 25px;
     border: 1px solid $c_primary;
     cursor: pointer;
 
@@ -342,18 +508,9 @@
     }
   }
 
-  @media #{$tablet_s} {
-    height: 32px;
-    width: 32px;
-  }
-
-  @media #{$tablet_m} {
-    background-size: 13px;
-  }
-
   @media #{$mobile} {
-    background-size: 8px;
-    height: 20px;
-    width: 20px;
+    background-size: 18px;
+    min-height: 48px;
+    min-width: 48px;
   }
 }

@@ -27,7 +27,6 @@
                     <div class="popup_one_column">
                         <img
                             src="../assets/i/done.svg"
-                            @click="showPassword"
                             alt=""
                         >
 

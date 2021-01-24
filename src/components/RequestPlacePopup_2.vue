@@ -68,7 +68,6 @@
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.pay_a_deposit_for_safety') }}</span>
 
                                 <v-radio-group
-                                    v-model="row"
                                     row
                                 >
                                     <v-radio
@@ -91,7 +90,6 @@
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.take_consolidated_cargo') }}</span>
 
                                 <v-radio-group
-                                    v-model="row"
                                     row
                                 >
                                     <v-radio
@@ -108,7 +106,6 @@
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
                                 <v-radio-group
-                                    v-model="row"
                                     row
                                 >
                                     <v-radio

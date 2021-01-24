@@ -21,7 +21,6 @@
 
                     <img
                         src="../assets/i/done.svg"
-                        @click="showPassword"
                         alt=""
                     >
 

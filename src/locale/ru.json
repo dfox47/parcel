@@ -1,6 +1,7 @@
 {
   "add_application": "Добавить заявку",
   "add_new_order": "+ Добавить заявку",
+  "answered": "откликнулся",
   "auto_search": "Автопоиск",
   "apartment": "Квартира",
 
@@ -152,9 +153,11 @@
   "transfer_method_to_recipient": "Способ передачи получателю",
 
   "status.delivered": "Доставлено",
+  "status.deliver": "Доставляю",
   "status.looking_parcel": "Ищу посылку",
   "status.looking_suitcase": "Ищу чемодан",
   "status.sent": "Отправлено",
+  "status.send": "Отправляю",
 
   "surname": "Фамилия",
 
@@ -162,29 +165,33 @@
 
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "weight": "Вес",
-  "where_to": "Куда",
+  "we_found": "по Вашим праметрам мы нашли",
   "what_do_you_need": "Что Вам необходимо?",
+  "where": "Где?",
+  "where_to": "Куда",
+  "width": "Ширина",
 
 
   "how": "Как?",
-  "where": "Где?",
   "phone_number": "Номер телефона",
   "names": "Имя Фамилия",
   "choose_category": "Выберите Категорию",
   "calendar": "Календарь",
   "height": "Высота",
   "depth": "Глубина",
-  "width": "Ширина",
   "sum": "Сумма",
-  "change_search_request": "Изменить параметры поиска",
 
   "or_decline": "или отказаться",
-  "reconcile_data": "Согласовать данные",
+  "change_search_request": "Изменить параметры поиска",
+  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:",
+  "cost": "Стоимость",
+  "courier_pick_up_address": "Адрес получения курьером",
   "delivery_method_to_courier": "Способ получения курьером",
   "delivery_method_to_recipient": "Способ передачи получателю",
-  "courier_pick_up_address": "Адрес получения курьером",
-  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:",
   "delivery_date": "Дата передачи",
   "delivery_time": "Время передачи",
-  "pick_up_address": "Адрес передачи"
+  "open_reconcile_window": "Открыть окно согласования",
+  "pick_up_address": "Адрес передачи",
+  "reconcile_data": "Согласовать данные",
+  "security deposit": "Залог за сохранность"
 }

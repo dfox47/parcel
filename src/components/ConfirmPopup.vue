@@ -4,20 +4,15 @@
             name="fade"
             appear
         >
-            <div
-                class="popup_overlay"
-                v-if="showConfirmPopup"
-                @click="this.hideConfirmPopup"
-            />
-        </transition>
-
-        <transition
-            name="fade"
-            appear
-        >
             <v-card
                 v-if="showConfirmPopup"
             >
+                <div
+                    class="popup_overlay"
+                    v-if="showConfirmPopup"
+                    @click="this.hideConfirmPopup"
+                />
+
                 <div class="popup popup_one_column  popup_confirm">
                     <span
                         class="popup_close_btn"
@@ -26,7 +21,7 @@
 
                     <form
                         action=""
-                        class="popup_one_column"
+                        class="popup_one_column__wrap"
                     >
                         <v-card-title>
                             {{ $vuetify.lang.t('$vuetify.confirmation') }}

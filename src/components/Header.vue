@@ -29,15 +29,12 @@
                 </router-link>
 
                 <div class="header_right">
-                    <div
+                    <img
+                        src="../assets/i/photo.png"
+                        alt="login_icon"
                         class="header_login_icon header_mobile"
                         @click="showMenuPopup"
                     >
-                        <img
-                            src="../assets/i/photo.png"
-                            alt="login_icon"
-                        >
-                    </div>
 
                     <ul class="header_nav">
                         <li class="header_nav__item">

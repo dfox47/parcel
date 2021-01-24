@@ -38,12 +38,8 @@ body  {
       }
     }
 
-    .agreement_checkbox {
+    .chat__agreement_checkbox {
       display: flex;
-
-      .v-input--checkbox {
-        margin: 0 45px 0 0;
-      }
     }
 
     .two_inputs {
@@ -82,15 +78,16 @@ body  {
           border-radius: 4px;
         }
 
-        &.v-select {
-          flex-grow: 0;
-          width: 124px;
-        }
-
         &.v-text-field {
-          flex-grow: 0;
+          flex-grow: 1;
           margin: 0 22px 0 0;
           width: 205px;
+        }
+
+        &.v-select {
+          flex-grow: 0;
+          margin: 0 0 0 0;
+          width: 124px;
         }
       }
     }
@@ -198,6 +195,11 @@ body  {
           height: 37px;
           padding: 0 39px;
         }
+
+        &.v-btn--block {
+          height: 48px;
+          padding: 0 10px;
+        }
       }
     }
 
@@ -265,9 +267,20 @@ body  {
           margin: 0 auto;
           padding: 16px 0 9px;
         }
+
+        &__subtitle {
+          text-align: center;
+          line-height: 20px;
+          font-size: 10px;
+          padding: 10px 0;
+        }
       }
     }
 
+
+    .v-text-field--outlined > .v-input__control > .v-input__slot {
+      min-height: auto;
+    }
 
     .v-input--checkbox {
       .v-label {
@@ -361,7 +374,7 @@ body  {
 
     .v-checkbox_v2 {
       margin: 0;
-      padding: 0;
+      padding: 0 0 14px;
 
       .v-input__slot {
         margin: 0;
@@ -401,7 +414,7 @@ body  {
         left: -11px;
       }
 
-      @media only screen and (max-width: 980px) {
+      @media #{$tablet_l} {
         .mdi-checkbox-blank-outline {
           &:before {
             background-size: cover;
@@ -433,7 +446,7 @@ body  {
         }
       }
 
-      @media only screen and (max-width: 380px) {
+      @media #{$mobile} {
         .mdi-checkbox-blank-outline {
           &:before {
             background-size: cover;
@@ -467,7 +480,7 @@ body  {
     }
 
     .v-checkbox_v3 {
-      margin: 0;
+      margin: 0 40px 0 0;
       padding: 0;
 
       .v-input__slot {
@@ -476,6 +489,7 @@ body  {
       }
 
       .v-label {
+        font-weight: 300;
         font-size: 20px;
         top: 4px;
       }
@@ -512,68 +526,47 @@ body  {
         left: -8px;
       }
 
-      @media only screen and (max-width: 980px) {
-        .mdi-checkbox-blank-outline {
-          &:before {
-            background-size: cover;
-            height: 42px;
-            width: 42px;
-          }
-        }
-
-        .mdi-checkbox-marked {
-          &:before {
-            background-size: cover;
-            height: 42px;
-            width: 42px;
-          }
-        }
-
-        .v-input--selection-controls__input {
-          height: 42px;
-          margin-right: 19px;
-          width: 42px;
-        }
-
-        .v-input--selection-controls__ripple {
-          left: -3px;
-        }
-
-        .v-label {
-          font-size: 23px;
-        }
-      }
-
-      @media only screen and (max-width: 380px) {
-        .mdi-checkbox-blank-outline {
-          &:before {
-            background-size: cover;
-            height: 33px;
-            width: 33px;
-          }
-        }
-
-        .mdi-checkbox-marked {
-          &:before {
-            background-size: cover;
-            height: 33px;
-            width: 33px;
-          }
-        }
-
-        .v-input--selection-controls__input {
-          height: 33px;
-          margin-right: 19px;
-          width: 33px;
-        }
-
-        .v-input--selection-controls__ripple {
-          left: -8px;
-        }
-
+      @media #{$tablet_l} {
         .v-label {
           font-size: 18px;
         }
+      }
+
+      @media #{$mobile} {
+        margin: 0 24px 0 0;
+
+        .mdi-checkbox-blank-outline {
+          &:before {
+            height: 19px;
+            width: 19px;
+          }
+        }
+
+        .mdi-checkbox-marked {
+          &:before {
+            background-size: 8px;
+            height: 19px;
+            width: 19px;
+          }
+        }
+
+        .v-input--selection-controls__input {
+          height: 19px;
+          margin-right: 19px;
+          width: 19px;
+        }
+
+        .v-input--selection-controls__ripple {
+          left: -14px;
+        }
+
+        .v-label {
+          font-size: 10px;
+        }
+      }
+
+      &:last-child {
+        margin: 0;
       }
     }
 
@@ -976,6 +969,15 @@ body  {
     font-size: 50px;
     text-align: center;
     width: 70px;
+  }
+
+  @media #{$mobile} {
+    input {
+      font-size: 30px;
+      height: 49px;
+      padding: 4px 0 0;
+      width: 42px;
+    }
   }
 }
 

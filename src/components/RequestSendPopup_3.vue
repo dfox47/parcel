@@ -31,7 +31,6 @@
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
                                 <v-radio-group
-                                    v-model="row"
                                     row
                                 >
                                     <v-radio
@@ -67,7 +66,6 @@
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
                                 <v-radio-group
-                                    v-model="row"
                                     row
                                 >
                                     <v-radio

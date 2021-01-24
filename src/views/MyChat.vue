@@ -40,8 +40,8 @@
                         </div>
                         <span class="person_rating">{{ item.rating }}</span>
                         <div class="chat__person_info">
-                            <span><strong>{{ $vuetify.lang.t('$vuetify.from') }}</strong> {{ item.from }}</span>
-                            <span><strong>{{ $vuetify.lang.t('$vuetify.where_to') }}  </strong> {{ item.to }}  </span>
+                            <span><strong>{{ $vuetify.lang.t('$vuetify.from') }}</strong> {{ item.from }} </span>
+                            <span><strong>{{ $vuetify.lang.t('$vuetify.where_to') }}</strong> {{ item.to }} </span>
                         </div>
                     </div>
                 </div>
@@ -77,296 +77,300 @@
                 </div>
             </div>
 
+            <div
+                class="chat__agreement_btn"
+                @click="this.toggle"
+            >
+                {{ this.reconcile_window_text }}
+            </div>
+
             <div class="chat__agreement">
-                <div class="chat__agreement_btn">
-                    {{ $vuetify.lang.t('$vuetify.reconcile_data') }}
-                </div>
-
-                <div class="chat__agreement_title">
-                    {{ $vuetify.lang.t('$vuetify.check_the_box_if_you_agree_with_the_conditions') }}
-                </div>
-
-                <div class="chat__agreement_section">
-                    <div class="popup_two_columns__two">
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_method_to_courier') }}
-                            </div>
-
-                            <v-select
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.how')"
-                                outlined
-                            />
-
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_date') }}
-                            </div>
-
-                            <v-select
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.calendar')"
-                                outlined
-                            />
-
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_time') }}
-                            </div>
-
-                            <v-select
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.calendar')"
-                                outlined
-                            />
+                <transition
+                    name="fade"
+                    v-if="this.reconcile_window"
+                    appear
+                >
+                    <div class="chat__agreement_wrap">
+                        <div class="chat__agreement_title">
+                            {{ $vuetify.lang.t('$vuetify.check_the_box_if_you_agree_with_the_conditions') }}
                         </div>
 
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                Адрес получения курьером:
+                        <div class="chat__agreement_section">
+                            <div class="popup_two_columns__two">
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_method_to_courier') }}
+                                    </div>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.how')"
+                                        outlined
+                                    />
+
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_date') }}
+                                    </div>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
+                                        outlined
+                                    />
+
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_time') }}
+                                    </div>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
+                                        outlined
+                                    />
+                                </div>
+
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        Адрес получения курьером:
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Город"
+                                        outlined
+                                    />
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Улица"
+                                        outlined
+                                    />
+
+                                    <div class="two_inputs">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Корпус/строение"
+                                            outlined
+                                        />
+
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Дом"
+                                            outlined
+                                        />
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Коментарий к адресу"
+                                        outlined
+                                    />
+                                </div>
                             </div>
 
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Город"
-                                outlined
-                            />
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Улица"
-                                outlined
-                            />
-
-                            <div class="two_inputs">
-                                <v-text-field
-                                    class="take_destinations__select"
-                                    label="Корпус/строение"
-                                    outlined
+                            <div class="chat__agreement_checkbox">
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Вы"
                                 />
 
-                                <v-text-field
-                                    class="take_destinations__select"
-                                    label="Дом"
-                                    outlined
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Александр Константиновский"
                                 />
                             </div>
+                        </div>
 
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Коментарий к адресу"
-                                outlined
-                            />
+                        <div class="chat__agreement_section">
+                            <div class="popup_two_columns__two">
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_method_to_recipient') }}
+                                    </div>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.how')"
+                                        outlined
+                                    />
+
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.recipient_data') }}
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.name')"
+                                        outlined
+                                    />
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.phone_number')"
+                                        outlined
+                                    />
+                                </div>
+
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.pick_up_address') }}
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Город"
+                                        outlined
+                                    />
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Улица"
+                                        outlined
+                                    />
+
+                                    <div class="two_inputs">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Корпус/строение"
+                                            outlined
+                                        />
+
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Дом"
+                                            outlined
+                                        />
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Коментарий к адресу"
+                                        outlined
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="popup_two_columns__two">
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_date') }}
+                                    </div>
+
+                                    <v-select
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
+                                        outlined
+                                    />
+                                </div>
+
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.delivery_time') }}
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        :label="$vuetify.lang.t('$vuetify.name')"
+                                        outlined
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="chat__agreement_checkbox">
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Вы"
+                                />
+
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Александр Константиновский"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="chat__agreement_section">
+                            <div class="popup_two_columns__two">
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.security deposit') }}
+                                    </div>
+
+                                    <v-radio-group
+                                        row
+                                    >
+                                        <v-radio
+                                            label="Нет"
+                                            value="radio-1"
+                                        />
+
+                                        <v-radio
+                                            label="Да"
+                                            value="radio-2"
+                                        />
+                                    </v-radio-group>
+
+                                    <div class="input_n_select_wrap">
+                                        <v-text-field
+                                            :label="$vuetify.lang.t('$vuetify.sum')"
+                                            v-focus
+                                        />
+
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :items="currency"
+                                            :label="currency[0]"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div
+                                        class="popup_title"
+                                    >
+                                        {{ $vuetify.lang.t('$vuetify.cost') }}
+                                    </div>
+
+                                    <v-text-field
+                                        class="take_destinations__select"
+                                        label="Город"
+                                        outlined
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="chat__agreement_checkbox">
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Вы"
+                                />
+
+                                <v-checkbox
+                                    class="v-checkbox_v3"
+                                    label="Александр Константиновский"
+                                />
+                            </div>
                         </div>
                     </div>
-
-                    <div class="agreement_checkbox">
-                        <v-checkbox
-                            v-model="checkRu"
-                            class="v-checkbox_v3"
-                            label="Вы"
-                        />
-
-                        <v-checkbox
-                            v-model="checkRub"
-                            class="v-checkbox_v3"
-                            label="Александр Константиновский"
-                        />
-                    </div>
-                </div>
-
-                <div class="chat__agreement_section">
-                    <div class="popup_two_columns__two">
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_method_to_recipient') }}
-                            </div>
-
-                            <v-select
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.how')"
-                                outlined
-                            />
-
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.recipient_data') }}
-                            </div>
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.name')"
-                                outlined
-                            />
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.phone_number')"
-                                outlined
-                            />
-                        </div>
-
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.pick_up_address') }}
-                            </div>
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Город"
-                                outlined
-                            />
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Улица"
-                                outlined
-                            />
-
-                            <div class="two_inputs">
-                                <v-text-field
-                                    class="take_destinations__select"
-                                    label="Корпус/строение"
-                                    outlined
-                                />
-
-                                <v-text-field
-                                    class="take_destinations__select"
-                                    label="Дом"
-                                    outlined
-                                />
-                            </div>
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Коментарий к адресу"
-                                outlined
-                            />
-                        </div>
-                    </div>
-
-                    <div class="popup_two_columns__two">
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_date') }}
-                            </div>
-
-                            <v-select
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.calendar')"
-                                outlined
-                            />
-                        </div>
-
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_time') }}
-                            </div>
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                :label="$vuetify.lang.t('$vuetify.name')"
-                                outlined
-                            />
-                        </div>
-                    </div>
-
-                    <div class="agreement_checkbox">
-                        <v-checkbox
-                            v-model="checkRu"
-                            class="v-checkbox_v3"
-                            label="Вы"
-                        />
-
-                        <v-checkbox
-                            v-model="checkRub"
-                            class="v-checkbox_v3"
-                            label="Александр Константиновский"
-                        />
-                    </div>
-                </div>
-
-                <div class="chat__agreement_section">
-                    <div class="popup_two_columns__two">
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.delivery_method_to_recipient') }}
-                            </div>
-
-                            <v-radio-group
-                                v-model="row"
-                                row
-                            >
-                                <v-radio
-                                    label="Нет"
-                                    value="radio-1"
-                                />
-
-                                <v-radio
-                                    label="Да"
-                                    value="radio-2"
-                                />
-                            </v-radio-group>
-
-                            <div class="input_n_select_wrap">
-                                <v-text-field
-                                    :label="$vuetify.lang.t('$vuetify.sum')"
-                                    v-focus
-                                />
-
-                                <v-select
-                                    class="take_destinations__select"
-                                    :items="currency"
-                                    :label="currency[0]"
-                                />
-                            </div>
-                        </div>
-
-                        <div>
-                            <div
-                                class="popup_title"
-                            >
-                                {{ $vuetify.lang.t('$vuetify.pick_up_address') }}
-                            </div>
-
-                            <v-text-field
-                                class="take_destinations__select"
-                                label="Город"
-                                outlined
-                            />
-                        </div>
-                    </div>
-
-                    <div class="agreement_checkbox">
-                        <v-checkbox
-                            v-model="checkRu"
-                            class="v-checkbox_v3"
-                            label="Вы"
-                        />
-
-                        <v-checkbox
-                            v-model="checkRub"
-                            class="v-checkbox_v3"
-                            label="Александр Константиновский"
-                        />
-                    </div>
-                </div>
+                </transition>
             </div>
 
             <div class="chat__messages">
@@ -419,18 +423,30 @@
 
                 <div class="chat__messages_textarea">
                     <v-textarea
-                        rows="4"
                         clear-icon
+                        @keyup.enter.native="this.sendMessage"
+                        rows="4"
                         id="textarea-js"
                     />
 
-                    <v-btn
-                        medium
-                        color="primary"
+                    <div
+                        class="chat__messages_btn"
+                    >
+                        <v-btn
+                            medium
+                            color="primary"
+                            @click="this.sendMessage"
+                        >
+                            {{ $vuetify.lang.t('$vuetify.send') }}
+                        </v-btn>
+                    </div>
+
+                    <img
+                        alt="user name"
+                        src="../assets/i/icons/send.svg"
+                        class="chat__messages_btn_mobile"
                         @click="this.sendMessage"
                     >
-                        {{ $vuetify.lang.t('$vuetify.send') }}
-                    </v-btn>
                 </div>
             </div>
         </div>
@@ -441,7 +457,8 @@
 export default {
     data: () => ({
         currency: ['rub', 'eur'],
-        btn_more: "Открыть ",
+        reconcile_window: false,
+        reconcile_window_text: "Открыть окно согласования",
         items: [
             {
                 counter: 55,
@@ -526,6 +543,17 @@ export default {
                 });
             }
         },
+        toggle() {
+            if (this.reconcile_window) {
+                this.reconcile_window = false;
+                this.reconcile_window_text = "Открыть окно согласования";
+                console.log('asdf');
+            }
+            else {
+                this.reconcile_window = true;
+                this.reconcile_window_text = "Закрыть окно согласования";
+            }
+        }
     }
 }
 </script>
