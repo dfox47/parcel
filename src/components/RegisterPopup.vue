@@ -179,7 +179,7 @@ export default {
 
             axios.post(`https://api.wwprcl.ru/auth/register`, {
                 phone: '+7' + this.phone,
-                password: 'this.password'
+                password: this.password
             })
                 .then(response => {
                     console.log(response.data)
