@@ -187,8 +187,23 @@ export default {
                 password: this.password
             })
                 .then(response => {
-                    console.log(response.data)
                     this.$store.dispatch('setLoading', false);
+                    let data = response.data
+                    if (data.success === true) {
+                        this.$store.dispatch('autoLoginUser', data.user);
+                        this.$store.dispatch('hideLoginPopup')
+
+                        if (this.checkbox === true)
+                        {
+                            const parsed = JSON.stringify(data.user);
+                            localStorage.setItem('user', parsed);
+                        }
+
+
+                        this.$router.push('/account/personal-info')
+                    } else {
+                        this.$store.dispatch('setError', data.message);
+                    }
                 }, error => {
                     //console.log(error);
                     this.$store.dispatch('setLoading', false);

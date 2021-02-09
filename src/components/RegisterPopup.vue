@@ -168,22 +168,30 @@ export default {
         showLoginPopup () {
             this.$store.dispatch('showLoginPopup')
         },
-        showConfirmPopup () {
-            this.$store.dispatch('showConfirmPopup')
-        },
         onSubmit () {
             this.$store.dispatch('clearError');
             this.$store.dispatch('setLoading', true);
 
+            let phone = '+7' + this.phone
+            let password = this.password
+
             console.log(this.phone + ' - ' + this.password)
 
             axios.post(`https://api.wwprcl.ru/auth/register`, {
-                phone: '+7' + this.phone,
-                password: this.password
+                phone: phone,
+                password: password
             })
                 .then(response => {
-                    console.log(response.data)
                     this.$store.dispatch('setLoading', false);
+                    let data = response.data
+                    if (data.success === true) {
+                        this.$store.dispatch('setSuccessRegistration', true);
+                        this.$store.dispatch('setRegisteredPhone', phone);
+                        this.$store.dispatch('hideLoginPopup')
+                        this.$store.dispatch('showConfirmPopup')
+                    } else {
+                        this.$store.dispatch('setError', data.message);
+                    }
                 }, error => {
                     //console.log(error);
                     this.$store.dispatch('setLoading', false);

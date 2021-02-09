@@ -65,14 +65,30 @@
                     <app-lang_and_cur_popup />
 
                     <ul class="login_nav">
-                        <li class="login_nav__item">
+                        <li
+                            class="login_nav__item"
+                            v-if="!isUserLoggedIn"
+                        >
                             <v-btn
                                 color="secondary"
                                 small
-                                @click="showMenuPopup"
+                                @click="showLoginPopup"
                             >
                                 {{ $vuetify.lang.t('$vuetify.login.button') }}
                             </v-btn>
+                        </li>
+                        <li
+                            class="login_nav__item"
+                            v-if="isUserLoggedIn"
+                        >
+                            <v-avatar
+                                color="indigo"
+                                @click="showMenuPopup"
+                            >
+                                <v-icon dark>
+                                    mdi-account-circle
+                                </v-icon>
+                            </v-avatar>
                         </li>
                     </ul>
 
@@ -87,12 +103,26 @@
 
 <script>
 export default {
+    computed: {
+        loading () {
+            return this.$store.getters.loading
+        },
+        isUserLoggedIn () {
+            return this.$store.getters.isUserLoggedIn
+        },
+        user () {
+            return this.$store.getters.user
+        }
+    },
     methods: {
         showLangAndCurPopup () {
             this.$store.dispatch('showLangAndCurPopup')
         },
-        showMenuPopup () {
+        showLoginPopup () {
             this.$store.dispatch('showLoginPopup')
+        },
+        showMenuPopup () {
+            this.$store.dispatch('showMenuPopup')
         },
         getCurSymbol () {
             return this.$store.getters.getCurSymbol

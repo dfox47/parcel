@@ -1,5 +1,8 @@
 <template>
-    <div class="content">
+    <div
+        class="content"
+        v-if="isUserLoggedIn"
+    >
         <div class="account">
             <div class="wrap">
                 <ul class="breadcrumbs">
@@ -84,8 +87,8 @@
                                     Номер телефона
                                 </p>
 
-                                <p>
-                                    +7 903 123 45 67
+                                <p v-if="user && user.info">
+                                    {{ user.info.phone }}
                                 </p>
                             </div>
 
@@ -186,7 +189,22 @@ export default {
                 weight: '5 кг',
             }
         ]
-    })
+    }),
+    computed: {
+        loading () {
+            return this.$store.getters.loading
+        },
+        isUserLoggedIn () {
+            return this.$store.getters.isUserLoggedIn
+        },
+        user () {
+            return this.$store.getters.user
+        }
+    },
+    mounted() {
+        this.$store.dispatch('hideMenuPopup');
+        this.$store.dispatch('updateUserData');
+    }
 }
 </script>
 

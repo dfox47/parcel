@@ -1,10 +1,12 @@
 import axios from 'axios'
+import router from '../router'
 
 class User {
-    constructor (login, SessionId, expired) {
+    constructor (login, user_id, access_token) {
         this.login = login
-        this.SessionId = SessionId
-        this.expired = expired
+        this.user_id = user_id
+        this.access_token = access_token
+        this.info = null
     }
 }
 
@@ -29,65 +31,74 @@ export default {
         setCur (state, payload) {
             state.cur = payload
             localStorage.setItem('cur', payload);
+        },
+        setInfo (state, payload) {
+            state.user.info = payload
         }
     },
     actions: {
-        async loginUser ({ commit }, { login, password }) {
+        autoLoginUser ({ commit }, payload) {
+            commit('setUser', new User(payload.login, payload.user_id, payload.access_token))
+        },
+
+        async logoutUser ({ commit, getters }) {
+            let token = getters.user.access_token
+            commit('setUser', null)
+            localStorage.removeItem('user')
+
             commit('clearError')
             commit('setLoading', true)
 
             try {
-                axios({
-                    method: 'post',
-                    url: 'http://91.236.164.182:8528/AZS/AZSWebCGI.exe/VerifyKMAZS?json=1',
-                    data: 'Login='+login+'&Password='+password,
+                axios.post(`https://api.wwprcl.ru/auth/logout`, {}, {
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
+                        'X-Api-AuthKey': token
                     },
-                    withCredentials: true,
-                    maxRedirects: 0,
-                    responseType:"stream"
+                    withCredentials: true
                 })
-                    .then(response =>{
-                        if(response.data.IsLogin === true && response.data.SessionId.length > 0) {
-                            let now = new Date();
-                            now.setHours(now.getHours() + 23);
-                            let user = {
-                                login: login,
-                                SessionId: response.data.SessionId,
-                                expired: now
-                            }
-                            //console.log(user)
-
-                            const parsed = JSON.stringify(user);
-                            localStorage.setItem('user', parsed);
-
-                            commit('setUser', new User(user.login, user.SessionId, user.expired))
-                            commit('setLoading', false)
-
-                            router.push('/lk/')
-                        } else {
-                            commit('setLoading', false)
-                            commit('setError', 'Не верное имя пользователя или пароль!')
-                        }
-                    })
-                    .catch(e => {
-                        console.log(e)
-                    })
+                    .then(response => {
+                        console.log(response.data)
+                        router.push('/')
+                    }, error => {
+                        console.log(error)
+                    });
             } catch (error) {
                 console.log('error - ' + error)
-                commit('setLoading', false)
                 commit('setError', error.message)
                 throw error
             }
+            commit('hideMenuPopup')
+            commit('setLoading', false)
         },
-        autoLoginUser ({ commit }, payload) {
-            commit('setUser', new User(payload.login, payload.SessionId, payload.expired))
+
+        async updateUserData ({ commit, state }, payload) {
+            //console.log(state.user)
+            if (state.user !== null) {
+                let token = state.user.access_token
+                commit('clearError')
+                commit('setLoading', true)
+
+                try {
+                    axios.get(`https://api.wwprcl.ru/api/profile/personal`, {
+                        headers: {
+                            'X-Api-AuthKey': token
+                        }
+                    })
+                        .then(response => {
+                            commit('setLoading', false);
+                            commit('setInfo', response.data)
+                            //console.log(state.user)
+                        }, error => {
+                            commit('setLoading', false);
+                            commit('setError', error.toJSON().message);
+                        });
+                } catch(e) {
+                    console.log(e)
+                    throw e
+                }
+            }
         },
-        logoutUser ({ commit }) {
-            commit('setUser', null)
-            localStorage.removeItem('user')
-        },
+
         setLoginError ({ commit }, payload) {
             commit('setLoginError', payload)
         },
