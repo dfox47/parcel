@@ -23,7 +23,9 @@ export default {
         RequestSendPopup_2: false,
         RequestSendPopup_3: false,
 
-        SendOrGrubPopup: false
+        SendOrGrubPopup: false,
+        SuccessRegistration: false,
+        RegisteredPhone: null
     },
     mutations: {
         //Hide All popup's
@@ -95,6 +97,11 @@ export default {
         showLoginPopup(state) {
             this.commit('hideEverything');
             state.LoginPopup = true;
+            if (state.user !== null) {
+                state.MenuPopup = true;
+            } else {
+                state.LoginPopup = true;
+            }
         },
         hideLoginPopup(state) {
             state.LoginPopup = false;
@@ -147,7 +154,6 @@ export default {
 
         //REGISTRATION
         showRegistrationPopup(state) {
-            this.commit('hideEverything');
             state.RegistrationPopup = true;
         },
         hideRegistrationPopup(state) {
@@ -184,37 +190,44 @@ export default {
         //RequestSend1
         showRequestSendPopup_1(state) {
             this.commit('hideEverything');
-            state.RequestSendPopup_1= true;
+            state.RequestSendPopup_1 = true;
         },
         hideRequestSendPopup_1 (state) {
-            state.RequestSendPopup_1= false;
+            state.RequestSendPopup_1 = false;
         },
 
         //RequestSend2
         showRequestSendPopup_2(state) {
             this.commit('hideEverything');
-            state.RequestSendPopup_2= true;
+            state.RequestSendPopup_2 = true;
         },
         hideRequestSendPopup_2 (state) {
-            state.RequestSendPopup_2= false;
+            state.RequestSendPopup_2 = false;
         },
 
         //RequestSend3
         showRequestSendPopup_3(state) {
             this.commit('hideEverything');
-            state.RequestSendPopup_3= true;
+            state.RequestSendPopup_3 = true;
         },
         hideRequestSendPopup_3 (state) {
-            state.RequestSendPopup_3= false;
+            state.RequestSendPopup_3 = false;
         },
 
         //RequestAcceptedPopup
         showRequestAcceptedPopup(state) {
             this.commit('hideEverything');
-            state.RequestAcceptedPopup= true;
+            state.RequestAcceptedPopup = true;
         },
         hideRequestAcceptedPopup (state) {
-            state.RequestAcceptedPopup= false;
+            state.RequestAcceptedPopup = false;
+        },
+
+        setSuccessRegistration (state, payload) {
+            state.SuccessRegistration =  payload
+        },
+        setRegisteredPhone (state, payload) {
+            state.RegisteredPhone =  payload
         }
     },
     actions: {
@@ -283,8 +296,21 @@ export default {
             commit('hidePassportLoadedPopup')
         },
 
-        showRegistrationPopup ({ commit }) {
-            commit('showRegistrationPopup')
+        showRegistrationPopup ({ commit, getters }) {
+            commit('hideEverything')
+            //console.log(getters.user)
+            if (getters.user) {
+                commit('showMenuPopup')
+            } else {
+                if (getters.getSuccessRegistration === false)
+                {
+                    commit('showRegistrationPopup')
+                } else {
+                    commit('hideRegistrationPopup')
+                    commit('showConfirmPopup')
+                }
+            }
+
         },
         hideRegistrationPopup ({ commit }) {
             commit('hideRegistrationPopup')
@@ -333,6 +359,12 @@ export default {
         hideSendOrGrubPopup ({ commit }) {
             commit('hideSendOrGrubPopup')
         },
+        setSuccessRegistration ({ commit }, payload) {
+            commit('setSuccessRegistration', payload)
+        },
+        setRegisteredPhone ({ commit }, payload) {
+            commit('setRegisteredPhone', payload)
+        }
     },
     getters: {
         getConfirmPopup (state) {
@@ -365,17 +397,17 @@ export default {
         getPassportPopup_3 (state) {
             return state.PassportPopup_3;
         },
+
         getPassportLoadedPopup (state) {
             return state.PassportLoadedPopup;
         },
-
         getRegisterPopup (state) {
             return state.RegistrationPopup;
         },
-
         getRequestAcceptedPopup (state) {
             return state.RequestAcceptedPopup;
         },
+
         getRequestPlacePopup_1 (state) {
             return state.RequestPlacePopup_1;
         },
@@ -394,6 +426,12 @@ export default {
 
         getSendOrGrub (state) {
             return state.SendOrGrubPopup;
+        },
+        getSuccessRegistration (state) {
+            return state.SuccessRegistration;
+        },
+        getRegisteredPhone (state) {
+            return state.RegisteredPhone;
         }
     }
 }

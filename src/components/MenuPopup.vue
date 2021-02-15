@@ -55,12 +55,18 @@
                         <span class="popup_menu__number">99</span>
                     </li>
 
-                    <li class="popup_menu__item">
-                        Аккаунт
+                    <li
+                        class="popup_menu__item"
+                    >
+                        <router-link to="/account/personal-info">
+                            Аккаунт
+                        </router-link>
                     </li>
 
                     <li class="popup_menu__item">
-                        Выход
+                        <a @click="logout">
+                            Выход
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -82,12 +88,18 @@ export default {
     computed: {
         showMenuPopup() {
             return this.$store.getters.getMenuPopup
+        },
+        user () {
+            return this.$store.getters.user
         }
     },
     methods: {
         hideMenuPopup () {
             this.$store.dispatch('hideMenuPopup')
         },
+        logout () {
+            this.$store.dispatch('logoutUser')
+        }
     }
 }
 </script>
