@@ -121,6 +121,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
     data() {
         return {
@@ -174,7 +176,45 @@ export default {
             this.$store.dispatch('showRegistrationPopup')
         },
         onSubmit () {
+            this.$store.dispatch('clearError');
+            this.$store.dispatch('setLoading', true);
+
             console.log(this.phone + ' - ' + this.password)
+
+            axios.post(`https://api.wwprcl.ru/auth/login`, {
+                phone: '+7' + this.phone,
+                password: this.password
+            })
+                .then(response => {
+                    this.$store.dispatch('setLoading', false);
+                    let data = response.data
+                    if (data.success === true) {
+                        this.$store.dispatch('autoLoginUser', data.user);
+                        this.$store.dispatch('hideLoginPopup')
+
+                        if (this.checkbox === true)
+                        {
+                            const parsed = JSON.stringify(data.user);
+                            localStorage.setItem('user', parsed);
+                        }
+
+
+                        this.$router.push('/account/personal-info')
+                    } else {
+                        this.$store.dispatch('setError', data.message);
+                    }
+                }, error => {
+                    //console.log(error);
+                    this.$store.dispatch('setLoading', false);
+
+                    if (error.toJSON().message === '') {
+                        this.$store.dispatch('setError', 'Неизвестная ошибка запроса к серверу');
+                    }
+                    else {
+                        this.$store.dispatch('setError', error.toJSON().message);
+                    }
+                    throw error;
+                });
         }
     }
 }
