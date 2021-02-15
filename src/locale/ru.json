@@ -1,13 +1,14 @@
+
+
 {
   "add_application": "Добавить заявку",
   "add_new_order": "+ Добавить заявку",
   "answered": "откликнулся",
-  "auto_search": "Автопоиск",
   "apartment": "Квартира",
+  "auto_search": "Автопоиск",
 
   "back": "Назад",
   "back_to_search_results": "Назад к результатам поиска",
-
   "breadcrumbs.account": "Аккаунт",
   "breadcrumbs.completed": "Завершённые",
   "breadcrumbs.home": "Главная",
@@ -17,28 +18,36 @@
   "breadcrumbs.rules": "Правила",
   "breadcrumbs.search_parcel": "Поиск посылки",
   "breadcrumbs.search_suitcase": "Поиск чемодана",
-
   "building": "Корпус",
 
+  "calendar": "Календарь",
+  "change_search_request": "Изменить параметры поиска",
   "check_and_edit_your_data": "Пожалуйста проверьте данные и отредактируйте при необходимости.",
-
-  "country": "Страна",
-  "country_code": "Код государства",
-
+  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:",
+  "choose_category": "Выберите Категорию",
+  "city": "Город",
   "confirmation": "Подтверждение",
   "confirmation_text": "Пожалуйста, введите код, полученный на номер +7 905 677 34 54",
   "connect": "Связаться",
   "connect_card": "Привязать карту",
   "continue_button": "Продолжить",
+  "cost": "Стоимость",
+  "country": "Страна",
+  "country_code": "Код государства",
+  "courier_pick_up_address": "Адрес получения курьером",
   "create_new_request": "Создать заявку",
 
-  "city": "Город",
-
+  "data_check": "Пожалуйста проверьте данные и отредактируйте при необходимости.",
   "date_of_birth": "Дата рождения",
-  "date_of_issue": "Дата выдачи",
   "date_of_expiration": "Дата окончания",
-
+  "date_of_issue": "Дата выдачи",
+  "delivery_date": "Дата передачи",
+  "delivery_method_to_courier": "Способ получения курьером",
+  "delivery_method_to_recipient": "Способ передачи получателю",
+  "delivery_time": "Время передачи",
+  "depth": "Глубина",
   "dimensions": "Габариты",
+  "dots": "...",
 
   "edit": "Редактировать",
 
@@ -49,20 +58,19 @@
   "footer.send": "Хочу отправить",
   "footer.support": "Поддержка",
   "footer.take": "Могу захватить",
-
   "from": "Откуда",
 
   "gender": "Пол",
 
+  "height": "Высота",
   "home.how_it_works": "Как это работает?",
   "home.title": "Заголовок о сервисе в две строки",
-
   "house": "Дом",
+  "how": "Как?",
 
   "issuing_authority": "Орган выдавший документ",
 
   "language_name": "Русский",
-
   "load_document": "Загрузить документ",
   "login": "Войти",
   "login.button": "Вход",
@@ -72,44 +80,37 @@
 
   "menu_button_send": "Хочу отправить",
   "menu_button_take": "Могу захватить",
-
   "messages": "Сообщения",
   "messages.from": "Откуда: ",
   "messages.to": "Куда: ",
-
   "more_filters": "Больше фильтров",
 
   "name": "Имя",
-
+  "names": "Имя Фамилия",
   "number": "Номер",
 
+  "open_agreement_window": "Открыть окно согласования",
+  "or_decline": "или отказаться",
   "our_advantages": "Наши преимущества",
 
-  "parcel_description": "Описание посылки",
   "parcel_category": "Категория посылки",
-
+  "parcel_description": "Описание посылки",
   "passport_upload_text": "Пожалуйста загрузите фотографию перевого разворота своего паспорта.",
-
   "pay_a_deposit_for_safety" : "Могу внести залог за сохранность",
-
+  "phone_number": "Номер телефона",
+  "pick_up_address": "Адрес передачи",
   "place_of_birth": "Место рождения",
-
   "product_category": "Категория товара",
-
   "publish_request": "Опубликовать заявку",
 
   "readmore": "Подробнее",
-
   "recipient_data": "Данные получателя",
-
+  "reconcile_data": "Согласовать данные",
   "region": "Регион",
-
   "register": "Зарегистрироваться",
   "registration": "Регистрация",
-  "registration_text": "Мы отправим Вам SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа.",
   "registration.login": "Уже есть аккаунт?",
-
-  "search_for_offers": "Поиск предложений",
+  "registration_text": "Мы отправим Вам SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа.",
 
   "search.find": "Найти",
   "search.from": "Откуда",
@@ -117,26 +118,30 @@
   "search.title": "Поиск посылки",
   "search.to": "Куда",
   "search.weight": "кг",
-
+  "search_for_offers": "Поиск предложений",
+  "security deposit": "Залог за сохранность",
   "send": "Отправить",
-
+  "send.additional_search": "Больше фильтров",
+  "send.results_title_": "Найдено",
+  "send.results_title_2": "свободных мест в чемодане",
+  "send_before": "Отправить до",
   "series": "Серия",
-
+  "status.deliver": "Доставляю",
+  "status.delivered": "Доставлено",
+  "status.looking_parcel": "Ищу посылку",
+  "status.looking_suitcase": "Ищу чемодан",
+  "status.send": "Отправляю",
+  "status.sent": "Отправлено",
+  "steps.1_of_2": "Шаг 1 / 2",
   "steps.1_of_3": "Шаг 1 / 3",
+  "steps.2_of_2": "Шаг 2 / 2",
   "steps.2_of_3": "Шаг 2 / 3",
   "steps.3_of_3": "Шаг 3 / 3",
-
-  "steps.1_of_2": "Шаг 1 / 2",
-  "steps.2_of_2": "Шаг 2 / 2",
-
   "street": "Улица",
-
-  "send_before": "Отправить до",
-
-  "suitcase.search": "Поиск чемодана",
   "suitcase.free_space": "свободных мест в чемодане",
-
-  "take_consolidated_cargo": "Могу взять сборный груз",
+  "suitcase.search": "Поиск чемодана",
+  "sum": "Сумма",
+  "surname": "Фамилия",
 
   "take.additional_search": "Расширенный поиск",
   "take.from": "Откуда",
@@ -145,53 +150,21 @@
   "take.results_title_2": "желающих отправить посылку",
   "take.search": "Искать",
   "take.to": "Куда",
-
+  "take_consolidated_cargo": "Могу взять сборный груз",
   "tasks.active": "Активные",
   "tasks.completed": "Завершённые",
-
   "transfer_method": "Способ передачи",
   "transfer_method_to_recipient": "Способ передачи получателю",
 
-  "status.delivered": "Доставлено",
-  "status.deliver": "Доставляю",
-  "status.looking_parcel": "Ищу посылку",
-  "status.looking_suitcase": "Ищу чемодан",
-  "status.sent": "Отправлено",
-  "status.send": "Отправляю",
-
-  "surname": "Фамилия",
-
   "upload_photo": "Загрузить фото",
 
+  "we_found": "по Вашим праметрам мы нашли",
   "we_have_mobile_app": "У нас есть мобильное приложение!",
   "weight": "Вес",
-  "we_found": "по Вашим праметрам мы нашли",
   "what_do_you_need": "Что Вам необходимо?",
   "where": "Где?",
   "where_to": "Куда",
   "width": "Ширина",
 
-
-  "how": "Как?",
-  "phone_number": "Номер телефона",
-  "names": "Имя Фамилия",
-  "choose_category": "Выберите Категорию",
-  "calendar": "Календарь",
-  "height": "Высота",
-  "depth": "Глубина",
-  "sum": "Сумма",
-
-  "or_decline": "или отказаться",
-  "change_search_request": "Изменить параметры поиска",
-  "check_the_box_if_you_agree_with_the_conditions": "Поставьте галочку, если Вы согласны с выбором условий:",
-  "cost": "Стоимость",
-  "courier_pick_up_address": "Адрес получения курьером",
-  "delivery_method_to_courier": "Способ получения курьером",
-  "delivery_method_to_recipient": "Способ передачи получателю",
-  "delivery_date": "Дата передачи",
-  "delivery_time": "Время передачи",
-  "open_reconcile_window": "Открыть окно согласования",
-  "pick_up_address": "Адрес передачи",
-  "reconcile_data": "Согласовать данные",
-  "security deposit": "Залог за сохранность"
+  "...": "..."
 }

@@ -1,13 +1,14 @@
+
+
 {
   "add_application": "Add application",
   "add_new_order": "+ Add application",
   "answered": "answered",
-  "auto_search": "Autosearch",
   "apartment": "Apartment",
+  "auto_search": "Autosearch",
 
   "back": "Back",
   "back_to_search_results": "Back to search results",
-
   "breadcrumbs.account": "Account",
   "breadcrumbs.completed": "Completed",
   "breadcrumbs.home": "Home",
@@ -17,28 +18,36 @@
   "breadcrumbs.rules": "Rules",
   "breadcrumbs.search_parcel": "Parcel search",
   "breadcrumbs.search_suitcase": "Suitcase search",
-
   "building": "Building",
 
+  "calendar": "Calendar",
+  "change_search_request": "Change search request",
   "check_and_edit_your_data": "Please check your data and edit if necessary.",
-
-  "country": "Country",
-  "country_code": "Country code",
-
+  "check_the_box_if_you_agree_with_the_conditions": "Check the box if you agree with the conditions:",
+  "choose_category": "Choose category",
+  "city": "City",
   "confirmation": "Conformation",
   "confirmation_text": "Please enter the code received on the number +7 905 677 34 54",
   "connect": "Connect",
   "connect_card": "Connect card",
   "continue_button": "Continue",
+  "cost": "Cost",
+  "country": "Country",
+  "country_code": "Country code",
+  "courier_pick_up_address": "Courier pick up address",
   "create_new_request": "Create request",
 
-  "city": "City",
-
+  "data_check": "Please check the data and edit if necessary.",
   "date_of_birth": "Date of birth",
-  "date_of_issue": "Date of issue",
   "date_of_expiration": "Date of expiration",
-
+  "date_of_issue": "Date of issue",
+  "delivery_date": "Date delivery",
+  "delivery_method_to_courier": "Delivery method to courier",
+  "delivery_method_to_recipient": "Delivery method to recipient",
+  "delivery_time": "Time delivery",
+  "depth": "Depth",
   "dimensions": "Dimensions",
+  "dots": "...",
 
   "edit": "Edit",
 
@@ -49,20 +58,19 @@
   "footer.send": "Want send",
   "footer.support": "Support",
   "footer.take": "Can take",
-
   "from": "From",
 
   "gender": "Gender",
 
+  "height": "Height",
   "home.how_it_works": "How it works?",
   "home.title": "Title about service at several lines",
-
   "house": "House",
+  "how": "How?",
 
   "issuing_authority": "Issuing authority",
 
   "language_name": "English",
-
   "load_document": "Load document",
   "login": "Login",
   "login.button": "Login",
@@ -72,44 +80,37 @@
 
   "menu_button_send": "Want to send",
   "menu_button_take": "Can take",
-
   "messages": "Messages",
   "messages.from": "From: ",
   "messages.to": "To: ",
-
   "more_filters": "More filters",
 
   "name": "Name",
-
+  "names": "Names",
   "number": "Number",
 
+  "open_agreement_window": "Open reconcile window",
+  "or_decline": "or decline",
   "our_advantages": "Our advantages",
 
-  "parcel_description": "Parcel description",
   "parcel_category": "Parcel category",
-
+  "parcel_description": "Parcel description",
   "passport_upload_text": "Please upload the first page of your passport.",
-
   "pay_a_deposit_for_safety" : "I can pay a deposit for safety",
-
+  "phone_number": "Phone number",
+  "pick_up_address": "Pick up address",
   "place_of_birth": "Place of Birth",
-
   "product_category": "Product category",
-
   "publish_request": "Publish request",
 
   "readmore": "Readmore",
-
   "recipient_data": "Recipient data",
-
+  "reconcile_data": "Reconcile data",
   "region": "Регион",
-
   "register": "Register",
   "registration": "Registration",
-  "registration_text": "We will send you an SMS to verify your phone number. Your standard fare terms apply.",
   "registration.login": "Already have an account?",
-
-  "search_for_offers": "Search for offers",
+  "registration_text": "We will send you an SMS to verify your phone number. Your standard fare terms apply.",
 
   "search.find": "Find",
   "search.from": "From",
@@ -117,25 +118,29 @@
   "search.title": "Search for a parcel",
   "search.to": "To",
   "search.weight": "kg",
-
+  "search_for_offers": "Search for offers",
+  "security deposit": "Security deposit",
   "send": "Send",
-
+  "send.additional_search": "More filters",
+  "send.results_title_1": "Found",
+  "send.results_title_2": "available places",
+  "send_before": "Send before",
   "series": "Series",
-
+  "status.deliver": "Deliver",
+  "status.delivered": "Delivered",
+  "status.looking_parcel": "Looking for parcel",
+  "status.looking_suitcase": "Looking for a suitcase",
+  "status.send": "Send",
+  "status.sent": "Sent",
+  "steps.1_of_2": "Step 1 / 2",
   "steps.1_of_3": "Step 1 / 3",
+  "steps.2_of_2": "Step 2 / 2",
   "steps.2_of_3": "Step 2 / 3",
   "steps.3_of_3": "Step 3 / 3",
-
-  "steps.1_of_2": "Step 1 / 2",
-  "steps.2_of_2": "Step 2 / 2",
-
   "street": "Street",
-
-  "send_before": "Send before",
-
   "suitcase.search": "Suitcase search",
-
-  "take_consolidated_cargo": "I can take consolidated cargo",
+  "sum": "Sum",
+  "surname": "Surname",
 
   "take.add_new_order": "+ Add order",
   "take.additional_search": "Additional search",
@@ -145,54 +150,22 @@
   "take.results_title_2": "who want to send a parcel",
   "take.search": "Search",
   "take.to": "To",
-
+  "take_consolidated_cargo": "I can take consolidated cargo",
   "tasks.active": "Active",
   "tasks.completed": "Completed",
-
   "transfer_method": "Transfer method",
   "transfer_method_to_recipient": "Transfer method to recipient",
 
-  "status.delivered": "Delivered",
-  "status.deliver": "Deliver",
-  "status.looking_parcel": "Looking for parcel",
-  "status.looking_suitcase": "Looking for a suitcase",
-  "status.sent": "Sent",
-  "status.send": "Send",
-
-  "surname": "Surname",
-
   "upload_photo": "Upload photo",
 
+  "we_found": "according to your parameters we have found",
   "we_have_mobile_app": "We've got mobile app!",
   "weight": "Weight",
-  "where_to": "To",
   "what_do_you_need": "What do you need?",
-
-
-  "how": "How?",
   "where": "Where?",
-  "phone_number": "Phone number",
-  "names": "Names",
-  "choose_category": "Choose category",
-  "calendar": "Calendar",
-  "height": "Height",
-  "depth": "Depth",
+  "where_to": "To",
   "width": "Width",
-  "sum": "Sum",
-  "change_search_request": "Change search request",
 
-  "or_decline": "or decline",
-  "reconcile_data": "Reconcile data",
-  "open_reconcile_window": "Open reconcile window",
-  "delivery_method_to_courier": "Delivery method to courier",
-  "delivery_method_to_recipient": "Delivery method to recipient",
-  "courier_pick_up_address": "Courier pick up address",
-  "check_the_box_if_you_agree_with_the_conditions": "Check the box if you agree with the conditions:",
-  "delivery_date": "Date delivery",
-  "delivery_time": "Time delivery",
-  "pick_up_address": "Pick up address",
-  "security deposit": "Security deposit",
-  "cost": "Cost",
-
-  "we_found": "according to your parameters we have found"
+  "dots": "..."
 }
+

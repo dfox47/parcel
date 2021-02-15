@@ -30,36 +30,36 @@
                             <span class="popup_title">{{ $vuetify.lang.t('$vuetify.dimensions') }}</span>
 
                             <div>
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         :label="$vuetify.lang.t('$vuetify.weight')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         :label="$vuetify.lang.t('$vuetify.height')"
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         :label="$vuetify.lang.t('$vuetify.depth')"
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         :label="$vuetify.lang.t('$vuetify.width')"
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 

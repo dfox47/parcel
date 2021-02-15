@@ -61,7 +61,7 @@
                             @blur="checkBlur"
                         />
 
-                        <label class="input_wrap">
+                        <div class="input_wrap">
                             <v-text-field
                                 id="password"
                                 prepend-icon="mdi-lock"
@@ -78,7 +78,7 @@
                                 @click="showPassword"
                                 alt=""
                             >
-                        </label>
+                        </div>
 
                         <div class="popup_login_options">
                             <div>
