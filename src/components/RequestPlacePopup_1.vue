@@ -30,37 +30,37 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.from') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.country')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.city')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.where_to') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.country')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.city')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
@@ -68,22 +68,22 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.parcel_category') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.parcel_category')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.send_before') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         :label="$vuetify.lang.t('$vuetify.calendar')"
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
@@ -91,32 +91,32 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.transfer_method') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.how')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.transfer_method_to_recipient') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.how')"
                                         :items="items"
                                     />
-                                </label>
+                                </div>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-autocomplete
                                         :label="$vuetify.lang.t('$vuetify.where')"
                                         :items="items"
                                         hint="Возможно несколько вариантов"
                                         persistent-hint
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 

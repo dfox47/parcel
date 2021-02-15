@@ -24,7 +24,7 @@
                     </v-card-title>
 
                     <v-card-subtitle>
-                        {{ $vuetify.lang.t('$vuetify.confirmation_text') }}
+                        {{ $vuetify.lang.t('$vuetify.data_check') }}
                     </v-card-subtitle>
 
                     <form
@@ -34,69 +34,69 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.country_code') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
                                         label="RUS"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.number') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.dots')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.series') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.dots')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="popup_two_columns__block">
                             <span class="popup_title">{{ $vuetify.lang.t('$vuetify.issuing_authority') }}</span>
 
-                            <label class="input_wrap">
+                            <div class="input_wrap">
                                 <v-text-field
-                                    label="Номер телефона"
+                                    :label="$vuetify.lang.t('$vuetify.dots')"
                                     v-focus
                                 />
-                            </label>
+                            </div>
                         </div>
 
                         <div class="popup_two_columns__two">
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_issue') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_expiration') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
@@ -104,23 +104,23 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.surname') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.dots')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.name') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.dots')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
@@ -128,35 +128,35 @@
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.gender') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.dots')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
 
                             <div>
                                 <span class="popup_title">{{ $vuetify.lang.t('$vuetify.date_of_birth') }}</span>
 
-                                <label class="input_wrap">
+                                <div class="input_wrap">
                                     <v-text-field
-                                        label="Номер телефона"
+                                        :label="$vuetify.lang.t('$vuetify.calendar')"
                                         v-focus
                                     />
-                                </label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="popup_two_columns__block">
                             <span class="popup_title">{{ $vuetify.lang.t('$vuetify.place_of_birth') }}</span>
 
-                            <label class="input_wrap">
+                            <div class="input_wrap">
                                 <v-text-field
-                                    label="Номер телефона"
+                                    :label="$vuetify.lang.t('$vuetify.dots')"
                                     v-focus
                                 />
-                            </label>
+                            </div>
                         </div>
 
                         <div class="popup_two_columns__two">

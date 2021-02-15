@@ -45,6 +45,7 @@ body  {
     .two_inputs {
       display: flex;
       justify-content: space-between;
+      max-width: 420px;
 
       > div {
         max-width: 47.5%;
@@ -71,6 +72,7 @@ body  {
       display: flex;
       justify-content: flex-start;
       margin: 0 0 9px;
+      max-width: 420px;
 
       .v-input {
         input {
@@ -697,10 +699,23 @@ body  {
 
       .v-input__control {
         .v-input__slot {
+          border: 1px solid $c_input_border;
+          border-radius: 6px;
           margin-bottom: 10px;
 
           .v-input__append-inner {
-            //display: none;
+            margin: 0;
+
+            .v-input__icon {
+
+              &.v-input__icon--clear {
+                margin: 18px 20px 0 0;
+              }
+
+              .v-icon--disabled {
+                visibility: visible;
+              }
+            }
           }
         }
 
@@ -731,6 +746,7 @@ body  {
 
           .v-counter {
             font-size: 16px;
+            line-height: 16px;
           }
         }
       }
@@ -769,7 +785,6 @@ body  {
         }
 
         .v-text-field__slot {
-          border: 1px solid $c_input_border;
           border-radius: 6px;
 
           .v-text-field__prefix {
@@ -782,7 +797,6 @@ body  {
         }
 
         .v-select__slot {
-          border: 1px solid $c_input_border;
           border-radius: 6px;
 
           .v-select__slot {
@@ -836,6 +850,20 @@ body  {
         .v-input__control {
           .v-input__slot {
             margin-bottom: 4px;
+
+            .v-input__append-inner {
+              .v-input__icon {
+
+                &.v-input__icon--clear {
+                  font-size: 10px;
+                  margin: 6px 6px 0 0;
+                }
+
+                .v-icon {
+                  font-size: 18px;
+                }
+              }
+            }
           }
 
           .v-text-field__details {
@@ -850,7 +878,9 @@ body  {
           margin-right: 4px;
 
           .v-input__icon--prepend {
-            font-size: 18px;
+            .v-icon {
+              font-size: 16px;
+            }
           }
         }
 
@@ -900,6 +930,10 @@ body  {
           margin: 0 0 25px;
         }
       }
+    }
+
+    .primary--text {
+      color: $c_special !important;
     }
 
     .rules {
@@ -1072,6 +1106,12 @@ body  {
     display: block;
     padding: 16px 18px;
     width: 100%;
+  }
+
+  .tooltip_sign {
+    position: absolute;
+    top: 0;
+    right: -30px;
   }
 
   @media #{$mobile} {

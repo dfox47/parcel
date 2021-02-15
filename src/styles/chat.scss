@@ -19,8 +19,28 @@
   margin: 48px auto;
   max-width: 670px;
   padding: 14px 0 8px;
+  position: relative;
   text-align: center;
   width: 100%;
+
+  &:before {
+    content: "";
+    background: url(#{$i}/icons/select_secondary.svg) center center no-repeat scroll transparent;
+    display: block;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0,-50%);
+    transition: $transition;
+    width: 24px;
+  }
+
+  &.active {
+    &:before {
+      transform: translate(0,-50%) rotate(180deg);
+    }
+  }
 }
 
 .chat__agreement_wrap {}
@@ -116,7 +136,8 @@
 .chat__messages_btn {}
 
 .chat__messages_btn_mobile {
-  display: block;
+  cursor: pointer;
+  display: none;
   position: absolute;
   bottom: 20px;
   right: 15px;

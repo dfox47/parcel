@@ -427,6 +427,13 @@ ul {
   border-radius: 6px;
   height: 21px;
   width: 21px;
+  
+  @media #{$mobile} {
+    background-size: 5px;
+    border-radius: 4px;
+    height: 13px;
+    width: 13px;
+  }
 }
 
 

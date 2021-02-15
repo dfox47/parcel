@@ -78,16 +78,16 @@
             </div>
 
             <div
-                class="chat__agreement_btn"
+                :class="'chat__agreement_btn ' + this.agreement_window_class"
                 @click="this.toggle"
             >
-                {{ this.reconcile_window_text }}
+                {{ this.agreement_window_text }}
             </div>
 
             <div class="chat__agreement">
                 <transition
                     name="fade"
-                    v-if="this.reconcile_window"
+                    v-if="this.agreement_window"
                     appear
                 >
                     <div class="chat__agreement_wrap">
@@ -104,11 +104,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_method_to_courier') }}
                                     </div>
 
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.how')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.how')"
+                                            outlined
+                                        />
+                                    </div>
 
                                     <div
                                         class="popup_title"
@@ -116,11 +118,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_date') }}
                                     </div>
 
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.calendar')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.calendar')"
+                                            outlined
+                                        />
+                                    </div>
 
                                     <div
                                         class="popup_title"
@@ -128,11 +132,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_time') }}
                                     </div>
 
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.calendar')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.calendar')"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>
@@ -142,16 +148,21 @@
                                         Адрес получения курьером:
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Город"
-                                        outlined
-                                    />
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Улица"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Город"
+                                            outlined
+                                        />
+                                    </div>
+
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Улица"
+                                            outlined
+                                        />
+                                    </div>
 
                                     <div class="two_inputs">
                                         <v-text-field
@@ -167,11 +178,24 @@
                                         />
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Коментарий к адресу"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Коментарий к адресу"
+                                            outlined
+                                        />
+
+                                        <v-tooltip top>
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <div
+                                                    class="tooltip_sign"
+                                                    v-bind="attrs"
+                                                    v-on="on"
+                                                />
+                                            </template>
+                                            <span>Lorem ipsum dolor sit amet.</span>
+                                        </v-tooltip>
+                                    </div>
                                 </div>
                             </div>
 
@@ -197,11 +221,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_method_to_recipient') }}
                                     </div>
 
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.how')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.how')"
+                                            outlined
+                                        />
+                                    </div>
 
                                     <div
                                         class="popup_title"
@@ -209,17 +235,21 @@
                                         {{ $vuetify.lang.t('$vuetify.recipient_data') }}
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.name')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.name')"
+                                            outlined
+                                        />
+                                    </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.phone_number')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.phone_number')"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>
@@ -229,16 +259,21 @@
                                         {{ $vuetify.lang.t('$vuetify.pick_up_address') }}
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Город"
-                                        outlined
-                                    />
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Улица"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Город"
+                                            outlined
+                                        />
+                                    </div>
+
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Улица"
+                                            outlined
+                                        />
+                                    </div>
 
                                     <div class="two_inputs">
                                         <v-text-field
@@ -254,11 +289,13 @@
                                         />
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Коментарий к адресу"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Коментарий к адресу"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -270,11 +307,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_date') }}
                                     </div>
 
-                                    <v-select
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.calendar')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-select
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.calendar')"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
 
                                 <div>
@@ -284,11 +323,13 @@
                                         {{ $vuetify.lang.t('$vuetify.delivery_time') }}
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        :label="$vuetify.lang.t('$vuetify.name')"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            :label="$vuetify.lang.t('$vuetify.name')"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -312,6 +353,18 @@
                                         class="popup_title"
                                     >
                                         {{ $vuetify.lang.t('$vuetify.security deposit') }}
+                                        <!--here-->
+
+                                        <v-tooltip top>
+                                            <template v-slot:activator="{ on, attrs }">
+                                                <div
+                                                    class="tooltip_sign"
+                                                    v-bind="attrs"
+                                                    v-on="on"
+                                                />
+                                            </template>
+                                            <span>Lorem ipsum dolor sit amet.</span>
+                                        </v-tooltip>
                                     </div>
 
                                     <v-radio-group
@@ -349,11 +402,13 @@
                                         {{ $vuetify.lang.t('$vuetify.cost') }}
                                     </div>
 
-                                    <v-text-field
-                                        class="take_destinations__select"
-                                        label="Город"
-                                        outlined
-                                    />
+                                    <div class="input_wrap">
+                                        <v-text-field
+                                            class="take_destinations__select"
+                                            label="Город"
+                                            outlined
+                                        />
+                                    </div>
                                 </div>
                             </div>
 
@@ -457,8 +512,9 @@
 export default {
     data: () => ({
         currency: ['rub', 'eur'],
-        reconcile_window: false,
-        reconcile_window_text: "Открыть окно согласования",
+        agreement_window: false,
+        agreement_window_class: '',
+        agreement_window_text: "Открыть окно согласования",
         items: [
             {
                 counter: 55,
@@ -544,14 +600,15 @@ export default {
             }
         },
         toggle() {
-            if (this.reconcile_window) {
-                this.reconcile_window = false;
-                this.reconcile_window_text = "Открыть окно согласования";
-                console.log('asdf');
+            if (this.agreement_window) {
+                this.agreement_window = false;
+                this.agreement_window_class = "";
+                this.agreement_window_text = "Открыть окно согласования";
             }
             else {
-                this.reconcile_window = true;
-                this.reconcile_window_text = "Закрыть окно согласования";
+                this.agreement_window = true;
+                this.agreement_window_text = "Закрыть окно согласования";
+                this.agreement_window_class = "active";
             }
         }
     }
