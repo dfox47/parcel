@@ -42,7 +42,6 @@ import CountryFlag from 'vue-country-flag';
 import VCalendar from "v-calendar";
 import moment from 'moment';
 import './plugins/vuetify-mask.js';
-import axios from "axios";
 
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-header', Header);
