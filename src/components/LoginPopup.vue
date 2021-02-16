@@ -83,6 +83,7 @@
                         <div class="popup_login_options">
                             <div>
                                 <v-checkbox
+                                    v-model="checkbox"
                                     class="v-checkbox"
                                     :label="$vuetify.lang.t('$vuetify.login.remember')"
                                 />
