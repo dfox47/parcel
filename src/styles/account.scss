@@ -113,6 +113,11 @@
   flex-grow: 1;
   margin: 0 55px 0 0;
 
+  &__btns {
+    align-items: center;
+    display: flex;
+  }
+
   &__info {
     font-size: 22px;
     padding: 0 0 60px;
@@ -145,6 +150,7 @@
 
     &__info {
       color: $c_text_dark;
+      flex-grow: 1;
       font-size: 22px;
     }
   }

@@ -84,7 +84,7 @@
                         <div class="account_fields__item">
                             <div class="account_fields__item__info">
                                 <p>
-                                    Номер телефона
+                                    {{ $vuetify.lang.t('$vuetify.phone_number') }}
                                 </p>
 
                                 <p v-if="user && user.info">
@@ -98,6 +98,56 @@
                             >
                                 {{ $vuetify.lang.t('$vuetify.edit') }}
                             </a>
+                        </div>
+
+                        <!-- Номер телефона -->
+                        <div class="account_fields__item">
+                            <div class="account_fields__item__info">
+                                <div class="input_wrap__center">
+                                    <v-text-field-integer
+                                        v-model="phone"
+                                        class="input_wrap"
+                                        name="phone"
+                                        label="Ваш телефон"
+                                        :properties="{
+                                            prefix: mask,
+                                            suffix: '',
+                                            'prepend-icon': 'mdi-phone',
+                                            rules: [
+                                                v => !!v || 'Укажите пожалуйста Ваш телефон',
+                                                v => (v !== null && v.length >= 15) || 'Слишком короткий номер телефона'
+                                            ],
+                                            readonly: false,
+                                            disabled: false,
+                                            outlined: false,
+                                            clearable: true,
+                                            placeholder: '',
+                                        }"
+                                        :options="{
+                                            inputMask: '(###) ###-##-##',
+                                            outputMask: '##########',
+                                            empty: null,
+                                            applyAfter: false,
+                                            alphanumeric: true,
+                                            lowerCase: false,
+                                        }"
+                                        @focus="mask = '+7'"
+                                        @blur="checkBlur"
+                                    />
+                                </div>
+                            </div>
+
+
+                            <div class="account_fields__btns">
+                                <a
+                                    class="account_fields__item__edit"
+                                    href="/"
+                                >
+                                    {{ $vuetify.lang.t('$vuetify.save') }}
+                                </a>
+
+                                <div class="account_btn account_btn__close" />
+                            </div>
                         </div>
 
 
@@ -143,6 +193,23 @@
 export default {
     name: 'AccountPersonalInfo',
     data: () => ({
+        pass_img: require('@/assets/i/icons/show_pass.svg'),
+        type: 'password',
+        btnText: 'Show Password',
+        phone: null,
+        focus: false,
+        mask: '',
+        password: '',
+        passwordRules: [
+            v => !!v || 'Введите пароль!',
+            v => (v && v.length >= 8) || 'Пароль не может быть меньше 8 символов!',
+            v => /(?=.*[A-Z])/.test(v) || 'Пароль должен содержать хотя бы 1 заглавную букву',
+            v => /(?=.*[a-z])/.test(v) || 'Пароль должен содержать хотя бы 1 строчную букву',
+            v => /(?=.*\d)/.test(v) || 'Пароль должен содержать хотя бы 1 цифру',
+            v => /^[a-zA-Z0-9@#$%^&+=*.\-_]{0,100}$/.test(v) || 'Недопустимые символы'
+        ],
+        checkbox: true,
+        valid: false,
         items: [
             {
                 categories: [
@@ -188,7 +255,7 @@ export default {
                 to: 'Турция, Стамбул - Россия, Владивосток',
                 weight: '5 кг',
             }
-        ]
+        ],
     }),
     computed: {
         loading () {

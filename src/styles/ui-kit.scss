@@ -1100,6 +1100,11 @@ body  {
   position: relative;
   width: 100%;
 
+  &__center {
+    @extend .input_wrap;
+    margin-top: 18px;
+  }
+
   input {
     border: 1px solid $c_input_border;
     border-radius: 4px;
