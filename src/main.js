@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import vuetify from './plugins/vuetify';
+import axios from 'axios'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import RulesMenu from './components/RulesMenu';
@@ -41,7 +42,6 @@ import CountryFlag from 'vue-country-flag';
 import VCalendar from "v-calendar";
 import moment from 'moment';
 import './plugins/vuetify-mask.js';
-import axios from "axios";
 
 Vue.component('app-confirm_popup', Confirm_popup);
 Vue.component('app-header', Header);
@@ -91,6 +91,7 @@ Vue.directive('focus', {
 })
 
 new Vue({
+    axios,
     router,
     store,
     vuetify,

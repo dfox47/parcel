@@ -95,13 +95,7 @@ export default {
 
         //LOGIN
         showLoginPopup(state) {
-            this.commit('hideEverything');
             state.LoginPopup = true;
-            if (state.user !== null) {
-                state.MenuPopup = true;
-            } else {
-                state.LoginPopup = true;
-            }
         },
         hideLoginPopup(state) {
             state.LoginPopup = false;
@@ -258,9 +252,17 @@ export default {
         hideLangAndCurPopup ({ commit }) {
             commit('hideLangAndCurPopup')
         },
-        showLoginPopup ({ commit }) {
-            commit('showLoginPopup')
+
+        showLoginPopup ({ commit, getters }) {
+            commit('hideEverything')
+            //console.log(getters.user)
+            if (getters.user) {
+                commit('showMenuPopup')
+            } else {
+                commit('showLoginPopup')
+            }
         },
+
         hideLoginPopup({ commit }) {
             commit('hideLoginPopup')
         },
@@ -310,8 +312,8 @@ export default {
                     commit('showConfirmPopup')
                 }
             }
-
         },
+
         hideRegistrationPopup ({ commit }) {
             commit('hideRegistrationPopup')
         },

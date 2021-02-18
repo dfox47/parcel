@@ -60,6 +60,11 @@
         <app-request_send_popup_3 />
 
         <app-send_or_grub_popup />
+
+        <app-request_send_popup_1 />
+        <app-request_send_popup_2 />
+        <app-request_send_popup_3 />
+        <app-request_accepted_popup />
     </v-app>
 </template>
 
